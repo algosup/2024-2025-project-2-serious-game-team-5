@@ -1,6 +1,7 @@
 extends Control
 
 var userDataFile = FileAccess.file_exists("user://userLanguage.dat")
+var userSettingsFile = FileAccess.file_exists("user://settings.json")
 
 func _ready():
 	_gameInit()
@@ -17,7 +18,14 @@ func _gameInit():
 	else:
 		_createUserData()
 		language = _loadUserData()
+	
+	# Check if settings file exist
+	if userSettingsFile:
+		return
+	else:
+		_createUserSettings()
 		
+	# Setup the text language
 	match language:
 		"english":
 			$PlayButton.text = "Play"
@@ -32,6 +40,7 @@ func _gameInit():
 			$CreditsButton.text = "Crédits"
 			$WelcomeText.text = "Bienvenue sur Brought Back City"
 
+# This function take input i, and depends on i value, it will make different actions. i = buttons
 func _onPressed(i):
 	match i:
 		1: # Starting the game function
@@ -43,11 +52,27 @@ func _onPressed(i):
 		4: # Switch to Credits
 			get_tree().change_scene_to_file("res://Scenes/Credits.tscn")
 
+# This function will load the userLanguage
 func _loadUserData():
 	var file = FileAccess.open("user://userLanguage.dat", FileAccess.READ)
 	var content = file.get_as_text()
 	return content
 
+# This function will create a default userLanguage file, with english as default value
 func _createUserData():
 	var file = FileAccess.open("user://userLanguage.dat", FileAccess.WRITE)
 	file.store_string("english")
+
+# This function will create the settings file, with default value
+func _createUserSettings():
+	var file = FileAccess.open("user://settings.json", FileAccess.WRITE)
+	var default_settings = {
+		"right": "D",
+		"left": "A",
+		"forward": "W",
+		"backward": "S"
+	}
+	
+	file.store_string(JSON.stringify(default_settings))
+	print("File created successfully")
+	file.close
