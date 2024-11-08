@@ -56,7 +56,11 @@
   - [2.1 - Game Concept](#21---game-concept)
     - [2.1.1 - Game Genre](#211---game-genre)
     - [2.1.2 - Game Audience](#212---game-audience)
+      - [2.1.2.1 - Rating](#2121---rating)
+      - [2.1.2.2 - Audience](#2122---audience)
     - [2.1.3 - Game Setting](#213---game-setting)
+    - [2.1.4 - Game Mechanics](#214---game-mechanics)
+    - [2.1.5 - Game Story](#215---game-story)
 
 </details>
 
@@ -178,8 +182,38 @@ The game will be a **Serious Game**. It will be a mix of **Adventure** and **Puz
 
 ### 2.1.2 - Game Audience
 
-The game is designed for teenagers and adults (ages 13+), particularly those interested in environmental issues and climate change. It targets players who enjoy educational content, adventure, and puzzle-solving, with a focus on raising awareness about sustainability and global challenges.
+#### 2.1.2.1 - Rating
+
+
+The game will carry a **T (Teen 13+) rating** in the United States and a **PEGI 12 rating** in Europe.
+
+<img src="img/icons/rating/rated-T.png" style="height:18px;"/> A **T (Teen 13+) rating** allows content suitable for players aged 13 and up, which may include violence, suggestive themes, crude humor, minimal blood, simulated gambling, and occasional strong language.
+
+<img src="img/icons/rating/pegi-12.png" style="height:18px;"/> A **PEGI 12 rating** permits fantasy violence, non-realistic violence toward human-like characters, and mild nudity with some graphic detail.
+
+
+In our case, the game will be mild, containing no violence or nudity. We chose this rating to allow for occasional strong language to enhance character expression and realism, while still remaining accessible to a younger audience.
+
+#### 2.1.2.2 - Audience
+
+The game is intended for teenagers and young adults who are interested in environmental issues and want to learn more about climate change. The game will be designed to raise awareness about climate change and its consequences.
+
 
 ### 2.1.3 - Game Setting
 
-The game will be available on Computers(Windows and MacOS) and can be downloaded from Steam. The player will be able to set the language of the game in the settings. The game will be available in English and French. 
+The game will be available on computers, the supported operating systems will be Windows <img src="img/icons/os/windows.png" style="height:18px;"/> and MacOS <img src="img/icons/os/macos.png" style="height:18px;"/>. 
+The player will be able to set the language of the game in the settings, the game will be available in American English <img src="img/icons/flags/usa.png" style="width:18px;"/> and French <img src="img/icons/flags/france.png" style="width:18px;"/>.
+
+### 2.1.4 - Game Mechanics
+
+The game will have the following mechanics:
+
+- **Time Travel**: The player will be able to travel to the past to complete missions.
+- **Missions**: The player will have to complete various missions to save the planet from the effects of climate change.
+- **Adaptive Dialogues**: The dialogues will adapt based on the player's choices and actions.
+- **Puzzle Solving**: The player will have to solve puzzles to complete missions.
+- **Evolving Environment**: The environment will change based on the player's actions and decisions.
+
+### 2.1.5 - Game Story
+
+The player will control Sola, she evolves in the year 3034, in a post-apocalyptic world where the consequences of climate change are visible. She will meet Professor D. Greta, a scientist who built Past-Box, a time machine that allows her to travel in the time to correct the past mistakes that led to the current situation. She will visit different eras and meet important figures to interact with.
