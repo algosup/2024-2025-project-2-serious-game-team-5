@@ -102,3 +102,12 @@ offset_top = 15.0
 offset_right = 1111.0
 offset_bottom = 51.0
 text = "English Version"
+
+[node name="KeyErrorText" type="Label" parent="Control"]
+visible = false
+layout_mode = 0
+offset_left = 384.0
+offset_top = 450.0
+offset_right = 800.0
+offset_bottom = 473.0
+text = "This key is already used, press the same key again."

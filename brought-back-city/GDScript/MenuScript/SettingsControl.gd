@@ -34,11 +34,32 @@ func _onPressed(i):
 # This function will put the focus to one of the element. Then, the function _input will handle it
 func _onFocus(i): 
 	focused_element = i;
-			
+	
+# This function will check if the given key is already used in any of the lines. Will be used in the _input function
+func _is_key_used(key):
+	return key == $ForwardLine.text or key == $BackwardLine.text or key == $RightLine.text or key == $LeftLine.text
 
 # This function is handled directly by Godot. When there is an input event, it will handle it depends on our code
 func _input(event):
 	if((event is InputEventKey and event.pressed) and (event.unicode >= 32 and event.unicode <= 126)):
+		var new_key = event.as_text()
+		
+		if _is_key_used(new_key):
+		# Erase the previous key if you put the same one in another line
+			if focused_element != 0:
+				if new_key == $ForwardLine.text:
+					$ForwardLine.text = ""
+				elif new_key == $BackwardLine.text:
+					$BackwardLine.text = ""
+				elif new_key == $RightLine.text:
+					$RightLine.text = ""
+				elif new_key == $LeftLine.text:
+					$LeftLine.text = ""
+				
+				$KeyErrorText.visible = true
+				return
+		else:
+			$KeyErrorText.visible = false
 		match focused_element:
 			1:
 				$ForwardLine.text = event.as_text()
@@ -110,6 +131,7 @@ func _updateLanguage(i):
 			$LeftText.text = "Left"
 			$RightText.text = "Right"
 			$LanguageButton.text = "English Version"
+			$KeyErrorText.text = "This key is already used, press the same key again."
 		"french":
 			$BackToMenuButton.text = "Revenir au Menu"
 			$SettingsText.text = "Paramètres"
@@ -118,6 +140,7 @@ func _updateLanguage(i):
 			$LeftText.text = "Gauche"
 			$RightText.text = "Droite"
 			$LanguageButton.text = "Version Française"
+			$KeyErrorText.text = "Cette touche est déjà utilisée, appuyez à nouveau sur la même touche."
 
 # This function load keys from the settings.json file, and display them on the LineEdit (node) children
 func _loadKey():
