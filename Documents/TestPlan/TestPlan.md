@@ -66,7 +66,7 @@
 #### **Test Cases and Scenarios**
    - **Purpose:** Outline step-by-step instructions to test each feature, educational content, and player interaction.
    - **Content:** 
-     - **Functional Test Cases**: Ensure all gameplay mechanics function, including level progression, scoring, and tutorials.
+     - **Functional Test Cases**: Ensure all gameplay mechanics function, including level progression, and tutorials.
      - **Educational Content Test Cases**: Verify accuracy and impact of educational messaging at key moments.
      - **Usability Test Cases**: Confirm controls and UI elements are intuitive and user-friendly.
      - **Scenario-based Testing**: Design scenarios to simulate real gameplay, assessing player choices and corresponding educational impact.
@@ -97,17 +97,6 @@
       - **Bug Reporting**: Allow testers to report bugs, categorizing issues by severity and impact.
       - **Improvement Suggestions**: Collect feedback on potential gameplay, educational, and UI enhancements.
    - **Format**: Package the demo as a standalone or linked version with an accompanying feedback form for structured input.
-
-#### **Defect Reports**
-   - **Purpose:** Track identified issues with categorized severity to guide prioritization.
-   - **Content:**
-     - **Defect ID**: Unique identifier (e.g., "DEF-01").
-     - **Severity**: Classify issues as critical, major, or minor.
-     - **Description**: Brief issue summary, noting location and observed behavior.
-     - **Reproduction Steps**: Detailed steps to recreate the issue.
-     - **Expected vs. Actual**: Outline the expected and observed behaviors.
-     - **Attachments**: Screenshots or recordings for clarity.
-   - **Format**: Log defects in a defect tracking tool (e.g., JIRA, Trello).
 
 #### **Test Summary Report**
    - **Purpose:** Provide a final overview of testing, pass/fail statuses, defect statistics, and insights for stakeholders.
