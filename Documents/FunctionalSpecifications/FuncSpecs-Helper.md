@@ -1,8 +1,10 @@
-✅📝⏳
+✅ DONE
+📝 IN PROGRESS
+⏳ WAITING TO BE DONE
 
-0. Functional Specification
-✅ 0.1 Approvals
-✅ 0.2 Table of Contents
+📝 0. Functional Specification
+📝 0.1 Approvals
+📝 0.2 Table of Contents
 
 ✅ 1. Introduction
 ✅ 1.1 Overview
@@ -20,20 +22,22 @@
 
 
 
-⏳ 2. Game Overview
-⏳ 2.1 Game Concept
-⏳ 2.1.1 Game Genre
-⏳ 2.1.2 Game Audience
-⏳ 2.1.3 Game Setting
-⏳ 2.1.4 Game Mechanics
-⏳ 2.1.5 Game Story
+📝 2. Game Overview
+✅ 2.1 Game Concept
+✅ 2.1.1 Game Genre
+✅ 2.1.2 Game Audience
+✅ 2.1.2.1 Rating
+✅ 2.1.2.2 Audience
+✅ 2.1.3 Game Setting
+✅ 2.1.4 Game Mechanics
+✅ 2.1.5 Synopsis
 
-⏳ 2.2 Game Objectives
-⏳ 2.2.1 Game Goals
-⏳ 2.2.2 Game Challenges
+✅ 2.2 Game Objectives
+✅ 2.2.1 Game Goals
+✅ 2.2.2 Game Challenges
 
-⏳ 2.3 Game Features
-⏳ 2.3.1 Game Levels
+📝 2.3 Game Features
+📝 2.3.1 Game Levels
 ⏳ 2.3.2 Game Characters
 ⏳ 2.3.3 Game Items
 
@@ -58,7 +62,6 @@
 ⏳ 3.1.2 Environment
 ⏳ 3.1.3 Items
 
-⏳ 3.2 Game Resources
 ⏳ 3.2 Game Resources
 ⏳ 3.2.1 Game Textures
 ⏳ 3.2.2 Game Sounds

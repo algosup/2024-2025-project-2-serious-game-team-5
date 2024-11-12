@@ -15,7 +15,9 @@
 
 **Created on:** November 6<sup>th</sup>, 2024
 
-**Last updated:** November 6<sup>th</sup>, 2024
+**Last updated:** November 12<sup>th</sup>, 2024
+
+**Version:** 0.4
 
 ---
 
@@ -60,7 +62,17 @@
       - [2.1.2.2 - Audience](#2122---audience)
     - [2.1.3 - Game Setting](#213---game-setting)
     - [2.1.4 - Game Mechanics](#214---game-mechanics)
-    - [2.1.5 - Game Story](#215---game-story)
+    - [2.1.5 - Synopsis](#215---synopsis)
+  - [2.2 - Game Objectives](#22---game-objectives)
+    - [2.2.1 - Game Goals](#221---game-goals)
+    - [2.2.2 - Game Challenges](#222---game-challenges)
+  - [2.3 - Game Features](#23---game-features)
+    - [2.3.1 - Game Levels](#231---game-levels)
+    - [2.3.2 - Game Characters](#232---game-characters)
+      - [Main Character: Sola](#main-character-sola)
+      - [Mentor: Professor D. Greta](#mentor-professor-d-greta)
+      - [Side-Kick: \[!TBD!\]](#side-kick-tbd)
+      - [Antagonist: \[!TBD!\]](#antagonist-tbd)
 
 </details>
 
@@ -68,7 +80,7 @@
 
 ## 1.1 - Overview
 
-The aim of this project is to create a **Serious Game** about **Climate Change**. The game will be designed to raise awareness about climate change and its consequences. The player will have to complete various missions to save the planet from the effects of climate change.
+The aim of this project is to create a **Serious Game** about **Climate Change**. The game will be designed to raise awareness about climate change and its consequences. 
 
 #### What is **Climate Change**?
 A **Serious Game** is a game designed for a primary purpose other than pure entertainment. The "serious" adjective is generally prepended to refer to video games used by industries like defense, education, scientific exploration, health care, emergency management, city planning, engineering, religion, and politics.
@@ -82,9 +94,9 @@ A **Serious Game** is a game designed for a primary purpose other than pure ente
 
 [_(Back to top)_](#toc)
 
-Our game will use the Time Travel concept to show the player the consequences of climate change in the past and the present. The player will have to complete various missions to save the planet from the effects of climate change.
+Our game will use the Time Travel concept to show the player the consequences of climate change in the past and the present. The player must complete a series of missions to protect the planet from the impacts of climate change.
 The main character is a teenager who will have to complete missions in the past to improve the qulity of life in the present. He will be guided by a crazy scientist who will guide him to complete his missions.
-The present will be a post-apocalyptic world where the player will have to complete missions in the pasr to save the planet from the effects of climate change.
+The present will be a post-apocalyptic world where the player will have to complete missions in the past to save the planet from the effects of climate change.
 
 ### 1.2.2 - Scope
 
@@ -146,13 +158,14 @@ The deliverables of this project are:
 
 [_(Back to top)_](#toc)
 
-| Stakeholder     | Description                                     |
-| --------------- | ----------------------------------------------- |
-| ALGOSUP         | They are the owners of the project.             |
-| Konstantinos D. | He is the consultant for the game design.       |
-| Team 5          | They are the developers of the project.         |
-| End-Users       | They are the players of the game.               |
-| Reviewers       | They are the external reviewers of the project. |
+| Stakeholder             | Description                                           |
+| ----------------------- | ----------------------------------------------------- |
+| ALGOSUP                 | They are the owners of the project.                   |
+| Konstantinos D.         | He is the consultant for the game design.             |
+| Team 5                  | They are the developers of the project.               |
+| 3D Molier International | Partners for the 3D model of the secondary character. |
+| End-Users               | They are the players of the game.                     |
+| Reviewers               | They are the external reviewers of the project.       |
 
 ### 1.3.3 - Project Team
 
@@ -169,7 +182,7 @@ The deliverables of this project are:
 
 ### 1.3.4 - Project Reviewers
 
-
+Our quality assurance will review the project to ensure that the specifications and conventions are respected.
 External project reviewers have been appointed by the project owner to review our specifications and provide us with feedback.
 
 # 2. - Game Overview
@@ -209,11 +222,54 @@ The player will be able to set the language of the game in the settings, the gam
 The game will have the following mechanics:
 
 - **Time Travel**: The player will be able to travel to the past to complete missions.
-- **Missions**: The player will have to complete various missions to save the planet from the effects of climate change.
+- **Missions**: The player will complete missions and try to save the planet from the effects of climate change.
 - **Adaptive Dialogues**: The dialogues will adapt based on the player's choices and actions.
 - **Puzzle Solving**: The player will have to solve puzzles to complete missions.
 - **Evolving Environment**: The environment will change based on the player's actions and decisions.
 
-### 2.1.5 - Game Story
+### 2.1.5 - Synopsis
 
 The player will control Sola, she evolves in the year 3034, in a post-apocalyptic world where the consequences of climate change are visible. She will meet Professor D. Greta, a scientist who built Past-Box, a time machine that allows her to travel in the time to correct the past mistakes that led to the current situation. She will visit different eras and meet important figures to interact with.
+
+## 2.2 - Game Objectives
+
+### 2.2.1 - Game Goals
+
+The primary goal of the game is to raise awareness about climate change by engaging the player in a time-travel adventure to correct past actions and mitigate environmental impacts. To achieve this, the game focuses on the following goals:
+
+1. **Educational Impact**: Players will gain insights into the causes and effects of climate change, and understand the importance of sustainable practices and environmental responsibility. The storyline and missions are designed to provide historical and scientific context, helping players learn about the environmental challenges of different eras.
+
+2. **Player Engagement**: The game aims to keep players engaged through an interactive and immersive experience. By offering various missions and puzzles, players remain motivated to progress and make meaningful changes to the game world, which reflects their actions over time.
+
+3. **Empowerment Through Choice**: Players can make decisions that influence the game’s narrative and the outcomes of the missions. This feature is designed to empower players by showing how individual actions can contribute to broader environmental change.
+
+4. **Problem-Solving Skills**: Through the puzzle-solving and mission-completion mechanics, players will develop critical thinking and problem-solving skills as they face environmental challenges and strategize to overcome them.
+
+5. **Storytelling and Emotional Connection**: The game uses compelling storytelling and relatable characters to create an emotional connection with players, making the themes of climate change more impactful and memorable. By connecting with Sola’s journey, players will be more likely to carry the game’s environmental message into their real lives.
+
+### 2.2.2 - Game Challenges
+
+The game presents a series of challenges designed to immerse players in the journey to combat climate change. These challenges encourage players to think critically, adapt strategies, and learn from each scenario. The main types of challenges are:
+
+1. **Resource Management**: Players must carefully manage limited resources such as [!TBD!]. Making sustainable choices under resource constraints simulates real-world environmental challenges and demonstrates the consequences of resource depletion.
+
+2. **Moral Dilemmas**: Throughout the game, players encounter moral and ethical choices with potential environmental consequences. These dilemmas challenge players to consider the broader impact of their actions and instill a sense of responsibility toward sustainable decision-making.
+
+3. **Adaptive Difficulty**: As players progress, the game introduces more complex puzzles, time-sensitive missions, and challenging scenarios. This gradual increase in difficulty keeps players engaged and provides a sense of accomplishment as they develop their skills.
+
+By facing these challenges, players not only experience an engaging adventure but also gain a deeper understanding of climate change, its causes, and its far-reaching effects. 
+
+## 2.3 - Game Features
+
+
+### 2.3.1 - Game Levels
+
+### 2.3.2 - Game Characters
+
+#### Main Character: Sola
+
+#### Mentor: Professor D. Greta
+
+#### Side-Kick: [!TBD!]
+
+#### Antagonist: [!TBD!]
