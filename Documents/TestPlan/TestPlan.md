@@ -1,11 +1,10 @@
-<!-- See: Docs/Specifications/FuncSpecs-Helper.md -->
 <div align="center">
 
-# Test Plan
+# Test Plan - Serious Game - Team 5
 
 ---
 
-**Title:** Serious Game - Team 5
+**Title:** Test Plan - Serious Game - Team 5
 
 **Author:** Maxime CARON
 
