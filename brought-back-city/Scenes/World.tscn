@@ -1,0 +1,90 @@
+[gd_scene load_steps=15 format=3 uid="uid://wqw1ua78dy8k"]
+
+[ext_resource type="PackedScene" uid="uid://dyna83k7m266c" path="res://Scenes/Player.tscn" id="1_gga1m"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_fa2s6"]
+sky_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
+ground_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
+
+[sub_resource type="Sky" id="Sky_qgm26"]
+sky_material = SubResource("ProceduralSkyMaterial_fa2s6")
+
+[sub_resource type="Environment" id="Environment_3ontc"]
+background_mode = 2
+sky = SubResource("Sky_qgm26")
+tonemap_mode = 2
+glow_enabled = true
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_gtgtr"]
+size = Vector3(1, 0.001, 1)
+
+[sub_resource type="MeshTexture" id="MeshTexture_0to2u"]
+
+[sub_resource type="MeshTexture" id="MeshTexture_p3vyq"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_iyw5r"]
+albedo_color = Color(0.899575, 0.345625, 0.273767, 1)
+albedo_texture = SubResource("MeshTexture_0to2u")
+albedo_texture_force_srgb = true
+albedo_texture_msdf = true
+metallic = 1.0
+metallic_specular = 1.0
+metallic_texture = SubResource("MeshTexture_p3vyq")
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_1hygb"]
+lightmap_size_hint = Vector2i(252, 252)
+material = SubResource("StandardMaterial3D_iyw5r")
+size = Vector2(200, 200)
+
+[sub_resource type="SphereMesh" id="SphereMesh_nh7ln"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ecufh"]
+albedo_color = Color(0.14902, 0.705882, 0.913725, 1)
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_0tlrk"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_qyc5w"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_s64pt"]
+albedo_color = Color(1, 1, 0.0431373, 1)
+
+[node name="World" type="StaticBody3D"]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_3ontc")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="WorldEnvironment"]
+transform = Transform3D(-0.866024, -0.433016, 0.250001, 0, 0.499998, 0.866027, -0.500003, 0.75, -0.43301, 15.8842, 15.3395, -18.0187)
+shadow_enabled = true
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(50, 0, 0, 0, 50, 0, 0, 0, 50, 0, 0, 0)
+shape = SubResource("BoxShape3D_gtgtr")
+
+[node name="Ground" type="MeshInstance3D" parent="CollisionShape3D"]
+transform = Transform3D(0.02, 0, 0, 0, 0.02, 0, 0, 0, 0.02, 0, 0, 0)
+mesh = SubResource("PlaneMesh_1hygb")
+skeleton = NodePath("../..")
+
+[node name="Player" parent="." instance=ExtResource("1_gga1m")]
+transform = Transform3D(0.707107, -0.600314, -0.373662, 0, 0.528438, -0.848972, 0.707107, 0.600314, 0.373662, -20, 2, 20)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 12.2885, 4.19147, 6.17707)
+mesh = SubResource("SphereMesh_nh7ln")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="."]
+transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 12.2885, 4.19147, -12.8689)
+mesh = SubResource("SphereMesh_nh7ln")
+surface_material_override/0 = SubResource("StandardMaterial3D_ecufh")
+
+[node name="MeshInstance3D4" type="MeshInstance3D" parent="."]
+transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, -12.2679, 4.19147, 9.53218)
+mesh = SubResource("CapsuleMesh_0tlrk")
+surface_material_override/0 = SubResource("StandardMaterial3D_ecufh")
+
+[node name="MeshInstance3D3" type="MeshInstance3D" parent="."]
+transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, -12.2986, 4.19147, -12.2546)
+mesh = SubResource("BoxMesh_qyc5w")
+skeleton = NodePath("../MeshInstance3D")
+surface_material_override/0 = SubResource("StandardMaterial3D_s64pt")

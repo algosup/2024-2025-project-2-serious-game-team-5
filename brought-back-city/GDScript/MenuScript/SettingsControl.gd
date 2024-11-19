@@ -90,6 +90,11 @@ func _editSettingsFile(i, e):
 	var file_parse = JSON.parse_string(file)
 	var data = file_parse
 	
+# Remove any existing key bindings that match the new key
+	for key in data.keys():
+		if data[key] == e:
+			data[key] = ""
+	
 	data[i] = e
 	
 	file = FileAccess.open("user://settings.json", FileAccess.WRITE)
