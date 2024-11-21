@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://dyna83k7m266c"]
 
-[ext_resource type="Script" path="res://GDScript/CharacterScript/PlayerScript/Camera.gd" id="2_6isr1"]
+[ext_resource type="Script" path="res://GDScript/CharacterScript/PlayerScript/Player.gd" id="2_6isr1"]
 
 [node name="Player" type="Node3D"]
 
