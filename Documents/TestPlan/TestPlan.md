@@ -12,7 +12,7 @@
 
 **Created on:** November 12<sup>th</sup>, 2024
 
-**Last updated:** November 21<sup>th</sup>, 2024
+**Last updated:** November 22<sup>th</sup>, 2024
 
 ---
 
@@ -103,11 +103,81 @@ Performance testing will be conducted to evaluate the game's performance under v
 - **Resource Usage:** Monitoring the game's resource usage, such as CPU, memory, and GPU, to identify any performance issues.
 
 ### 4.5. Regression Testing
+Regression testing will be performed to ensure that new changes or updates do not introduce new defects or issues into the game. It will involve:
+- **Re-testing:** Testing the game after each update or change to verify that existing features are still working as expected.
+- **Compatibility Testing:** Testing the game on different devices, operating systems, and browsers to ensure compatibility.
+- **Integration Testing:** Testing the integration of new features or updates with the existing game components to ensure they work together seamlessly.
+- **Performance Testing:** Re-evaluating the game's performance after each update to ensure that it meets the required performance standards.
+- **Play Testing:** Re-testing the game with real users to gather feedback and identify any new issues or bugs.
 
 ## 5. Test Cases
+The test cases will be developed based on the game's features and mechanics outlined in the [Functional Specifications](../FunctionalSpecifications/FunctionalSpecifications.md) document. The test cases will cover the following areas:
+- **Game Launch:** Verify that the game launches without any errors.
+- **Main Menu:** Check that the main menu is accessible and functional.
+- **Gameplay:** Test the basic gameplay mechanics, such as camera movement, resource management, and decision-making.
+- **User Interface:** Evaluate the user interface elements, such as buttons, menus, and tooltips.
+- **Game Mechanics:** Test the various game mechanics and interactions to ensure they work as intended.
+
+All tests will be documented in [Test Cases](./TestCases.md) document.
+All tests will be performed by the Quality Assurance team from the 5<sup>th</sup> week of development to the 7<sup>th</sup> week of development.
 
 ## 6. Bug Reporting
+Bugs and issues will be reported using GitHub Issues. The bug reporting process will follow these steps:
+1. **Identify the Bug:** Identify the bug or issue encountered during testing.
+2. **Reproduce the Bug:** Reproduce the bug by following the steps that led to the issue.
+3. **Create an Issue:** Create a new issue on GitHub Issues with a detailed description of the bug, including steps to reproduce, expected behavior, and actual behavior.
+4. **Assign the Issue:** Assign the issue to the relevant team member responsible for resolving the bug.
+5. **Fix the Bug:** The team member will investigate and fix the bug as soon as possible.
+6. **Verify the Fix:** Verify that the bug has been fixed and the issue is resolved.
+7. **Close the Issue:** Close the issue on GitHub Issues once the bug has been fixed and verified.
+
+### GitHub Issues Labels
+The following labels will be used to categorize and prioritize issues on GitHub Issues:
+- **Bug:** Indicates a bug or issue that needs to be fixed.
+- **Enhancement:** Indicates a feature request or enhancement that can be implemented in future updates.
+- **Duplicate:** Indicates a duplicate issue that has already been reported.
+- **Invalid:** Indicates an issue that is not valid or does not require action.
+- **Won't Fix:** Indicates an issue that will not be fixed or addressed.
+- **Help Wanted:** Indicates an issue that requires assistance or collaboration from other team members.
+
+### GitHub Issue Template
+The following template will be used to report bugs on GitHub Issues:
+
+```markdown
+## Description
+[Describe the bug or issue encountered]
+
+## Steps to Reproduce
+[Provide detailed steps to reproduce the bug]
+
+## Expected Behavior
+[Describe the expected behavior]
+
+## Actual Behavior
+[Describe the actual behavior]
+
+## Screenshots
+[Include any screenshots or images that may help in understanding the issue]
+
+## Additional Information
+[Include any additional information or context about the bug]
+```
 
 ## 7. Test Schedule
+
+| Week | Task | Responsible | Date |
+| ---- | ---- | ----------- | ---- |
+| 2 | Starting Test Plan | Quality Assurance | November 12<sup>th</sup>, 2024 |
+| 2 | Writing Test Plan | Quality Assurance | November 15<sup>th</sup>, 2024 |
+| 3 | Writing Test Plan | Quality Assurance | November 22<sup>th</sup>, 2024 |
+| 3 | Review Functional Specifications | Quality Assurance | November 22<sup>th</sup>, 2024 |
+| 3 | Review Risk Management Plan | Quality Assurance | November 22<sup>th</sup>, 2024 |
+| 4 | Writing Test Cases | Quality Assurance | November 29<sup>th</sup>, 2024 |
+| 5 | Perform all tests form Test Cases | December 6<sup>th</sup>, 2024 |
+| 6 | Perform all tests form Test Cases | Quality Assurance | December 12<sup>th</sup>, 2024 |
+| 6 | Review Technical Specifications | Quality Assurance | December 12<sup>th</sup>, 2024 |
+| 6 | Review User Manual | Quality Assurance | December 12<sup>th</sup>, 2024 |
+| 7 | Play Testing | Every team member | December 16<sup>th</sup> to December 18<sup>th</sup>, 2024 |
+| 7 | Presentation Review | Quality Assurance | December 17<sup>th</sup>, 2024 |
 
 ## 8. Risks and Contingencies
