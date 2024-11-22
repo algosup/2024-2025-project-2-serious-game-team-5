@@ -15,9 +15,9 @@
 
 **Created on:** November 6<sup>th</sup  >, 2024
 
-**Last updated:** November 17<sup>th</sup>, 2024
+**Last updated:** November 22<sup>th</sup>, 2024
 
-**Version:** 0.0.5
+**Version:** 0.0.9
 
 ---
 
@@ -48,7 +48,6 @@
       - [What is Carbon Footprint?](#what-is-carbon-footprint)
   - [1.2 - Project Definition](#12---project-definition)
     - [1.2.1 - Purpose](#121---purpose)
-    - [1.2.2 - Scope](#122---scope)
     - [1.2.3 - Deliverables](#123---deliverables)
   - [1.3 - Project Organization](#13---project-organization)
     - [1.3.1 - Project Representatives](#131---project-representatives)
@@ -58,9 +57,12 @@
 - [2. - Game Overview](#2---game-overview)
   - [2.1 - Game Concept](#21---game-concept)
     - [2.1.1 - Game Genre](#211---game-genre)
+      - [2.1.1.1 - Similar Games](#2111---similar-games)
     - [2.1.2 - Game Audience](#212---game-audience)
       - [2.1.2.1 - Rating](#2121---rating)
       - [2.1.2.2 - Audience](#2122---audience)
+        - [2.1.2.2.1 - Eco-Minded and Educational](#21221---eco-minded-and-educational)
+      - [2.1.2.2.2 - Casual and Strategy Gamers](#21222---casual-and-strategy-gamers)
     - [2.1.3 - Game Setting](#213---game-setting)
     - [2.1.4 - Game Mechanics](#214---game-mechanics)
     - [2.1.5 - Synopsis](#215---synopsis)
@@ -91,6 +93,37 @@
     - [3.1.9 - Fonts](#319---fonts)
       - [3.1.9.1 - Main Font](#3191---main-font)
       - [3.1.9.2 - Secondary Font](#3192---secondary-font)
+- [4 - Game Mechanics](#4---game-mechanics)
+  - [4.1 - Resource Balancing](#41---resource-balancing)
+    - [4.1.1 - CO₂ Levels](#411---co-levels)
+    - [4.1.2 - Money](#412---money)
+    - [4.1.3 - Population](#413---population)
+    - [4.1.4 - Happiness](#414---happiness)
+  - [4.2 - Game Dilemmas](#42---game-dilemmas)
+    - [4.2.1 - Renovate vs. Rebuild](#421---renovate-vs-rebuild)
+    - [4.2.2 - Public Transport vs. Cars](#422---public-transport-vs-cars)
+    - [4.2.3 - Green Energy vs. Fossil Fuels](#423---green-energy-vs-fossil-fuels)
+    - [4.2.4 - Recycling vs. Landfill](#424---recycling-vs-landfill)
+  - [4.3 - Strategic Decision-Making](#43---strategic-decision-making)
+    - [4.3.1 - Short-Term vs. Long-Term](#431---short-term-vs-long-term)
+    - [4.3.2 - Financial vs. Environmental](#432---financial-vs-environmental)
+    - [4.3.3 - Population Growth vs. Sustainability](#433---population-growth-vs-sustainability)
+    - [4.3.4 - Happiness vs. Efficiency](#434---happiness-vs-efficiency)
+  - [4.4 - Game Over Condition](#44---game-over-condition)
+    - [4.4.1 - CO₂ Levels](#441---co-levels)
+    - [4.4.2 - Population Happiness](#442---population-happiness)
+    - [4.4.3 - Game Over Screen](#443---game-over-screen)
+- [5 - Game Interface](#5---game-interface)
+  - [5.1 - Main Menu](#51---main-menu)
+  - [5.2 - Game Screen](#52---game-screen)
+  - [5.3 - Building Menu](#53---building-menu)
+  - [5.4 - Resource Indicators](#54---resource-indicators)
+  - [5.5 - Game Over Screen](#55---game-over-screen)
+  - [5.6 - Settings](#56---settings)
+- [6 - End Matter](#6---end-matter)
+  - [6.1 - Contributors](#61---contributors)
+  - [6.2 - License](#62---license)
+  - [6.3 - Glossary](#63---glossary)
 
 </details>
 
@@ -122,9 +155,7 @@ Our game combines city management mechanics with an educational focus on environ
 3. Population – The number of citizens in the city.
 4. Happiness – The overall satisfaction of the population.
 
-If the Happiness resource reaches zero, the player is deemed to have failed as mayor, resulting in a Game Over.
-
-### 1.2.2 - Scope
+If the CO₂ levels rise too high or the population becomes too unhappy and leaves the city, the player loses the game when there are no more citizens left in the city.
 
 [_(Back to top)_](#toc)
 
@@ -179,7 +210,7 @@ The deliverables of this project are:
 | ALGOSUP                 | They are the owners of the project.                   |
 | Konstantinos D.         | He is the consultant for the game design.             |
 | Team 5                  | They are the developers of the project.               |
-| 3D Molier International | Partners for the 3D model of the secondary character. |
+| 3D Molier International | Partners for 3D models  |
 | End-Users               | They are the players of the game.                     |
 | Reviewers               | They are the external reviewers of the project.       |
 
@@ -205,15 +236,24 @@ External project reviewers have been appointed by the project owner to review ou
 
 ## 2.1 - Game Concept
 
+**Carbon Control** is played on 10 years of in-game time, 1 day in-game is equivalent to 12 seconds in real life. The game can be finished before the 10 years if the player loses the game. The player can pause the game at any time.
+The game is aimed to long at least 12 hour to finish the game. When the player finishes, he got some statistics about his game and can restart the game.
+
 ### 2.1.1 - Game Genre
 
 The game will be a **Serious Game** with elements of **Strategy** and **City Management**. The focus is on resource balancing and decision-making to raise awareness about environmental issues. Players will encounter ecological dilemmas, requiring strategic thinking and moral consideration.
+
+#### 2.1.1.1 - Similar Games
+
+- **SimCity**: A city-building simulation game that allows players to construct and manage a city. [🔗](https://www.ea.com/games/simcity)
+- **Cities: Skylines**: A city-building game that emphasizes urban planning and infrastructure management. [🔗](https://www.citiesskylines.com/)
+- **Plan it Green**: An eco-friendly city-building game developed by National Geographic in 2013. [🔗](https://archive.org/details/plan-it-green/Cover.jpg)
 
 ### 2.1.2 - Game Audience
 
 #### 2.1.2.1 - Rating
 
-The game will carry a **T (Teen 13+) rating** in the United States and a **PEGI 12 rating** in Europe.
+**Carbon Control** will carry a **T (Teen 13+) rating** in the United States and a **PEGI 12 rating** in Europe.
 
 <img src="img/icons/rating/rated-T.png" style="height:18px;"/> A **T (Teen 13+) rating** allows content suitable for players aged 13 and up, which may include violence, suggestive themes, crude humor, minimal blood, simulated gambling, and occasional strong language.
 
@@ -226,9 +266,36 @@ In our case, the game will be mild, containing no violence or nudity. We chose t
 
 The primary audience includes teenagers and young adults interested in environmental topics and strategy games. The game's mechanics and dilemmas are designed to appeal to players seeking a mix of learning and strategic challenges.
 
+##### 2.1.2.2.1 - Eco-Minded and Educational 
+
+| The Ecological Activist | The Concerned Parent |
+| ------------------------ | --------------------- |
+| <img src="img/personas/eco-activist.png" style="height:100px;"/> | <img src="img/personas/concerned-parent.png" style="height:100px;"/> |
+| **Name:** Emma Green | **Name:** Sarah Robinson |
+| **Age:** 29 | **Age:** 42 |
+| **Occupation:** Environmental Consultant | **Occupation:** High School Science Teacher |
+| **Location:** San Francisco, CA, USA | **Location:** Dublin, Ireland |
+| **Tech Savviness:** ⭐️⭐️⭐️ | **Tech Savviness:** ⭐️⭐️ |
+| **Ecological Awareness:** ⭐️⭐️⭐️⭐️⭐️ | **Ecological Awareness:** ⭐️⭐️⭐️⭐️ |
+| **Bio:** Emma is passionate about sustainability and spends her free time advocating for environmental causes. She enjoys games that align with her values, especially those that provide educational insights into real-world issues. For Emma, **Carbon Control** offers a way to unwind while gaining new ideas for her work and inspiring change. | **Bio:** Sarah is dedicated to teaching her children and students about sustainability. She sees **Carbon Control** as both a fun and educational tool for sparking discussions about environmental challenges. It allows her to combine quality time with her family and her passion for teaching. |
+
+
+#### 2.1.2.2.2 - Casual and Strategy Gamers
+
+| The Strategy Enthusiast | The Casual Gamer |
+| ----------------------- | ---------------- |
+| <img src="img/personas/strategy-enthusiast.png" style="height:100px;"/> | <img src="img/personas/casual-gamer.png" style="height:100px;"/> |
+| **Name:** James Mitchell | **Name:** Lucas Dupont |
+| **Age:** 35 | **Age:** 19 |
+| **Occupation:** Software Engineer | **Occupation:** University Student (Economics) |
+| **Location:** Seattle, WA, USA | **Location:** Paris, France |
+| **Tech Savviness:** ⭐️⭐️⭐️⭐️⭐️ | **Tech Savviness:** ⭐️⭐️⭐️ |
+| **Ecological Awareness:** ⭐️⭐️⭐️ | **Ecological Awareness:** ⭐️⭐️ |
+| **Bio:** James loves mastering complex systems and enjoys strategy games like Cities: Skylines and Civilization. While climate change isn’t his main focus, the resource management and decision-making mechanics of **Carbon Control** appeal to his strategic mind. For James, the game offers a relaxing yet intellectually stimulating experience. | **Bio:** Lucas enjoys light, engaging games that blend entertainment with learning. With interests in urban planning and economics, **Carbon Control** appeals to his curiosity about managing resources and solving environmental problems. Lucas plays games to unwind and expand his knowledge in a low-pressure environment. |
+
 ### 2.1.3 - Game Setting
 
-The game will be available on computers, the supported operating systems will be Windows <img src="img/icons/os/windows.png" style="height:18px;"/> and MacOS <img src="img/icons/os/macos.png" style="height:18px;"/>. 
+**Carbon Control** will be available on computers, the supported operating systems will be Windows <img src="img/icons/os/windows.png" style="height:18px;"/> and MacOS <img src="img/icons/os/macos.png" style="height:18px;"/>. 
 The player will be able to set the language of the game in the settings, the game will be available in American English <img src="img/icons/flags/usa.png" style="width:18px;"/> and French <img src="img/icons/flags/france.png" style="width:18px;"/>.
 
 ### 2.1.4 - Game Mechanics  
@@ -244,7 +311,7 @@ Players step into the shoes of a city mayor tasked with reducing their city’s 
 
 ### 2.1.6 - Visual Style
 
-The game will feature a **2D isometric visual style** with **low-poly assets**. All the assets are open-source and available on the internet. 
+**Carbon Control** will feature a **3D isometric visual style** with **low-poly assets**. All the assets are open-source and available on the internet. 
 
 ### 2.1.7 - Game Controls
 
@@ -299,7 +366,7 @@ Each in-game decision presents a dilemma with educational context, such as:
 
 ### 2.3.4 - Game Level
 
-The game will feature a single-player gameplay in a sandbox mode. Players can manage their city at their own pace, with no time constraints. There is no real end to the game, except for the Game Over condition.
+The game will feature a single-player gameplay in a sandbox mode. Players can manage their city at their own pace, with no time constraints. **Carbon Control** end at the day 3652, except if there are no more citizens in the city.
 
 ### 2.3.5 - Construction Grid
 
@@ -440,7 +507,7 @@ The game will feature the following vehicles:
 
 ### 3.1.6 - Icons
 
-Icons are used to represent resources, controls, and information in the game. The game will feature the following icons:
+Icons are used to represent resources, controls, and information in **Carbon Control**. The game will feature the following icons:
 
 | Name       | Description                              | Image                                                                 |
 | ---------- | ---------------------------------------- | --------------------------------------------------------------------- |
@@ -456,16 +523,16 @@ The list of the sound effect is not defined at the moment, All the sound effects
 
 ### 3.1.8 - Music
 
-Background music is used to set the tone and atmosphere of the game. The game will feature 1 background track that will loop during gameplay.
+Background music is used to set the tone and atmosphere of **Carbon Control**. The game will feature 1 background track that will loop during gameplay.
 The track is not copyrighted, you can find it here: [🔗 Background Music](https://youtu.be/tsoRvdnl1fk?si=l55ZUXQx6pxbNFJU)
 
 ### 3.1.9 - Fonts
 
-Fonts are used to display text and information in the game. The game will feature a main font for the headings and a secondary font for the body text.
+Fonts are used to display text and information. The game will feature a main font for the headings and a secondary font for the body text.
 
 #### 3.1.9.1 - Main Font
 
-The main font used in the game is **Parkinsans**. It is a clean, modern font that is easy to read and suitable for UI elements and text.
+The main font used is **Parkinsans**. It is a clean, modern font that is easy to read and suitable for UI elements and text.
 
 <img src="img/assets/fonts/parkinsans.png" style="height:100px;"/>
 
@@ -473,8 +540,124 @@ The main font used in the game is **Parkinsans**. It is a clean, modern font tha
 
 #### 3.1.9.2 - Secondary Font
 
-The secondary font used in the game is **Roboto**. It is a versatile, easy-to-read font that is suitable for body text and subtitles.
+The secondary font used is **Roboto**. It is a versatile, easy-to-read font that is suitable for body text and subtitles.
 
 <img src="img/assets/fonts/roboto.png" style="height:100px;"/>
 
 🔗 The font can be downloaded [here](https://fonts.google.com/specimen/Roboto)
+
+
+# 4 - Game Mechanics
+
+## 4.1 - Resource Balancing
+
+### 4.1.1 - CO₂ Levels
+
+The CO₂ levels represent the city's environmental impact. The goal is to keep CO₂ levels low to reduce the city's carbon footprint. CO₂ levels are affected by industrial buildings, vehicles, and energy sources. Players must balance economic growth with environmental sustainability to maintain healthy CO₂ levels.
+
+Here are the levels of CO₂ emissions and their impact on the city:
+
+| CO₂ Level | Impact on City                                                                 |
+| --------- | ------------------------------------------------------------------------------ |
+| Low(0-50) | Increase the happiness by 5% each day.                                          |
+| Medium(51-100) | No impact on the city.                                                       |
+| High(101-150) | Decrease the happiness by 5% each day.                                        |
+
+Players can reduce CO₂ levels by:
+- Building green spaces and energy sources.
+- Upgrading industrial buildings to reduce emissions.
+- Implementing eco-friendly policies and practices.
+- Encouraging citizens to use public transport.
+
+### 4.1.2 - Money
+
+Money represents the city's financial resources. The goal is to maintain a balanced budget while investing in city growth and sustainability. Money is earned through taxes, commercial buildings, and industrial production. Money is spent on construction and inhabitants.
+
+Player can earn money by:
+- Collecting taxes from citizens and businesses.
+- Generating income from commercial and industrial buildings.
+- Completing missions and challenges.
+
+### 4.1.3 - Population
+
+
+
+### 4.1.4 - Happiness
+<!--! TODO  -->
+
+## 4.2 - Game Dilemmas
+
+### 4.2.1 - Renovate vs. Rebuild
+<!--! TODO  -->
+
+### 4.2.2 - Public Transport vs. Cars
+<!--! TODO  -->
+
+### 4.2.3 - Green Energy vs. Fossil Fuels
+<!--! TODO  -->
+
+### 4.2.4 - Recycling vs. Landfill
+<!--! TODO  -->
+
+## 4.3 - Strategic Decision-Making
+
+### 4.3.1 - Short-Term vs. Long-Term
+<!--! TODO  -->
+
+### 4.3.2 - Financial vs. Environmental
+<!--! TODO  -->
+
+### 4.3.3 - Population Growth vs. Sustainability
+<!--! TODO  -->
+
+### 4.3.4 - Happiness vs. Efficiency
+<!--! TODO  -->
+
+## 4.4 - Game Over Condition
+
+### 4.4.1 - CO₂ Levels
+<!--! TODO  -->
+
+### 4.4.2 - Population Happiness
+<!--! TODO  -->
+
+### 4.4.3 - Game Over Screen
+<!--! TODO  -->
+
+# 5 - Game Interface
+
+## 5.1 - Main Menu
+<!--! TODO  -->
+
+## 5.2 - Game Screen
+<!--! TODO  -->
+
+## 5.3 - Building Menu
+<!--! TODO  -->
+
+## 5.4 - Resource Indicators
+<!--! TODO  -->
+
+## 5.5 - Game Over Screen
+<!--! TODO  -->
+
+## 5.6 - Settings
+<!--! TODO  -->
+
+# 6 - End Matter
+
+## 6.1 - Contributors
+
+The following contributors have participated in the creation of this project:
+
+| Photo | Name | Role | LinkedIn | GitHub |
+| ----- | ---- | ---- | -------- | ------ |
+
+## 6.2 - License
+
+This project is licensed under the **MIT License**. You can find the full license text [here](../../LICENSE.md).
+Game assets are licensed under the **Creative Commons Attribution 4.0 International License**. You can find the full license text [here](https://creativecommons.org/licenses/by/4.0/).
+
+## 6.3 - Glossary
+
+| Term          | Definition                                                                 |

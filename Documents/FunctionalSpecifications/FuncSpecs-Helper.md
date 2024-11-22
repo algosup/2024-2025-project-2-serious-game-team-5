@@ -92,3 +92,23 @@
 ⏳ 5.2.1 Player Interactions
 ⏳ 5.2.2 Non-Player Interactions
 ⏳ 5.2.3 Object Interactions
+
+
+
+
+
+
+Personas
+Game Mechanics (diagram, etc)
+Map
+Maquette du jeu
+
+
+generer une jacquette du jeu avec chatgpt
+<!-- Projet similaire/ concurrence -->
+
+Glossaire
+Contributors
+License
+
+<!-- rajouter le nom du jeu un peu partout -->
