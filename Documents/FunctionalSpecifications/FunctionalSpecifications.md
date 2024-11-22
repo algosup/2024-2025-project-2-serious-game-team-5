@@ -17,19 +17,19 @@
 
 **Last updated:** November 22<sup>th</sup>, 2024
 
-**Version:** 0.0.10
+**Version:** 1.0.1
 
 ### Approvals
 
 | Reviewer          | Role              | Approved | Date |
 | ----------------- | ----------------- | -------- | ---- |
-| Maxime CARON      | Quality Assurance |    ✅    |      |
-| Rémy CHARLES      | Project Manager   |    ✅    |      |
-| Pierre GORIN      | Program Manager   |    ✅    |      |
-| Salaheddine NAMIR | Technical Lead    |    ✅    |      |
-| Elone DELILLE     | Technical Writer  |    ✅    |      |
-| Alexis LASSELIN   | Software Engineer |    ✅    |      |
-| Camille GAYAT     | Software Engineer |    ✅    |      |
+| Maxime CARON      | Quality Assurance |    ✅    |   2024/11/22   |
+| Rémy CHARLES      | Project Manager   |    ✅    |  2024/11/22    |
+| Pierre GORIN      | Program Manager   |    ✅    |  2024/11/22    |
+| Salaheddine NAMIR | Technical Lead    |    ✅    |  2024/11/22    |
+| Elone DELILLE     | Technical Writer  |    ✅    |  2024/11/22    |
+| Alexis LASSELIN   | Software Engineer |    ✅    |  2024/11/22    |
+| Camille GAYAT     | Software Engineer |    ✅    |  2024/11/22    |
 
 </div>
 
@@ -121,7 +121,7 @@
 - [5 - Game Interface](#5---game-interface)
   - [5.1 - Main Menu](#51---main-menu)
   - [5.2 - Game Screen](#52---game-screen)
-  - [5.3 - Building Menu](#53---building-menu)
+  - [5.3 - Construction Menu](#53---construction-menu)
   - [5.4 - Resource Indicators](#54---resource-indicators)
   - [5.6 - Settings](#56---settings)
 - [6 - End Matter](#6---end-matter)
@@ -621,6 +621,20 @@ The game advances over time:
 - **Events:** Trigger every 6 in-game months, offering new buildings, policies, technologies, or dilemmas with resource impacts.  
 - **Game End:** After 10 in-game years or if CO₂ levels reach critical levels.
 
+```mermaid
+graph TD
+    A[Game Start] --> B[In-Game Day]
+    B -->|12 seconds in real-time| C[Time Advances]
+    C --> D[Events Trigger]
+    D -->|Every 6 in-game months| E[New Buildings]
+    D -->|Every 6 in-game months| F[New Policies]
+    D -->|Every 6 in-game months| G[New Technologies]
+    D -->|Every 6 in-game months| H[New Dilemmas]
+    C --> I[Game End Conditions]
+    I -->|After 10 in-game years| J[Game Ends]
+    I -->|Critical CO₂ Levels Reached| J[Game Ends]
+```
+
 #### 4.1.6 - Upgrade System
 Buildings can be upgraded to improve efficiency and reduce environmental impact. 
 
@@ -755,23 +769,55 @@ Players must make pivotal choices to balance conflicting priorities, shaping the
 | **Happiness Priority**   | Focus on building amenities like parks and schools to increase citizen well-being.         | High initial cost                          | Increases happiness but slows infrastructure or industrial development.                        |
 | **Efficiency Priority**  | Streamline city operations, focusing on production and resource management.                | Reduced focus on citizen satisfaction      | Improves resource efficiency but risks unhappiness and emigration.                             |
 
+
 # 5 - Game Interface
 
 ## 5.1 - Main Menu
-<!--! TODO  -->
+The **Main Menu** provides the following options:
+- **Resume Game:** Allows the player to continue a previously saved game.
+- **New Game:** Starts a fresh playthrough.
+- **Settings:** Accesses customization options for the game.
+- **Credits:** Displays information about the development team.
+- **Quit:** (Not shown in the mockup but will allow exiting the game).
+
+<img src="img/mock-ups/main-menu.png" style="height:350px"/>
 
 ## 5.2 - Game Screen
-<!--! TODO  -->
+The **Game Screen** consists of:
+- The **city map** where players can view and manage the city layout.
+- A **Construction Menu button** to open the building selection menu.
+- **Resource indicators** displayed on the left-hand side, showing essential metrics like money, CO₂ levels, population, and happiness.
+- A **time tracker** in the top-right corner, indicating the current day and year of the game.
 
-## 5.3 - Building Menu
-<!--! TODO  -->
+<img src="img/mock-ups/game-screen.png" style="height:350px"/>
+
+## 5.3 - Construction Menu
+The **Construction Menu** provides a categorized list of structures available for purchase:
+- **Residential Buildings:** Different types of homes for citizens.
+- **Public Buildings:** Includes essential infrastructure such as schools or hospitals.
+- **Industrial Buildings:** Facilities like factories or power plants.
+- **Decorative Elements:** Includes benches, lampposts, and trees for beautifying the city.
+- **Terrain Modifications:** Options for adjusting the land, such as clearing or leveling ground.
+
+<img src="img/mock-ups/construction-menu.png" style="height:350px"/>
 
 ## 5.4 - Resource Indicators
-<!--! TODO  -->
+The **Resource Indicators** are prominently displayed and include:
+- **Money:** The city's available funds.
+- **CO₂ Levels:** The environmental impact of the city's activities.
+- **Population:** The number of citizens living in the city.
+- **Happiness:** A measure of the citizens' satisfaction.
+- **Time:** Displays the current year and day in the simulation.
 
+<img src="img/mock-ups/resource-indicators.png" style="height:350px"/>
 
 ## 5.6 - Settings
-<!--! TODO  -->
+The **Settings Menu** offers the following options:
+- Toggle between **full screen** and **windowed mode**.
+- Change the game language between **French** and **US English**.
+- Adjust various audio levels, such as background music and sound effects.
+
+<img src="img/mock-ups/settings-menu.png" style="height:350px"/>
 
 # 6 - End Matter
 
