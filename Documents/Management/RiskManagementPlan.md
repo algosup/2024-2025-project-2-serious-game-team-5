@@ -1,6 +1,6 @@
-# **Risk Management Document**  
+# **Risk Management Plan**  
 **Project Title**: Serious Game on Climate Change  
-**Project Manager**: Rémy CHARLES 
+**Project Manager**: Rémy CHARLES </br>
 **Team Size**: 7 members  
 **Project Duration**: 7 weeks  
 
