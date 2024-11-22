@@ -1,0 +1,169 @@
+[gd_scene load_steps=4 format=3 uid="uid://htmeeru1v4h8"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_t4721"]
+font_size = 9
+
+[sub_resource type="LabelSettings" id="LabelSettings_p8544"]
+font_size = 9
+
+[sub_resource type="LabelSettings" id="LabelSettings_doy48"]
+font_size = 9
+
+[node name="Interface" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+
+[node name="RenovationButton" type="Button" parent="."]
+layout_mode = 0
+offset_left = 600.0
+offset_top = 566.0
+offset_right = 745.0
+offset_bottom = 631.0
+text = "Renovation"
+
+[node name="ConstructionButton" type="Button" parent="."]
+layout_mode = 0
+offset_left = 450.0
+offset_top = 566.0
+offset_right = 595.0
+offset_bottom = 631.0
+text = "Construction"
+
+[node name="Co2Background" type="ColorRect" parent="."]
+layout_mode = 0
+offset_left = 50.0
+offset_top = 20.0
+offset_right = 194.0
+offset_bottom = 62.0
+color = Color(0.0562916, 0.0562916, 0.0562916, 1)
+
+[node name="Co2Label" type="Label" parent="Co2Background"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -23.0
+offset_top = -14.0
+offset_right = 51.0
+offset_bottom = 9.0
+grow_horizontal = 2
+grow_vertical = 0
+text = "TCo₂/year"
+label_settings = SubResource("LabelSettings_t4721")
+
+[node name="Co2Bar" type="ProgressBar" parent="Co2Background"]
+modulate = Color(0.95782, 0.446297, 1.44392e-05, 1)
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -68.0
+offset_top = 2.0
+offset_right = 70.0
+offset_bottom = 29.0
+grow_horizontal = 2
+value = 70.0
+
+[node name="HIIBackground" type="ColorRect" parent="."]
+layout_mode = 0
+offset_left = 300.0
+offset_top = 20.0
+offset_right = 444.0
+offset_bottom = 62.0
+color = Color(0.0562916, 0.0562916, 0.0562916, 1)
+
+[node name="HIILabel" type="Label" parent="HIIBackground"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -61.0
+offset_top = -14.0
+offset_right = 61.0
+offset_bottom = 9.0
+grow_horizontal = 2
+grow_vertical = 0
+text = "Happy Inhabitants Indicator"
+label_settings = SubResource("LabelSettings_p8544")
+
+[node name="HIIBar" type="ProgressBar" parent="HIIBackground"]
+modulate = Color(0.976594, 0.402417, 0.455874, 1)
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -68.0
+offset_top = 2.0
+offset_right = 70.0
+offset_bottom = 29.0
+grow_horizontal = 2
+value = 55.0
+
+[node name="MoneyBackground" type="ColorRect" parent="."]
+layout_mode = 0
+offset_left = 550.0
+offset_top = 20.0
+offset_right = 694.0
+offset_bottom = 62.0
+color = Color(0.0562916, 0.0562916, 0.0562916, 1)
+
+[node name="MoneyTextLabel" type="Label" parent="MoneyBackground"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -36.0
+offset_top = -14.0
+offset_right = 92.0
+offset_bottom = 9.0
+grow_horizontal = 2
+grow_vertical = 0
+text = "Available money"
+label_settings = SubResource("LabelSettings_doy48")
+
+[node name="MoneyLabel" type="Label" parent="MoneyBackground"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -20.0
+offset_right = 20.0
+offset_bottom = 23.0
+grow_horizontal = 2
+text = "3 543 834 $"
+
+[node name="Day&InhabitantsBackground" type="ColorRect" parent="."]
+layout_mode = 0
+offset_left = 943.0
+offset_top = 10.0
+offset_right = 1144.0
+offset_bottom = 71.0
+color = Color(0.0562916, 0.0562916, 0.0562916, 1)
+
+[node name="DayLabel" type="Label" parent="Day&InhabitantsBackground"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -2.5
+offset_right = 71.5
+offset_bottom = 23.0
+grow_horizontal = 2
+text = "Day: 115"
+
+[node name="InhabitantsLabel" type="Label" parent="Day&InhabitantsBackground"]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 3.0
+offset_top = -23.0
+offset_right = 151.0
+grow_vertical = 0
+text = "Inhabitants: 25 078"

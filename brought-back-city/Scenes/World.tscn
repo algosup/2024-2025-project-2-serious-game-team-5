@@ -1,8 +1,9 @@
-[gd_scene load_steps=16 format=4 uid="uid://wqw1ua78dy8k"]
+[gd_scene load_steps=17 format=4 uid="uid://wqw1ua78dy8k"]
 
 [ext_resource type="PackedScene" uid="uid://dyna83k7m266c" path="res://Scenes/Player.tscn" id="1_gga1m"]
 [ext_resource type="Script" path="res://GDScript/GameScript/Building.gd" id="2_ksk52"]
 [ext_resource type="Script" path="res://GDScript/GameScript/Building_2.gd" id="3_cx3us"]
+[ext_resource type="PackedScene" uid="uid://htmeeru1v4h8" path="res://Scenes/Interface.tscn" id="4_q2v0b"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_fa2s6"]
 sky_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
@@ -109,3 +110,5 @@ surface_material_override/0 = SubResource("StandardMaterial3D_wlwjb")
 visible = false
 mesh = SubResource("ArrayMesh_30xxv")
 surface_material_override/0 = SubResource("StandardMaterial3D_0pva0")
+
+[node name="Interface" parent="." instance=ExtResource("4_q2v0b")]
