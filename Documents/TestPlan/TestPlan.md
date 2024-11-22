@@ -1,113 +1,164 @@
+
 <div align="center">
 
-# Test Plan - Serious Game - Team 5
+# **Test Plan - Serious Game - Team 5**
 
 ---
 
-**Title:** Test Plan - Serious Game - Team 5
-
-**Author:** Maxime CARON
-
-**Team:** Team 5
-
-**Created on:** November 12<sup>th</sup>, 2024
-
-**Last updated:** November 21<sup>th</sup>, 2024
+**Title:** Test Plan - Serious Game - Team 5  
+**Author:** Maxime CARON  
+**Team:** Team 5  
+**Created on:** November 12<sup>th</sup>, 2024  
+**Last updated:** November 22<sup>th</sup>, 2024  
 
 ---
 
-## Approvals
+## **Approvals**
 
-| Reviewer          | Role              | Approved | Date |
-| ----------------- | ----------------- | -------- | ---- |
-| Maxime CARON      | Quality Assurance |          |      |
-| Rémy CHARLES      | Project Manager   |          |      |
-| Pierre GORIN      | Program Manager   |          |      |
-| Salaheddine NAMIR | Technical Lead    |          |      |
-| Elone DELILLE     | Technical Writer  |          |      |
-| Alexis LASSELIN   | Software Engineer |          |      |
-| Camille GAYAT     | Software Engineer |          |      |
+| Reviewer          | Role              | Approved | Date         |
+|-------------------|-------------------|----------|--------------|
+| Maxime CARON      | Quality Assurance |          |              |
+| Rémy CHARLES      | Project Manager   |          |              |
+| Pierre GORIN      | Program Manager   |          |              |
+| Salaheddine NAMIR | Technical Lead    |          |              |
+| Elone DELILLE     | Technical Writer  |          |              |
+| Alexis LASSELIN   | Software Engineer |          |              |
+| Camille GAYAT     | Software Engineer |          |              |
 
 </div>
 
-## 1. Introduction
+---
 
-### 1.1. Project Overview
-The game will be a **Serious Game** with elements of **Strategy** and **City Management**. The focus is on resource balancing and decision-making to raise awareness about environmental issues. Players will encounter ecological dilemmas, requiring strategic thinking and moral consideration.
+## **1. Introduction**
 
-It's highly recommended to read the [Functional Specifications](../FunctionalSpecifications/FunctionalSpecifications.md) document to get a better understanding of the game's features and mechanics before proceeding with this document.
+### **1.1. Project Overview**
+This project is a **Serious Game** combining elements of **Strategy** and **City Management**, designed to raise awareness about environmental issues. Players must balance resources, make strategic decisions, and face ecological dilemmas that require moral consideration.  
 
-### 1.2. Document Purpose
-The purpose of this document is to outline the testing strategy and plan for the Serious Game developed by Team 5. It will provide an overview of the testing process, including the scope, objectives, strategies, test cases, bug reporting, test schedule, and risks.
+It is recommended to refer to the [Functional Specifications](../FunctionalSpecifications/FunctionalSpecifications.md) document for a detailed understanding of the game's mechanics and features.
 
-### 1.3. Scope
-The document mainly targets the testing phase of the project. It will cover the following aspects:
-- **Testing Tools:** The tools used for testing the game.
-- **Test Strategies:** The strategies employed to ensure the game's quality.
-- **Bug Reporting:** The process of reporting and tracking bugs.
-- **Test Schedule:** The timeline for testing activities.
-- **Risks and Contingencies:** The potential risks and their mitigation strategies.
+---
 
-### 1.4. Objectives
-The primary objectives of this document are:
-- To ensure the quality of the game by defining a comprehensive testing strategy.
-- To identify the tools and techniques used for testing.
-- To provide a structured approach to test the game.
-- To establish a bug reporting process.
-- To define a test schedule and allocate resources effectively.
-- To identify potential risks and plan for contingencies.
-- To ensure that the game meets the specified requirements and is free of critical defects.
+### **1.2. Document Purpose**  
+This document outlines the test strategy for the Serious Game, detailing testing processes, tools, schedules, and risks. It ensures that the game meets quality standards and satisfies all functional and performance requirements.
 
-## 2. Glossary
+---
 
-## 3. Tools
-### 3.1. Reporting Tools
-- **GitHub Issues:** GitHub Issues will be used to report and track bugs, issues, and feature requests. The issues will be categorized based on their severity and priority, and assigned to the relevant team members for resolution.
-### 3.2. Testing Tools
-- **Godot Engine:** Godot Engine will be used as the primary game engine for developing and testing the game. It provides a comprehensive set of tools for game development, including scene editing, scripting, and debugging.
-- **Google Forms:** Google Forms will be used to collect feedback from users during play testing. The feedback will be used to identify usability issues, bugs, or design flaws.
-- **Google Sheets:** Google Sheets will be used to store and analyze the feedback collected from users during play testing. It will help in identifying trends, patterns, and areas for improvement.
+### **1.3. Scope**
+This test plan encompasses the following:
+- **Testing Tools:** Identification of tools used in the testing process.
+- **Test Strategies:** Techniques and methodologies for validating game functionality and quality.
+- **Bug Reporting:** Processes for documenting and resolving defects.
+- **Test Schedule:** Planned timeline for testing activities.
+- **Risk Management:** Identification of potential risks and mitigation strategies.
 
-### 3.3. Performance Monitoring Tools
-- **Task Manager:** Task Manager will be used to monitor the game's resource usage on Windows, such as CPU, memory, and GPU. It will help in identifying performance issues and bottlenecks.
-- **Activity Monitor:** Activity Monitor will be used to monitor the game's resource usage on macOS, such as CPU, memory, and GPU. It will help in identifying performance issues and bottlenecks.
-- **System Monitor:** System Monitor will be used to monitor the game's resource usage on Linux, such as CPU, memory, and GPU. It will help in identifying performance issues and bottlenecks.
-- **Godot Performances Monitor:** Godot Profiler will be used to profile the game's performance and identify bottlenecks or performance issues. It provides detailed information on resource usage, frame rate, and memory consumption.
+---
 
+### **1.4. Objectives**
+Key objectives of this test plan include:
+- Ensuring high-quality game features and mechanics.
+- Identifying and resolving bugs effectively.
+- Providing structured test cases for validation.
+- Ensuring compatibility across platforms and devices.
+- Maintaining performance standards under various conditions.
 
-## 4. Test Strategies
+---
 
-### 4.1. Smoke Testing
-The smoke testing phase will be conducted to ensure that the basic functionalities of the game are working as expected. It will involve testing the core features of the game to verify that they are operational and stable. The smoke testing will cover the following areas:
-- **Game Launch:** Verify that the game launches without any errors.
-- **Main Menu:** Check that the main menu is accessible and functional.
-- **Gameplay:** Test the basic gameplay mechanics, such as camera movement, resource management, and decision-making.
+## **2. Glossary**
+- **QA:** Quality Assurance  
+- **FPS:** Frames Per Second  
+- **Regression Testing:** Testing to confirm that changes haven’t introduced new defects.  
+- **Smoke Testing:** Preliminary testing to verify core functionality.  
 
-### 4.2. Exploratory Testing
-Exploratory testing will be performed to uncover any hidden defects or issues that may not be apparent during the regular testing process. It involves exploring the game in an unstructured manner to identify potential bugs, usability problems, or design flaws. The focus will be on:
-- **Game Mechanics:** Testing the various game mechanics and interactions to ensure they work as intended.
-- **User Experience:** Evaluating the overall user experience, including controls, feedback, and visual elements.
-- **Edge Cases:** Testing the game under unusual conditions or scenarios to identify potential vulnerabilities.
+---
 
-### 4.3. Play Testing
-Play testing will be conducted to gather feedback from real users and evaluate the game's playability, engagement, and overall experience. It will involve:
-- **User Feedback:** Collecting feedback from players on the game's enjoyment and general idea in a dedicated Google Form.
-Link forms: [EN](https://forms.gle/9EBFaZDe9YELbBD96), [FR](https://forms.gle/MFbKxKKUcWhG2aTJ8)
-Forms feedbacks will be collected in this [Google Sheet](https://docs.google.com/spreadsheets/d/15Wzkg-CMg0YiQwxjlq3kPDKzgapVBM8iaG4ngdFdD8E/edit?usp=sharing)
-- **User Testing:** Observing players as they interact with the game to identify usability issues, bugs, or design flaws.
+## **3. Tools**
 
-### 4.4. Performance Testing
-Performance testing will be conducted to evaluate the game's performance under various conditions and ensure that it meets the required performance standards. It will involve:
-- **Load Testing:** Testing the game's performance under different load levels to identify bottlenecks or performance issues.
-- **Stress Testing:** Subjecting the game to extreme conditions to evaluate its stability and resilience.
-- **Resource Usage:** Monitoring the game's resource usage, such as CPU, memory, and GPU, to identify any performance issues.
+### **3.1. Reporting Tools**
+- **GitHub Issues:** For bug tracking and categorization by severity and priority.  
 
-### 4.5. Regression Testing
+### **3.2. Testing Tools**
+- **Godot Engine:** Used for testing core mechanics and debugging during development.  
+- **Google Forms & Sheets:** For gathering and analyzing user feedback during playtesting.  
 
-## 5. Test Cases
+### **3.3. Performance Monitoring Tools**
+- **Task Manager (Windows), Activity Monitor (MacOS), System Monitor (Linux):** For tracking resource usage (CPU, memory, GPU).  
+- **Godot Profiler:** For analyzing performance bottlenecks and memory usage.
 
-## 6. Bug Reporting
+---
 
-## 7. Test Schedule
+## **4. Test Strategies**
 
-## 8. Risks and Contingencies
+### **4.1. Smoke Testing**
+- **Objective:** Ensure basic game functionality works as expected.  
+- **Scope:** Game launch, main menu access, and core gameplay mechanics.  
+
+---
+
+### **4.2. Exploratory Testing**
+- **Objective:** Identify hidden defects through unstructured testing.  
+- **Scope:** Game mechanics, user experience, and edge case scenarios.
+
+---
+
+### **4.3. Playtesting**
+- **Objective:** Gather player feedback to improve usability and engagement.  
+- **Methods:**  
+  - User feedback forms ([EN](https://forms.gle/9EBFaZDe9YELbBD96), [FR](https://forms.gle/MFbKxKKUcWhG2aTJ8)).  
+  - Observing real players interact with the game.  
+
+---
+
+### **4.4. Performance Testing**
+- **Objective:** Verify game stability under load and stress conditions.  
+- **Scope:** Load testing, stress testing, and monitoring resource usage.
+
+---
+
+### **4.5. Regression Testing**
+- **Objective:** Confirm no new defects are introduced by updates.  
+- **Scope:** Compatibility, integration, and re-evaluation of performance after updates.
+
+---
+
+## **5. Test Cases**
+Detailed test cases are documented in the [Test Cases](./TestCases.md) file. Areas covered include:  
+- Game launch and navigation.  
+- Main menu functionality.  
+- Gameplay mechanics and interactions.  
+- User interface responsiveness.  
+
+Testing will be conducted from **Week 5** through **Week 7**.
+
+---
+
+## **6. Bug Reporting**
+
+### **Process**
+1. **Identify:** Detect a bug during testing.  
+2. **Reproduce:** Confirm the bug by following steps to recreate it.  
+3. **Log:** Document the bug using GitHub Issues, providing steps, screenshots, and descriptions.  
+4. **Assign:** Assign the bug to a relevant team member.  
+5. **Fix:** Resolve the issue promptly.  
+6. **Verify:** Test the fix to ensure resolution.  
+7. **Close:** Mark the issue as resolved.  
+
+### **Labels**
+- **Bug, Enhancement, Duplicate, Invalid, Won’t Fix, Help Wanted.**
+
+---
+
+## **7. Test Schedule**
+
+| Week | Task                                   | Responsible         | Date                 |
+|------|---------------------------------------|---------------------|----------------------|
+| 2    | Initiate Test Plan                    | Quality Assurance   | November 12, 2024    |
+| 3    | Finalize Test Plan                    | Quality Assurance   | November 22, 2024    |
+| 4    | Write Test Cases                      | Quality Assurance   | November 29, 2024    |
+| 5-7  | Execute Test Cases                    | QA Team             | December 6-18, 2024  |
+| 7    | Conduct Playtesting                   | Team Members        | December 16-18, 2024 |
+| 7    | Final Presentation Review             | QA Team             | December 17, 2024    |
+
+---
+
+## **8. Risks and Contingencies**  
+Refer to the [Risk Management Plan](../Management/RiskManagementPlan.md) for a detailed analysis of risks and mitigation strategies.  
