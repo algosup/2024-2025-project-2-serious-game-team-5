@@ -346,7 +346,7 @@ The residential buildings are used to house the city's population. They come in 
 | Large House  | A large, multi-story home for 6 citizens.                             | 84 000                                                                  | 6                 | 14 000            | 4 (2x2)              | <img src="img/assets/buildings/residential/large-house.png" style="height:100px;"/>  |
 | Apartment    | A multi-unit building with 6 apartments. Each unit houses 4 citizens. | 1 320 000                                                               | 24                | 55 000            | 25 (5x5)             | <img src="img/assets/buildings/residential/apartment.png" style="height:100px;"/>    |
 | Skyscraper   | A high-rise building with 32 units. Each unit houses 4 citizens.      | 7 040 000                                                               | 128               | 55 000            | 81 (9x9)             | <img src="img/assets/buildings/residential/skyscraper.png" style="height:100px;"/>   |
-<!--         | Condominium                                                           | A luxury apartment building with 14 units. Each unit houses 4 citizens. | 3 360 000         | 56                | 60 000               | 56 (14x4)                                                                            | <img src="img/assets/buildings/residential/condominium.png" style="height:100px;"/> | --> 
+<!--         | Condominium                                                           | A luxury apartment building with 14 units. Each unit houses 4 citizens. | 3 360 000         | 56                | 60 000               | 56 (14x4)                                                                            | <img src="img/assets/buildings/residential/condominium.png" style="height:100px;"/> | -->
 
 #### 3.1.1.2 - Commercial Buildings
 
@@ -358,7 +358,7 @@ The commercial buildings are used to provide goods and services to the city's po
 | BarberShop    | A barbershop offering haircuts and shaves.           | -60 000        | +1 200         | 50               | 4 (2x2)              | <img src="img/assets/buildings/commercial/barbershop.png" style="height:100px;"/>    |
 | Bakery        | A bakery selling bread, pastries, and cakes.         | -80 000        | +1 400         | 57               | 4 (2x2)              | <img src="img/assets/buildings/commercial/bakery.png" style="height:100px;"/>        |
 | Pharmacy      | A pharmacy selling medicine and health products.     | -120 000       | +2 000         | 60               | 4 (2x2)              | <img src="img/assets/buildings/commercial/pharmacy.png" style="height:100px;"/>      |
-| Hardware Shop | A hardware store selling tools and supplies.         | -200 000       | +3 000         | 67               | 4 (2x2)              | <img src="img/assets/buildings/commercial/hardware-shop.png" style="height:100px;"/> |
+| Hardware Shop | A hardware store selling tools and supplies.         | -200 000       | +3 000         | 67               | 4 (2x2)              | <img src="img/assets/buildings/commercial/hardware.png" style="height:100px;"/> |
 | Farm          | A farm producing fresh fruits and vegetables.        | -1 200 000     | +12 000        | 100              | 120 (12x10)          | <img src="img/assets/buildings/commercial/farm.png" style="height:100px;"/>          |
 | Casino        | A casino offering games of chance and entertainment. | -3 000 000     | +30 000        | 100              | 12 (6x2)             | <img src="img/assets/buildings/commercial/casino.png" style="height:100px;"/>        |
 
@@ -370,7 +370,7 @@ The industrial buildings are used to produce goods and materials for the city. *
 | ----------- | ---------------------------------------- | ---------------------------------------- | -------------- | ---------------- | ------------------- | -------------------- | ---------------------------------------------------------------------------------- |
 | Factory     | A factory producing goods and materials. | -400 000                                 | +8 000         | 50               | +12 000             | 12 (4x3)             | <img src="img/assets/buildings/industrial/factory.png" style="height:100px;"/>     |
 | Power Plant | A power plant generating electricity.    | -3 000 000                               | +45 000        | 67               | +40 000             | 25 (5x5)             | <img src="img/assets/buildings/industrial/power-plant.png" style="height:100px;"/> |
-<!--        | Warehouse                                | A warehouse storing goods and materials. | -200 000       | +4 000           | 50                  | +1000                | 9 (3x3)                                                                            | <img src="img/assets/buildings/industrial/warehouse.png" style="height:100px;"/> | --> 
+<!--        | Warehouse                                | A warehouse storing goods and materials. | -200 000       | +4 000           | 50                  | +1000                | 9 (3x3)                                                                            | <img src="img/assets/buildings/industrial/warehouse.png" style="height:100px;"/> | -->
 
 #### 3.1.1.3 - Public Buildings
 
@@ -382,7 +382,7 @@ The public buildings are used to provide services and amenities to the city's po
 | School    | A school providing education to children. | -200 000                              | +1 000         | 200              | +400      | 9 (3x3)              | <img src="img/assets/buildings/public/school.png" style="height:100px;"/>    |
 | Hospital  | A hospital providing medical care.        | -400 000                              | +2 000         | 200              | +600      | 9 (3x3)              | <img src="img/assets/buildings/public/hospital.png" style="height:100px;"/>  |
 | Museum    | A museum showcasing art and history.      | -800 000                              | +4 000         | 200              | +1 200    | 32 (8x4)             | <img src="img/assets/buildings/public/museum.png" style="height:100px;"/>    |
-<!--      | Temple                                    | A temple offering spiritual services. | -1 200 000     | +6 000           | 200       | +1 400               | 9 (3x3)                                                                      | <img src="img/assets/buildings/public/temple.png" style="height:100px;"/> | --> 
+<!--      | Temple                                    | A temple offering spiritual services. | -1 200 000     | +6 000           | 200       | +1 400               | 9 (3x3)                                                                      | <img src="img/assets/buildings/public/temple.png" style="height:100px;"/> | -->
 
 ### 3.1.2 - Green Spaces and Energy Sources
 
@@ -397,7 +397,7 @@ The game will feature the following green spaces and energy sources:
 
 | Name         | Description                                 | Price to build | Earning by Day | Day to Earn Back | CO2 Non-Produced by Day | Happiness | Slot Needed to Built | Image                                                                                 |
 | ------------ | ------------------------------------------- | -------------- | -------------- | ---------------- | ----------------------- | --------- | -------------------- | ------------------------------------------------------------------------------------- |
-| Park         | A public park with green spaces and trees.  | -40 000        | +100           | 400              | -600                    | +300      | 4 (2x2)              |                                                                                       |
+| Park         | A public park with green spaces and trees.  | -40 000        | +100           | 400              | -600                    | +300      | 4 (2x2)              | No Image Available                                                                    |
 | Lake         | A natural lake providing water and scenery. | -80 000        | +200           | 400              | -800                    | +400      | 9 (3x3)              | <img src="img/assets/buildings/green-spaces/lake.png" style="height:100px;"/>         |
 | Wind Turbine | Wind turbines generating electricity.       | -360 000       | +2 000         | 180              | -1 200                  | 0         | 12 (4x3)             | <img src="img/assets/buildings/green-spaces/wind-turbine.png" style="height:100px;"/> |
 | Solar Panel  | Solar panels generating electricity.        | -600 000       | +4 000         | 150              | -2 000                  | 0         | 16 (4x4)             | <img src="img/assets/buildings/green-spaces/solar-panel.png" style="height:100px;"/>  |
@@ -429,14 +429,14 @@ Following are the ground textures that will be used in the game:
 
 The game will feature the following vehicles:
 
-| Name      | Description                           | Image                                                                |
-| --------- | ------------------------------------- | -------------------------------------------------------------------- |
-| Car       | A car for citizens to travel.         | <img src="img/assets/vehicles/car.png" style="height:100px;"/>       |
-| Bicycle   | A bicycle for citizens to ride.       | <img src="img/assets/vehicles/bicycle.png" style="height:100px;"/>   |
-| Police    | A police car for law enforcement.     | <img src="img/assets/vehicles/police.png" style="height:100px;"/>    |
-| Ambulance | An ambulance for medical emergencies. | <img src="img/assets/vehicles/ambulance.png" style="height:100px;"/> |
-| Firetruck      | A fire truck for firefighting.        | <img src="img/assets/vehicles/firetruck.png" style="height:100px;"/>      |
-| Garbage truck     | A garbage truck for waste collection. | <img src="img/assets/vehicles/garbage-truck.png" style="height:100px;"/> |
+| Name          | Description                           | Image                                                                    |
+| ------------- | ------------------------------------- | ------------------------------------------------------------------------ |
+| Car           | A car for citizens to travel.         | <img src="img/assets/vehicles/car.png" style="height:100px;"/>           |
+| Bicycle       | A bicycle for citizens to ride.       | <img src="img/assets/vehicles/bicycle.png" style="height:100px;"/>       |
+| Police        | A police car for law enforcement.     | <img src="img/assets/vehicles/police.png" style="height:100px;"/>        |
+| Ambulance     | An ambulance for medical emergencies. | <img src="img/assets/vehicles/ambulance.png" style="height:100px;"/>     |
+| Firetruck     | A fire truck for firefighting.        | <img src="img/assets/vehicles/firetruck.png" style="height:100px;"/>     |
+| Garbage truck | A garbage truck for waste collection. | <img src="img/assets/vehicles/garbage-truck.png" style="height:100px;"/> |
 
 ### 3.1.6 - Icons
 
@@ -444,11 +444,11 @@ Icons are used to represent resources, controls, and information in the game. Th
 
 | Name       | Description                              | Image                                                                 |
 | ---------- | ---------------------------------------- | --------------------------------------------------------------------- |
-| CO2        | Icon representing CO2 emissions.         | <img src="img/icons/resources/co2.png" style="height:100px;"/>        |
-| Money      | Icon representing financial resources.   | <img src="img/icons/resources/money.png" style="height:100px;"/>      |
-| Population | Icon representing the city's population. | <img src="img/icons/resources/population.png" style="height:100px;"/> |
-| Happiness  | Icon representing citizen satisfaction.  | <img src="img/icons/resources/happiness.png" style="height:100px;"/>  |
-| Clock      | Icon representing the time.              | <img src="img/icons/resources/clock.png" style="height:100px;"/>      |
+| CO2        | Icon representing CO2 emissions.         | <img src="img/icons/resources/co2.png" style="height:50px;"/>        |
+| Money      | Icon representing financial resources.   | <img src="img/icons/resources/money.png" style="height:50px;"/>      |
+| Population | Icon representing the city's population. | <img src="img/icons/resources/population.png" style="height:50px;"/> |
+| Happiness  | Icon representing citizen satisfaction.  | <img src="img/icons/resources/happiness.png" style="height:50px;"/>  |
+| Clock      | Icon representing the time.              | <img src="img/icons/resources/clock.png" style="height:50px;"/>      |
 
 ### 3.1.7 - Sound Effects
 
@@ -467,7 +467,7 @@ Fonts are used to display text and information in the game. The game will featur
 
 The main font used in the game is **Parkinsans**. It is a clean, modern font that is easy to read and suitable for UI elements and text.
 
-<img src="img/assets/fonts/parkinsans.png" style="height:50px;"/>
+<img src="img/assets/fonts/parkinsans.png" style="height:100px;"/>
 
 🔗 The font can be downloaded [here](https://fonts.google.com/specimen/Parkinsans)
 
@@ -475,6 +475,6 @@ The main font used in the game is **Parkinsans**. It is a clean, modern font tha
 
 The secondary font used in the game is **Roboto**. It is a versatile, easy-to-read font that is suitable for body text and subtitles.
 
-<img src="img/assets/fonts/roboto.png" style="height:50px;"/>
+<img src="img/assets/fonts/roboto.png" style="height:100px;"/>
 
 🔗 The font can be downloaded [here](https://fonts.google.com/specimen/Roboto)
