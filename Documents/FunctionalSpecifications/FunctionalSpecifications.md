@@ -19,8 +19,6 @@
 
 **Version:** 0.0.10
 
----
-
 ### Approvals
 
 | Reviewer          | Role              | Approved | Date |
@@ -95,36 +93,36 @@
       - [3.1.9.2 - Secondary Font](#3192---secondary-font)
 - [4 - Game Mechanics](#4---game-mechanics)
   - [4.1 - Resource Balancing](#41---resource-balancing)
-      - [**4.1.1 - CO₂ Levels**](#411---co-levels)
+      - [4.1.1 - CO₂ Levels](#411---co-levels)
         - [CO₂ Emission Impact Table:](#co-emission-impact-table)
         - [Actions Impacting CO₂ Levels:](#actions-impacting-co-levels)
-      - [**4.1.2 - Money**](#412---money)
+      - [4.1.2 - Money](#412---money)
         - [Money Flow:](#money-flow)
-      - [**4.1.3 - Population**](#413---population)
-      - [**4.1.4 - Happiness**](#414---happiness)
-        - [**Happiness Impact on Population:**](#happiness-impact-on-population)
-        - [**How to Influence Happiness:**](#how-to-influence-happiness)
-      - [**4.1.5 - Game Progression**](#415---game-progression)
-      - [**4.1.6 - Upgrade System**](#416---upgrade-system)
+      - [4.1.3 - Population](#413---population)
+      - [4.1.4 - Happiness](#414---happiness)
+        - [Happiness Impact on Population:](#happiness-impact-on-population)
+        - [How to Influence Happiness:](#how-to-influence-happiness)
+      - [4.1.5 - Game Progression](#415---game-progression)
+      - [4.1.6 - Upgrade System](#416---upgrade-system)
         - [Building Upgrade Cost Breakdown (Example: $100,000 Initial Cost):](#building-upgrade-cost-breakdown-example-100000-initial-cost)
-    - [**4.1.7 Resource Management - Overview Diagram**](#417-resource-management---overview-diagram)
-  - [4.2 - Game Dilemmas](#42---game-dilemmas)
-    - [4.2.1 - Renovate vs. Rebuild](#421---renovate-vs-rebuild)
-      - [**Renovate**](#renovate)
-    - [4.2.2 - Public Transport vs. Cars](#422---public-transport-vs-cars)
-    - [4.2.3 - Green Energy vs. Fossil Fuels](#423---green-energy-vs-fossil-fuels)
-    - [4.2.4 - Recycling vs. Landfill](#424---recycling-vs-landfill)
-  - [4.3 - Strategic Decision-Making](#43---strategic-decision-making)
-    - [4.3.1 - Short-Term vs. Long-Term](#431---short-term-vs-long-term)
-    - [4.3.2 - Financial vs. Environmental](#432---financial-vs-environmental)
-    - [4.3.3 - Population Growth vs. Sustainability](#433---population-growth-vs-sustainability)
-    - [4.3.4 - Happiness vs. Efficiency](#434---happiness-vs-efficiency)
+    - [4.1.7 Resource Management - Overview Diagram](#417-resource-management---overview-diagram)
+    - [4.2 - Map](#42---map)
+      - [Navigation:](#navigation)
+    - [4.3 - Game Dilemmas](#43---game-dilemmas)
+      - [4.3.1 - Renovate vs. Rebuild](#431---renovate-vs-rebuild)
+      - [4.3.2 - Public Transport vs. Cars](#432---public-transport-vs-cars)
+      - [4.3.3 - Green Energy vs. Fossil Fuels](#433---green-energy-vs-fossil-fuels)
+      - [4.3.4 - Recycling vs. Landfill](#434---recycling-vs-landfill)
+    - [4.4 - Strategic Decision-Making](#44---strategic-decision-making)
+      - [4.4.1 - Short-Term vs. Long-Term](#441---short-term-vs-long-term)
+      - [4.4.2 - Financial vs. Environmental](#442---financial-vs-environmental)
+      - [4.4.3 - Population Growth vs. Sustainability](#443---population-growth-vs-sustainability)
+      - [4.4.4 - Happiness vs. Efficiency](#444---happiness-vs-efficiency)
 - [5 - Game Interface](#5---game-interface)
   - [5.1 - Main Menu](#51---main-menu)
   - [5.2 - Game Screen](#52---game-screen)
   - [5.3 - Building Menu](#53---building-menu)
   - [5.4 - Resource Indicators](#54---resource-indicators)
-  - [5.5 - Game Over Screen](#55---game-over-screen)
   - [5.6 - Settings](#56---settings)
 - [6 - End Matter](#6---end-matter)
   - [6.1 - Contributors](#61---contributors)
@@ -261,9 +259,9 @@ The game will be a **Serious Game** with elements of **Strategy** and **City Man
 
 **Carbon Control** will carry a **T (Teen 13+) rating** in the United States and a **PEGI 12 rating** in Europe.
 
-<img src="img/icons/rating/rated-T.png" style="min-height:18px;max-height:18px;"/> A **T (Teen 13+) rating** allows content suitable for players aged 13 and up, which may include violence, suggestive themes, crude humor, minimal blood, simulated gambling, and occasional strong language.
+<img src="img/icons/rating/rated-t.png" style="max-height:18px;"/> A **T (Teen 13+) rating** allows content suitable for players aged 13 and up, which may include violence, suggestive themes, crude humor, minimal blood, simulated gambling, and occasional strong language.
 
-<img src="img/icons/rating/pegi-12.png" style="min-height:18px;max-height:18px;"/> A **PEGI 12 rating** permits fantasy violence, non-realistic violence toward human-like characters, and mild nudity with some graphic detail.
+<img src="img/icons/rating/pegi-12.png" style="max-height:18px;"/> A **PEGI 12 rating** permits fantasy violence, non-realistic violence toward human-like characters, and mild nudity with some graphic detail.
 
 
 In our case, the game will be mild, containing no violence or nudity. We chose this rating to allow for occasional strong language to enhance character expression and realism, while still remaining accessible to a younger audience.
@@ -378,8 +376,6 @@ The game will feature a single-player gameplay in a sandbox mode. Players can ma
 
 The game will feature a grid-based construction system, allowing players to place buildings and structures on a city map. The grid system ensures that buildings are placed in an orderly fashion and align with the city's infrastructure.
 
-The grid system will have the following features: <!--  -->
-
 # 3. - Assets and Resources
 
 ## 3.1 - Game Assets
@@ -414,11 +410,11 @@ The residential buildings are used to house the city's population. They come in 
 
 | Name         | Description                                                           | Price to build | Number of Citizen | Price per Citizen | Slot Needed to Built | Image                                                                                |
 | ------------ | --------------------------------------------------------------------- | -------------- | ----------------- | ----------------- | -------------------- | ------------------------------------------------------------------------------------ |
-| Small House  | A small, single-family home for 2 citizens.                           | 28 000         | 2                 | 14 000            | 1 (1x1)              | <img src="img/assets/buildings/residential/small-house.png" style="height:100px;"/>  |
-| Medium House | A medium-sized home for 4 citizens.                                   | 60 000         | 4                 | 15 000            | 2 (2x1)              | <img src="img/assets/buildings/residential/medium-house.png" style="height:100px;"/> |
-| Large House  | A large, multi-story home for 6 citizens.                             | 84 000         | 6                 | 14 000            | 4 (2x2)              | <img src="img/assets/buildings/residential/large-house.png" style="height:100px;"/>  |
-| Apartment    | A multi-unit building with 6 apartments. Each unit houses 4 citizens. | 1 320 000      | 24                | 55 000            | 25 (5x5)             | <img src="img/assets/buildings/residential/apartment.png" style="height:100px;"/>    |
-| Skyscraper   | A high-rise building with 32 units. Each unit houses 4 citizens.      | 7 040 000      | 128               | 55 000            | 81 (9x9)             | <img src="img/assets/buildings/residential/skyscraper.png" style="height:100px;"/>   |
+| Small House  | A small, single-family home for 2 citizens.                           | $28,000         | 2                 | 14,000$            | 1 (1x1)              | <img src="img/assets/buildings/residential/small-house.png" style="height:100px;"/>  |
+| Medium House | A medium-sized home for 4 citizens.                                   | $60,000         | 4                 | 15,000$            | 2 (2x1)              | <img src="img/assets/buildings/residential/medium-house.png" style="height:100px;"/> |
+| Large House  | A large, multi-story home for 6 citizens.                             | $84,000         | 6                 | 14,000$            | 4 (2x2)              | <img src="img/assets/buildings/residential/large-house.png" style="height:100px;"/>  |
+| Apartment    | A multi-unit building with 6 apartments. Each unit houses 4 citizens. | $1,320,000      | 24                | 55,000$            | 25 (5x5)             | <img src="img/assets/buildings/residential/apartment.png" style="height:100px;"/>    |
+| Skyscraper   | A high-rise building with 32 units. Each unit houses 4 citizens.      | $7,040,000      | 128               | 55,000$            | 81 (9x9)             | <img src="img/assets/buildings/residential/skyscraper.png" style="height:100px;"/>   |
 
 #### 3.1.1.2 - Commercial Buildings
 
@@ -426,22 +422,25 @@ The commercial buildings are used to provide goods and services to the city's po
 
 | Name          | Description                                          | Price to build | Earning by Day | Day to Earn Back | Slot Needed to Built | Image                                                                             |
 | ------------- | ---------------------------------------------------- | -------------- | -------------- | ---------------- | -------------------- | --------------------------------------------------------------------------------- |
-| Bookshop      | A small shop selling books and magazines.            | 40 000        | 800           | 50               | 4 (2x2)              | <img src="img/assets/buildings/commercial/bookshop.png" style="height:100px;"/>   |
-| BarberShop    | A barbershop offering haircuts and shaves.           | 60 000        | 1 200         | 50               | 4 (2x2)              | <img src="img/assets/buildings/commercial/barbershop.png" style="height:100px;"/> |
-| Bakery        | A bakery selling bread, pastries, and cakes.         | 80 000        | 1 400         | 57               | 4 (2x2)              | <img src="img/assets/buildings/commercial/bakery.png" style="height:100px;"/>     |
-| Pharmacy      | A pharmacy selling medicine and health products.     | 120 000       | 2 000         | 60               | 4 (2x2)              | <img src="img/assets/buildings/commercial/pharmacy.png" style="height:100px;"/>   |
-| Hardware Shop | A hardware store selling tools and supplies.         | 200 000       | 3 000         | 67               | 4 (2x2)              | <img src="img/assets/buildings/commercial/hardware.png" style="height:100px;"/>   |
-| Farm          | A farm producing fresh fruits and vegetables.        | 1 200 000     | 12 000        | 100              | 120 (12x10)          | <img src="img/assets/buildings/commercial/farm.png" style="height:100px;"/>       |
-| Casino        | A casino offering games of chance and entertainment. | 3 000 000     | 30 000        | 100              | 12 (6x2)             | <img src="img/assets/buildings/commercial/casino.png" style="height:100px;"/>     |
+| Bookshop      | A small shop selling books and magazines.            | $40,000        | $800           | 50               | 4 (2x2)              | <img src="img/assets/buildings/commercial/bookshop.png" style="height:100px;"/>   |
+| BarberShop    | A barbershop offering haircuts and shaves.           | $60,000        | $1,200         | 50               | 4 (2x2)              | <img src="img/assets/buildings/commercial/barbershop.png" style="height:100px;"/> |
+| Bakery        | A bakery selling bread, pastries, and cakes.         | $80,000        | $1,400         | 57               | 4 (2x2)              | <img src="img/assets/buildings/commercial/bakery.png" style="height:100px;"/>     |
+| Pharmacy      | A pharmacy selling medicine and health products.     | $120,000       | $2,000         | 60               | 4 (2x2)              | <img src="img/assets/buildings/commercial/pharmacy.png" style="height:100px;"/>   |
+| Hardware Shop | A hardware store selling tools and supplies.         | $200,000       | $3,000         | 67               | 4 (2x2)              | <img src="img/assets/buildings/commercial/hardware.png" style="height:100px;"/>   |
+| Farm          | A farm producing fresh fruits and vegetables.        | $1,200,000     | $12,000        | 100              | 120 (12x10)          | <img src="img/assets/buildings/commercial/farm.png" style="height:100px;"/>       |
+| Casino        | A casino offering games of chance and entertainment. | $3,000,000     | $30,000        | 100              | 12 (6x2)             | <img src="img/assets/buildings/commercial/casino.png" style="height:100px;"/>     |
 
 #### 3.1.1.2 - Industrial Buildings
 
-The industrial buildings are used to produce goods and materials for the city. **They generate CO₂ emissions.**
+The industrial buildings are used to produce goods and materials for the city. **They generate CO₂ emissions or reduce the CO₂ emissions.**
 
-| Name        | Description                              | Price to build | Earning by Day | Day to Earn Back | CO2 Produced by Day | Slot Needed to Built | Image                                                                              |
+| Name        | Description                              | Price to build | Earning by Day | Day to Earn Back | CO2 by Day | Slot Needed to Built | Image                                                                              |
 | ----------- | ---------------------------------------- | -------------- | -------------- | ---------------- | ------------------- | -------------------- | ---------------------------------------------------------------------------------- |
-| Factory     | A factory producing goods and materials. | 400 000       | 8 000         | 50               | 12 000             | 12 (4x3)             | <img src="img/assets/buildings/industrial/factory.png" style="height:100px;"/>     |
-| Power Plant | A power plant generating electricity.    | 3 000 000     | 45 000        | 67               | 40 000             | 25 (5x5)             | <img src="img/assets/buildings/industrial/power-plant.png" style="height:100px;"/> |
+| Factory     | A factory producing goods and materials. | $400,000       | $8,000         | 50               | 12 000             | 12 (4x3)             | <img src="img/assets/buildings/industrial/factory.png" style="height:100px;"/>     |
+| Recycling Center | A recycling center processing waste.    | $1,200,000     | $15,000        | 80               | -8 000              | 30 (6x5)             | No Image Available                                                                 |
+| Power Plant | A power plant generating electricity.    | $3,000,000     | $35,000        | 86               | 20 000             | 25 (5x5)             | <img src="img/assets/buildings/industrial/power-plant.png" style="height:100px;"/> |
+| Oil Refinery | An oil refinery producing fuel.          | $7,000,000     | $65,000        | 108              | 50 000             | 36 (6x6)             | No Image Available                                                                 |
+
 
 #### 3.1.1.3 - Public Buildings
 
@@ -449,10 +448,10 @@ The public buildings are used to provide services and amenities to the city's po
 
 | Name      | Description                               | Price to build | Earning by Day | Day to Earn Back | Hapinness | Slot Needed to Built | Image                                                                        |
 | --------- | ----------------------------------------- | -------------- | -------------- | ---------------- | --------- | -------------------- | ---------------------------------------------------------------------------- |
-| City Hall | The city's administrative center.         | 0              | 0              | 0                | 100      | 6 (3x2)              | <img src="img/assets/buildings/public/city-hall.png" style="height:100px;"/> |
-| School    | A school providing education to children. | 200 000       | 1 000         | 200              | 400      | 9 (3x3)              | <img src="img/assets/buildings/public/school.png" style="height:100px;"/>    |
-| Hospital  | A hospital providing medical care.        | 400 000       | 2 000         | 200              | 600      | 9 (3x3)              | <img src="img/assets/buildings/public/hospital.png" style="height:100px;"/>  |
-| Museum    | A museum showcasing art and history.      | 800 000       | 4 000         | 200              | 1 200    | 32 (8x4)             | <img src="img/assets/buildings/public/museum.png" style="height:100px;"/>    |
+| City Hall | The city's administrative center.         | $0             | $0             | 0                | 100      | 6 (3x2)              | <img src="img/assets/buildings/public/city-hall.png" style="height:100px;"/> |
+| School    | A school providing education to children. | $200,000       | $1,000         | 200              | 400      | 9 (3x3)              | <img src="img/assets/buildings/public/school.png" style="height:100px;"/>    |
+| Hospital  | A hospital providing medical care.        | $400,000       | $2,000         | 200              | 600      | 9 (3x3)              | <img src="img/assets/buildings/public/hospital.png" style="height:100px;"/>  |
+| Museum    | A museum showcasing art and history.      | $800,000       | $4,000         | 200              | 1 200    | 32 (8x4)             | <img src="img/assets/buildings/public/museum.png" style="height:100px;"/>    |
 
 ### 3.1.2 - Green Spaces and Energy Sources
 
@@ -467,10 +466,10 @@ The game will feature the following green spaces and energy sources:
 
 | Name         | Description                                 | Price to build | Earning by Day | Day to Earn Back | CO2 Non-Produced by Day | Happiness | Slot Needed to Built | Image                                                                                 |
 | ------------ | ------------------------------------------- | -------------- | -------------- | ---------------- | ----------------------- | --------- | -------------------- | ------------------------------------------------------------------------------------- |
-| Park         | A public park with green spaces and trees.  | 40 000        | 100           | 400              | 600                    | 300      | 4 (2x2)              | No Image Available                                                                    |
-| Lake         | A natural lake providing water and scenery. | 80 000        | 200           | 400              | 800                    | 400      | 9 (3x3)              | <img src="img/assets/buildings/green-spaces/lake.png" style="height:100px;"/>         |
-| Wind Turbine | Wind turbines generating electricity.       | 360 000       | 2 000         | 180              | 1 200                  | 0         | 12 (4x3)             | <img src="img/assets/buildings/green-spaces/wind-turbine.png" style="height:100px;"/> |
-| Solar Panel  | Solar panels generating electricity.        | 600 000       | 4 000         | 150              | 2 000                  | 0         | 16 (4x4)             | <img src="img/assets/buildings/green-spaces/solar-panel.png" style="height:100px;"/>  |
+| Park         | A public park with green spaces and trees.  | $40,000        | $100           | 400              | 600                    | 300      | 4 (2x2)              | No Image Available                                                                    |
+| Lake         | A natural lake providing water and scenery. | $80,000        | $200           | 400              | 800                    | 400      | 9 (3x3)              | <img src="img/assets/buildings/green-spaces/lake.png" style="height:100px;"/>         |
+| Wind Turbine | Wind turbines generating electricity.       | $360,000       | $2,000         | 180              | 1 200                  | 0         | 12 (4x3)             | <img src="img/assets/buildings/green-spaces/wind-turbine.png" style="height:100px;"/> |
+| Solar Panel  | Solar panels generating electricity.        | $600,000       | $4,000         | 150              | 2 000                  | 0         | 16 (4x4)             | <img src="img/assets/buildings/green-spaces/solar-panel.png" style="height:100px;"/>  |
 
 ### 3.1.3 - Decorative Elements
 
@@ -480,9 +479,9 @@ The game will feature the following decorative elements:
 
 | Name        | Description                            | Price to build | Earning by Day | Day to Earn Back | CO2 Non-Produced by Day | Happiness | Slot Needed to Built | Image                                                                    |
 | ----------- | -------------------------------------- | -------------- | -------------- | ---------------- | ----------------------- | --------- | -------------------- | ------------------------------------------------------------------------ |
-| Trees       | A spot of several trees.               | 1 000         | 0              | Never            | 50                     | 10       | 1 (1x1)              | <img src="img/assets/decorative/trees.png" style="height:100px;"/>       |
-| Bench       | A bench for citizens to sit and relax. | 1 000         | 0              | Never            | 0                       | 20       | 1 (1x1)              | <img src="img/assets/decorative/bench.png" style="height:100px;"/>       |
-| Streetlight | A streetlight to illuminate the city.  | 1 000         | 0              | Never            | 0                       | 10       | 1 (1x1)              | <img src="img/assets/decorative/streetlight.png" style="height:100px;"/> |
+| Trees       | A spot of several trees.               | $1,000         | $0              | Never            | 50                     | 10       | 1 (1x1)              | <img src="img/assets/decorative/trees.png" style="height:100px;"/>       |
+| Bench       | A bench for citizens to sit and relax. | $1,000         | $0              | Never            | 0                       | 20       | 1 (1x1)              | <img src="img/assets/decorative/bench.png" style="height:100px;"/>       |
+| Streetlight | A streetlight to illuminate the city.  | $1,000         | $0              | Never            | 0                       | 10       | 1 (1x1)              | <img src="img/assets/decorative/streetlight.png" style="height:100px;"/> |
 
 ### 3.1.4 - Ground Textures
 
@@ -553,7 +552,8 @@ The secondary font used is **Roboto**. It is a versatile, easy-to-read font that
 
 ## 4.1 - Resource Balancing
 
-#### **4.1.1 - CO₂ Levels**  
+#### 4.1.1 - CO₂ Levels
+
 CO₂ levels indicate the environmental impact of the city. Players aim to keep CO₂ levels low while balancing economic growth and sustainability.
 
 ##### CO₂ Emission Impact Table:
@@ -574,9 +574,7 @@ CO₂ levels indicate the environmental impact of the city. Players aim to keep 
 | Implementing eco-friendly policies                 | Allowing traffic congestion                        |
 | Encouraging public transport use                   | Ignoring environmental issues                     |
 
----
-
-#### **4.1.2 - Money**  
+#### 4.1.2 - Money
 Money represents financial resources. Players must balance earning and spending to grow the city sustainably.
 
 ##### Money Flow:
@@ -587,21 +585,17 @@ Money represents financial resources. Players must balance earning and spending 
 | Generate income from commercial/industrial zones| Upgrade buildings                            |
 | Complete missions and challenges                | Fund green initiatives and policies          |
 
----
-
-#### **4.1.3 - Population**  
+#### 4.1.3 - Population
 Population reflects the city's growth and prosperity.
 
 | **Increase Population**          | **Decrease Population**                     |
 | -------------------------------- | ------------------------------------------ |
 | Build residential buildings       | Allow happiness to drop too low            |
 
----
-
-#### **4.1.4 - Happiness**
+#### 4.1.4 - Happiness
 Happiness represents citizen satisfaction and well-being. Maintaining a high happiness level leads to population growth, while low happiness causes population decline.
 
-##### **Happiness Impact on Population:**
+##### Happiness Impact on Population:
 
 | Happiness Level (%) | Population Impact                        |
 |----------------------|------------------------------------------|
@@ -613,25 +607,21 @@ Happiness represents citizen satisfaction and well-being. Maintaining a high hap
 | **71%-90%**          | 2 citizens arrive each day              |
 | **91%-100%**         | 3 citizens arrive each day              |
 
-##### **How to Influence Happiness:**
+##### How to Influence Happiness:
 
 | **Increase Happiness**                          | **Decrease Happiness**                       |
 | ---------------------------------------------- | ------------------------------------------- |
 | Build green spaces and public amenities        | Neglect citizen needs                       |
 | Provide services like schools and hospitals    | Allow CO₂ levels to rise excessively        |  
 
----
-
-#### **4.1.5 - Game Progression**  
+#### 4.1.5 - Game Progression
 The game advances over time:
 
 - **In-Game Day:** 12 seconds in real-time.
 - **Events:** Trigger every 6 in-game months, offering new buildings, policies, technologies, or dilemmas with resource impacts.  
 - **Game End:** After 10 in-game years or if CO₂ levels reach critical levels.
 
----
-
-#### **4.1.6 - Upgrade System**  
+#### 4.1.6 - Upgrade System
 Buildings can be upgraded to improve efficiency and reduce environmental impact. 
 
 ##### Building Upgrade Cost Breakdown (Example: $100,000 Initial Cost):
@@ -649,9 +639,7 @@ Buildings can be upgraded to improve efficiency and reduce environmental impact.
 | **9**          | $212,600     | 40%               | $744,099                  |
 | **10 (max)**    | $372,050     | 50%               | $1,116,149                |
 
----
-
-### **4.1.7 Resource Management - Overview Diagram**
+### 4.1.7 Resource Management - Overview Diagram
 
 ```mermaid
 graph TD
@@ -689,37 +677,83 @@ graph TD
     E -->|Negative Actions| AC[High CO₂, Neglect]
 ```
 
-## 4.2 - Game Dilemmas
+### 4.2 - Map
 
-### 4.2.1 - Renovate vs. Rebuild
+The game world is represented as a **grid-based map** of **255x255 tiles**. Players construct, manage, and optimize their city within this grid to achieve a balance between environmental sustainability and urban development.
 
-#### **Renovate** 
-- **Description:** Renovating a building improves its efficiency and reduces its environmental impact.
-- **Cost:** 50% of the building's initial cost.
-- 
+#### Navigation:
+- Players can zoom in and out to get a detailed or overall view of their city.
+- The grid facilitates precise planning and allocation of resources.
 
-### 4.2.2 - Public Transport vs. Cars
-<!--! TODO  -->
+### 4.3 - Game Dilemmas
 
-### 4.2.3 - Green Energy vs. Fossil Fuels
-<!--! TODO  -->
+#### 4.3.1 - Renovate vs. Rebuild
 
-### 4.2.4 - Recycling vs. Landfill
-<!--! TODO  -->
+Every building has a lifespan of **1,000 in-game days**, after which players must choose to **renovate** or **rebuild**. The game incentivizes **renovation** as the more eco-friendly option.
 
-## 4.3 - Strategic Decision-Making
+| **Option**     | **Details**                                                                                             | **Cost**                   | **Impact**                                                                                              |
+|-----------------|-------------------------------------------------------------------------------------------------------|----------------------------|--------------------------------------------------------------------------------------------------------|
+| **Renovate**    | Increases the building's efficiency and reduces its environmental impact.                              | 40% of the building's cost | Extends lifespan by 500 days, moderately decreases CO₂ emissions.                                      |
+| **Rebuild**     | Constructs a new building, upgrading to a better version.                                              | 100% of the building's cost| Resets lifespan to 1,000 days but generates more CO₂ emissions during the rebuilding process.           |
 
-### 4.3.1 - Short-Term vs. Long-Term
-<!--! TODO  -->
+#### 4.3.2 - Public Transport vs. Cars
 
-### 4.3.2 - Financial vs. Environmental
-<!--! TODO  -->
+Players must balance the city's transport needs by choosing between **public transport systems** or a car-centric approach. 
 
-### 4.3.3 - Population Growth vs. Sustainability
-<!--! TODO  -->
+| **Option**         | **Details**                                                                                             | **Cost**                              | **Impact**                                                                                              |
+|---------------------|-------------------------------------------------------------------------------------------------------|---------------------------------------|--------------------------------------------------------------------------------------------------------|
+| **Public Transport**| Build infrastructure like buses and trams for efficient transportation.                                | $300 for every 15 citizens            | Decreases CO₂ emissions and improves citizen happiness.                                                |
+| **Cars**            | Expand roads and highways to support car usage.                                                       | $10 per car for every 2 citizens      | Increases CO₂ emissions but boosts economic activity through logistics.                                |
 
-### 4.3.4 - Happiness vs. Efficiency
-<!--! TODO  -->
+#### 4.3.3 - Green Energy vs. Fossil Fuels
+
+The choice between **green energy** and **fossil fuels** depends on the infrastructure built in the city.  
+
+| **Option**         | **Details**                                                                                             | **Cost**                              | **Impact**                                                                                              |
+|---------------------|-------------------------------------------------------------------------------------------------------|---------------------------------------|--------------------------------------------------------------------------------------------------------|
+| **Green Energy**    | Requires constructing **Wind Turbines** and **Solar Panels** to generate clean energy.                 | High initial setup cost, low upkeep   | Decreases CO₂ emissions and improves happiness.                                                        |
+| **Fossil Fuels**    | Relies on building **Oil Refineries** for energy production.                                           | Moderate initial setup cost, high upkeep| Increases CO₂ emissions and lowers citizen satisfaction.                                               |
+
+#### 4.3.4 - Recycling vs. Landfill
+
+Players must decide how to manage waste to minimize its environmental and social impacts.
+
+| **Option**         | **Details**                                                                                             | **Cost**                              | **Impact**                                                                                              |
+|---------------------|-------------------------------------------------------------------------------------------------------|---------------------------------------|--------------------------------------------------------------------------------------------------------|
+| **Recycling**       | Build recycling centers to process waste into reusable materials.                                      | Moderate setup cost, low upkeep       | Significantly decreases CO₂ emissions and improves happiness.                                          |
+| **Landfill**        | Allocate space for landfills to manage waste without processing.                                       | Low setup cost, high upkeep           | Significantly increases CO₂ emissions and reduces happiness.                                           |
+
+### 4.4 - Strategic Decision-Making
+
+Players must make pivotal choices to balance conflicting priorities, shaping their city's trajectory.
+
+#### 4.4.1 - Short-Term vs. Long-Term
+
+| **Option**            | **Details**                                                                                  | **Cost**                                   | **Impact**                                                                                      |
+|------------------------|----------------------------------------------------------------------------------------------|--------------------------------------------|--------------------------------------------------------------------------------------------------|
+| **Short-Term Gains**   | Focus on quick fixes or temporary solutions for immediate benefits.                         | Low upfront cost                           | Boosts immediate happiness and revenue but risks higher CO₂ levels or future financial strain. |
+| **Long-Term Planning** | Invest in sustainable development, infrastructure, and policies for gradual improvement.    | High upfront cost                          | Leads to reduced CO₂ levels and sustained happiness and growth over time.                      |
+
+#### 4.4.2 - Financial vs. Environmental
+
+| **Option**            | **Details**                                                                                  | **Cost**                                   | **Impact**                                                                                      |
+|------------------------|----------------------------------------------------------------------------------------------|--------------------------------------------|--------------------------------------------------------------------------------------------------|
+| **Financial Focus**    | Prioritize industrial growth, tax revenue, and economic expansion.                          | High CO₂ impact                            | Generates significant money but reduces citizen happiness and environmental quality.            |
+| **Environmental Focus**| Allocate resources toward green initiatives and eco-friendly policies.                      | High initial investment                    | Decreases CO₂ emissions and improves happiness but slows financial growth.                     |
+
+#### 4.4.3 - Population Growth vs. Sustainability
+
+| **Option**              | **Details**                                                                                | **Cost**                                   | **Impact**                                                                                      |
+|--------------------------|--------------------------------------------------------------------------------------------|--------------------------------------------|--------------------------------------------------------------------------------------------------|
+| **Population Growth**    | Encourage rapid city expansion by building residential areas and infrastructure.          | High resource and energy usage             | Attracts more citizens and boosts revenue but increases strain on the environment.             |
+| **Sustainability Focus** | Limit growth to ensure resource availability and reduce environmental impact.              | Slower economic growth                     | Maintains balance between resources and happiness, preventing overpopulation and CO₂ spikes.   |
+
+#### 4.4.4 - Happiness vs. Efficiency
+
+| **Option**              | **Details**                                                                                | **Cost**                                   | **Impact**                                                                                      |
+|--------------------------|--------------------------------------------------------------------------------------------|--------------------------------------------|--------------------------------------------------------------------------------------------------|
+| **Happiness Priority**   | Focus on building amenities like parks and schools to increase citizen well-being.         | High initial cost                          | Increases happiness but slows infrastructure or industrial development.                        |
+| **Efficiency Priority**  | Streamline city operations, focusing on production and resource management.                | Reduced focus on citizen satisfaction      | Improves resource efficiency but risks unhappiness and emigration.                             |
 
 # 5 - Game Interface
 
@@ -735,8 +769,6 @@ graph TD
 ## 5.4 - Resource Indicators
 <!--! TODO  -->
 
-## 5.5 - Game Over Screen
-<!--! TODO  -->
 
 ## 5.6 - Settings
 <!--! TODO  -->
@@ -747,8 +779,15 @@ graph TD
 
 The following contributors have participated in the creation of this project:
 
-| Photo | Name | Role | LinkedIn | GitHub |
-| ----- | ---- | ---- | -------- | ------ |
+| Photo| Name | Role | Contact (*Click*) |
+| ---- | ---- | ---- | ----------------- |
+| <img src="https://media.licdn.com/dms/image/v2/D5603AQF7d1atB4eiFw/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1695912635010?e=1737590400&v=beta&t=9tsL6LjQX4VgVNfRXVkTCMgCSFsnqNjhS1gWODDvnO4" width="50">  | Rémy CHARLES | Project Manager | [<img src="https://cdn.pixabay.com/photo/2022/01/30/13/33/github-6980894_1280.png" width="30">](https://github.com/RemyCHARLES) [<img src="https://www.presse-citron.net/app/uploads/2020/06/linkedin-logo.jpg"  width="30">](https://www.linkedin.com/in/r%C3%A9my-charles-2a8960232/) |
+| <img src="https://media.licdn.com/dms/image/v2/D4E03AQHqFcMtLtVuag/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1696599167147?e=1737590400&v=beta&t=fP0_-dsh8k1Pqzdg9St89IA98oTJpUxl-Zjnec9cYq4" width="50"> | Pierre GORIN | Program Manager | [<img src="https://cdn.pixabay.com/photo/2022/01/30/13/33/github-6980894_1280.png" width="30">](https://github.com/Pierre2103) [<img src="https://www.presse-citron.net/app/uploads/2020/06/linkedin-logo.jpg"  width="30">](https://www.linkedin.com/in/pierre-gorin-61a784221/) |
+| <img src="https://media.licdn.com/dms/image/v2/D4E03AQG4JssEc7tEOQ/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1695991836011?e=1737590400&v=beta&t=cDj7euLhhSMuTAWQXgUy9WfifxwrWgA5V0FPtkfWlY4" width="50">  | Salaheddine NAMIR | Tech Lead | [<img src="https://cdn.pixabay.com/photo/2022/01/30/13/33/github-6980894_1280.png" width="30">](https://github.com/T3rryc) [<img src="https://www.presse-citron.net/app/uploads/2020/06/linkedin-logo.jpg"  width="30">](https://www.linkedin.com/in/salaheddine-namir-3402471b8/) |
+| <img src="https://media.licdn.com/dms/image/v2/D4E03AQFIJpdgeOvvQQ/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1732199951840?e=1737590400&v=beta&t=f56zRsNW4vCyOKnpsZdMbzHjpf65Piw2tmDyibgPI6E" width="50">  | Alexis LASSELIN | Software Engineer | [<img src="https://cdn.pixabay.com/photo/2022/01/30/13/33/github-6980894_1280.png" width="30">](https://github.com/AlexisLasselin) [<img src="https://www.presse-citron.net/app/uploads/2020/06/linkedin-logo.jpg"  width="30">](https://www.linkedin.com/in/alexis-lasselin-318649251/) |
+| <img src="https://media.licdn.com/dms/image/v2/D4D03AQEKY-bD9z6Xdg/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1727448664015?e=1737590400&v=beta&t=8XaWGtukWZ2prhN__wFL9FHRPO1EjAZPAWB37l0A_P8" width="50">  | Camille GAYAT | Software Engineer | [<img src="https://cdn.pixabay.com/photo/2022/01/30/13/33/github-6980894_1280.png" width="30">](https://github.com/camillegayat) [<img src="https://www.presse-citron.net/app/uploads/2020/06/linkedin-logo.jpg"  width="30">](https://www.linkedin.com/in/camille-g-a89114293/) |
+| <img src="https://media.licdn.com/dms/image/v2/D4E03AQHUg0HyK6qWfg/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1727178196161?e=1737590400&v=beta&t=47pgQq4QZ0y8jQd3UNqUBX3r5ApDmzlMyNSiMxERM2I" width="50">  | Maxime CARON | Quality Assurance | [<img src="https://cdn.pixabay.com/photo/2022/01/30/13/33/github-6980894_1280.png" width="30">](https://github.com/MaximeAlgosup) [<img src="https://www.presse-citron.net/app/uploads/2020/06/linkedin-logo.jpg"  width="30">](https://www.linkedin.com/in/maxime-caron-dev/) |
+| <img src="https://media.licdn.com/dms/image/v2/D4E03AQESvmny4SOxIg/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1720217974116?e=1737590400&v=beta&t=OKeRHjaJ6xruw-tmYds5tR4tvTDywG8t52dgC4fen4A" width="50">  | Elone DELILLE | Technical Writer | [<img src="https://cdn.pixabay.com/photo/2022/01/30/13/33/github-6980894_1280.png" width="30">](https://github.com/HiNett) [<img src="https://www.presse-citron.net/app/uploads/2020/06/linkedin-logo.jpg"  width="30">](https://www.linkedin.com/in/elonedelille/) |
 
 ## 6.2 - License
 
