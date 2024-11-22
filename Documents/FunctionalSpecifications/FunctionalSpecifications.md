@@ -95,22 +95,22 @@
       - [3.1.9.2 - Secondary Font](#3192---secondary-font)
 - [4 - Game Mechanics](#4---game-mechanics)
   - [4.1 - Resource Balancing](#41---resource-balancing)
-    - [Improved Presentation](#improved-presentation)
       - [**4.1.1 - CO₂ Levels**](#411---co-levels)
         - [CO₂ Emission Impact Table:](#co-emission-impact-table)
         - [Actions Impacting CO₂ Levels:](#actions-impacting-co-levels)
       - [**4.1.2 - Money**](#412---money)
         - [Money Flow:](#money-flow)
       - [**4.1.3 - Population**](#413---population)
-      - [**4.1.4 - Happiness** (Updated)](#414---happiness-updated)
+      - [**4.1.4 - Happiness**](#414---happiness)
         - [**Happiness Impact on Population:**](#happiness-impact-on-population)
         - [**How to Influence Happiness:**](#how-to-influence-happiness)
       - [**4.1.5 - Game Progression**](#415---game-progression)
       - [**4.1.6 - Upgrade System**](#416---upgrade-system)
         - [Building Upgrade Cost Breakdown (Example: $100,000 Initial Cost):](#building-upgrade-cost-breakdown-example-100000-initial-cost)
-    - [Diagram: Resource Management Overview](#diagram-resource-management-overview)
+    - [**4.1.7 Resource Management - Overview Diagram**](#417-resource-management---overview-diagram)
   - [4.2 - Game Dilemmas](#42---game-dilemmas)
     - [4.2.1 - Renovate vs. Rebuild](#421---renovate-vs-rebuild)
+      - [**Renovate**](#renovate)
     - [4.2.2 - Public Transport vs. Cars](#422---public-transport-vs-cars)
     - [4.2.3 - Green Energy vs. Fossil Fuels](#423---green-energy-vs-fossil-fuels)
     - [4.2.4 - Recycling vs. Landfill](#424---recycling-vs-landfill)
@@ -261,9 +261,9 @@ The game will be a **Serious Game** with elements of **Strategy** and **City Man
 
 **Carbon Control** will carry a **T (Teen 13+) rating** in the United States and a **PEGI 12 rating** in Europe.
 
-<img src="img/icons/rating/rated-T.png" style="max-height:18px;"/> A **T (Teen 13+) rating** allows content suitable for players aged 13 and up, which may include violence, suggestive themes, crude humor, minimal blood, simulated gambling, and occasional strong language.
+<img src="img/icons/rating/rated-T.png" style="min-height:18px;max-height:18px;"/> A **T (Teen 13+) rating** allows content suitable for players aged 13 and up, which may include violence, suggestive themes, crude humor, minimal blood, simulated gambling, and occasional strong language.
 
-<img src="img/icons/rating/pegi-12.png" style="max-height:18px;"/> A **PEGI 12 rating** permits fantasy violence, non-realistic violence toward human-like characters, and mild nudity with some graphic detail.
+<img src="img/icons/rating/pegi-12.png" style="min-height:18px;max-height:18px;"/> A **PEGI 12 rating** permits fantasy violence, non-realistic violence toward human-like characters, and mild nudity with some graphic detail.
 
 
 In our case, the game will be mild, containing no violence or nudity. We chose this rating to allow for occasional strong language to enhance character expression and realism, while still remaining accessible to a younger audience.
@@ -276,7 +276,7 @@ The primary audience includes teenagers and young adults interested in environme
 
 | The Ecological Activist                                                                                                                                                                                                                                                                                                                               | The Concerned Parent                                                                                                                                                                                                                                                                                |
 | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| <img src="img/personas/eco-activist.png" style="max-height:250px;"/>                                                                                                                                                                                                                                                                                      | <img src="img/personas/concerned-parent.png" style="max-height:250px;"/>                                                                                                                                                                                                                                |
+| <img src="img/personas/eco-activist.png" style="height:250px;"/>                                                                                                                                                                                                                                                                                      | <img src="img/personas/concerned-parent.png" style="height:250px;"/>                                                                                                                                                                                                                                |
 | **Name:** Emma Green                                                                                                                                                                                                                                                                                                                                  | **Name:** Sarah Robinson                                                                                                                                                                                                                                                                            |
 | **Age:** 29                                                                                                                                                                                                                                                                                                                                           | **Age:** 42                                                                                                                                                                                                                                                                                         |
 | **Occupation:** Environmental Consultant                                                                                                                                                                                                                                                                                                              | **Occupation:** High School Science Teacher                                                                                                                                                                                                                                                         |
@@ -290,7 +290,7 @@ The primary audience includes teenagers and young adults interested in environme
 
 | The Strategy Enthusiast                                                                                                                                                                                                                                                                                                                                | The Casual Gamer                                                                                                                                                                                                                                                                                                                 |
 | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| <img src="img/personas/strategy-enthusiast.png" style="max-height:250px;"/>                                                                                                                                                                                                                                                                                | <img src="img/personas/casual-gamer.png" style="max-height:250px;"/>                                                                                                                                                                                                                                                                 |
+| <img src="img/personas/strategy-enthusiast.png" style="height:250px;"/>                                                                                                                                                                                                                                                                                | <img src="img/personas/casual-gamer.png" style="height:250px;"/>                                                                                                                                                                                                                                                                 |
 | **Name:** James Mitchell                                                                                                                                                                                                                                                                                                                               | **Name:** Lucas Dupont                                                                                                                                                                                                                                                                                                           |
 | **Age:** 35                                                                                                                                                                                                                                                                                                                                            | **Age:** 19                                                                                                                                                                                                                                                                                                                      |
 | **Occupation:** Software Engineer                                                                                                                                                                                                                                                                                                                      | **Occupation:** University Student (Economics)                                                                                                                                                                                                                                                                                   |
@@ -301,7 +301,7 @@ The primary audience includes teenagers and young adults interested in environme
 
 ### 2.1.3 - Game Setting
 
-**Carbon Control** will be available on computers, the supported operating systems will be Windows <img src="img/icons/os/windows.png" style="max-height:18px;"/> and MacOS <img src="img/icons/os/macos.png" style="max-height:18px;"/>. 
+**Carbon Control** will be available on computers, the supported operating systems will be Windows <img src="img/icons/os/windows.png" style="height:18px;"/> and MacOS <img src="img/icons/os/macos.png" style="height:18px;"/>. 
 The player will be able to set the language of the game in the settings, the game will be available in American English <img src="img/icons/flags/usa.png" style="width:18px;"/> and French <img src="img/icons/flags/france.png" style="width:18px;"/>.
 
 ### 2.1.4 - Game Mechanics  
@@ -365,10 +365,10 @@ Each in-game decision presents a dilemma with educational context, such as:
 
 | Name             | Description                                            | Role                 | Image                                                                         |
 | ---------------- | ------------------------------------------------------ | -------------------- | ----------------------------------------------------------------------------- |
-| Mayor            | The player character, acting as the mayor of the city. | Protagonist          | <img src="img/assets/characters/mayor.png" style="max-height:100px;"/>            |
-| Citizen          | Represents the city's population and happiness.        | Supporting Character | <img src="img/assets/characters/citizen.png" style="max-height:100px;"/>          |
-| Environmentalist | Provides advice and context on ecological dilemmas.    | Supporting Character | <img src="img/assets/characters/environmentalist.png" style="max-height:100px;"/> |
-| Worker           | Represents the city's labor force.                     | Supporting Character | <img src="img/assets/characters/worker.png" style="max-height:100px;"/>           |
+| Mayor            | The player character, acting as the mayor of the city. | Protagonist          | <img src="img/assets/characters/mayor.png" style="height:100px;"/>            |
+| Citizen          | Represents the city's population and happiness.        | Supporting Character | <img src="img/assets/characters/citizen.png" style="height:100px;"/>          |
+| Environmentalist | Provides advice and context on ecological dilemmas.    | Supporting Character | <img src="img/assets/characters/environmentalist.png" style="height:100px;"/> |
+| Worker           | Represents the city's labor force.                     | Supporting Character | <img src="img/assets/characters/worker.png" style="height:100px;"/>           |
 
 ### 2.3.4 - Game Level
 
@@ -414,11 +414,11 @@ The residential buildings are used to house the city's population. They come in 
 
 | Name         | Description                                                           | Price to build | Number of Citizen | Price per Citizen | Slot Needed to Built | Image                                                                                |
 | ------------ | --------------------------------------------------------------------- | -------------- | ----------------- | ----------------- | -------------------- | ------------------------------------------------------------------------------------ |
-| Small House  | A small, single-family home for 2 citizens.                           | 28 000         | 2                 | 14 000            | 1 (1x1)              | <img src="img/assets/buildings/residential/small-house.png" style="max-height:100px;"/>  |
-| Medium House | A medium-sized home for 4 citizens.                                   | 60 000         | 4                 | 15 000            | 2 (2x1)              | <img src="img/assets/buildings/residential/medium-house.png" style="max-height:100px;"/> |
-| Large House  | A large, multi-story home for 6 citizens.                             | 84 000         | 6                 | 14 000            | 4 (2x2)              | <img src="img/assets/buildings/residential/large-house.png" style="max-height:100px;"/>  |
-| Apartment    | A multi-unit building with 6 apartments. Each unit houses 4 citizens. | 1 320 000      | 24                | 55 000            | 25 (5x5)             | <img src="img/assets/buildings/residential/apartment.png" style="max-height:100px;"/>    |
-| Skyscraper   | A high-rise building with 32 units. Each unit houses 4 citizens.      | 7 040 000      | 128               | 55 000            | 81 (9x9)             | <img src="img/assets/buildings/residential/skyscraper.png" style="max-height:100px;"/>   |
+| Small House  | A small, single-family home for 2 citizens.                           | 28 000         | 2                 | 14 000            | 1 (1x1)              | <img src="img/assets/buildings/residential/small-house.png" style="height:100px;"/>  |
+| Medium House | A medium-sized home for 4 citizens.                                   | 60 000         | 4                 | 15 000            | 2 (2x1)              | <img src="img/assets/buildings/residential/medium-house.png" style="height:100px;"/> |
+| Large House  | A large, multi-story home for 6 citizens.                             | 84 000         | 6                 | 14 000            | 4 (2x2)              | <img src="img/assets/buildings/residential/large-house.png" style="height:100px;"/>  |
+| Apartment    | A multi-unit building with 6 apartments. Each unit houses 4 citizens. | 1 320 000      | 24                | 55 000            | 25 (5x5)             | <img src="img/assets/buildings/residential/apartment.png" style="height:100px;"/>    |
+| Skyscraper   | A high-rise building with 32 units. Each unit houses 4 citizens.      | 7 040 000      | 128               | 55 000            | 81 (9x9)             | <img src="img/assets/buildings/residential/skyscraper.png" style="height:100px;"/>   |
 
 #### 3.1.1.2 - Commercial Buildings
 
@@ -426,13 +426,13 @@ The commercial buildings are used to provide goods and services to the city's po
 
 | Name          | Description                                          | Price to build | Earning by Day | Day to Earn Back | Slot Needed to Built | Image                                                                             |
 | ------------- | ---------------------------------------------------- | -------------- | -------------- | ---------------- | -------------------- | --------------------------------------------------------------------------------- |
-| Bookshop      | A small shop selling books and magazines.            | -40 000        | +800           | 50               | 4 (2x2)              | <img src="img/assets/buildings/commercial/bookshop.png" style="max-height:100px;"/>   |
-| BarberShop    | A barbershop offering haircuts and shaves.           | -60 000        | +1 200         | 50               | 4 (2x2)              | <img src="img/assets/buildings/commercial/barbershop.png" style="max-height:100px;"/> |
-| Bakery        | A bakery selling bread, pastries, and cakes.         | -80 000        | +1 400         | 57               | 4 (2x2)              | <img src="img/assets/buildings/commercial/bakery.png" style="max-height:100px;"/>     |
-| Pharmacy      | A pharmacy selling medicine and health products.     | -120 000       | +2 000         | 60               | 4 (2x2)              | <img src="img/assets/buildings/commercial/pharmacy.png" style="max-height:100px;"/>   |
-| Hardware Shop | A hardware store selling tools and supplies.         | -200 000       | +3 000         | 67               | 4 (2x2)              | <img src="img/assets/buildings/commercial/hardware.png" style="max-height:100px;"/>   |
-| Farm          | A farm producing fresh fruits and vegetables.        | -1 200 000     | +12 000        | 100              | 120 (12x10)          | <img src="img/assets/buildings/commercial/farm.png" style="max-height:100px;"/>       |
-| Casino        | A casino offering games of chance and entertainment. | -3 000 000     | +30 000        | 100              | 12 (6x2)             | <img src="img/assets/buildings/commercial/casino.png" style="max-height:100px;"/>     |
+| Bookshop      | A small shop selling books and magazines.            | 40 000        | 800           | 50               | 4 (2x2)              | <img src="img/assets/buildings/commercial/bookshop.png" style="height:100px;"/>   |
+| BarberShop    | A barbershop offering haircuts and shaves.           | 60 000        | 1 200         | 50               | 4 (2x2)              | <img src="img/assets/buildings/commercial/barbershop.png" style="height:100px;"/> |
+| Bakery        | A bakery selling bread, pastries, and cakes.         | 80 000        | 1 400         | 57               | 4 (2x2)              | <img src="img/assets/buildings/commercial/bakery.png" style="height:100px;"/>     |
+| Pharmacy      | A pharmacy selling medicine and health products.     | 120 000       | 2 000         | 60               | 4 (2x2)              | <img src="img/assets/buildings/commercial/pharmacy.png" style="height:100px;"/>   |
+| Hardware Shop | A hardware store selling tools and supplies.         | 200 000       | 3 000         | 67               | 4 (2x2)              | <img src="img/assets/buildings/commercial/hardware.png" style="height:100px;"/>   |
+| Farm          | A farm producing fresh fruits and vegetables.        | 1 200 000     | 12 000        | 100              | 120 (12x10)          | <img src="img/assets/buildings/commercial/farm.png" style="height:100px;"/>       |
+| Casino        | A casino offering games of chance and entertainment. | 3 000 000     | 30 000        | 100              | 12 (6x2)             | <img src="img/assets/buildings/commercial/casino.png" style="height:100px;"/>     |
 
 #### 3.1.1.2 - Industrial Buildings
 
@@ -440,8 +440,8 @@ The industrial buildings are used to produce goods and materials for the city. *
 
 | Name        | Description                              | Price to build | Earning by Day | Day to Earn Back | CO2 Produced by Day | Slot Needed to Built | Image                                                                              |
 | ----------- | ---------------------------------------- | -------------- | -------------- | ---------------- | ------------------- | -------------------- | ---------------------------------------------------------------------------------- |
-| Factory     | A factory producing goods and materials. | -400 000       | +8 000         | 50               | +12 000             | 12 (4x3)             | <img src="img/assets/buildings/industrial/factory.png" style="max-height:100px;"/>     |
-| Power Plant | A power plant generating electricity.    | -3 000 000     | +45 000        | 67               | +40 000             | 25 (5x5)             | <img src="img/assets/buildings/industrial/power-plant.png" style="max-height:100px;"/> |
+| Factory     | A factory producing goods and materials. | 400 000       | 8 000         | 50               | 12 000             | 12 (4x3)             | <img src="img/assets/buildings/industrial/factory.png" style="height:100px;"/>     |
+| Power Plant | A power plant generating electricity.    | 3 000 000     | 45 000        | 67               | 40 000             | 25 (5x5)             | <img src="img/assets/buildings/industrial/power-plant.png" style="height:100px;"/> |
 
 #### 3.1.1.3 - Public Buildings
 
@@ -449,10 +449,10 @@ The public buildings are used to provide services and amenities to the city's po
 
 | Name      | Description                               | Price to build | Earning by Day | Day to Earn Back | Hapinness | Slot Needed to Built | Image                                                                        |
 | --------- | ----------------------------------------- | -------------- | -------------- | ---------------- | --------- | -------------------- | ---------------------------------------------------------------------------- |
-| City Hall | The city's administrative center.         | 0              | 0              | 0                | +100      | 6 (3x2)              | <img src="img/assets/buildings/public/city-hall.png" style="max-height:100px;"/> |
-| School    | A school providing education to children. | -200 000       | +1 000         | 200              | +400      | 9 (3x3)              | <img src="img/assets/buildings/public/school.png" style="max-height:100px;"/>    |
-| Hospital  | A hospital providing medical care.        | -400 000       | +2 000         | 200              | +600      | 9 (3x3)              | <img src="img/assets/buildings/public/hospital.png" style="max-height:100px;"/>  |
-| Museum    | A museum showcasing art and history.      | -800 000       | +4 000         | 200              | +1 200    | 32 (8x4)             | <img src="img/assets/buildings/public/museum.png" style="max-height:100px;"/>    |
+| City Hall | The city's administrative center.         | 0              | 0              | 0                | 100      | 6 (3x2)              | <img src="img/assets/buildings/public/city-hall.png" style="height:100px;"/> |
+| School    | A school providing education to children. | 200 000       | 1 000         | 200              | 400      | 9 (3x3)              | <img src="img/assets/buildings/public/school.png" style="height:100px;"/>    |
+| Hospital  | A hospital providing medical care.        | 400 000       | 2 000         | 200              | 600      | 9 (3x3)              | <img src="img/assets/buildings/public/hospital.png" style="height:100px;"/>  |
+| Museum    | A museum showcasing art and history.      | 800 000       | 4 000         | 200              | 1 200    | 32 (8x4)             | <img src="img/assets/buildings/public/museum.png" style="height:100px;"/>    |
 
 ### 3.1.2 - Green Spaces and Energy Sources
 
@@ -467,10 +467,10 @@ The game will feature the following green spaces and energy sources:
 
 | Name         | Description                                 | Price to build | Earning by Day | Day to Earn Back | CO2 Non-Produced by Day | Happiness | Slot Needed to Built | Image                                                                                 |
 | ------------ | ------------------------------------------- | -------------- | -------------- | ---------------- | ----------------------- | --------- | -------------------- | ------------------------------------------------------------------------------------- |
-| Park         | A public park with green spaces and trees.  | -40 000        | +100           | 400              | -600                    | +300      | 4 (2x2)              | No Image Available                                                                    |
-| Lake         | A natural lake providing water and scenery. | -80 000        | +200           | 400              | -800                    | +400      | 9 (3x3)              | <img src="img/assets/buildings/green-spaces/lake.png" style="max-height:100px;"/>         |
-| Wind Turbine | Wind turbines generating electricity.       | -360 000       | +2 000         | 180              | -1 200                  | 0         | 12 (4x3)             | <img src="img/assets/buildings/green-spaces/wind-turbine.png" style="max-height:100px;"/> |
-| Solar Panel  | Solar panels generating electricity.        | -600 000       | +4 000         | 150              | -2 000                  | 0         | 16 (4x4)             | <img src="img/assets/buildings/green-spaces/solar-panel.png" style="max-height:100px;"/>  |
+| Park         | A public park with green spaces and trees.  | 40 000        | 100           | 400              | 600                    | 300      | 4 (2x2)              | No Image Available                                                                    |
+| Lake         | A natural lake providing water and scenery. | 80 000        | 200           | 400              | 800                    | 400      | 9 (3x3)              | <img src="img/assets/buildings/green-spaces/lake.png" style="height:100px;"/>         |
+| Wind Turbine | Wind turbines generating electricity.       | 360 000       | 2 000         | 180              | 1 200                  | 0         | 12 (4x3)             | <img src="img/assets/buildings/green-spaces/wind-turbine.png" style="height:100px;"/> |
+| Solar Panel  | Solar panels generating electricity.        | 600 000       | 4 000         | 150              | 2 000                  | 0         | 16 (4x4)             | <img src="img/assets/buildings/green-spaces/solar-panel.png" style="height:100px;"/>  |
 
 ### 3.1.3 - Decorative Elements
 
@@ -480,9 +480,9 @@ The game will feature the following decorative elements:
 
 | Name        | Description                            | Price to build | Earning by Day | Day to Earn Back | CO2 Non-Produced by Day | Happiness | Slot Needed to Built | Image                                                                    |
 | ----------- | -------------------------------------- | -------------- | -------------- | ---------------- | ----------------------- | --------- | -------------------- | ------------------------------------------------------------------------ |
-| Trees       | A spot of several trees.               | -1 000         | 0              | Never            | -50                     | +10       | 1 (1x1)              | <img src="img/assets/decorative/trees.png" style="max-height:100px;"/>       |
-| Bench       | A bench for citizens to sit and relax. | -1 000         | 0              | Never            | 0                       | +20       | 1 (1x1)              | <img src="img/assets/decorative/bench.png" style="max-height:100px;"/>       |
-| Streetlight | A streetlight to illuminate the city.  | -1 000         | 0              | Never            | 0                       | +10       | 1 (1x1)              | <img src="img/assets/decorative/streetlight.png" style="max-height:100px;"/> |
+| Trees       | A spot of several trees.               | 1 000         | 0              | Never            | 50                     | 10       | 1 (1x1)              | <img src="img/assets/decorative/trees.png" style="height:100px;"/>       |
+| Bench       | A bench for citizens to sit and relax. | 1 000         | 0              | Never            | 0                       | 20       | 1 (1x1)              | <img src="img/assets/decorative/bench.png" style="height:100px;"/>       |
+| Streetlight | A streetlight to illuminate the city.  | 1 000         | 0              | Never            | 0                       | 10       | 1 (1x1)              | <img src="img/assets/decorative/streetlight.png" style="height:100px;"/> |
 
 ### 3.1.4 - Ground Textures
 
@@ -490,10 +490,10 @@ Following are the ground textures that will be used in the game:
 
 | Name     | Description                           | Image                                                               |
 | -------- | ------------------------------------- | ------------------------------------------------------------------- |
-| Road     | A paved road for vehicles.            | <img src="img/assets/textures/road.png" style="max-height:100px;"/>     |
-| Grass    | A grassy area for parks and lawns.    | <img src="img/assets/textures/grass.png" style="max-height:100px;"/>    |
-| Water    | A water texture for lakes and rivers. | <img src="img/assets/textures/water.png" style="max-height:100px;"/>    |
-| Concrete | A concrete texture for buildings.     | <img src="img/assets/textures/concrete.png" style="max-height:100px;"/> |
+| Road     | A paved road for vehicles.            | <img src="img/assets/textures/road.png" style="height:100px;"/>     |
+| Grass    | A grassy area for parks and lawns.    | <img src="img/assets/textures/grass.png" style="height:100px;"/>    |
+| Water    | A water texture for lakes and rivers. | <img src="img/assets/textures/water.png" style="height:100px;"/>    |
+| Concrete | A concrete texture for buildings.     | <img src="img/assets/textures/concrete.png" style="height:100px;"/> |
 
 ### 3.1.5 - Vehicles
 
@@ -501,12 +501,12 @@ The game will feature the following vehicles:
 
 | Name          | Description                           | Image                                                                    |
 | ------------- | ------------------------------------- | ------------------------------------------------------------------------ |
-| Car           | A car for citizens to travel.         | <img src="img/assets/vehicles/car.png" style="max-height:100px;"/>           |
-| Bicycle       | A bicycle for citizens to ride.       | <img src="img/assets/vehicles/bicycle.png" style="max-height:100px;"/>       |
-| Police        | A police car for law enforcement.     | <img src="img/assets/vehicles/police.png" style="max-height:100px;"/>        |
-| Ambulance     | An ambulance for medical emergencies. | <img src="img/assets/vehicles/ambulance.png" style="max-height:100px;"/>     |
-| Firetruck     | A fire truck for firefighting.        | <img src="img/assets/vehicles/firetruck.png" style="max-height:100px;"/>     |
-| Garbage truck | A garbage truck for waste collection. | <img src="img/assets/vehicles/garbage-truck.png" style="max-height:100px;"/> |
+| Car           | A car for citizens to travel.         | <img src="img/assets/vehicles/car.png" style="height:100px;"/>           |
+| Bicycle       | A bicycle for citizens to ride.       | <img src="img/assets/vehicles/bicycle.png" style="height:100px;"/>       |
+| Police        | A police car for law enforcement.     | <img src="img/assets/vehicles/police.png" style="height:100px;"/>        |
+| Ambulance     | An ambulance for medical emergencies. | <img src="img/assets/vehicles/ambulance.png" style="height:100px;"/>     |
+| Firetruck     | A fire truck for firefighting.        | <img src="img/assets/vehicles/firetruck.png" style="height:100px;"/>     |
+| Garbage truck | A garbage truck for waste collection. | <img src="img/assets/vehicles/garbage-truck.png" style="height:100px;"/> |
 
 ### 3.1.6 - Icons
 
@@ -514,11 +514,11 @@ Icons are used to represent resources, controls, and information in **Carbon Con
 
 | Name       | Description                              | Image                                                                |
 | ---------- | ---------------------------------------- | -------------------------------------------------------------------- |
-| CO2        | Icon representing CO2 emissions.         | <img src="img/icons/resources/co2.png" style="max-height:50px;"/>        |
-| Money      | Icon representing financial resources.   | <img src="img/icons/resources/money.png" style="max-height:50px;"/>      |
-| Population | Icon representing the city's population. | <img src="img/icons/resources/population.png" style="max-height:50px;"/> |
-| Happiness  | Icon representing citizen satisfaction.  | <img src="img/icons/resources/happiness.png" style="max-height:50px;"/>  |
-| Clock      | Icon representing the time.              | <img src="img/icons/resources/clock.png" style="max-height:50px;"/>      |
+| CO2        | Icon representing CO2 emissions.         | <img src="img/icons/resources/co2.png" style="height:50px;"/>        |
+| Money      | Icon representing financial resources.   | <img src="img/icons/resources/money.png" style="height:50px;"/>      |
+| Population | Icon representing the city's population. | <img src="img/icons/resources/population.png" style="height:50px;"/> |
+| Happiness  | Icon representing citizen satisfaction.  | <img src="img/icons/resources/happiness.png" style="height:50px;"/>  |
+| Clock      | Icon representing the time.              | <img src="img/icons/resources/clock.png" style="height:50px;"/>      |
 
 ### 3.1.7 - Sound Effects
 
@@ -537,7 +537,7 @@ Fonts are used to display text and information. The game will feature a main fon
 
 The main font used is **Parkinsans**. It is a clean, modern font that is easy to read and suitable for UI elements and text.
 
-<img src="img/assets/fonts/parkinsans.png" style="max-height:100px;"/>
+<img src="img/assets/fonts/parkinsans.png" style="height:100px;"/>
 
 🔗 The font can be downloaded [here](https://fonts.google.com/specimen/Parkinsans)
 
@@ -545,15 +545,13 @@ The main font used is **Parkinsans**. It is a clean, modern font that is easy to
 
 The secondary font used is **Roboto**. It is a versatile, easy-to-read font that is suitable for body text and subtitles.
 
-<img src="img/assets/fonts/roboto.png" style="max-height:100px;"/>
+<img src="img/assets/fonts/roboto.png" style="height:100px;"/>
 
 🔗 The font can be downloaded [here](https://fonts.google.com/specimen/Roboto)
 
 # 4 - Game Mechanics
 
 ## 4.1 - Resource Balancing
-
-### Improved Presentation
 
 #### **4.1.1 - CO₂ Levels**  
 CO₂ levels indicate the environmental impact of the city. Players aim to keep CO₂ levels low while balancing economic growth and sustainability.
@@ -600,7 +598,7 @@ Population reflects the city's growth and prosperity.
 
 ---
 
-#### **4.1.4 - Happiness** (Updated)  
+#### **4.1.4 - Happiness**
 Happiness represents citizen satisfaction and well-being. Maintaining a high happiness level leads to population growth, while low happiness causes population decline.
 
 ##### **Happiness Impact on Population:**
@@ -653,7 +651,7 @@ Buildings can be upgraded to improve efficiency and reduce environmental impact.
 
 ---
 
-### Diagram: Resource Management Overview
+### **4.1.7 Resource Management - Overview Diagram**
 
 ```mermaid
 graph TD
@@ -694,7 +692,11 @@ graph TD
 ## 4.2 - Game Dilemmas
 
 ### 4.2.1 - Renovate vs. Rebuild
-<!--! TODO  -->
+
+#### **Renovate** 
+- **Description:** Renovating a building improves its efficiency and reduces its environmental impact.
+- **Cost:** 50% of the building's initial cost.
+- 
 
 ### 4.2.2 - Public Transport vs. Cars
 <!--! TODO  -->
