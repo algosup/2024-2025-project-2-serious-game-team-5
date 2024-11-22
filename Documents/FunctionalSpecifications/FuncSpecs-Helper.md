@@ -98,7 +98,7 @@
 
 
 
-Personas
+<!-- Personas -->
 Game Mechanics (diagram, etc)
 Map
 Maquette du jeu
