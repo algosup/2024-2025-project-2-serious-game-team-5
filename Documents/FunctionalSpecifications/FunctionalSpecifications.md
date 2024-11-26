@@ -15,9 +15,9 @@
 
 **Created on:** November 6<sup>th</sup  >, 2024
 
-**Last updated:** November 22<sup>th</sup>, 2024
+**Last updated:** November 26<sup>th</sup>, 2024
 
-**Version:** 1.0.1
+**Version:** 1.0.2
 
 ### Approvals
 
@@ -259,9 +259,9 @@ The game will be a **Serious Game** with elements of **Strategy** and **City Man
 
 **Carbon Control** will carry a **T (Teen 13+) rating** in the United States and a **PEGI 12 rating** in Europe.
 
-<img src="img/icons/rating/rated-t.png" style="max-height:18px;"/> A **T (Teen 13+) rating** allows content suitable for players aged 13 and up, which may include violence, suggestive themes, crude humor, minimal blood, simulated gambling, and occasional strong language.
+<img src="img/icons/rating/rated-t.png" style="height:18px;"/> A **T (Teen 13+) rating** allows content suitable for players aged 13 and up, which may include violence, suggestive themes, crude humor, minimal blood, simulated gambling, and occasional strong language.
 
-<img src="img/icons/rating/pegi-12.png" style="max-height:18px;"/> A **PEGI 12 rating** permits fantasy violence, non-realistic violence toward human-like characters, and mild nudity with some graphic detail.
+<img src="img/icons/rating/pegi-12.png" style="height:18px;"/> A **PEGI 12 rating** permits fantasy violence, non-realistic violence toward human-like characters, and mild nudity with some graphic detail.
 
 
 In our case, the game will be mild, containing no violence or nudity. We chose this rating to allow for occasional strong language to enhance character expression and realism, while still remaining accessible to a younger audience.
