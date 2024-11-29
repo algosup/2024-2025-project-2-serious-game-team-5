@@ -2,7 +2,7 @@
 
 ## Link to other documents
 - [Functional Specifications](./Documents/FunctionalSpecifications/FunctionalSpecifications.md)
-- [Technical Specifications](./Documents/TechnicalSpecification/TechnicalSpecification.md)
+- [Technical Specifications](./Documents/TechnicalSpecification/TechnicalSpecifications.md)
 
 **Expected Release Date**: December 15, 2024
 
