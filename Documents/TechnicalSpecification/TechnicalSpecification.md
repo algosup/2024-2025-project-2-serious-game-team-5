@@ -56,164 +56,85 @@ The player need to take in consideration of the four resources, if the happiness
 ```
 
 📁Carbon-Control
-
 |
-
 |
-
 |____ 📁 Src
-
 |     |
-
 |     |____ 📁 .godot
-
 |     |
-
 |     |____ 📁 addons (💻)
-
 |     |
-
 |     |____ 📁 GDScript
-
 |     |     |
-
 |     |     |____ 📁 CharacterScript (💻)
-
 |     |
-
 |     |     |____ 📁 GameScript(💻)
-
 |     |
-
 |     |     |____ 📁 MenuScript(💻)
-
 |     |
-
 |     |____ 📁 Scene 
-
 |     |     |
-
 |     |     |____ 🎬 Building.tscn 
-
 |     |
-
 |     |     |____ 🎬 Credit.tscn 
-
 |     |
-
 |     |     |____ 🎬 Interface.tscn 
-
 |     |
-
 |     |     |____ 🎬MainMenu.tscn 
-
 |     |
-
 |     |     |____ 🎬 Player.tscn 
-
 |     |
-
 |     |     |____ 🎬 Setting.tscn 
-
 |     |
-
 |     |     |____ 🎬 World.tscn 
-
 |     |
-
 |     |____ 📁Asset(📦)
-
 |     |
-
 |     |____ ⚙️ project.godot
-
 |
-
 |
-
 |____ 📁Documents
-
 |     |
-
 |     |
-
 |     |____ 📁FunctionalSpecifications
-
 |     |     |
-
 |     |     |
-
 |     |     |____ img📁(📁-->🖼️)
-
 |     |     |
-
 |     |     |
-
 |     |     |____ 📄FuncSpecs-Helper.md
-
 |     |     |
-
 |     |     |
-
 |     |     |____ 📄FunctionalSpecification.md
-
 |     |
-
 |     |
-
 |     |____ 📁TechnicalSpecifications
-
 |     |     |
-
 |     |     |
-
 |     |     |____ 📄TechnicalSpecification.md
-
 |     |
-
 |     |
-
 |     |____ 📁TestPlan
-
 |           |
-
 |           |
-
 |           |____ 📁TestReport
-
 |           |     |
-
 |           |     |
-
 |           |     |____ 📁FormReports
-
 |           |     |
-
 |           |     |
-
 |           |     |____ 📁TestCaseReports
-
 |           |
-
 |           |
-
 |           |____ 📄TestCase.md
-
 |           |
-
 |           |
-
 |           |____ 📄TestPlan.md
-
 |
-
 |
-
 |____ 📄README.md
 
-
 📁folder 📄document 🖼️image 🎬scene 📦assets 💻source code ⚙️configuration
-
 ```
 
 ## 4. Requirements
@@ -283,18 +204,16 @@ Gotdot v4.3 Requirement.
   -  200 MB for executable, project files, and cache
 
 - **Operating System**:
-
-  - Native editor:
-
-     -  Windows 7
-
-     -   macOS 10.13 (Compatibility) or macOS 10.15 (Forward+/Mobile)
-
-     -   Linux distribution released after 2016
-
-- **Web editor**:
-
-  -  Firefox 79, Chrome 68, Edge 79, Safari 15.2, Opera 64
+  - **Native editor**:
+    - Windows 7 or later (64-bit)
+    - macOS 10.13 (Compatibility) or macOS 10.15 (Forward+/Mobile) or later (64-bit)
+    - Linux distribution released after 2016 (64-bit)
+  - **Web editor**:
+    - Firefox 79
+    - Chrome 68
+    - Edge 79
+    - Safari 15.2
+    - Opera 64
 
 ## 6. Implementation
 

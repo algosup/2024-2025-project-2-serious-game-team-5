@@ -68,7 +68,7 @@
       - [**8. Minor**](#8-minor)
       - [**9. Cosmetic**](#9-cosmetic)
       - [**10. Help Wanted**](#10-help-wanted)
-  - [**8. Test Schedule**](#8-test-schedule)
+  - [**8. Testing Plan**](#8-testing-plan)
   - [**9. Risks and Contingencies**](#9-risks-and-contingencies)
     - [**Key Risks**](#key-risks)
   
@@ -149,31 +149,31 @@ Key objectives:
 ## **5. Test Strategies**
 
 ### **5.1. Smoke Testing**
-- **Objective:** Ensure the core game features work.  
+- **Objective:** Ensure the core game features work.
 - **Examples:** Launching the game, navigating the main menu, starting gameplay.
 
 ### **5.2. Functional Testing**
-- **Objective:** Validate specific game mechanics.  
+- **Objective:** Validate specific game mechanics.
 - **Examples:** Resource management, decision-making outcomes, and environmental impact.
 
 ### **5.3. Exploratory Testing**
-- **Objective:** Identify unexpected bugs through unstructured gameplay.  
+- **Objective:** Identify unexpected bugs through unstructured gameplay.
 - **Examples:** Testing edge cases, trying unusual player inputs, and exploiting mechanics.
 
 ### **5.4. Playtesting**
-- **Objective:** Gather feedback to refine usability and balance.  
+- **Objective:** Gather feedback to refine usability and balance.
 - **Methods:** Structured surveys ([EN](https://forms.gle/9EBFaZDe9YELbBD96), [FR](https://forms.gle/MFbKxKKUcWhG2aTJ8)), observing gameplay, and qualitative interviews.
 
 ### **5.5. Performance Testing**
-- **Objective:** Assess stability under load.  
+- **Objective:** Assess stability under load.
 - **Examples:** Filling maps, maxing out units, and monitoring FPS/memory.
 
 ### **5.6. Localization Testing**
-- **Objective:** Ensure correct functionality across languages.  
+- **Objective:** Ensure correct functionality across languages.
 - **Examples:** Checking translations, UI alignment, and audio/text synchronization.
 
 ### **5.7. Regression Testing**
-- **Objective:** Confirm no new issues after updates.  
+- **Objective:** Confirm no new issues after updates.
 - **Examples:** Testing fixed bugs and verifying feature integration.
 
 ---
@@ -184,7 +184,7 @@ Key objectives:
 - Validating UI responsiveness.
 - Checking resource management and decision-making impacts.
 - Evaluating tutorial clarity and onboarding flow.
-- Verifying device compatibility (PC/Mac/Linux).
+- Verifying device compatibility (Windows/MacOS/Debian).
 
 Refer to [Test Cases](./TestCases.md) for a complete breakdown.
 
@@ -193,12 +193,12 @@ Refer to [Test Cases](./TestCases.md) for a complete breakdown.
 ## **7. Bug Reporting**
 
 ### **Process**
-1. **Identify:** Find an issue.  
-2. **Reproduce:** Ensure it is consistently reproducible.  
-3. **Log:** Document on GitHub with detailed steps, screenshots, and environment info.  
-4. **Prioritize:** Assign severity levels (Critical, Major, Minor).  
-5. **Assign:** Allocate to a responsible team member.  
-6. **Fix:** Resolve the issue.  
+1. **Identify:** Find an issue.
+2. **Reproduce:** Ensure it is consistently reproducible.
+3. **Log:** Document on GitHub with detailed steps, screenshots, and environment info.
+4. **Prioritize:** Assign severity levels (Critical, Major, Minor).
+5. **Assign:** Allocate to a responsible team member.
+6. **Fix:** Resolve the issue.
 7. **Verify:** Confirm resolution and close the issue.
 
 ### **Issue Template**
@@ -216,7 +216,7 @@ Refer to [Test Cases](./TestCases.md) for a complete breakdown.
 X. [Final step]
 
 ### **Environment**
-- **Platform:** [PC/Mac/Linux]
+- **Platform:** [Windows, MacOS, Debian]
 - **Version:** [Game version]
 - **Resolution:** [1920x1080, 1280x720, etc.]
 
@@ -242,7 +242,7 @@ Each bug reported will be categorized using the following labels to streamline p
 
 #### **3. Duplicate**
 - **Definition:** Indicates that the reported issue is already logged in the system under another entry.  
-- **Examples:**  
+- **Example:**  
   - Two separate reports for the same crash scenario.  
 
 #### **4. Invalid**
@@ -289,7 +289,7 @@ Each bug reported will be categorized using the following labels to streamline p
 
 ---
 
-## **8. Test Schedule**
+## **8. Testing Plan**
 
 | **Week** | **Task**                       | **Responsible** | **Date**             |
 | -------- | ------------------------------ | --------------- | -------------------- |
