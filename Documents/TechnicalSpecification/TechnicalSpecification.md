@@ -37,11 +37,11 @@
 
 ## 1. Introduction
 
-This project is a [serious game](#glossary) on [climate change](#glossary) named ***Carbon Control***.
+This project is a [serious game](#8-glossary) on [climate change](#8-glossary) named ***Carbon Control***.
 
 ## 2. Project Overview
 
-***Carbon Control*** is a 2D [isometric view](#glossary), construction and management simulation, [city-building](#glossary), serious game on the game engine [Godot](#glossary) v4.3 .
+***Carbon Control*** is a 2D [isometric view](#8-glossary), construction and management simulation, [city-building](#8-glossary), serious game on the game engine [Godot](#glossary) v4.3 .
 
 The goal of the game is to build a city as a mayor with four resources to manage, CO₂ level, population, happiness and money.
 
