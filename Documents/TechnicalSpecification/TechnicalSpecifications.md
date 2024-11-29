@@ -1,7 +1,7 @@
 # Technical Specifications
 
 ## Table of Contents
-- [Technical Specification](#technical-specification)
+- [Technical Specifications](#technical-specifications)
 	- [Table of Contents](#table-of-contents)
 	- [1. Introduction](#1-introduction)
 	- [2. Project Overview](#2-project-overview)
