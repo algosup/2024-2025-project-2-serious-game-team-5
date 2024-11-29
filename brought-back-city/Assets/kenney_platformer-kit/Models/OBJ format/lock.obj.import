@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://ddfsd4dg5nwnt"
+path="res://.godot/imported/lock.obj-d6a52901e733f6e1be0897bd1a9c465d.mesh"
+
+[deps]
+
+files=["res://.godot/imported/lock.obj-d6a52901e733f6e1be0897bd1a9c465d.mesh"]
+
+source_file="res://Assets/kenney_platformer-kit/Models/OBJ format/lock.obj"
+dest_files=["res://.godot/imported/lock.obj-d6a52901e733f6e1be0897bd1a9c465d.mesh", "res://.godot/imported/lock.obj-d6a52901e733f6e1be0897bd1a9c465d.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

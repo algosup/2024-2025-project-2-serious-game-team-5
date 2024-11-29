@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://ew7w5ju066p5"
+path="res://.godot/imported/spike-block-wide.obj-47f0210cbb7a9034c37c40e6b8e01e70.mesh"
+
+[deps]
+
+files=["res://.godot/imported/spike-block-wide.obj-47f0210cbb7a9034c37c40e6b8e01e70.mesh"]
+
+source_file="res://Assets/kenney_platformer-kit/Models/OBJ format/spike-block-wide.obj"
+dest_files=["res://.godot/imported/spike-block-wide.obj-47f0210cbb7a9034c37c40e6b8e01e70.mesh", "res://.godot/imported/spike-block-wide.obj-47f0210cbb7a9034c37c40e6b8e01e70.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false
