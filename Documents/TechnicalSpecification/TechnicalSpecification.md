@@ -1,4 +1,4 @@
-# Technical Specification
+# Technical Specifications
 
 ## Table of Contents
 - [Technical Specification](#technical-specification)
