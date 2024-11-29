@@ -56,6 +56,7 @@
   - [**6. Test Cases**](#6-test-cases)
   - [**7. Bug Reporting**](#7-bug-reporting)
     - [**Process**](#process)
+    - [**Issue Template**](#issue-template)
     - [**Bug Labels**](#bug-labels)
       - [**1. Bug**](#1-bug)
       - [**2. Enhancement**](#2-enhancement)
@@ -199,6 +200,29 @@ Refer to [Test Cases](./TestCases.md) for a complete breakdown.
 5. **Assign:** Allocate to a responsible team member.  
 6. **Fix:** Resolve the issue.  
 7. **Verify:** Confirm resolution and close the issue.
+
+### **Issue Template**
+```markdown
+### **Title**
+[Concise description of the issue]
+
+### **Description**
+[Detailed description of the issue]
+
+### **Steps to Reproduce**
+1. [First step]
+2. [Second step]
+...
+X. [Final step]
+
+### **Environment**
+- **Platform:** [PC/Mac/Linux]
+- **Version:** [Game version]
+- **Resolution:** [1920x1080, 1280x720, etc.]
+
+### **Labels**
+- [Bug, Enhancement, Duplicate, Invalid, WontFix, Critical, Major, Minor, Cosmetic, Help Wanted]
+```
 
 ### **Bug Labels**
 
