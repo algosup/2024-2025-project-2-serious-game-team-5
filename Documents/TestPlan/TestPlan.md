@@ -14,20 +14,66 @@
 
 ## **Approvals**
 
-| Reviewer          | Role              | Approved | Date         |
-|-------------------|-------------------|----------|--------------|
-| Maxime CARON      | Quality Assurance |          |              |
-| Rémy CHARLES      | Project Manager   |          |              |
-| Pierre GORIN      | Program Manager   |          |              |
-| Salaheddine NAMIR | Technical Lead    |          |              |
-| Elone DELILLE     | Technical Writer  |          |              |
-| Alexis LASSELIN   | Software Engineer |          |              |
-| Camille GAYAT     | Software Engineer |          |              |
+| Reviewer          | Role              | Approved | Date |
+| ----------------- | ----------------- | -------- | ---- |
+| Maxime CARON      | Quality Assurance |          |      |
+| Rémy CHARLES      | Project Manager   |          |      |
+| Pierre GORIN      | Program Manager   |          |      |
+| Salaheddine NAMIR | Technical Lead    |          |      |
+| Elone DELILLE     | Technical Writer  |          |      |
+| Alexis LASSELIN   | Software Engineer |          |      |
+| Camille GAYAT     | Software Engineer |          |      |
 
 </div>
 
----
+<br>
 
+<details>
+<summary><h2 id="toc"> Table of Contents <i>(Click to expand)</i></h2></summary>
+
+- [**Test Plan - Serious Game - Team 5**](#test-plan---serious-game---team-5)
+  - [**Approvals**](#approvals)
+  - [**1. Executive Summary**](#1-executive-summary)
+  - [**2. Introduction**](#2-introduction)
+    - [**2.1. Project Overview**](#21-project-overview)
+    - [**2.2. Document Purpose**](#22-document-purpose)
+    - [**2.3. Scope**](#23-scope)
+    - [**2.4. Objectives**](#24-objectives)
+  - [**3. Glossary**](#3-glossary)
+  - [**4. Tools**](#4-tools)
+    - [**4.1. Reporting Tools**](#41-reporting-tools)
+    - [**4.2. Testing Tools**](#42-testing-tools)
+    - [**4.3. Performance Monitoring**](#43-performance-monitoring)
+    - [**4.4. Tools Considered but Not Used**](#44-tools-considered-but-not-used)
+  - [**5. Test Strategies**](#5-test-strategies)
+    - [**5.1. Smoke Testing**](#51-smoke-testing)
+    - [**5.2. Functional Testing**](#52-functional-testing)
+    - [**5.3. Exploratory Testing**](#53-exploratory-testing)
+    - [**5.4. Playtesting**](#54-playtesting)
+    - [**5.5. Performance Testing**](#55-performance-testing)
+    - [**5.6. Localization Testing**](#56-localization-testing)
+    - [**5.7. Regression Testing**](#57-regression-testing)
+  - [**6. Test Cases**](#6-test-cases)
+  - [**7. Bug Reporting**](#7-bug-reporting)
+    - [**Process**](#process)
+    - [**Bug Labels**](#bug-labels)
+      - [**1. Bug**](#1-bug)
+      - [**2. Enhancement**](#2-enhancement)
+      - [**3. Duplicate**](#3-duplicate)
+      - [**4. Invalid**](#4-invalid)
+      - [**5. WontFix**](#5-wontfix)
+      - [**6. Critical**](#6-critical)
+      - [**7. Major**](#7-major)
+      - [**8. Minor**](#8-minor)
+      - [**9. Cosmetic**](#9-cosmetic)
+      - [**10. Help Wanted**](#10-help-wanted)
+  - [**8. Test Schedule**](#8-test-schedule)
+  - [**9. Risks and Contingencies**](#9-risks-and-contingencies)
+    - [**Key Risks**](#key-risks)
+  
+</details>
+
+---
 ## **1. Executive Summary**
 
 This test plan defines the structured approach for validating the quality, performance, and functionality of the Serious Game by **Team 5**, focusing on educational engagement with environmental awareness. Testing ensures that gameplay mechanics, user experience, and cross-platform compatibility align with project objectives.
@@ -69,14 +115,14 @@ Key objectives:
 
 ## **3. Glossary**
 
-| **Term**             | **Definition**                                                                 |
-|-----------------------|-------------------------------------------------------------------------------|
-| **QA**               | Quality Assurance                                                            |
-| **FPS**              | Frames Per Second                                                            |
-| **Regression Testing**| Ensuring that new updates do not introduce defects.                          |
-| **Smoke Testing**    | Preliminary testing of core functionality.                                   |
-| **Exploratory Testing** | Unstructured testing to discover potential issues.                         |
-| **Playtesting**      | Gathering user feedback by observing gameplay and satisfaction.               |
+| **Term**                | **Definition**                                                  |
+| ----------------------- | --------------------------------------------------------------- |
+| **QA**                  | Quality Assurance                                               |
+| **FPS**                 | Frames Per Second                                               |
+| **Regression Testing**  | Ensuring that new updates do not introduce defects.             |
+| **Smoke Testing**       | Preliminary testing of core functionality.                      |
+| **Exploratory Testing** | Unstructured testing to discover potential issues.              |
+| **Playtesting**         | Gathering user feedback by observing gameplay and satisfaction. |
 
 ---
 
@@ -221,14 +267,14 @@ Each bug reported will be categorized using the following labels to streamline p
 
 ## **8. Test Schedule**
 
-| **Week** | **Task**                            | **Responsible**   | **Date**               |
-|----------|-------------------------------------|-------------------|------------------------|
-| 2        | Define Test Plan                    | QA                | November 12, 2024      |
-| 3        | Finalize Test Plan                  | QA                | November 22, 2024      |
-| 4        | Create Test Cases                   | QA                | November 29, 2024      |
-| 5-7      | Execute Test Cases                  | QA                | December 6-18, 2024    |
-| 7        | Conduct Playtesting                 | Team Members      | December 16-18, 2024   |
-| 7        | Final Presentation & QA Review      | QA                | December 17, 2024      |
+| **Week** | **Task**                       | **Responsible** | **Date**             |
+| -------- | ------------------------------ | --------------- | -------------------- |
+| 2        | Define Test Plan               | QA              | November 12, 2024    |
+| 3        | Finalize Test Plan             | QA              | November 22, 2024    |
+| 4        | Create Test Cases              | QA              | November 29, 2024    |
+| 5-7      | Execute Test Cases             | QA              | December 6-18, 2024  |
+| 7        | Conduct Playtesting            | Team Members    | December 16-18, 2024 |
+| 7        | Final Presentation & QA Review | QA              | December 17, 2024    |
 
 ---
 
