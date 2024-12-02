@@ -27,6 +27,7 @@ func _unhandled_input(event: InputEvent) -> void:
 		if Input.is_action_pressed("moving_camera") and Input.get_mouse_mode() == Input.MOUSE_MODE_CONFINED:
 			moving_camera_input.x = -event.screen_relative.x * mouse_sensitivity
 			moving_camera_input.z = -event.screen_relative.y * mouse_sensitivity
+			print("right click is working")
 	
 	# Camera zoom-in (wheel down) and zoom-out (wheel up)
 	if event is InputEventMouseButton:
