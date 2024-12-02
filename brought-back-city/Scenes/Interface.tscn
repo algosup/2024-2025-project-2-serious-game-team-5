@@ -1,8 +1,9 @@
-[gd_scene load_steps=5 format=3 uid="uid://htmeeru1v4h8"]
+[gd_scene load_steps=6 format=3 uid="uid://htmeeru1v4h8"]
 
 [ext_resource type="Script" path="res://GDScript/GameScript/InterfaceScript/Interface.gd" id="1_5xait"]
 [ext_resource type="Texture2D" uid="uid://b3cjh5nfx3cgg" path="res://Assets/2DAssets/Interface/ConstructionMenu.png" id="1_lhiha"]
 [ext_resource type="Texture2D" uid="uid://yf82ro07spqe" path="res://Assets/2DAssets/Interface/Construction.png" id="1_q44jx"]
+[ext_resource type="Script" path="res://GDScript/GameScript/InterfaceScript/timer.gd" id="2_xjeol"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_t4721"]
 font_size = 9
@@ -150,19 +151,23 @@ offset_right = 1144.0
 offset_bottom = 71.0
 mouse_filter = 1
 color = Color(0.0562916, 0.0562916, 0.0562916, 1)
+script = ExtResource("2_xjeol")
 
 [node name="YearLabel" type="Label" parent="Year&DayBackground"]
 layout_mode = 1
 offset_right = 74.0
 offset_bottom = 23.0
-text = "Year: 2/10"
 
 [node name="DayLabel" type="Label" parent="Year&DayBackground"]
 layout_mode = 1
 offset_top = 35.0
 offset_right = 148.0
 offset_bottom = 58.0
-text = "Day: 224/365"
+
+[node name="DayTimer" type="Timer" parent="Year&DayBackground"]
+process_callback = 0
+wait_time = 12.0
+autostart = true
 
 [node name="ConstructionMenu" type="VBoxContainer" parent="."]
 layout_mode = 1
@@ -195,4 +200,5 @@ mouse_filter = 1
 mouse_default_cursor_shape = 2
 texture_normal = ExtResource("1_q44jx")
 
+[connection signal="timeout" from="Year&DayBackground/DayTimer" to="." method="_on_day_timer_timeout"]
 [connection signal="pressed" from="ConstructionMenu/ConstructionMenuButton" to="." method="_on_construction_menu_button_pressed"]
