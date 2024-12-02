@@ -1,40 +1,29 @@
-[gd_scene load_steps=4 format=3 uid="uid://htmeeru1v4h8"]
+[gd_scene load_steps=5 format=3 uid="uid://htmeeru1v4h8"]
+
+[ext_resource type="Script" path="res://GDScript/GameScript/InterfaceScript/Interface.gd" id="1_5xait"]
+[ext_resource type="Texture2D" uid="uid://b3cjh5nfx3cgg" path="res://Assets/2DAssets/Interface/ConstructionMenu.png" id="1_lhiha"]
+[ext_resource type="Texture2D" uid="uid://yf82ro07spqe" path="res://Assets/2DAssets/Interface/Construction.png" id="1_q44jx"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_t4721"]
 font_size = 9
 
-[sub_resource type="LabelSettings" id="LabelSettings_p8544"]
-font_size = 9
-
-[sub_resource type="LabelSettings" id="LabelSettings_doy48"]
-font_size = 9
-
 [node name="Interface" type="Control"]
 layout_mode = 3
-anchors_preset = 0
-
-[node name="RenovationButton" type="Button" parent="."]
-layout_mode = 0
-offset_left = 600.0
-offset_top = 566.0
-offset_right = 745.0
-offset_bottom = 631.0
-text = "Renovation"
-
-[node name="ConstructionButton" type="Button" parent="."]
-layout_mode = 0
-offset_left = 450.0
-offset_top = 566.0
-offset_right = 595.0
-offset_bottom = 631.0
-text = "Construction"
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 1
+script = ExtResource("1_5xait")
 
 [node name="Co2Background" type="ColorRect" parent="."]
 layout_mode = 0
-offset_left = 50.0
-offset_top = 20.0
-offset_right = 194.0
-offset_bottom = 62.0
+offset_left = 30.0
+offset_top = 80.0
+offset_right = 174.0
+offset_bottom = 122.0
+mouse_filter = 1
 color = Color(0.0562916, 0.0562916, 0.0562916, 1)
 
 [node name="Co2Label" type="Label" parent="Co2Background"]
@@ -64,34 +53,35 @@ offset_top = 2.0
 offset_right = 70.0
 offset_bottom = 29.0
 grow_horizontal = 2
-value = 70.0
+value = 42.0
 
-[node name="HIIBackground" type="ColorRect" parent="."]
+[node name="HappinessBackground" type="ColorRect" parent="."]
 layout_mode = 0
-offset_left = 300.0
-offset_top = 20.0
-offset_right = 444.0
-offset_bottom = 62.0
+offset_left = 30.0
+offset_top = 240.0
+offset_right = 174.0
+offset_bottom = 282.0
+mouse_filter = 1
 color = Color(0.0562916, 0.0562916, 0.0562916, 1)
 
-[node name="HIILabel" type="Label" parent="HIIBackground"]
+[node name="HappinessLabel" type="Label" parent="HappinessBackground"]
 layout_mode = 1
 anchors_preset = 7
 anchor_left = 0.5
 anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
-offset_left = -61.0
+offset_left = -23.0
 offset_top = -14.0
-offset_right = 61.0
+offset_right = 51.0
 offset_bottom = 9.0
 grow_horizontal = 2
 grow_vertical = 0
-text = "Happy Inhabitants Indicator"
-label_settings = SubResource("LabelSettings_p8544")
+text = "Happiness"
+label_settings = SubResource("LabelSettings_t4721")
 
-[node name="HIIBar" type="ProgressBar" parent="HIIBackground"]
-modulate = Color(0.976594, 0.402417, 0.455874, 1)
+[node name="HappinessBar" type="ProgressBar" parent="HappinessBackground"]
+modulate = Color(0.653786, 0.26679, 0.832991, 1)
 layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
@@ -101,69 +91,108 @@ offset_top = 2.0
 offset_right = 70.0
 offset_bottom = 29.0
 grow_horizontal = 2
-value = 55.0
+value = 72.0
+
+[node name="Population" type="ColorRect" parent="."]
+layout_mode = 0
+offset_left = 30.0
+offset_top = 160.0
+offset_right = 174.0
+offset_bottom = 202.0
+mouse_filter = 1
+color = Color(0.0562916, 0.0562916, 0.0562916, 1)
+
+[node name="PopulationLabel" type="Label" parent="Population"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -61.0
+offset_top = -11.5
+offset_right = 61.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "103/106"
+horizontal_alignment = 1
 
 [node name="MoneyBackground" type="ColorRect" parent="."]
 layout_mode = 0
-offset_left = 550.0
+offset_left = 30.0
 offset_top = 20.0
-offset_right = 694.0
+offset_right = 174.0
 offset_bottom = 62.0
+mouse_filter = 1
 color = Color(0.0562916, 0.0562916, 0.0562916, 1)
-
-[node name="MoneyTextLabel" type="Label" parent="MoneyBackground"]
-layout_mode = 1
-anchors_preset = 7
-anchor_left = 0.5
-anchor_top = 1.0
-anchor_right = 0.5
-anchor_bottom = 1.0
-offset_left = -36.0
-offset_top = -14.0
-offset_right = 92.0
-offset_bottom = 9.0
-grow_horizontal = 2
-grow_vertical = 0
-text = "Available money"
-label_settings = SubResource("LabelSettings_doy48")
 
 [node name="MoneyLabel" type="Label" parent="MoneyBackground"]
 layout_mode = 1
-anchors_preset = 5
+anchors_preset = 8
 anchor_left = 0.5
+anchor_top = 0.5
 anchor_right = 0.5
-offset_left = -20.0
-offset_right = 20.0
-offset_bottom = 23.0
+anchor_bottom = 0.5
+offset_left = -36.5
+offset_top = -11.5
+offset_right = 36.5
+offset_bottom = 11.5
 grow_horizontal = 2
-text = "3 543 834 $"
+grow_vertical = 2
+text = "123,400 $"
 
-[node name="Day&InhabitantsBackground" type="ColorRect" parent="."]
+[node name="Year&DayBackground" type="ColorRect" parent="."]
 layout_mode = 0
 offset_left = 943.0
 offset_top = 10.0
 offset_right = 1144.0
 offset_bottom = 71.0
+mouse_filter = 1
 color = Color(0.0562916, 0.0562916, 0.0562916, 1)
 
-[node name="DayLabel" type="Label" parent="Day&InhabitantsBackground"]
+[node name="YearLabel" type="Label" parent="Year&DayBackground"]
 layout_mode = 1
-anchors_preset = 5
-anchor_left = 0.5
-anchor_right = 0.5
-offset_left = -2.5
-offset_right = 71.5
+offset_right = 74.0
 offset_bottom = 23.0
-grow_horizontal = 2
-text = "Day: 115"
+text = "Year: 2/10"
 
-[node name="InhabitantsLabel" type="Label" parent="Day&InhabitantsBackground"]
+[node name="DayLabel" type="Label" parent="Year&DayBackground"]
 layout_mode = 1
-anchors_preset = 2
+offset_top = 35.0
+offset_right = 148.0
+offset_bottom = 58.0
+text = "Day: 224/365"
+
+[node name="ConstructionMenu" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.936
 anchor_top = 1.0
+anchor_right = 1.068
 anchor_bottom = 1.0
-offset_left = 3.0
-offset_top = -23.0
-offset_right = 151.0
+offset_left = -419.0
+offset_top = -524.0
+offset_right = 273.0
+offset_bottom = -20.0
+grow_horizontal = 0
 grow_vertical = 0
-text = "Inhabitants: 25 078"
+theme_override_constants/separation = 10
+
+[node name="ConstructionMenuBox" type="NinePatchRect" parent="ConstructionMenu"]
+custom_minimum_size = Vector2(265, 400)
+layout_mode = 2
+size_flags_horizontal = 8
+mouse_filter = 1
+mouse_default_cursor_shape = 2
+texture = ExtResource("1_lhiha")
+region_rect = Rect2(0, 0, 730, 1160)
+
+[node name="ConstructionMenuButton" type="TextureButton" parent="ConstructionMenu"]
+layout_mode = 2
+size_flags_horizontal = 4
+mouse_filter = 1
+mouse_default_cursor_shape = 2
+texture_normal = ExtResource("1_q44jx")
+
+[connection signal="pressed" from="ConstructionMenu/ConstructionMenuButton" to="." method="_on_construction_menu_button_pressed"]
