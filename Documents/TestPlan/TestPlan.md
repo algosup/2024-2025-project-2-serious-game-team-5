@@ -16,13 +16,13 @@
 
 | Reviewer          | Role              | Approved | Date |
 | ----------------- | ----------------- | -------- | ---- |
-| Maxime CARON      | Quality Assurance |          |      |
-| Rémy CHARLES      | Project Manager   |          |      |
-| Pierre GORIN      | Program Manager   |          |      |
-| Salaheddine NAMIR | Technical Lead    |          |      |
-| Elone DELILLE     | Technical Writer  |          |      |
-| Alexis LASSELIN   | Software Engineer |          |      |
-| Camille GAYAT     | Software Engineer |          |      |
+| Maxime CARON      | Quality Assurance |   ✅       |  2024/12/06    |
+| Rémy CHARLES      | Project Manager   |   ✅       |  2024/12/06    |
+| Pierre GORIN      | Program Manager   |   ✅       |  2024/12/06    |
+| Salaheddine NAMIR | Technical Lead    |   ✅       |  2024/12/06    |
+| Elone DELILLE     | Technical Writer  |   ✅       |  2024/12/06    |
+| Alexis LASSELIN   | Software Engineer |   ✅       |  2024/12/06    |
+| Camille GAYAT     | Software Engineer |   ✅       |  2024/12/06    |
 
 </div>
 
