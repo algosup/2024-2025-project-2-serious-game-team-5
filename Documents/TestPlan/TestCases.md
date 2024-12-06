@@ -48,7 +48,6 @@
       - [3.1.2 **Player Actions**](#312-player-actions)
       - [3.1.3 **User Interface (UI)**](#313-user-interface-ui)
       - [3.1.4 **Edge Cases for Actions**](#314-edge-cases-for-actions)
-      - [3.1.5 **Indicator Scaling**](#315-indicator-scaling)
     - [3.2 **Gameplay**](#32-gameplay)
       - [3.2.1 **Progression**](#321-progression)
     - [3.3 **Non-Functional Tests**](#33-non-functional-tests)
@@ -105,10 +104,12 @@ The test cases cover the following areas:
 
 #### 3.1.1 **Indicators**  
 
-| Test Case ID | Test Case Name                  | Description                                                   | Input                    | Expected Output                            |  Priority  |
-| ------------ | ------------------------------- | ------------------------------------------------------------- | ------------------------ | ------------------------------------------ | ---------- |
-| IND-01       | Real-Time Indicator Display     | Verify the real-time updates of carbon emissions, happiness, and money. | Player makes changes to the city (e.g., renovates a building). | Indicators update instantly at the top of the screen without lag. | High |
-| IND-02       | No Trigger Events from Indicators | Ensure extreme indicator values do not trigger events.         | Happiness drops to 0%, carbon emissions reach a high value. | No game events or interruptions occur due to indicator changes. | Medium |
+| Test Case ID | Test Case Name                  | Description                                                   | Input                           | Expected Output                            | Priority  |
+| ------------ | ------------------------------- | ------------------------------------------------------------- | ------------------------------- | ------------------------------------------ | --------- |
+| IND-01 | Real-Time Indicator Display	| Verify the real-time updates of carbon emissions, happiness, and money. |	Player makes changes to the city (e.g., renovates a building). |	Indicators update instantly at the top of the screen without lag. | High |
+| IND-02 |	No Trigger Events from Indicators |	Ensure extreme indicator values do not trigger events. | Happiness drops to 0%, carbon emissions reach a high value. | No game events or interruptions occur due to indicator changes.| Medium |
+| IND-03       | Large Happiness Changes         | Verify indicators handle abrupt increases or decreases.       | Add 10 green spaces in a row.             | Happiness increases significantly; no UI glitches occur. | Medium |
+| IND-04       | Indicator Overflow              | Test maximum and minimum values for indicators.               | Reach 0% happiness or 100% carbon emissions. | Indicators cap at the defined range (e.g., 0%-100%); UI remains functional. | Medium |
 
 #### 3.1.2 **Player Actions**  
 
@@ -141,15 +142,6 @@ The test cases cover the following areas:
 | EDGE-03      | High Carbon Emissions           | Test the impact of excessive carbon emissions on gameplay.    | Continuously add polluting buildings.     | Carbon emissions continue to rise; no event is triggered. | Medium |
 | EDGE-04      | Extreme Carbon Emission Focus   | Test the game’s response to prioritizing carbon reduction only. | Remove all roads, focus only on green spaces. | Carbon emissions drop significantly; happiness may fluctuate. | Medium |
 | EDGE-05      | Ignoring Budget                 | Test what happens if the player spends all money early on.    | Build expensive structures repeatedly until money is $0.00. | Actions become disabled; game progression remains unaffected. | Medium |
-
-#### 3.1.5 **Indicator Scaling**  
-
-| Test Case ID | Test Case Name                  | Description                                                   | Input                           | Expected Output                            | Priority  |
-| ------------ | ------------------------------- | ------------------------------------------------------------- | ------------------------------- | ------------------------------------------ | --------- |
-| IND-01 | Real-Time Indicator Display	| Verify the real-time updates of carbon emissions, happiness, and money. |	Player makes changes to the city (e.g., renovates a building). |	Indicators update instantly at the top of the screen without lag. | High |
-| IND-02 |	No Trigger Events from Indicators |	Ensure extreme indicator values do not trigger events. | Happiness drops to 0%, carbon emissions reach a high value. | No game events or interruptions occur due to indicator changes.| Medium |
-| IND-03       | Large Happiness Changes         | Verify indicators handle abrupt increases or decreases.       | Add 10 green spaces in a row.             | Happiness increases significantly; no UI glitches occur. | Medium |
-| IND-04       | Indicator Overflow              | Test maximum and minimum values for indicators.               | Reach 0% happiness or 100% carbon emissions. | Indicators cap at the defined range (e.g., 0%-100%); UI remains functional. | Medium |
 
 ---
 
@@ -194,3 +186,5 @@ The test cases cover the following areas:
 | INT-01       | Indicator Updates               | Ensure player actions correctly impact indicators.            | Renovate a building, add green space.      | Indicators adjust accurately to reflect changes caused by the action. | High |
 | INT-02       | Green Space and Happiness Impact | Test how multiple green spaces affect happiness.              | Add 5 green spaces to the city.           | Happiness increases proportionally; no bugs occur in indicator calculations. | High |
 | INT-03       | Budget-Limited Decisions        | Test interdependency between budget and actions.              | Spend all money on roads.                 | Building options become disabled; warning messages guide the player. | High |
+
+---
