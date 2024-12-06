@@ -44,7 +44,6 @@ text = "TCo₂/year"
 label_settings = SubResource("LabelSettings_t4721")
 
 [node name="Co2Bar" type="ProgressBar" parent="Co2Background"]
-modulate = Color(0.95782, 0.446297, 1.44392e-05, 1)
 layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
@@ -54,7 +53,9 @@ offset_top = 2.0
 offset_right = 70.0
 offset_bottom = 29.0
 grow_horizontal = 2
-value = 42.0
+max_value = 200000.0
+step = 1000.0
+value = 90000.0
 
 [node name="HappinessBackground" type="ColorRect" parent="."]
 layout_mode = 0
