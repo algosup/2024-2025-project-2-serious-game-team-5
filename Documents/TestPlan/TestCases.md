@@ -1,51 +1,116 @@
 <div align="center">
 
-# Test Cases - SimCity-Like Game - Team 5  
+# Test Cases - Serious Game - Team 5
 
 ---
 
-**Title:** Test Cases - SimCity-Like Game - Team 5  
+**Title:** Test Cases - Serious Game - Team 5  
+
 **Author:** Maxime CARON  
+
 **Team:** Team 5  
+
 **Created on:** November 12<sup>th</sup>, 2024  
+
 **Last updated:** December 6<sup>th</sup>, 2024  
 
 ---
 
-## Approvals  
+## Approvals
 
-| Reviewer          | Role              | Approved | Date       |  
-| ------------------ | ----------------- | -------- | ---------- |  
-| Maxime CARON       | Quality Assurance |          |            |  
-| Rémy CHARLES       | Project Manager   |          |            |  
-| Pierre GORIN       | Program Manager   |          |            |  
-| Salaheddine NAMIR  | Technical Lead    |          |            |  
-| Elone DELILLE      | Technical Writer  |          |            |  
-| Alexis LASSELIN    | Software Engineer |          |            |  
-| Camille GAYAT      | Software Engineer |          |            |  
+| Reviewer          | Role              | Approved | Date       |
+| ----------------- | ----------------- | -------- | ---------- |
+| Maxime CARON      | Quality Assurance |          |            |
+| Rémy CHARLES      | Project Manager   |          |            |
+| Pierre GORIN      | Program Manager   |          |            |
+| Salaheddine NAMIR | Technical Lead    |          |            |
+| Elone DELILLE     | Technical Writer  |          |            |
+| Alexis LASSELIN   | Software Engineer |          |            |
+| Camille GAYAT     | Software Engineer |          |            |
 
-</div>  
+</div>
+
+<br>
+
+<details>
+<summary><h2 id="toc"> Table of Contents <i>(Click to expand)</i></h2></summary>
+
+- [Test Cases - Serious Game - Team 5](#test-cases---serious-game---team-5)
+  - [Approvals](#approvals)
+  - [**1. Executive Summary**](#1-executive-summary)
+  - [**2. Introduction**](#2-introduction)
+    - [**2.1 Project Overview**](#21-project-overview)
+    - [**2.2 Document Purpose**](#22-document-purpose)
+    - [**2.3 Scope**](#23-scope)
+  - [3. Test Cases](#3-test-cases)
+    - [3.1 **Core Mechanics**](#31-core-mechanics)
+      - [3.1.1 **Indicators**](#311-indicators)
+      - [3.1.2 **Player Actions**](#312-player-actions)
+      - [3.1.3 **User Interface (UI)**](#313-user-interface-ui)
+      - [3.1.4 **Edge Cases for Actions**](#314-edge-cases-for-actions)
+      - [3.1.5 **Indicator Scaling**](#315-indicator-scaling)
+    - [3.2 **Gameplay**](#32-gameplay)
+      - [3.2.1 **Progression**](#321-progression)
+    - [3.3 **Non-Functional Tests**](#33-non-functional-tests)
+      - [3.3.1 **Performance**](#331-performance)
+      - [3.3.2 **User Experience (UX)**](#332-user-experience-ux)
+    - [3.4 **Integration Tests**](#34-integration-tests)
+      - [3.4.1 **Indicator-Action Integration**](#341-indicator-action-integration)
+  
+</details>
 
 ---
 
-## 1. Executive Summary  
+## **1. Executive Summary**
 
-This document defines test cases for the SimCity-like serious game developed by Team 5. The purpose is to validate that the core mechanics, interface, and gameplay functionalities work as intended. Testing also ensures that the game is performant, engaging, and aligned with its educational goal of raising awareness about carbon footprint reduction.  
+This document outlines the test cases for the serious game developed by Team 5. These cases address **functional**, **non-functional**, and **integration** aspects, ensuring that the game meets user expectations and quality standards.
 
 ---
 
-## 2. Test Cases  
+## **2. Introduction**
 
-### 2.1 **Core Mechanics**  
+### **2.1 Project Overview**
 
-#### 2.1.1 **Indicators**  
+The serious game is a web-based, educational game combining elements of strategy and environmental awareness. It engages players with challenging gameplay mechanics and helps them understand global ecological issues.  
+
+For detailed specifications, refer to the [Functional Specifications](../FunctionalSpecifications/FunctionalSpecifications.md) and the [Test Plan](TestPlan.md).
+
+---
+
+### **2.2 Document Purpose**
+
+This document aims to:  
+
+- Provide detailed test cases to validate game functionality, performance, and user experience.  
+- Ensure comprehensive testing to identify and resolve defects.  
+- Maintain alignment with project requirements.
+
+---
+
+### **2.3 Scope**
+
+The test cases cover the following areas:  
+
+- **Main Menu:** Navigation and interactions.  
+- **Settings:** Customization options.  
+- **Game Mechanics:** Core gameplay, rules, and functionality.  
+- **Performance:** Game stability under varying conditions.  
+- **Localization:** Multilingual support and cultural alignment.
+
+---
+
+## 3. Test Cases  
+
+### 3.1 **Core Mechanics**  
+
+#### 3.1.1 **Indicators**  
 
 | Test Case ID | Test Case Name                  | Description                                                   | Input                    | Expected Output                            |  
 | ------------ | ------------------------------- | ------------------------------------------------------------- | ------------------------ | ------------------------------------------ |  
 | IND-01       | Real-Time Indicator Display     | Verify the real-time updates of carbon emissions, happiness, and money. | Player makes changes to the city (e.g., renovates a building). | Indicators update instantly at the top of the screen without lag. |  
 | IND-02       | No Trigger Events from Indicators | Ensure extreme indicator values do not trigger events.         | Happiness drops to 0%, carbon emissions reach a high value. | No game events or interruptions occur due to indicator changes. |  
 
-#### 2.1.2 **Player Actions**  
+#### 3.1.2 **Player Actions**  
 
 | Test Case ID | Test Case Name                  | Description                                                   | Input                    | Expected Output                            |  
 | ------------ | ------------------------------- | ------------------------------------------------------------- | ------------------------ | ------------------------------------------ |  
@@ -54,7 +119,7 @@ This document defines test cases for the SimCity-like serious game developed by 
 | ACT-03       | Green Space Creation            | Test adding green spaces to the city.                         | Select an empty space → Choose "Add Green Space." | Green space appears; emissions decrease; money decreases; happiness increases. |  
 | ACT-04       | Road Construction               | Test adding roads and their impact.                           | Select an empty space → Choose "Add Road." | A road is added; emissions increase slightly; money decreases. |  
 
-#### 2.1.3 **User Interface (UI)**  
+#### 3.1.3 **User Interface (UI)**  
 
 | Test Case ID | Test Case Name                  | Description                                                   | Input                    | Expected Output                            |  
 | ------------ | ------------------------------- | ------------------------------------------------------------- | ------------------------ | ------------------------------------------ |  
@@ -65,7 +130,7 @@ This document defines test cases for the SimCity-like serious game developed by 
 | UI-05        | Corrupted Save File Handling    | Test behavior when loading a corrupted save file.             | Load an intentionally corrupted file.      | Game provides a clear error message and prevents crashes. |
 
 
-#### 2.1.4 **Edge Cases for Actions**  
+#### 3.1.4 **Edge Cases for Actions**  
 
 | Test Case ID | Test Case Name                  | Description                                                   | Input                           | Expected Output                            |  
 | ------------ | ------------------------------- | ------------------------------------------------------------- | ------------------------------- | ------------------------------------------ |  
@@ -75,7 +140,7 @@ This document defines test cases for the SimCity-like serious game developed by 
 | EDGE-04      | Extreme Carbon Emission Focus   | Test the game’s response to prioritizing carbon reduction only. | Remove all roads, focus only on green spaces. | Carbon emissions drop significantly; happiness may fluctuate. |  
 | EDGE-05      | Ignoring Budget                 | Test what happens if the player spends all money early on.    | Build expensive structures repeatedly until money is $0.00. | Actions become disabled; game progression remains unaffected. |  
 
-#### 2.1.5 **Indicator Scaling**  
+#### 3.1.5 **Indicator Scaling**  
 
 | Test Case ID | Test Case Name                  | Description                                                   | Input                           | Expected Output                            |  
 | ------------ | ------------------------------- | ------------------------------------------------------------- | ------------------------------- | ------------------------------------------ |
@@ -86,9 +151,9 @@ This document defines test cases for the SimCity-like serious game developed by 
 
 ---
 
-### 2.2 **Gameplay**  
+### 3.2 **Gameplay**  
 
-#### 2.2.1 **Progression**  
+#### 3.2.1 **Progression**  
 
 | Test Case ID | Test Case Name                  | Description                                                   | Input                    | Expected Output                            |  
 | ------------ | ------------------------------- | ------------------------------------------------------------- | ------------------------ | ------------------------------------------ |  
@@ -97,9 +162,9 @@ This document defines test cases for the SimCity-like serious game developed by 
 
 ---
 
-### 2.3 **Non-Functional Tests**  
+### 3.3 **Non-Functional Tests**  
 
-#### 2.3.1 **Performance**  
+#### 3.3.1 **Performance**  
 
 | Test Case ID | Test Case Name                  | Description                                                   | Input                    | Expected Output                            |  
 | ------------ | ------------------------------- | ------------------------------------------------------------- | ------------------------ | ------------------------------------------ |  
@@ -109,7 +174,7 @@ This document defines test cases for the SimCity-like serious game developed by 
 | PERF-04      | Menu Responsiveness             | Verify the menu opens quickly regardless of city size.        | Select any place after 8 years of gameplay. | Menu opens within 0.5 seconds. |  
 | PERF-05      | High Action Frequency           | Test how the game handles rapid consecutive actions.          | Quickly build 20 roads and buildings in sequence. | Game maintains performance; no freezes or crashes occur. |  
 
-#### 2.3.2 **User Experience (UX)**  
+#### 3.3.2 **User Experience (UX)**  
 
 | Test Case ID | Test Case Name                  | Description                                                   | Input                    | Expected Output                            |  
 | ------------ | ------------------------------- | ------------------------------------------------------------- | ------------------------ | ------------------------------------------ |  
@@ -118,14 +183,12 @@ This document defines test cases for the SimCity-like serious game developed by 
 
 ---
 
-### 2.4 **Integration Tests**  
+### 3.4 **Integration Tests**  
 
-#### 2.4.1 **Indicator-Action Integration**  
+#### 3.4.1 **Indicator-Action Integration**  
 
 | Test Case ID | Test Case Name                  | Description                                                   | Input                    | Expected Output                            |  
 | ------------ | ------------------------------- | ------------------------------------------------------------- | ------------------------ | ------------------------------------------ |  
 | INT-01       | Indicator Updates               | Ensure player actions correctly impact indicators.            | Renovate a building, add green space.      | Indicators adjust accurately to reflect changes caused by the action. |  
 | INT-02       | Green Space and Happiness Impact | Test how multiple green spaces affect happiness.              | Add 5 green spaces to the city.           | Happiness increases proportionally; no bugs occur in indicator calculations. |  
 | INT-03       | Budget-Limited Decisions        | Test interdependency between budget and actions.              | Spend all money on roads.                 | Building options become disabled; warning messages guide the player. |  
-
----
