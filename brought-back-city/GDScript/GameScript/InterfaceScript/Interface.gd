@@ -30,3 +30,7 @@ func _on_construction_menu_button_pressed() -> void:
 	else:
 		target_anchor = down_anchor
 	popped_up = !popped_up
+
+
+func _on_static_body_3d_input_event(camera: Node, event: InputEvent, event_position: Vector3, normal: Vector3, shape_idx: int) -> void:
+	pass # Replace with function body.
