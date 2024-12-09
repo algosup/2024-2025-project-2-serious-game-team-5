@@ -124,13 +124,22 @@ anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
 offset_left = -61.0
-offset_top = -11.5
+offset_top = -20.0
 offset_right = 61.0
-offset_bottom = 11.5
+offset_bottom = 3.0
 grow_horizontal = 2
 grow_vertical = 2
 text = "103/106"
 horizontal_alignment = 1
+
+[node name="Label" type="Label" parent="Population"]
+layout_mode = 0
+offset_top = 19.0
+offset_right = 145.0
+offset_bottom = 42.0
+text = "citizens"
+horizontal_alignment = 1
+vertical_alignment = 2
 
 [node name="MoneyBackground" type="ColorRect" parent="."]
 layout_mode = 0

@@ -70,7 +70,7 @@ func _load_user_data() -> void:
 
 # Reset user data to defaults
 func _reset_user_data() -> void:
-	carbon_bar.value = 0.0
+	carbon_bar.value = 50000.0
 	_save_user_data()
 
 # Save user data

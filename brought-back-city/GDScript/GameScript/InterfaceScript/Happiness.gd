@@ -16,7 +16,7 @@ func _ready() -> void:
 	_load_carbon_percentage()
 	_load_happiness_value()
 	
-	update_happiness()
+	_display_happiness()
 
 	# Start the day timer
 	if timer:
@@ -85,6 +85,8 @@ func update_happiness() -> void:
 
 	# Clamp the happiness value to be within the [0, 100] range
 	happiness_value = clamp(happiness_value, 0.0, 100.0)
+	_display_happiness()
 
+func _display_happiness() -> void:
 	# Update the happiness bar
 	happiness_bar.value = happiness_value
