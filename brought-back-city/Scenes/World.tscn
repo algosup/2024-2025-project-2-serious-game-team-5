@@ -54,7 +54,7 @@ data = {
 metadata/_editor_floor_ = Vector3(0, 0, 0)
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="GridMap"]
-transform = Transform3D(256, 0, 0, 0, 1, 0, 0, 0, 256, 128, 1.69, 128)
+transform = Transform3D(255, 0, 0, 0, 1, 0, 0, 0, 255, 128, 1.69, 128)
 mesh = SubResource("PlaneMesh_ihy0p")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="GridMap/MeshInstance3D"]
