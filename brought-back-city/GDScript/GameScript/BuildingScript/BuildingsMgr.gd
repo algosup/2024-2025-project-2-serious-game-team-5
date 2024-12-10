@@ -40,15 +40,9 @@ var street_light = "res://Scenes/Buildings/StreetLight.tscn"
 ## Road
 var road = "res://Scenes/Buildings/Road.tscn"
 
-# Array for the 512x512 tiles of the map
-var gridData = [] # 262144 tiles
 
 var isBuilding = true
 var buildingId = 1
-
-func _ready() -> void:
-	for i in range(262144):
-		gridData.append(0)
 
 # Building creation
 func CreateBuilding(pos: Vector3):

@@ -11,10 +11,6 @@ func _on_input_event(camera: Node, event: InputEvent, event_position: Vector3, n
 	var posY = round(event_position.z)
 	marker.transform.origin = Vector3(posX, 0, posY)
 	
-	# Check the clicked tile
-	var vec = Vector2(round(event_position.x), round(event_position.z))
-	var posTab = vec.x + (vec.y * 256)
-	
 	if Input.is_action_just_pressed("left_click") && BuildingsMgr.isBuilding:
 		print("Building created at " + str(marker.transform.origin))
 		pos = Vector3(posX, 0, posY)
