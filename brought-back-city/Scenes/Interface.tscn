@@ -1,9 +1,12 @@
-[gd_scene load_steps=6 format=3 uid="uid://htmeeru1v4h8"]
+[gd_scene load_steps=9 format=3 uid="uid://htmeeru1v4h8"]
 
 [ext_resource type="Script" path="res://GDScript/GameScript/InterfaceScript/Interface.gd" id="1_5xait"]
 [ext_resource type="Texture2D" uid="uid://b3cjh5nfx3cgg" path="res://Assets/2DAssets/Interface/ConstructionMenu.png" id="1_lhiha"]
 [ext_resource type="Texture2D" uid="uid://yf82ro07spqe" path="res://Assets/2DAssets/Interface/Construction.png" id="1_q44jx"]
-[ext_resource type="Script" path="res://GDScript/GameScript/InterfaceScript/timer.gd" id="2_xjeol"]
+[ext_resource type="Script" path="res://GDScript/GameScript/InterfaceScript/Carbon.gd" id="2_uv78b"]
+[ext_resource type="Script" path="res://GDScript/GameScript/InterfaceScript/Timer.gd" id="2_xjeol"]
+[ext_resource type="Script" path="res://GDScript/GameScript/InterfaceScript/Happiness.gd" id="3_xinxa"]
+[ext_resource type="Script" path="res://GDScript/GameScript/InterfaceScript/Population.gd" id="4_rfurx"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_t4721"]
 font_size = 9
@@ -26,6 +29,7 @@ offset_right = 174.0
 offset_bottom = 122.0
 mouse_filter = 1
 color = Color(0.0562916, 0.0562916, 0.0562916, 1)
+script = ExtResource("2_uv78b")
 
 [node name="Co2Label" type="Label" parent="Co2Background"]
 layout_mode = 1
@@ -44,7 +48,6 @@ text = "TCo₂/year"
 label_settings = SubResource("LabelSettings_t4721")
 
 [node name="Co2Bar" type="ProgressBar" parent="Co2Background"]
-modulate = Color(0.95782, 0.446297, 1.44392e-05, 1)
 layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
@@ -54,7 +57,16 @@ offset_top = 2.0
 offset_right = 70.0
 offset_bottom = 29.0
 grow_horizontal = 2
-value = 42.0
+max_value = 200000.0
+step = 1.0
+show_percentage = false
+
+[node name="CarbonLabel" type="Label" parent="Co2Background"]
+layout_mode = 0
+offset_right = 144.0
+offset_bottom = 30.0
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="HappinessBackground" type="ColorRect" parent="."]
 layout_mode = 0
@@ -64,6 +76,7 @@ offset_right = 174.0
 offset_bottom = 282.0
 mouse_filter = 1
 color = Color(0.0562916, 0.0562916, 0.0562916, 1)
+script = ExtResource("3_xinxa")
 
 [node name="HappinessLabel" type="Label" parent="HappinessBackground"]
 layout_mode = 1
@@ -92,7 +105,6 @@ offset_top = 2.0
 offset_right = 70.0
 offset_bottom = 29.0
 grow_horizontal = 2
-value = 72.0
 
 [node name="Population" type="ColorRect" parent="."]
 layout_mode = 0
@@ -102,6 +114,7 @@ offset_right = 174.0
 offset_bottom = 202.0
 mouse_filter = 1
 color = Color(0.0562916, 0.0562916, 0.0562916, 1)
+script = ExtResource("4_rfurx")
 
 [node name="PopulationLabel" type="Label" parent="Population"]
 layout_mode = 1
@@ -111,13 +124,22 @@ anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
 offset_left = -61.0
-offset_top = -11.5
+offset_top = -20.0
 offset_right = 61.0
-offset_bottom = 11.5
+offset_bottom = 3.0
 grow_horizontal = 2
 grow_vertical = 2
 text = "103/106"
 horizontal_alignment = 1
+
+[node name="Label" type="Label" parent="Population"]
+layout_mode = 0
+offset_top = 19.0
+offset_right = 145.0
+offset_bottom = 42.0
+text = "citizens"
+horizontal_alignment = 1
+vertical_alignment = 2
 
 [node name="MoneyBackground" type="ColorRect" parent="."]
 layout_mode = 0
@@ -143,6 +165,11 @@ grow_horizontal = 2
 grow_vertical = 2
 text = "123,400 $"
 
+[node name="DayTimer" type="Timer" parent="."]
+process_callback = 0
+wait_time = 12.0
+autostart = true
+
 [node name="Year&DayBackground" type="ColorRect" parent="."]
 layout_mode = 0
 offset_left = 943.0
@@ -163,11 +190,6 @@ layout_mode = 1
 offset_top = 35.0
 offset_right = 148.0
 offset_bottom = 58.0
-
-[node name="DayTimer" type="Timer" parent="Year&DayBackground"]
-process_callback = 0
-wait_time = 12.0
-autostart = true
 
 [node name="ConstructionMenu" type="VBoxContainer" parent="."]
 layout_mode = 1
@@ -200,5 +222,5 @@ mouse_filter = 1
 mouse_default_cursor_shape = 2
 texture_normal = ExtResource("1_q44jx")
 
-[connection signal="timeout" from="Year&DayBackground/DayTimer" to="." method="_on_day_timer_timeout"]
+[connection signal="timeout" from="DayTimer" to="." method="_on_day_timer_timeout"]
 [connection signal="pressed" from="ConstructionMenu/ConstructionMenuButton" to="." method="_on_construction_menu_button_pressed"]
