@@ -105,6 +105,7 @@ offset_top = 2.0
 offset_right = 70.0
 offset_bottom = 29.0
 grow_horizontal = 2
+max_value = 2500.0
 
 [node name="Population" type="ColorRect" parent="."]
 layout_mode = 0

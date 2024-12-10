@@ -9,7 +9,7 @@ const USER_HAPPINESS_DATA_FILE_PATH = "user://userHappinessData.dat"  # New happ
 
 # Variables to store loaded data
 var carbon_percentage: float = 0.0
-var happiness_value: float = 50.0  # Default starting happiness value
+var happiness_value: float = 1225.0  # Default starting happiness value
 
 func _ready() -> void:
 	# Load the saved carbon percentage and happiness value from the user data files
@@ -83,8 +83,8 @@ func update_happiness() -> void:
 	else:
 		happiness_value *= 0.9  # Decrease happiness more significantly
 
-	# Clamp the happiness value to be within the [0, 100] range
-	happiness_value = clamp(happiness_value, 0.0, 100.0)
+	# Clamp the happiness value to be within the [0, 2500] range
+	happiness_value = clamp(happiness_value, 0.0, 2500.0)
 	_display_happiness()
 
 func _display_happiness() -> void:
