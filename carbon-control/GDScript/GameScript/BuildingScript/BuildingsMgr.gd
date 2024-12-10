@@ -44,6 +44,7 @@ var gridData = [] # 512x512 grid data
 
 var isBuilding = true
 var selected_building = 0
+var building_price = 0
 
 func _ready():
 	for i in range(262144):
