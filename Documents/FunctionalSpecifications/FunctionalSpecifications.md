@@ -422,13 +422,13 @@ The commercial buildings are used to provide goods and services to the city's po
 
 | Name          | Description                                          | Price to build | Earning by Day | Day to Earn Back | Slot Needed to Built | Image                                                                             |
 | ------------- | ---------------------------------------------------- | -------------- | -------------- | ---------------- | -------------------- | --------------------------------------------------------------------------------- |
-| Bookshop      | A small shop selling books and magazines.            | $40,000        | $800           | 50               | 4 (2x2)              | <img src="img/assets/buildings/commercial/bookshop.png" style="height:100px;"/>   |
-| BarberShop    | A barbershop offering haircuts and shaves.           | $60,000        | $1,200         | 50               | 4 (2x2)              | <img src="img/assets/buildings/commercial/barbershop.png" style="height:100px;"/> |
+| Bookshop      | A small shop selling books and magazines.            | $40,000        | $800           | 50               | 9 (3x3)              | <img src="img/assets/buildings/commercial/bookshop.png" style="height:100px;"/>   |
+| Barber Shop    | A barbershop offering haircuts and shaves.           | $60,000        | $1,200         | 50               | 4 (2x2)              | <img src="img/assets/buildings/commercial/barbershop.png" style="height:100px;"/> |
 | Bakery        | A bakery selling bread, pastries, and cakes.         | $80,000        | $1,400         | 57               | 4 (2x2)              | <img src="img/assets/buildings/commercial/bakery.png" style="height:100px;"/>     |
-| Pharmacy      | A pharmacy selling medicine and health products.     | $120,000       | $2,000         | 60               | 4 (2x2)              | <img src="img/assets/buildings/commercial/pharmacy.png" style="height:100px;"/>   |
-| Hardware Shop | A hardware store selling tools and supplies.         | $200,000       | $3,000         | 67               | 4 (2x2)              | <img src="img/assets/buildings/commercial/hardware.png" style="height:100px;"/>   |
-| Farm          | A farm producing fresh fruits and vegetables.        | $1,200,000     | $12,000        | 100              | 120 (12x10)          | <img src="img/assets/buildings/commercial/farm.png" style="height:100px;"/>       |
-| Casino        | A casino offering games of chance and entertainment. | $3,000,000     | $30,000        | 100              | 12 (6x2)             | <img src="img/assets/buildings/commercial/casino.png" style="height:100px;"/>     |
+| Pharmacy      | A pharmacy selling medicine and health products.     | $120,000       | $2,000         | 60               | 9 (3x3)              | <img src="img/assets/buildings/commercial/pharmacy.png" style="height:100px;"/>   |
+| Hardware Store | A hardware store selling tools and supplies.         | $200,000       | $3,000         | 67               | 16 (4x4)              | <img src="img/assets/buildings/commercial/hardware.png" style="height:100px;"/>   |
+| Farm          | A farm producing fresh fruits and vegetables.        | $1,200,000     | $12,000        | 100              | 30 (6x5)          | <img src="img/assets/buildings/commercial/farm.png" style="height:100px;"/>       |
+| Casino        | A casino offering games of chance and entertainment. | $3,000,000     | $30,000        | 100              | 27 (9x3)             | <img src="img/assets/buildings/commercial/casino.png" style="height:100px;"/>     |
 
 #### 3.1.1.2 - Industrial Buildings
 
@@ -436,7 +436,7 @@ The industrial buildings are used to produce goods and materials for the city. *
 
 | Name        | Description                              | Price to build | Earning by Day | Day to Earn Back | CO2 by Day | Slot Needed to Built | Image                                                                              |
 | ----------- | ---------------------------------------- | -------------- | -------------- | ---------------- | ------------------- | -------------------- | ---------------------------------------------------------------------------------- |
-| Factory     | A factory producing goods and materials. | $400,000       | $8,000         | 50               | 12 000             | 12 (4x3)             | <img src="img/assets/buildings/industrial/factory.png" style="height:100px;"/>     |
+| Factory     | A factory producing goods and materials. | $400,000       | $8,000         | 50               | 12 000             | 48 (8x6)             | <img src="img/assets/buildings/industrial/factory.png" style="height:100px;"/>     |
 | Recycling Center | A recycling center processing waste.    | $1,200,000     | $15,000        | 80               | -8 000              | 30 (6x5)             | No Image Available                                                                 |
 | Power Plant | A power plant generating electricity.    | $3,000,000     | $35,000        | 86               | 20 000             | 25 (5x5)             | <img src="img/assets/buildings/industrial/power-plant.png" style="height:100px;"/> |
 | Oil Refinery | An oil refinery producing fuel.          | $7,000,000     | $65,000        | 108              | 50 000             | 36 (6x6)             | No Image Available                                                                 |
@@ -448,7 +448,7 @@ The public buildings are used to provide services and amenities to the city's po
 
 | Name      | Description                               | Price to build | Earning by Day | Day to Earn Back | Happinness | Slot Needed to Built | Image                                                                        |
 | --------- | ----------------------------------------- | -------------- | -------------- | ---------------- | --------- | -------------------- | ---------------------------------------------------------------------------- |
-| City Hall | The city's administrative center.         | $0             | $0             | 0                | 100      | 6 (3x2)              | <img src="img/assets/buildings/public/city-hall.png" style="height:100px;"/> |
+| City Hall | The city's administrative center.         | $0             | $500             | 0                | 100      | 6 (3x2)              | <img src="img/assets/buildings/public/city-hall.png" style="height:100px;"/> |
 | School    | A school providing education to children. | $200,000       | $1,000         | 200              | 400      | 9 (3x3)              | <img src="img/assets/buildings/public/school.png" style="height:100px;"/>    |
 | Hospital  | A hospital providing medical care.        | $400,000       | $2,000         | 200              | 600      | 9 (3x3)              | <img src="img/assets/buildings/public/hospital.png" style="height:100px;"/>  |
 | Museum    | A museum showcasing art and history.      | $800,000       | $4,000         | 200              | 1 200    | 32 (8x4)             | <img src="img/assets/buildings/public/museum.png" style="height:100px;"/>    |
@@ -468,8 +468,8 @@ The game will feature the following green spaces and energy sources:
 | ------------ | ------------------------------------------- | -------------- | -------------- | ---------------- | ----------------------- | --------- | -------------------- | ------------------------------------------------------------------------------------- |
 | Park         | A public park with green spaces and trees.  | $40,000        | $100           | 400              | 600                    | 300      | 4 (2x2)              | No Image Available                                                                    |
 | Lake         | A natural lake providing water and scenery. | $80,000        | $200           | 400              | 800                    | 400      | 9 (3x3)              | <img src="img/assets/buildings/green-spaces/lake.png" style="height:100px;"/>         |
-| Wind Turbine | Wind turbines generating electricity.       | $360,000       | $2,000         | 180              | 1 200                  | 0         | 12 (4x3)             | <img src="img/assets/buildings/green-spaces/wind-turbine.png" style="height:100px;"/> |
-| Solar Panel  | Solar panels generating electricity.        | $600,000       | $4,000         | 150              | 2 000                  | 0         | 16 (4x4)             | <img src="img/assets/buildings/green-spaces/solar-panel.png" style="height:100px;"/>  |
+| Wind Turbine | Wind turbines generating electricity.       | $360,000       | $2,000         | 180              | 2 500                  | 0         | 12 (4x3)             | <img src="img/assets/buildings/green-spaces/wind-turbine.png" style="height:100px;"/> |
+| Solar Panel  | Solar panels generating electricity.        | $600,000       | $4,000         | 150              | 4 000                  | 0         | 16 (4x4)             | <img src="img/assets/buildings/green-spaces/solar-panel.png" style="height:100px;"/>  |
 
 ### 3.1.3 - Decorative Elements
 
