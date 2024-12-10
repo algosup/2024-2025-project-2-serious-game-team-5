@@ -762,4 +762,10 @@ mouse_default_cursor_shape = 2
 texture_normal = ExtResource("1_q44jx")
 
 [connection signal="timeout" from="DayTimer" to="." method="_on_day_timer_timeout"]
+[connection signal="pressed" from="ConstructionMenu/ConstructionMenuBox/ScrollContainer/BuildingsBox/BuildingsLabel/ResidentialsLabel/SmallHouse" to="." method="_on_small_house_pressed"]
+[connection signal="pressed" from="ConstructionMenu/ConstructionMenuBox/ScrollContainer/BuildingsBox/BuildingsLabel/ResidentialsLabel/MediumHouse" to="." method="_on_medium_house_pressed"]
+[connection signal="pressed" from="ConstructionMenu/ConstructionMenuBox/ScrollContainer/BuildingsBox/BuildingsLabel/ResidentialsLabel/LargeHouse" to="." method="_on_large_house_pressed"]
+[connection signal="pressed" from="ConstructionMenu/ConstructionMenuBox/ScrollContainer/BuildingsBox/BuildingsLabel/ResidentialsLabel/Apartment" to="." method="_on_apartment_pressed"]
+[connection signal="pressed" from="ConstructionMenu/ConstructionMenuBox/ScrollContainer/BuildingsBox/BuildingsLabel/ResidentialsLabel/Skyscraper" to="." method="_on_skyscraper_pressed"]
+[connection signal="pressed" from="ConstructionMenu/ConstructionMenuBox/ScrollContainer/BuildingsBox/BuildingsLabel/PublicLabel/CityHall" to="." method="_on_city_hall_pressed"]
 [connection signal="pressed" from="ConstructionMenu/ConstructionMenuButton" to="." method="_on_construction_menu_button_pressed"]

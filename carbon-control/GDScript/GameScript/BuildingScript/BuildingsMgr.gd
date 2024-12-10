@@ -43,9 +43,7 @@ var road = "res://Scenes/Buildings/Road.tscn" # 1x1 ID: 25
 var gridData = [] # 512x512 grid data
 
 var isBuilding = true
-# var buildingId = 1
-
-var selected_building = 1
+var selected_building = 0
 
 func _ready():
 	for i in range(262144):
@@ -102,20 +100,34 @@ func GetSelectedBuilding():
 		return street_light
 	elif selected_building == 25:
 		return road
+	else:
+		return
 
 # Building creation
 func CreateBuilding(pos: Vector3, posTab: int):
 	if gridData[posTab] == 0:
+		# Get the selected building
+		var building_path = GetSelectedBuilding()
+		
+		# Check if a building is selected
+		if building_path == null:
+			print("No building selected.")
+			return
+
 		# Load the building resource
-		var building_res = load(GetSelectedBuilding())
-		var building_path = GetSelectedBuilding() 
+		var building_res = load(building_path)
+		if building_res == null:
+			print("Failed to load building resource: ", building_path)
+			return
+
 		var building = building_res.instantiate()
 		
 		building.position = pos  # Use 'position' to set the location in 3D
 		get_tree().get_root().add_child(building)
+		selected_building = 0
 
+		# Update the grid based on the building type
 		match building_path:
-			# Disable the cell where the building is placed and the cells around it
 			"res://Scenes/Buildings/SmallHouse.tscn":
 				gridData[posTab - 513] = 1
 				gridData[posTab - 512] = 1
