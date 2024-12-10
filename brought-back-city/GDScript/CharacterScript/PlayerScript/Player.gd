@@ -32,9 +32,9 @@ func _unhandled_input(event: InputEvent) -> void:
 	# Camera zoom-in (wheel down) and zoom-out (wheel up)
 	if event is InputEventMouseButton:
 		if Input.is_action_pressed("zoom_camera_in"):
-			player_camera.size = clamp(player_camera.size - zoom_speed, 30.0, 150.0)
+			player_camera.size = clamp(player_camera.size - zoom_speed, 10.0, 150.0)
 		elif Input.is_action_pressed("zoom_camera_out"):
-			player_camera.size = clamp(player_camera.size + zoom_speed, 30.0, 150.0)
+			player_camera.size = clamp(player_camera.size + zoom_speed, 10.0, 150.0)
 			
 # This function handle the interactions of the player with left click.			
 func _input(event):

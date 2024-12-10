@@ -3,6 +3,9 @@ extends Node
 # Building list
 var building1 = "res://Scenes/Buildings/SmallHouse.tscn"
 
+var isBuilding = true
+var buildingId = 1
+
 # Building creation
 func CreateBuilding(pos: Vector3):
 	# Load the building resource
