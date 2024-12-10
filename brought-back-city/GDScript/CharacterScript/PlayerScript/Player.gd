@@ -27,14 +27,13 @@ func _unhandled_input(event: InputEvent) -> void:
 		if Input.is_action_pressed("moving_camera") and Input.get_mouse_mode() == Input.MOUSE_MODE_CONFINED:
 			moving_camera_input.x = -event.screen_relative.x * mouse_sensitivity
 			moving_camera_input.z = -event.screen_relative.y * mouse_sensitivity
-			print("right click is working")
 	
 	# Camera zoom-in (wheel down) and zoom-out (wheel up)
 	if event is InputEventMouseButton:
 		if Input.is_action_pressed("zoom_camera_in"):
-			player_camera.size = clamp(player_camera.size - zoom_speed, 30.0, 150.0)
+			player_camera.size = clamp(player_camera.size - zoom_speed, 5, 70)
 		elif Input.is_action_pressed("zoom_camera_out"):
-			player_camera.size = clamp(player_camera.size + zoom_speed, 30.0, 150.0)
+			player_camera.size = clamp(player_camera.size + zoom_speed, 5, 70)
 			
 # This function handle the interactions of the player with left click.			
 func _input(event):
@@ -45,7 +44,7 @@ func _input(event):
 			_get_mouse_pos(mouse)
 
 # This function determine which building is clicked by the player
-func _get_mouse_pos(mouse: Vector2):
+func _get_mouse_pos(_mouse: Vector2):
 	var space = get_world_3d().direct_space_state
 	var start = get_viewport().get_camera_3d().project_ray_origin(mouse)
 	var end = get_viewport().get_camera_3d().project_position(mouse, distance)
