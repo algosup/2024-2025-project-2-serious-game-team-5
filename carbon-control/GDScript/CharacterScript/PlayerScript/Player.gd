@@ -34,12 +34,10 @@ func _unhandled_input(event: InputEvent) -> void:
 	
 	# Camera zoom-in (wheel down) and zoom-out (wheel up)
 	elif event is InputEventMouseButton:
-		if event.button_index == MOUSE_BUTTON_WHEEL_UP:
+		if event.button_index == MOUSE_BUTTON_WHEEL_UP && not(GlobalVariables.popped_up):
 			player_camera.size = clamp(player_camera.size - zoom_speed, 10.0, 150.0)
-		elif event.button_index == MOUSE_BUTTON_WHEEL_DOWN:
+		elif event.button_index == MOUSE_BUTTON_WHEEL_DOWN && not(GlobalVariables.popped_up):
 			player_camera.size = clamp(player_camera.size + zoom_speed, 10.0, 150.0)
-		elif event.button_index == MOUSE_BUTTON_MIDDLE and event.pressed:
-			print("Middle mouse button pressed")
 			
 # This function handle the interactions of the player with left click.			
 func _input(event):
