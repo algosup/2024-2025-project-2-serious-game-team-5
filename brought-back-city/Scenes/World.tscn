@@ -4,24 +4,18 @@
 [ext_resource type="Script" path="res://GDScript/GameScript/InterfaceScript/Marker.gd" id="4_7j8va"]
 [ext_resource type="Material" uid="uid://2c84wp3bqorp" path="res://Materials/green_material_3d.tres" id="4_io1jh"]
 [ext_resource type="PackedScene" uid="uid://htmeeru1v4h8" path="res://Scenes/Interface.tscn" id="4_q2v0b"]
-[ext_resource type="MeshLibrary" uid="uid://cf8yvg3vllpqr" path="res://Assets/mesh.tres" id="5_5st4n"]
+[ext_resource type="MeshLibrary" uid="uid://dmymo3hn2hqop" path="res://Assets/mesh.tres" id="5_5st4n"]
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_13kr8"]
-shader = ExtResource("1_ltg2d")
-shader_parameter/sky_color = Color(0.811765, 0.92549, 0.968627, 1)
-shader_parameter/sky_color2 = Color(0.627451, 0.85098, 0.937255, 1)
-shader_parameter/sky_color3 = Color(0.384314, 0.756863, 0.898039, 1)
-shader_parameter/sky_color4 = Color(0.12549, 0.654902, 0.858824, 1)
-shader_parameter/sky_color5 = Color(0.109804, 0.588235, 0.772549, 1)
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_fa2s6"]
+sky_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
+ground_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
 
 [sub_resource type="Sky" id="Sky_qgm26"]
-sky_material = SubResource("ShaderMaterial_13kr8")
+sky_material = SubResource("ProceduralSkyMaterial_fa2s6")
 
 [sub_resource type="Environment" id="Environment_3ontc"]
 background_mode = 2
 sky = SubResource("Sky_qgm26")
-ambient_light_source = 3
-reflected_light_source = 2
 tonemap_mode = 2
 glow_enabled = true
 
@@ -60,7 +54,7 @@ data = {
 metadata/_editor_floor_ = Vector3(0, 0, 0)
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="GridMap"]
-transform = Transform3D(255, 0, 0, 0, 1, 0, 0, 0, 256, 128, 1.69, 128)
+transform = Transform3D(255, 0, 0, 0, 1, 0, 0, 0, 255, 128, 1.69, 128)
 mesh = SubResource("PlaneMesh_ihy0p")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="GridMap/MeshInstance3D"]
