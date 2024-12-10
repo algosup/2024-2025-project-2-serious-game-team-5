@@ -9,8 +9,6 @@ func _ready():
 	$LeaveButton.connect("pressed", self._onPressed.bind(2))
 	$SettingsButton.connect("pressed", self._onPressed.bind(3))
 	$CreditsButton.connect("pressed", self._onPressed.bind(4))
-	$NewGameButton.connect("pressed", self._onPressed.bind(5))
-	
 
 func _gameInit():
 	var language
@@ -53,9 +51,6 @@ func _onPressed(i):
 			get_tree().change_scene_to_file("res://Scenes/SettingsMenu.tscn")
 		4: # Switch to Credits
 			get_tree().change_scene_to_file("res://Scenes/Credits.tscn")
-		5: # Remove previous save and play
-			GlobalTimer.reset_user_data()
-			get_tree().change_scene_to_file("res://Scenes/World.tscn")
 
 # This function will load the userLanguage
 func _loadUserData():

@@ -17,8 +17,7 @@ offset_left = 464.0
 offset_top = 152.0
 offset_right = 697.0
 offset_bottom = 175.0
-text = "Welcome to Carbon Control"
-horizontal_alignment = 1
+text = "Welcome to Brought Back City"
 
 [node name="PlayButton" type="Button" parent="Control"]
 layout_mode = 0
@@ -26,22 +25,22 @@ offset_left = 486.0
 offset_top = 210.0
 offset_right = 676.0
 offset_bottom = 253.0
-text = "Continue"
+text = "Play"
 
 [node name="LeaveButton" type="Button" parent="Control"]
 layout_mode = 0
-offset_left = 485.0
-offset_top = 369.0
-offset_right = 675.0
-offset_bottom = 412.0
+offset_left = 484.0
+offset_top = 352.0
+offset_right = 674.0
+offset_bottom = 395.0
 text = "Leave the game"
 
 [node name="SettingsButton" type="Button" parent="Control"]
 layout_mode = 0
 offset_left = 485.0
-offset_top = 316.0
+offset_top = 280.0
 offset_right = 675.0
-offset_bottom = 359.0
+offset_bottom = 323.0
 text = "Settings"
 
 [node name="CreditsButton" type="Button" parent="Control"]
@@ -51,11 +50,3 @@ offset_top = 11.0
 offset_right = 1141.0
 offset_bottom = 54.0
 text = "Credits"
-
-[node name="NewGameButton" type="Button" parent="Control"]
-layout_mode = 0
-offset_left = 485.0
-offset_top = 263.0
-offset_right = 675.0
-offset_bottom = 306.0
-text = "New Game"

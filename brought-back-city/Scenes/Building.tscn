@@ -1,0 +1,22 @@
+[gd_scene load_steps=5 format=3 uid="uid://bg3mijkvak70x"]
+
+[sub_resource type="GDScript" id="GDScript_0xosy"]
+script/source = "extends StaticBody3D
+"
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_2vqkw"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_20th8"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_3nlnw"]
+
+[node name="Building" type="StaticBody3D"]
+script = SubResource("GDScript_0xosy")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("BoxShape3D_2vqkw")
+
+[node name="BuildingMesh" type="MeshInstance3D" parent="CollisionShape3D"]
+mesh = SubResource("BoxMesh_20th8")
+skeleton = NodePath("../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_3nlnw")
