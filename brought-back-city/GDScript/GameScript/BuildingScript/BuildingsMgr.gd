@@ -41,9 +41,6 @@ var street_light = "res://Scenes/Buildings/StreetLight.tscn"
 var road = "res://Scenes/Buildings/Road.tscn"
 
 
-var isBuilding = true
-var buildingId = 1
-
 # Building creation
 func CreateBuilding(pos: Vector3):
 	# Load the building resource
