@@ -61,17 +61,17 @@ func _load_user_data() -> void:
 			day_count = int(data[1])
 		else:
 			print("Error: User data corrupted. Resetting to default.")
-			_reset_user_data()
+			reset_user_data()
 		file.close()
 	else:
 		print("Error: Failed to open user data file.")
 
 # Create initial user data
 func _create_user_data() -> void:
-	_reset_user_data()
+	reset_user_data()
 
 # Reset user data to defaults
-func _reset_user_data() -> void:
+func reset_user_data() -> void:
 	year_count = 1
 	day_count = 1
 	_save_user_data()
@@ -86,6 +86,12 @@ func _save_user_data() -> void:
 		print("Error: Failed to save user data.")
 
 # Update UI labels
+# Updates the UI labels for day and year
 func _update_labels() -> void:
-	day_label.text = "Day: %d" % day_count
-	year_label.text = "Year: %d" % year_count
+	# Ensure `day_label` and `year_label` are valid nodes
+	if day_label and year_label:
+		day_label.text = "Day: %d" % day_count
+		year_label.text = "Year: %d" % year_count
+	else:
+		print("Error: day_label or year_label is not initialized properly.")
+		
