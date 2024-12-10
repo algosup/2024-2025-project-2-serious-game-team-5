@@ -1,6 +1,7 @@
-[gd_scene load_steps=12 format=3 uid="uid://wqw1ua78dy8k"]
+[gd_scene load_steps=13 format=3 uid="uid://wqw1ua78dy8k"]
 
 [ext_resource type="PackedScene" uid="uid://dyna83k7m266c" path="res://Scenes/Player.tscn" id="1_gga1m"]
+[ext_resource type="Script" path="res://GDScript/GameScript/BuildingScript/BuildingsMgr.gd" id="1_s4h8r"]
 [ext_resource type="Script" path="res://GDScript/GameScript/InterfaceScript/Marker.gd" id="4_7j8va"]
 [ext_resource type="Material" uid="uid://2c84wp3bqorp" path="res://Materials/green_material_3d.tres" id="4_io1jh"]
 [ext_resource type="PackedScene" uid="uid://htmeeru1v4h8" path="res://Scenes/Interface.tscn" id="4_q2v0b"]
@@ -29,6 +30,7 @@ data = PackedVector3Array(0.5, 0, 0.5, -0.5, 0, 0.5, 0.5, 0, -0.5, -0.5, 0, 0.5,
 size = Vector2(1, 1)
 
 [node name="World" type="Node3D"]
+script = ExtResource("1_s4h8r")
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_3ontc")
