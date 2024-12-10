@@ -8,7 +8,7 @@ points = PackedVector3Array(-0.0132104, -0.0104013, -0.000122303, -0.00352124, -
 [node name="MediumHouse" instance=ExtResource("1_f7736")]
 
 [node name="House1" parent="." index="0"]
-transform = Transform3D(9.73536e-06, -50, -2.18557e-06, 0, -2.18557e-06, 50, -50, -9.73536e-06, -4.25546e-13, 1, 0, 1)
+transform = Transform3D(50, 0, 0, 0, -2.18557e-06, 50, 0, -50, -2.18557e-06, 0, 0, 0)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="House1" index="0"]
 
