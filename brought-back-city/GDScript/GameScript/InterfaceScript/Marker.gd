@@ -13,5 +13,5 @@ func _on_input_event(camera: Node, event: InputEvent, event_position: Vector3, n
 	
 	if Input.is_action_just_pressed("left_click") && BuildingsMgr.isBuilding:
 		print("Building created at " + str(marker.transform.origin))
-		pos = Vector3(posX, 0.5, posY)
+		pos = Vector3(posX, 0, posY)
 		BuildingsMgr.CreateBuilding(pos)
