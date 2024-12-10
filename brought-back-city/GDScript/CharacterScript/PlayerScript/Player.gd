@@ -21,20 +21,25 @@ func _process(_delta: float) -> void:
 		translate(moving_camera_input)
 		
 # This function will handle both camera movement and camera zoom.
-func _unhandled_input(event: InputEvent) -> void:
+func _unhandled_input(event: InputEvent) -> void:		
 	# Camera movement while holding right mouse button
 	if event is InputEventMouseMotion:
 		if Input.is_action_pressed("moving_camera") and Input.get_mouse_mode() == Input.MOUSE_MODE_CONFINED:
 			moving_camera_input.x = -event.screen_relative.x * mouse_sensitivity
 			moving_camera_input.z = -event.screen_relative.y * mouse_sensitivity
 			print("right click is working")
+		elif Input.is_mouse_button_pressed(MOUSE_BUTTON_MIDDLE):
+			player_camera.rotation_degrees.y -= event.screen_relative.x * mouse_sensitivity  # Rotate horizontally
+			player_camera.rotation_degrees.x -= event.screen_relative.y * mouse_sensitivity  # Rotate vertically
 	
 	# Camera zoom-in (wheel down) and zoom-out (wheel up)
-	if event is InputEventMouseButton:
-		if Input.is_action_pressed("zoom_camera_in"):
+	elif event is InputEventMouseButton:
+		if event.button_index == MOUSE_BUTTON_WHEEL_UP:
 			player_camera.size = clamp(player_camera.size - zoom_speed, 10.0, 150.0)
-		elif Input.is_action_pressed("zoom_camera_out"):
+		elif event.button_index == MOUSE_BUTTON_WHEEL_DOWN:
 			player_camera.size = clamp(player_camera.size + zoom_speed, 10.0, 150.0)
+		elif event.button_index == MOUSE_BUTTON_MIDDLE and event.pressed:
+			print("Middle mouse button pressed")
 			
 # This function handle the interactions of the player with left click.			
 func _input(event):
