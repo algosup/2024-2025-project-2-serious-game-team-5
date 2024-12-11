@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://GDScript/GameScript/InterfaceScript/Interface.gd" id="1_5xait"]
 [ext_resource type="Texture2D" uid="uid://yf82ro07spqe" path="res://Assets/2DAssets/Interface/Construction.png" id="1_q44jx"]
-[ext_resource type="Script" path="res://GDScript/GameScript/InterfaceScript/timer.gd" id="2_xjeol"]
+[ext_resource type="Script" path="res://GDScript/GameScript/InterfaceScript/Timer.gd" id="2_xjeol"]
 [ext_resource type="Texture2D" uid="uid://ts3dlc4yk6jo" path="res://Assets/2DAssets/Interface/Buildings/Houses/small-house.png" id="3_gbasx"]
 [ext_resource type="Texture2D" uid="uid://8r2tersk5nr3" path="res://Assets/2DAssets/Interface/Buildings/Houses/medium-house.png" id="4_dfwmb"]
 [ext_resource type="Texture2D" uid="uid://byt22kdv6ktw7" path="res://Assets/2DAssets/Interface/Buildings/Houses/large-house.png" id="5_j0uc5"]
@@ -111,6 +111,11 @@ grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 1
 script = ExtResource("1_5xait")
+
+[node name="DayTimer" type="Timer" parent="."]
+process_callback = 0
+wait_time = 12.0
+autostart = true
 
 [node name="Co2Background" type="ColorRect" parent="."]
 layout_mode = 0
@@ -257,11 +262,6 @@ layout_mode = 1
 offset_top = 35.0
 offset_right = 148.0
 offset_bottom = 58.0
-
-[node name="DayTimer" type="Timer" parent="Year&DayBackground"]
-process_callback = 0
-wait_time = 12.0
-autostart = true
 
 [node name="ConstructionMenu" type="VBoxContainer" parent="."]
 layout_mode = 1
@@ -761,5 +761,11 @@ mouse_filter = 1
 mouse_default_cursor_shape = 2
 texture_normal = ExtResource("1_q44jx")
 
-[connection signal="timeout" from="Year&DayBackground/DayTimer" to="." method="_on_day_timer_timeout"]
+[connection signal="timeout" from="DayTimer" to="." method="_on_day_timer_timeout"]
+[connection signal="pressed" from="ConstructionMenu/ConstructionMenuBox/ScrollContainer/BuildingsBox/BuildingsLabel/ResidentialsLabel/SmallHouse" to="." method="_on_small_house_pressed"]
+[connection signal="pressed" from="ConstructionMenu/ConstructionMenuBox/ScrollContainer/BuildingsBox/BuildingsLabel/ResidentialsLabel/MediumHouse" to="." method="_on_medium_house_pressed"]
+[connection signal="pressed" from="ConstructionMenu/ConstructionMenuBox/ScrollContainer/BuildingsBox/BuildingsLabel/ResidentialsLabel/LargeHouse" to="." method="_on_large_house_pressed"]
+[connection signal="pressed" from="ConstructionMenu/ConstructionMenuBox/ScrollContainer/BuildingsBox/BuildingsLabel/ResidentialsLabel/Apartment" to="." method="_on_apartment_pressed"]
+[connection signal="pressed" from="ConstructionMenu/ConstructionMenuBox/ScrollContainer/BuildingsBox/BuildingsLabel/ResidentialsLabel/Skyscraper" to="." method="_on_skyscraper_pressed"]
+[connection signal="pressed" from="ConstructionMenu/ConstructionMenuBox/ScrollContainer/BuildingsBox/BuildingsLabel/PublicLabel/CityHall" to="." method="_on_city_hall_pressed"]
 [connection signal="pressed" from="ConstructionMenu/ConstructionMenuButton" to="." method="_on_construction_menu_button_pressed"]

@@ -8,6 +8,9 @@ points = PackedVector3Array(-0.00475228, 0.014363, 0.0124705, -0.0039605, 0.0143
 [node name="SmallHouse" instance=ExtResource("1_y1bxy")]
 transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 0.5, 0, 0.5)
 
+[node name="House2" parent="." index="0"]
+transform = Transform3D(100, 0, 0, 0, -1.19209e-05, 100, 0, -100, -1.19209e-05, 0, 0, 0)
+
 [node name="StaticBody3D" type="StaticBody3D" parent="House2" index="0"]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="House2/StaticBody3D" index="0"]

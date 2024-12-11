@@ -17,9 +17,9 @@ config/icon="res://icon.svg"
 
 [autoload]
 
-GlobalTimer="*res://GDScript/GameScript/InterfaceScript/timer.gd"
-GlobalVariables="*res://GDScript/GlobalVariables.gd"
 BuildingsMgr="*res://GDScript/GameScript/BuildingScript/BuildingsMgr.gd"
+GlobalVariables="*res://GDScript/GlobalVariables.gd"
+GlobalTimer="*res://GDScript/GameScript/InterfaceScript/Timer.gd"
 
 [display]
 
