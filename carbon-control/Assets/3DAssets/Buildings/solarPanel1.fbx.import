@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://coqjy5yb3bmt3"
-path="res://.godot/imported/solarPanel1.fbx-ecdf5d2d4d32e7cea0639430a69d1d88.scn"
+path="res://.godot/imported/solarPanel1.fbx-5840c479f3bb1c94585f1edba3b8010f.scn"
 
 [deps]
 
-source_file="res://Scenes/Buildings/solarPanel1.fbx"
-dest_files=["res://.godot/imported/solarPanel1.fbx-ecdf5d2d4d32e7cea0639430a69d1d88.scn"]
+source_file="res://Assets/3DAssets/Buildings/solarPanel1.fbx"
+dest_files=["res://.godot/imported/solarPanel1.fbx-5840c479f3bb1c94585f1edba3b8010f.scn"]
 
 [params]
 

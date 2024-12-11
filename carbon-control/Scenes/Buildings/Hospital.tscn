@@ -8,6 +8,9 @@ points = PackedVector3Array(180.016, 34.3916, 43.865, 180.016, 33.1026, 43.865, 
 [node name="Hospital" instance=ExtResource("1_ggc64")]
 transform = Transform3D(-0.02, 0, -1.74846e-09, 0, 0.02, 0, 1.74846e-09, 0, -0.02, 0, 15, 0)
 
+[node name="Node" parent="." index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.04766e-05, 0, -119.838)
+
 [node name="StaticBody3D" type="StaticBody3D" parent="Node" index="0"]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Node/StaticBody3D" index="0"]

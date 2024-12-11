@@ -1,6 +1,6 @@
 [gd_scene load_steps=9 format=3 uid="uid://bg6mjyo8le845"]
 
-[ext_resource type="PackedScene" uid="uid://coqjy5yb3bmt3" path="res://Scenes/Buildings/solarPanel1.fbx" id="1_8lpfv"]
+[ext_resource type="PackedScene" uid="uid://coqjy5yb3bmt3" path="res://Assets/3DAssets/Buildings/solarPanel1.fbx" id="1_8lpfv"]
 
 [sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_66ab2"]
 points = PackedVector3Array(0.116667, 0.006, 0.0015, 0.116667, -0.006, 0.0015, 0.116667, 0.006, 0, -0.01, 0.006, 0.0015, 0.116667, -0.006, 0, -0.01, -0.006, 0.0015, -0.01, 0.006, 0, -0.01, -0.006, 0)

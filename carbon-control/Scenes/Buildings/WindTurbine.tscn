@@ -221,10 +221,10 @@ shadow_mesh = SubResource("ArrayMesh_dpjl0")
 points = PackedVector3Array(0.109812, -0.0252223, 0.171265, 0.00864218, -0.00500688, 0, 0.00999655, -1.15857e-06, 0, 0.00864218, 0.00499744, 0, 0.109554, -0.024766, 0.171407, 0.10979, -0.0252223, 0.171831, 0.109554, -0.0256858, 0.171407, 0.00498752, -0.00866491, 0, 0.00498752, 0.00865547, 0, 0.109554, -0.02488, 0.171831, 0.00589044, 0.036515, 0.232517, 0.00589044, 0.036515, 0.240939, 0.00724481, 0.0355452, 0.240939, 0.109554, -0.0255646, 0.171831, 0.000451453, -0.0252223, 0.361214, -7.45058e-09, -0.0100055, 0, -7.45058e-09, -0.0256858, 0.361214, -7.45058e-09, -0.0363319, 0.234676, -7.45058e-09, 0.00999603, 0, 0.000322461, -0.02488, 0.361001, -0.00597645, 0.036515, 0.232517, -0.00597645, 0.036515, 0.240939, -7.45058e-09, -0.024766, 0.361214, 0.000322461, -0.0255646, 0.361001, -7.45058e-09, -0.0252223, 0.361497, -0.109575, -0.0256858, 0.171407, -0.00500903, -0.00866491, 0, -0.000472963, -0.0252223, 0.361214, -0.000343971, -0.0255646, 0.361001, -0.109575, -0.0255646, 0.171831, -0.00500903, 0.00865547, 0, -0.109575, -0.024766, 0.171407, -0.00726632, 0.0355452, 0.240939, -0.00679336, 0.0355452, 0.241682, -0.000343971, -0.02488, 0.361001, -0.109812, -0.0252223, 0.171831, -0.109812, -0.0252223, 0.171265, -0.00866369, -0.00500688, 0, -0.109575, -0.02488, 0.171831, -0.00866369, 0.00499744, 0, -0.0100181, -1.15857e-06, 0)
 
 [node name="wind-turbines" type="Node3D"]
-transform = Transform3D(-3.93403e-07, 0, 9, 0, 9, 0, -9, 0, -3.93403e-07, -4.00195, 0, -4.37501)
+transform = Transform3D(-3.93403e-07, 0, 9, 0, 9, 0, -9, 0, -3.93403e-07, -0.0471845, 0, -0.169148)
 
 [node name="Node_005" type="MeshInstance3D" parent="."]
-transform = Transform3D(2, 0, 0, 0, -2.38419e-07, 2, 0, -2, -2.38419e-07, -0.25, 0, 0.25)
+transform = Transform3D(2, 0, 0, 0, -2.38419e-07, 2, 0, -2, -2.38419e-07, 0.224293, 0, -0.252193)
 mesh = SubResource("ArrayMesh_y3owa")
 skeleton = NodePath("")
 
@@ -234,7 +234,7 @@ skeleton = NodePath("")
 shape = SubResource("ConvexPolygonShape3D_o67ec")
 
 [node name="Node_014" type="MeshInstance3D" parent="."]
-transform = Transform3D(2, 0, 0, 0, -2.38419e-07, 2, 0, -2, -2.38419e-07, -0.75, 0, 0.25)
+transform = Transform3D(2, 0, 0, 0, -2.38419e-07, 2, 0, -2, -2.38419e-07, -0.275707, 0, -0.252193)
 mesh = SubResource("ArrayMesh_4bgit")
 skeleton = NodePath("")
 
@@ -244,7 +244,7 @@ skeleton = NodePath("")
 shape = SubResource("ConvexPolygonShape3D_hyxpx")
 
 [node name="Node_016" type="MeshInstance3D" parent="."]
-transform = Transform3D(2, 0, 0, 0, -2.38419e-07, 2, 0, -2, -2.38419e-07, -0.25, 0, 0.75)
+transform = Transform3D(2, 0, 0, 0, -2.38419e-07, 2, 0, -2, -2.38419e-07, 0.224293, 0, 0.247807)
 mesh = SubResource("ArrayMesh_p0r72")
 skeleton = NodePath("")
 
@@ -254,7 +254,7 @@ skeleton = NodePath("")
 shape = SubResource("ConvexPolygonShape3D_865g6")
 
 [node name="Node_017" type="MeshInstance3D" parent="."]
-transform = Transform3D(2, 0, 0, 0, -2.38419e-07, 2, 0, -2, -2.38419e-07, -0.75, 0, 0.75)
+transform = Transform3D(2, 0, 0, 0, -2.38419e-07, 2, 0, -2, -2.38419e-07, -0.275707, 0, 0.247807)
 mesh = SubResource("ArrayMesh_v16h5")
 skeleton = NodePath("")
 
@@ -264,7 +264,7 @@ skeleton = NodePath("")
 shape = SubResource("ConvexPolygonShape3D_v2v5m")
 
 [node name="Node_018" type="MeshInstance3D" parent="."]
-transform = Transform3D(2, 0, 0, 0, -2.38419e-07, 2, 0, -2, -2.38419e-07, -0.5, 0, 0.5)
+transform = Transform3D(2, 0, 0, 0, -2.38419e-07, 2, 0, -2, -2.38419e-07, -0.0257071, 0, -0.00219255)
 mesh = SubResource("ArrayMesh_4i5fc")
 skeleton = NodePath("")
 
