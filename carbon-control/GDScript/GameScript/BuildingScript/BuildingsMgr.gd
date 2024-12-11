@@ -104,10 +104,37 @@ func GetSelectedBuilding():
 	else:
 		return
 
-# Building creation
-func CreateBuilding(pos: Vector3, posTab: int):
-	if gridData[posTab] == 0 or selected_building == 24 or selected_building == 25:
-		# Get the selected building
+# Store the dimensions of each building (width x height)
+var building_sizes = {
+	1: Vector2(1, 1), # Small house
+	2: Vector2(2, 2), # Medium house
+	3: Vector2(2, 3), # Large house
+	4: Vector2(4, 5), # Apartment
+	5: Vector2(7, 8), # Skyscraper
+	6: Vector2(3, 3), # Bookshop
+	7: Vector2(2, 2), # Barber
+	8: Vector2(2, 2), # Bakery
+	9: Vector2(3, 3), # Pharmacy
+	10: Vector2(4, 4), # Hardware shop
+	11: Vector2(9, 12), # Farm
+	12: Vector2(4, 10), # Casino
+	13: Vector2(7, 7), # Factory
+	14: Vector2(24, 40), # Power plant
+	15: Vector2(8, 6), # City hall
+	16: Vector2(3, 5), # School
+	17: Vector2(8, 16), # Hospital
+	18: Vector2(6, 6), # Museum
+	19: Vector2(6, 8), # Lake
+	20: Vector2(7, 9), # Wind turbine
+	21: Vector2(4, 4), # Solar panel
+	22: Vector2(2, 2), # Tree
+	23: Vector2(4, 4), # Park
+	24: Vector2(1, 1), # Horizontal road
+	25: Vector2(1, 1), # Vertical road
+}
+
+func CreateBuilding(pos: Vector3, pos_tab: int):
+	if gridData[pos_tab] == 0 or selected_building == 25:
 		var building_path = GetSelectedBuilding()
 		
 		# Check if a building is selected
@@ -122,12 +149,15 @@ func CreateBuilding(pos: Vector3, posTab: int):
 			return
 
 		var building = building_res.instantiate()
-		
-		building.position = pos  # Use 'position' to set the location in 3D
+		building.position = pos
 		get_tree().get_root().add_child(building)
 
-		# Update the grid data
-		gridData[posTab] = 1
-
+		# Update all grid tiles occupied by the building
+		var size = building_sizes.get(selected_building, Vector2(1, 1))
+		var vec = Vector2(pos.x, pos.z)
+		for x in range(size.x):
+			for y in range(size.y):
+				var tile_index = (vec.x + x) + ((vec.y + y) * 512)
+				gridData[tile_index] = selected_building  # Use the building ID as marker
 	else:
 		print("Building already exists at this location.")

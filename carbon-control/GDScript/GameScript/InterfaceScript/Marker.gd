@@ -26,7 +26,7 @@ var building_sizes = {
 	19: Vector2(6, 8), # Lake
 	20: Vector2(7, 9), # Wind turbine
 	21: Vector2(4, 4), # Solar panel
-	22: Vector2(4, 4), # Tree
+	22: Vector2(2, 2), # Tree
 	23: Vector2(4, 4), # Park
 	24: Vector2(1, 1), # Horizontal road
 	25: Vector2(1, 1), # Vertical road
@@ -52,7 +52,10 @@ func _on_input_event(camera: Node, event: InputEvent, event_position: Vector3, n
 	for x in range(size.x):
 		for y in range(size.y):
 			var pos_tab = (vec.x + x) + ((vec.y + y) * 512)
-			if BuildingsMgr.gridData[pos_tab] != 0:
+			if pos_tab < 0 or pos_tab >= BuildingsMgr.gridData.size():  # Out of bounds
+				occupied = true
+				break
+			if BuildingsMgr.gridData[pos_tab] != 0:  # Occupied tile
 				occupied = true
 				break
 		if occupied:
