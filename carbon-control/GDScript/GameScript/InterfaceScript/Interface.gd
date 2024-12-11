@@ -127,10 +127,6 @@ func _on_bench_pressed() -> void:
 	BuildingsMgr.selected_building = 23
 	BuildingsMgr.building_price = 1000
 
-func _on_street_light_pressed() -> void:
-	BuildingsMgr.selected_building = 24
-	BuildingsMgr.building_price = 1000
-
 func _on_road_pressed() -> void:
 	BuildingsMgr.selected_building = 25
 	BuildingsMgr.building_price = 500
