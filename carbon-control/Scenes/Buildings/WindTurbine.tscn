@@ -3,7 +3,6 @@
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_djff1"]
 resource_name = "lambert3SG.005"
 vertex_color_use_as_albedo = true
-albedo_color = Color(1, 1, 1, 1)
 emission_enabled = true
 emission = Color(1, 1, 1, 1)
 emission_energy_multiplier = 0.0
@@ -48,7 +47,6 @@ points = PackedVector3Array(0.109812, -0.0252223, 0.171265, 0.00864218, -0.00500
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_cx6fw"]
 resource_name = "lambert3SG.014"
 vertex_color_use_as_albedo = true
-albedo_color = Color(1, 1, 1, 1)
 emission_enabled = true
 emission = Color(1, 1, 1, 1)
 emission_energy_multiplier = 0.0
@@ -93,7 +91,6 @@ points = PackedVector3Array(0.109812, -0.0252223, 0.171265, 0.00864218, -0.00500
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_anxwx"]
 resource_name = "lambert3SG.016"
 vertex_color_use_as_albedo = true
-albedo_color = Color(1, 1, 1, 1)
 emission_enabled = true
 emission = Color(1, 1, 1, 1)
 emission_energy_multiplier = 0.0
@@ -138,7 +135,6 @@ points = PackedVector3Array(0.109812, -0.0252223, 0.171265, 0.00864218, -0.00500
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_1pajm"]
 resource_name = "lambert3SG.017"
 vertex_color_use_as_albedo = true
-albedo_color = Color(1, 1, 1, 1)
 emission_enabled = true
 emission = Color(1, 1, 1, 1)
 emission_energy_multiplier = 0.0
@@ -183,7 +179,6 @@ points = PackedVector3Array(0.109812, -0.0252223, 0.171265, 0.00864218, -0.00500
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_otxxl"]
 resource_name = "lambert3SG.018"
 vertex_color_use_as_albedo = true
-albedo_color = Color(1, 1, 1, 1)
 emission_enabled = true
 emission = Color(1, 1, 1, 1)
 emission_energy_multiplier = 0.0
