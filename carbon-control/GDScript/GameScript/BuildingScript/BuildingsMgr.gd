@@ -283,5 +283,43 @@ func CreateBuilding(pos: Vector3, posTab: int):
 				gridData[posTab + 1535] = 1
 				gridData[posTab + 1536] = 1
 				gridData[posTab + 1537] = 1
+			"res://Scenes/Buildings/Factory.tscn":
+				gridData[posTab - 1025] = 1
+				gridData[posTab - 1024] = 1
+				gridData[posTab - 1023] = 1
+				gridData[posTab - 513] = 1
+				gridData[posTab - 512] = 1
+				gridData[posTab - 511] = 1
+				gridData[posTab - 1] = 1
+				gridData[posTab] = 1
+				gridData[posTab + 1] = 1
+				gridData[posTab + 511] = 1
+				gridData[posTab + 512] = 1
+				gridData[posTab + 513] = 1
+				gridData[posTab + 1023] = 1
+				gridData[posTab + 1024] = 1
+				gridData[posTab + 1025] = 1
+				gridData[posTab + 1535] = 1
+				gridData[posTab + 1536] = 1
+				gridData[posTab + 1537] = 1
+			"res://Scenes/Buildings/PowerPlant.tscn":
+				gridData[posTab - 1025] = 1
+				gridData[posTab - 1024] = 1
+				gridData[posTab - 1023] = 1
+				gridData[posTab - 513] = 1
+				gridData[posTab - 512] = 1
+				gridData[posTab - 511] = 1
+				gridData[posTab - 1] = 1
+				gridData[posTab] = 1
+				gridData[posTab + 1] = 1
+				gridData[posTab + 511] = 1
+				gridData[posTab + 512] = 1
+				gridData[posTab + 513] = 1
+				gridData[posTab + 1023] = 1
+				gridData[posTab + 1024] = 1
+				gridData[posTab + 1025] = 1
+				gridData[posTab + 1535] = 1
+				gridData[posTab + 1536] = 1
+				gridData[posTab + 1537] = 1
 	else:
 		print("Cell already occupied")
