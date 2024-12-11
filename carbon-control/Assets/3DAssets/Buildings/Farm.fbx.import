@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://w5wg4uu1wnps"
-path="res://.godot/imported/farm_complete.fbx-82a301e289a9391f78d814a47d2e894e.scn"
+path="res://.godot/imported/Farm.fbx-0ebb446f51cbccd190572d0eb5748006.scn"
 
 [deps]
 
-source_file="res://Assets/3DAssets/Buildings/farm_complete.fbx"
-dest_files=["res://.godot/imported/farm_complete.fbx-82a301e289a9391f78d814a47d2e894e.scn"]
+source_file="res://Assets/3DAssets/Buildings/Farm.fbx"
+dest_files=["res://.godot/imported/Farm.fbx-0ebb446f51cbccd190572d0eb5748006.scn"]
 
 [params]
 

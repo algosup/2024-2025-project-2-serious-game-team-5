@@ -215,5 +215,73 @@ func CreateBuilding(pos: Vector3, posTab: int):
 				gridData[posTab] = 1
 				gridData[posTab + 511] = 1
 				gridData[posTab + 512] = 1
+			"res://Scenes/Buildings/Bakery.tscn":
+				gridData[posTab - 513] = 1
+				gridData[posTab - 512] = 1
+				gridData[posTab - 1] = 1
+				gridData[posTab] = 1
+				gridData[posTab + 511] = 1
+				gridData[posTab + 512] = 1
+			"res://Scenes/Buildings/Pharmacy.tscn":
+				gridData[posTab - 513] = 1
+				gridData[posTab - 512] = 1
+				gridData[posTab - 1] = 1
+				gridData[posTab] = 1
+				gridData[posTab + 511] = 1
+				gridData[posTab + 512] = 1
+			"res://Scenes/Buildings/HardwareShop.tscn":
+				gridData[posTab - 513] = 1
+				gridData[posTab - 512] = 1
+				gridData[posTab - 1] = 1
+				gridData[posTab] = 1
+				gridData[posTab + 511] = 1
+				gridData[posTab + 512] = 1
+			"res://Scenes/Buildings/Farm.tscn":
+				gridData[posTab - 2049] = 1
+				gridData[posTab - 2048] = 1
+				gridData[posTab - 2047] = 1
+				gridData[posTab - 1537] = 1
+				gridData[posTab - 1536] = 1
+				gridData[posTab - 1535] = 1
+				gridData[posTab - 1025] = 1
+				gridData[posTab - 1024] = 1
+				gridData[posTab - 1023] = 1
+				gridData[posTab - 513] = 1
+				gridData[posTab - 512] = 1
+				gridData[posTab - 511] = 1
+				gridData[posTab - 1] = 1
+				gridData[posTab] = 1
+				gridData[posTab + 1] = 1
+				gridData[posTab + 511] = 1
+				gridData[posTab + 512] = 1
+				gridData[posTab + 513] = 1
+				gridData[posTab + 1023] = 1
+				gridData[posTab + 1024] = 1
+				gridData[posTab + 1025] = 1
+				gridData[posTab + 1535] = 1
+				gridData[posTab + 1536] = 1
+				gridData[posTab + 1537] = 1
+				gridData[posTab + 2047] = 1
+				gridData[posTab + 2048] = 1
+				gridData[posTab + 2049] = 1
+			"res://Scenes/Buildings/Casino.tscn":
+				gridData[posTab - 1025] = 1
+				gridData[posTab - 1024] = 1
+				gridData[posTab - 1023] = 1
+				gridData[posTab - 513] = 1
+				gridData[posTab - 512] = 1
+				gridData[posTab - 511] = 1
+				gridData[posTab - 1] = 1
+				gridData[posTab] = 1
+				gridData[posTab + 1] = 1
+				gridData[posTab + 511] = 1
+				gridData[posTab + 512] = 1
+				gridData[posTab + 513] = 1
+				gridData[posTab + 1023] = 1
+				gridData[posTab + 1024] = 1
+				gridData[posTab + 1025] = 1
+				gridData[posTab + 1535] = 1
+				gridData[posTab + 1536] = 1
+				gridData[posTab + 1537] = 1
 	else:
 		print("Cell already occupied")

@@ -1,6 +1,6 @@
 [gd_scene load_steps=57 format=3 uid="uid://d35cuyqgrr6jp"]
 
-[ext_resource type="PackedScene" uid="uid://w5wg4uu1wnps" path="res://Assets/3DAssets/Buildings/farm_complete.fbx" id="1_gfivq"]
+[ext_resource type="PackedScene" uid="uid://w5wg4uu1wnps" path="res://Assets/3DAssets/Buildings/Farm.fbx" id="1_gfivq"]
 
 [sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_c42bo"]
 points = PackedVector3Array(-0.0294506, -0.000827541, -0.000108226, -0.0294506, -0.000827541, 0.0108624, -0.0294506, 0.000827541, -0.000108226, 0.0294506, -0.000827541, -0.000108226, -0.0294506, 0.000827541, 0.0108624, 0.0294506, -0.000827541, 0.0108624, 0.0294506, 0.000827379, -0.000108226, 0.0294506, 0.000827379, 0.0108624)
