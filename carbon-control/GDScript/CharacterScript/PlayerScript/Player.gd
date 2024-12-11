@@ -27,7 +27,6 @@ func _unhandled_input(event: InputEvent) -> void:
 		if Input.is_action_pressed("moving_camera") and Input.get_mouse_mode() == Input.MOUSE_MODE_CONFINED:
 			moving_camera_input.x = -event.screen_relative.x * mouse_sensitivity
 			moving_camera_input.z = -event.screen_relative.y * mouse_sensitivity
-			print("right click is working")
 		elif Input.is_mouse_button_pressed(MOUSE_BUTTON_MIDDLE):
 			player_camera.rotation_degrees.y -= event.screen_relative.x * mouse_sensitivity  # Rotate horizontally
 			player_camera.rotation_degrees.x -= event.screen_relative.y * mouse_sensitivity  # Rotate vertically
