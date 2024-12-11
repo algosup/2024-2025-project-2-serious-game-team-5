@@ -10,7 +10,7 @@ void sky() {
 	float col = clamp(EYEDIR.y, -1.0, 1.0);
 	float segment = (col + 1.0) / 2.0;
 	vec3 final_color;
-	
+
 	// Gradient for sky_color and sky_color2
 	if (segment < 0.25) {
 		float t = segment / 0.25;
@@ -28,6 +28,6 @@ void sky() {
 		float t = (segment - 0.75) / 0.25;
 		final_color = mix(sky_color4, sky_color5, t);
 	}
-	
+
 	COLOR = final_color;
 }
