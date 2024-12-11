@@ -1972,7 +1972,7 @@ shadow_mesh = SubResource("ArrayMesh_avs7c")
 points = PackedVector3Array(3.0641, 1.50471, 0, 2.07613, 0, 1.29199, 3.0641, -1.50471, 0, -3.0641, 1.50471, 0, -2.07673, 0, 1.29199, -3.0641, -1.50471, 0)
 
 [node name="Building" type="Node3D"]
-transform = Transform3D(9.83506e-08, 0.75, -3.27835e-08, 2.86603e-15, 3.27835e-08, 0.75, 0.75, -9.83506e-08, 1.43301e-15, -0.883226, 0, 2.44586)
+transform = Transform3D(7.1723e-08, 0.95, 4.15258e-08, 0, -4.15258e-08, 0.95, 0.95, -7.1723e-08, -3.13511e-15, -1.15541, 0, 2.72677)
 
 [node name="Group685" type="Node3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 3)

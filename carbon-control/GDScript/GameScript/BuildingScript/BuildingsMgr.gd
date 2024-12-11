@@ -34,7 +34,7 @@ var solar_panel = "res://Scenes/Buildings/SolarPanel.tscn" # 4x4 ID: 21
 
 ## Decorative buildings
 var tree = "res://Scenes/Buildings/Tree.tscn" # 1x1 ID: 22
-var bench = "res://Scenes/Buildings/Bench.tscn" # 1x1 ID: 23
+var park = "res://Scenes/Buildings/Park.tscn" # 1x1 ID: 23
 var street_light = "res://Scenes/Buildings/StreetLight.tscn" # 1x1 ID: 24
 
 ## Road
@@ -96,7 +96,7 @@ func GetSelectedBuilding():
 	elif selected_building == 22:
 		return tree
 	elif selected_building == 23:
-		return bench
+		return park
 	elif selected_building == 24:
 		return street_light
 	elif selected_building == 25:
