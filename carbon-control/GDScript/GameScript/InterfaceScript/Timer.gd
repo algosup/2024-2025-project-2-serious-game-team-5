@@ -41,7 +41,21 @@ func _on_day_timer_timeout() -> void:
 
 	# Update labels and save user data
 	_update_labels()
+	_update_money()
+	GlobalPopulation.update_population()
 	_save_user_data()
+	
+func _update_money():
+	var earned: int = GlobalVariables.population_value * 20
+	earned += GlobalVariables.bookshop_nb * 800
+	earned += GlobalVariables.bakery_nb * 1200
+	earned += GlobalVariables.barber_shop_nb * 1400
+	earned += GlobalVariables.pharmacy_nb * 2000
+	earned += GlobalVariables.hardware_store_nb * 3000
+	earned += GlobalVariables.farm_nb * 12000
+	earned += GlobalVariables.casino_nb * 30000
+	GlobalMoney.add_money(earned)
+
 
 # Initialize game
 func _init_game() -> void:

@@ -27,6 +27,9 @@ func _on_day_timer_timeout() -> void:
 	_save_user_data()
 
 func update_color() -> void:
+	if carbon_bar == null :
+		return
+	
 	# Change the color of the carbon bar based on the carbon level
 	var percentage = get_percentage()
 
@@ -42,6 +45,8 @@ func update_color() -> void:
 	carbon_value.text = str(carbon_bar.value)  # Convert value to string
 
 func get_percentage() -> float:
+	if carbon_bar == null:
+		return 0.0
 	return carbon_bar.value / carbon_bar.max_value
 
 # Initialize game
@@ -57,7 +62,8 @@ func _load_user_data() -> void:
 	if file:
 		var content: String = file.get_as_text().strip_edges()
 		var data: Array = content.split(" ")
-		if data.size() == 2:
+		if data.size() == 2 && carbon_bar != null:
+			
 			carbon_bar.value = float(data[0])
 			var loaded_percentage: float = float(data[1]) / 100.0
 			carbon_bar.value = min(loaded_percentage * carbon_bar.max_value, carbon_bar.max_value)
@@ -70,6 +76,8 @@ func _load_user_data() -> void:
 
 # Reset user data to defaults
 func _reset_user_data() -> void:
+	if carbon_bar == null :
+		return
 	carbon_bar.value = 50000.0
 	_save_user_data()
 

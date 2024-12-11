@@ -104,12 +104,85 @@ func GetSelectedBuilding():
 	else:
 		return
 
+func _update_building_nb() -> void:
+	if selected_building == 1:
+		GlobalVariables.small_house_nb += 1
+	elif selected_building == 2:
+		GlobalVariables.medium_house_nb += 1
+	elif selected_building == 3:
+		GlobalVariables.large_house_nb += 1
+	elif selected_building == 4:
+		GlobalVariables.apartment_nb += 1
+	elif selected_building == 5:
+		GlobalVariables.skyscrapper_nb += 1
+	elif selected_building == 6:
+		GlobalVariables.bookshop_nb += 1
+	elif selected_building == 7:
+		GlobalVariables.bakery_nb += 1
+	elif selected_building == 8:
+		GlobalVariables.barber_shop_nb += 1
+	elif selected_building == 9:
+		GlobalVariables.pharmacy_nb += 1
+	elif selected_building == 10:
+		GlobalVariables.hardware_store_nb += 1
+	elif selected_building == 11:
+		GlobalVariables.farm_nb += 1
+	elif selected_building == 12:
+		GlobalVariables.casino_nb += 1
+	elif selected_building == 13:
+		GlobalVariables.factory_nb += 1
+	elif selected_building == 14:
+		GlobalVariables.power_plant_nb += 1
+	elif selected_building == 15:
+		return
+	elif selected_building == 16:
+		GlobalVariables.school_nb += 1
+	elif selected_building == 17:
+		GlobalVariables.hospital_nb += 1
+	elif selected_building == 18:
+		GlobalVariables.museum_nb += 1
+	elif selected_building == 19:
+		GlobalVariables.lake_nb += 1
+	elif selected_building == 20:
+		GlobalVariables.wind_turbine_nb += 1
+	elif selected_building == 21:
+		GlobalVariables.solar_panel_nb += 1
+	elif selected_building == 22:
+		GlobalVariables.tree_nb += 1
+	elif selected_building == 23:
+		GlobalVariables.bench_nb += 1
+	elif selected_building == 24:
+		GlobalVariables.street_light_nb += 1
+	elif selected_building == 25:
+		GlobalVariables.road_nb += 1
+	else:
+		return
+		
+func _update_popu_capa():
+	var new_max_capa: int = GlobalVariables.small_house_nb * 2
+	new_max_capa += GlobalVariables.medium_house_nb * 4
+	new_max_capa += GlobalVariables.large_house_nb * 6
+	new_max_capa += GlobalVariables.apartment_nb * 24
+	new_max_capa += GlobalVariables.skyscrapper_nb * 128
+	GlobalVariables.population_max = new_max_capa
+	
+
 # Building creation
 func CreateBuilding(pos: Vector3, posTab: int):
+	# Check if player as enought money
+	if GlobalVariables.remaining_money < building_price:
+		print("Player need more money to buy this building")
+		return
+		
 	if gridData[posTab] == 0:
 		# Get the selected building
 		var building_path = GetSelectedBuilding()
 		
+				# Update builing nb
+		_update_building_nb()
+		# Update population capacity
+		_update_popu_capa()
+		GlobalPopulation.display_population()
 		# Check if a building is selected
 		if building_path == null:
 			print("No building selected.")
@@ -126,6 +199,9 @@ func CreateBuilding(pos: Vector3, posTab: int):
 		building.position = pos  # Use 'position' to set the location in 3D
 		get_tree().get_root().add_child(building)
 		selected_building = 0
+		
+		# Update money
+		GlobalMoney.rem_money(building_price)
 
 		# Update the grid based on the building type
 		match building_path:

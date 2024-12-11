@@ -1,5 +1,6 @@
 extends Control
 
+
 # ConstructionMenuBox speed
 @export var menu_size = 0.45
 @export var lerp_speed = 0.2
@@ -10,12 +11,17 @@ var down_anchor: Vector2
 var target_anchor: Vector2
 
 @onready var construction_menu_box = $ConstructionMenu/ConstructionMenuBox
+@onready var money_label = $MoneyBackground/MoneyLabel
+@onready var population_label = $Population/PopulationLabel
+
 
 # This function sets up the starting and sliding positions for the ConstructionMenuBox
 func _ready() -> void:
 	down_anchor = Vector2(construction_menu_box.anchor_left, construction_menu_box.anchor_right)
 	up_anchor = Vector2(down_anchor.x - menu_size, down_anchor.y - menu_size)
 	target_anchor = down_anchor  # Set no movement of the MenuBox at the beginning
+	GlobalMoney.set_base_money(money_label)
+	GlobalPopulation.set_base_population(population_label)
 
 # This function moves the ConstructionMenuBox towards the target position, creating a sliding animation.
 func _process(_delta: float) -> void:

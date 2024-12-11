@@ -88,5 +88,7 @@ func update_happiness() -> void:
 	_display_happiness()
 
 func _display_happiness() -> void:
+	if happiness_bar == null:
+		return
 	# Update the happiness bar
 	happiness_bar.value = happiness_value

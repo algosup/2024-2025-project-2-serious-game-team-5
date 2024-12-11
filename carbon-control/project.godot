@@ -20,6 +20,10 @@ config/icon="res://icon.svg"
 BuildingsMgr="*res://GDScript/GameScript/BuildingScript/BuildingsMgr.gd"
 GlobalVariables="*res://GDScript/GlobalVariables.gd"
 GlobalTimer="*res://GDScript/GameScript/InterfaceScript/Timer.gd"
+GlobalMoney="*res://GDScript/GameScript/InterfaceScript/Money.gd"
+GlobalPopulation="*res://GDScript/GameScript/InterfaceScript/Population.gd"
+GlobalHappiness="*res://GDScript/GameScript/InterfaceScript/Happiness.gd"
+GlobalCarbon="*res://GDScript/GameScript/InterfaceScript/Carbon.gd"
 
 [display]
 
