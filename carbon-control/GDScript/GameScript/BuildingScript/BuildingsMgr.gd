@@ -106,7 +106,7 @@ func GetSelectedBuilding():
 
 # Building creation
 func CreateBuilding(pos: Vector3, posTab: int):
-	if gridData[posTab] == 0:
+	if gridData[posTab] == 0 or selected_building == 25:
 		# Get the selected building
 		var building_path = GetSelectedBuilding()
 		
