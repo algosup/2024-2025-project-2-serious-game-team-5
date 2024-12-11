@@ -125,7 +125,6 @@ func CreateBuilding(pos: Vector3, posTab: int):
 		
 		building.position = pos  # Use 'position' to set the location in 3D
 		get_tree().get_root().add_child(building)
-		selected_building = 0
 
 		# Update the grid based on the building type
 		match building_path:
@@ -151,5 +150,56 @@ func CreateBuilding(pos: Vector3, posTab: int):
 				gridData[posTab + 511] = 1
 				gridData[posTab + 512] = 1
 				gridData[posTab + 513] = 1
+			"res://Scenes/Buildings/LargeHouse.tscn":
+				gridData[posTab - 513] = 1
+				gridData[posTab - 512] = 1
+				gridData[posTab - 511] = 1
+				gridData[posTab - 3] = 1
+				gridData[posTab - 2] = 1
+				gridData[posTab - 1] = 1
+				gridData[posTab] = 1
+				gridData[posTab + 1] = 1
+				gridData[posTab + 2] = 1
+				gridData[posTab + 3] = 1
+				gridData[posTab + 511] = 1
+				gridData[posTab + 512] = 1
+				gridData[posTab + 513] = 1
+			"res://Scenes/Buildings/Apartment.tscn":
+				gridData[posTab - 513] = 1
+				gridData[posTab - 512] = 1
+				gridData[posTab - 511] = 1
+				gridData[posTab - 2] = 1
+				gridData[posTab - 1] = 1
+				gridData[posTab] = 1
+				gridData[posTab + 1] = 1
+				gridData[posTab + 2] = 1
+				gridData[posTab + 511] = 1
+				gridData[posTab + 512] = 1
+				gridData[posTab + 513] = 1
+				gridData[posTab + 1023] = 1
+				gridData[posTab + 1024] = 1
+				gridData[posTab + 1025] = 1
+				gridData[posTab + 1535] = 1
+				gridData[posTab + 1536] = 1
+				gridData[posTab + 1537] = 1
+			"res://Scenes/Buildings/Skyscraper.tscn":
+				gridData[posTab - 1025] = 1
+				gridData[posTab - 1024] = 1
+				gridData[posTab - 1023] = 1
+				gridData[posTab - 513] = 1
+				gridData[posTab - 512] = 1
+				gridData[posTab - 511] = 1
+				gridData[posTab - 1] = 1
+				gridData[posTab] = 1
+				gridData[posTab + 1] = 1
+				gridData[posTab + 511] = 1
+				gridData[posTab + 512] = 1
+				gridData[posTab + 513] = 1
+				gridData[posTab + 1023] = 1
+				gridData[posTab + 1024] = 1
+				gridData[posTab + 1025] = 1
+				gridData[posTab + 1535] = 1
+				gridData[posTab + 1536] = 1
+				gridData[posTab + 1537] = 1
 	else:
 		print("Cell already occupied")
