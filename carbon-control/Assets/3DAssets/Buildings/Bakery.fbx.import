@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://cd6m6v2po465n"
-path="res://.godot/imported/Farm.fbx-0ebb446f51cbccd190572d0eb5748006.scn"
+uid="uid://dkuv31e54j5dd"
+path="res://.godot/imported/Bakery.fbx-979e81e0a948c8aaec17a1d5ec358faf.scn"
 
 [deps]
 
-source_file="res://Assets/3DAssets/Buildings/Farm.fbx"
-dest_files=["res://.godot/imported/Farm.fbx-0ebb446f51cbccd190572d0eb5748006.scn"]
+source_file="res://Assets/3DAssets/Buildings/Bakery.fbx"
+dest_files=["res://.godot/imported/Bakery.fbx-979e81e0a948c8aaec17a1d5ec358faf.scn"]
 
 [params]
 
