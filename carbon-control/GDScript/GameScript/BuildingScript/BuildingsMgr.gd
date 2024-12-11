@@ -201,5 +201,19 @@ func CreateBuilding(pos: Vector3, posTab: int):
 				gridData[posTab + 1535] = 1
 				gridData[posTab + 1536] = 1
 				gridData[posTab + 1537] = 1
+			"res://Scenes/Buildings/Bookshop.tscn":
+				gridData[posTab - 513] = 1
+				gridData[posTab - 512] = 1
+				gridData[posTab - 1] = 1
+				gridData[posTab] = 1
+				gridData[posTab + 511] = 1
+				gridData[posTab + 512] = 1
+			"res://Scenes/Buildings/Barber.tscn":
+				gridData[posTab - 513] = 1
+				gridData[posTab - 512] = 1
+				gridData[posTab - 1] = 1
+				gridData[posTab] = 1
+				gridData[posTab + 511] = 1
+				gridData[posTab + 512] = 1
 	else:
 		print("Cell already occupied")
