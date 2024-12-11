@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://yvstnb4kct36"]
+
+[ext_resource type="PackedScene" uid="uid://dgaphu4ac8h3j" path="res://Assets/3DAssets/Buildings/Museum.fbx" id="1_64uiy"]
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_p6xx0"]
+points = PackedVector3Array(-0.0200424, 0.0233772, 0.0228518, -3.72529e-09, 0.0233897, 0.0292778, -0.0152398, 0.0233814, 0.0236271, 0.0200385, 0.0233772, 0.0228518, -3.72529e-09, 0.0233606, 0.0217559, -0.0200306, 0.0233606, 0.0217588, -0.0200385, -0.0183214, 0.0228489, -3.72529e-09, -0.0183421, 0.0292778, 0.0152358, 0.0233814, 0.0236271, -3.72529e-09, 0.0233897, 0.0277386, 0.0200346, -0.0183214, 0.0228489, 0.0200267, 0.0233606, 0.0217588, 0.0196461, 0.0229826, 4.85972e-05, -0.01965, 0.0229826, 4.85972e-05, -0.01965, -0.0190483, 4.85972e-05, -0.0200228, -0.0183048, 0.0217531, -0.01965, -0.0190483, 0.00475801, 0.0196461, -0.0190483, 0.00475801, 0.0196461, -0.0190483, 4.85972e-05, 0.0200189, -0.0183048, 0.0217531)
+
+[node name="Museum" instance=ExtResource("1_64uiy")]
+transform = Transform3D(1.4, 0, 0, 0, 1.4, 0, 0, 0, 1.4, 0, 0, 0)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Bank" index="0"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Bank/StaticBody3D" index="0"]
+shape = SubResource("ConvexPolygonShape3D_p6xx0")

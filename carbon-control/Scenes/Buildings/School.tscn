@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://ddcjjmh755yo0"]
+
+[ext_resource type="PackedScene" uid="uid://cermbjkyy763k" path="res://Assets/3DAssets/Buildings/School.glb" id="1_2vknd"]
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_mya34"]
+points = PackedVector3Array(1.02, 1.68, 0.599973, 1.02, 1.68, -0.600094, 0.999832, 1.68, 0.62, 1.02, 1.62984, 0.599973, 1.02, 1.62984, -0.600094, 0.999832, 1.68, -0.62, 0.999832, 1.62984, 0.62, -1.00003, 1.68, 0.62, 0.999832, -5.63993e-18, 0.599973, 0.999832, 1.62984, -0.62, 0.999832, -5.63993e-18, -0.600094, -1.00003, 1.68, -0.62, -1.00003, 1.62984, 0.62, -1.02, 1.68, 0.599973, -1.00003, -5.63993e-18, 0.599973, -1.00003, 1.62984, -0.62, -1.00003, -5.63993e-18, -0.600094, -1.02, 1.68, -0.600094, -1.02, 1.62984, 0.599973, -1.02, 1.62984, -0.600094)
+
+[node name="School" instance=ExtResource("1_2vknd")]
+transform = Transform3D(-8.74228e-08, 0, -2, 0, 2, 0, 2, 0, -8.74228e-08, 0, 0, 0)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="large_buildingA" index="0"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="large_buildingA/StaticBody3D" index="0"]
+shape = SubResource("ConvexPolygonShape3D_mya34")
