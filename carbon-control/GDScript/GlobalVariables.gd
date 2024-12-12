@@ -8,7 +8,11 @@ extends Control
 @onready var remaining_money: int = 0
 @onready var population_value: int = 100
 @onready var population_max: int = 100
+@onready var carbon_percentage: int = 0
 @onready var happiness_value: float = 50.00
+@onready var yearly_malus: float = 0
+@onready var yearly_bonus: float = 0
+
 
 # Residential buildings
 @onready var small_house_nb: int = 0
@@ -41,7 +45,7 @@ extends Control
 # Green spaces and energy
 @onready var park_nb: int = 0
 @onready var lake_nb: int = 0
-@onready var wind_turbin_nb: int = 0
+@onready var wind_turbine_nb: int = 0
 @onready var solar_panel_nb: int = 0
 
 @onready var tree_nb: int = 0

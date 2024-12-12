@@ -13,6 +13,10 @@ var target_anchor: Vector2
 @onready var construction_menu_box = $ConstructionMenu/ConstructionMenuBox
 @onready var money_label = $MoneyBackground/MoneyLabel
 @onready var population_label = $Population/PopulationLabel
+@onready var carbon_bar: ProgressBar = $Co2Background/Co2Bar
+@onready var carbon_value: Label = $Co2Background/CarbonLabel
+@onready var happiness_bar: ProgressBar = $HappinessBackground/HappinessBar
+@onready var happiness_value: Label = $HappinessBackground/HappinessLabel
 
 
 # This function sets up the starting and sliding positions for the ConstructionMenuBox
@@ -22,6 +26,8 @@ func _ready() -> void:
 	target_anchor = down_anchor  # Set no movement of the MenuBox at the beginning
 	GlobalMoney.set_base_money(money_label)
 	GlobalPopulation.set_base_population(population_label)
+	GlobalCarbon.set_base_carbon(carbon_bar, carbon_value)
+	GlobalHappiness.set_base_happyness(happiness_bar, happiness_value)
 
 # This function moves the ConstructionMenuBox towards the target position, creating a sliding animation.
 func _process(_delta: float) -> void:

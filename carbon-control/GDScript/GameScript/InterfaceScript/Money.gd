@@ -1,6 +1,6 @@
 extends ColorRect
 
-const base_money = 100000
+const base_money = 300000000
 
 var money_label: Label = null
 

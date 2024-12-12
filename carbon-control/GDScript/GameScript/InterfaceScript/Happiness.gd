@@ -5,12 +5,8 @@ const USER_CARBON_DATA_FILE_PATH = "user://userCarbonData.dat"  # Existing carbo
 const USER_HAPPINESS_DATA_FILE_PATH = "user://userHappinessData.dat"  # New happiness data file
 
 @onready var timer: Timer = $"../DayTimer"
-@onready var happiness_bar: ProgressBar = $HappinessBar
-
-# Variables to store loaded data
-var carbon_percentage: float = 0.0
-var happiness_value: float = 1225.0  # Default starting happiness value
-
+@onready var happiness_bar: ProgressBar = null
+@onready var happiness_value: Label = null
 func _ready() -> void:
 	# Load the saved carbon percentage and happiness value from the user data files
 	_load_carbon_percentage()
@@ -25,6 +21,11 @@ func _ready() -> void:
 	else:
 		print("Error: DayTimer node not found!")
 
+func set_base_happyness(new_happiness_bar: ProgressBar, new_happiness_value: Label) -> void:
+	happiness_bar = new_happiness_bar
+	happiness_value = new_happiness_value
+	
+
 func _on_day_timer_timeout() -> void:
 	update_happiness()
 	_save_happiness_value()  # Save the updated happiness value
@@ -38,10 +39,10 @@ func _load_carbon_percentage() -> void:
 			var data: Array = content.split(" ")
 			if data.size() == 2:
 				# Load the percentage from the saved file
-				carbon_percentage = float(data[1])
+				GlobalVariables.carbon_percentage = float(data[1])
 			else:
 				print("Error: Data corrupted in carbon data file. Resetting to default.")
-				carbon_percentage = 0.0
+				GlobalVariables.carbon_percentage = 0.0
 			file.close()
 		else:
 			print("Error: Failed to open carbon data file.")
@@ -54,7 +55,7 @@ func _load_happiness_value() -> void:
 		var file := FileAccess.open(USER_HAPPINESS_DATA_FILE_PATH, FileAccess.READ)
 		if file:
 			var content: String = file.get_as_text().strip_edges()
-			happiness_value = float(content)  # Assuming the file only contains the happiness value
+			GlobalVariables.happiness_value = float(content)  # Assuming the file only contains the happiness value
 			file.close()
 		else:
 			print("Error: Failed to open happiness data file.")
@@ -65,30 +66,31 @@ func _load_happiness_value() -> void:
 func _save_happiness_value() -> void:
 	var file := FileAccess.open(USER_HAPPINESS_DATA_FILE_PATH, FileAccess.WRITE)
 	if file:
-		file.store_string(str(happiness_value))  # Save the happiness value as a string
+		file.store_string(str(GlobalVariables.happiness_value))  # Save the happiness value as a string
 		file.close()
 	else:
 		print("Error: Failed to save happiness data.")
 
 # Increase or decrease the happiness bar based on the carbon level
 func update_happiness() -> void:
+	print("Carbon % = ", GlobalVariables.carbon_percentage)
+	print("Happiness value = ", GlobalVariables.happiness_value)
 	# Adjust happiness based on the loaded carbon percentage
-	if carbon_percentage < 30.0:
-		happiness_value *= 1.05  # Increase happiness
-	elif carbon_percentage < 50.0:
-		# No change
-		return
-	elif carbon_percentage < 70.0:
-		happiness_value *= 0.95  # Decrease happiness slightly
+	if GlobalVariables.carbon_percentage < 30.0:
+		GlobalVariables.happiness_value += GlobalVariables.happiness_value * 0.15
+	elif GlobalVariables.carbon_percentage < 50.0:
+		GlobalVariables.happiness_value += GlobalVariables.happiness_value * 0.05
+	elif GlobalVariables.carbon_percentage < 70.0:
+		GlobalVariables.happiness_value -= GlobalVariables.happiness_value * 0.05
 	else:
-		happiness_value *= 0.9  # Decrease happiness more significantly
+		GlobalVariables.happiness_value -= GlobalVariables.happiness_value * 0.1
 
 	# Clamp the happiness value to be within the [0, 2500] range
-	happiness_value = clamp(happiness_value, 0.0, 2500.0)
+	GlobalVariables.happiness_value = clamp(GlobalVariables.happiness_value, 0.0, 2500.0)
 	_display_happiness()
 
 func _display_happiness() -> void:
 	if happiness_bar == null:
 		return
 	# Update the happiness bar
-	happiness_bar.value = happiness_value
+	happiness_bar.value = round(GlobalVariables.happiness_value / 100)

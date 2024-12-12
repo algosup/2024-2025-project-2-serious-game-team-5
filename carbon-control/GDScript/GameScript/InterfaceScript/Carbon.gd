@@ -6,10 +6,10 @@ const USER_DATA_FILE_PATH = "user://userCarbonData.dat"
 # Variables
 var is_user_data_exists := FileAccess.file_exists(USER_DATA_FILE_PATH)
 
-@onready var timer: Timer = $"../DayTimer"
-@onready var carbon_bar: ProgressBar = $Co2Bar
-@onready var carbon_value: Label = $CarbonLabel
 
+@onready var timer: Timer = $"../DayTimer"
+@onready var carbon_bar: ProgressBar = null
+@onready var carbon_value: Label = null
 func _ready() -> void:
 	_init_game()
 	update_color()
@@ -41,12 +41,55 @@ func update_color() -> void:
 		carbon_bar.modulate = Color(1, 0.647059, 0, 1)  # Orange
 	else:
 		carbon_bar.modulate = Color(1, 0, 0, 1)  # Red
-		
+	
+	if carbon_value == null:
+		return
 	carbon_value.text = str(carbon_bar.value)  # Convert value to string
+
+func update_carbon() -> void:
+	var new_carbon_value: float = GlobalVariables.small_house_nb * 7.5
+	new_carbon_value += GlobalVariables.medium_house_nb * 15
+	new_carbon_value += GlobalVariables.large_house_nb * 30
+	new_carbon_value += GlobalVariables.apartment_nb * 7.5 * 12
+	new_carbon_value += GlobalVariables.skyscrapper_nb * 60 * 32
+	new_carbon_value += GlobalVariables.bookshop_nb * 37.5 * 50
+	new_carbon_value += GlobalVariables.barber_shop_nb * 30 * 30
+	new_carbon_value += GlobalVariables.bakery_nb * 60 * 30
+	new_carbon_value += GlobalVariables.pharmacy_nb * 50 * 30
+	new_carbon_value += GlobalVariables.hardware_store_nb * 50 * 30
+	new_carbon_value += GlobalVariables.farm_nb * 5000 * 15
+	new_carbon_value += GlobalVariables.casino_nb * 150 * 500
+	new_carbon_value += GlobalVariables.factory_nb * 2500000
+	new_carbon_value = new_carbon_value - GlobalVariables.recycling_center_nb * 8000000
+	new_carbon_value += GlobalVariables.power_plant_nb * 2500000000
+	new_carbon_value += GlobalVariables.oil_rafinery_nb * 3000000000
+	new_carbon_value += GlobalVariables.city_hall_nb * 100 * 300
+	new_carbon_value += GlobalVariables.school_nb * 50 * 300
+	new_carbon_value += GlobalVariables.museum_nb * 150 * 500
+	new_carbon_value += GlobalVariables.hospital_nb * 225 * 500
+	new_carbon_value = new_carbon_value - GlobalVariables.park_nb * 0.6 * 365
+	new_carbon_value = new_carbon_value - GlobalVariables.lake_nb * 0.4 * 365
+	new_carbon_value = new_carbon_value - GlobalVariables.wind_turbine_nb * 2.5 * 365
+	print("carbon new before solare panel value ", new_carbon_value)
+	new_carbon_value = new_carbon_value - GlobalVariables.solar_panel_nb * 4 * 365
+	print("carbon new after solare panel value ", new_carbon_value)
+	new_carbon_value = new_carbon_value - GlobalVariables.tree_nb * 0.05 * 365
+	print("carbon bar value ", carbon_bar.value)
+	print("carbon new value ", new_carbon_value)
+	
+	if carbon_bar != null :
+		carbon_bar.value = new_carbon_value
+		update_color()
+		
+func set_base_carbon(new_carbon_bar: ProgressBar, new_carbon_value: Label) -> void:
+	carbon_value = new_carbon_value
+	carbon_bar = new_carbon_bar
 
 func get_percentage() -> float:
 	if carbon_bar == null:
 		return 0.0
+	carbon_bar.max_value = GlobalVariables.population_value * 12000
+	GlobalVariables.carbon_percentage = (carbon_bar.value / carbon_bar.max_value) * 100
 	return carbon_bar.value / carbon_bar.max_value
 
 # Initialize game

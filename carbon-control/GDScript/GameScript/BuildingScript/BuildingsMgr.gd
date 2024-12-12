@@ -212,6 +212,7 @@ func CreateBuilding(pos: Vector3, pos_tab: int):
 		# Update population capacity
 		_update_popu_capa()
 		GlobalPopulation.display_population()
+		GlobalCarbon.update_carbon()
 		# Check if a building is selected
 		if building_path == null:
 			print("No building selected.")

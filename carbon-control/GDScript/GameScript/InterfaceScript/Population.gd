@@ -56,21 +56,21 @@ func update_population() -> void:
 	if GlobalVariables.population_value < GlobalVariables.population_max:
 		var happiness_percentage: float = GlobalVariables.happiness_value / 100.0
 		var population_change: int = 0
-
-		if happiness_percentage <= 0.15:
-			population_change = -3
-		elif happiness_percentage <= 0.30:
-			population_change = -2
-		elif happiness_percentage <= 0.45:
-			population_change = -1
-		elif happiness_percentage <= 0.60:
-			population_change = 0
-		elif happiness_percentage <= 0.70:
-			population_change = 1
-		elif happiness_percentage <= 0.90:
-			population_change = 2
+		
+		if happiness_percentage <= 15:
+			population_change -= round(GlobalVariables.population_value * 0.15)
+		elif happiness_percentage <= 30:
+			population_change = round(GlobalVariables.population_value * 0.1)
+		elif happiness_percentage <= 45:
+			population_change = round(GlobalVariables.population_value * 0.05)
+		elif happiness_percentage <= 60:
+			population_change += round(GlobalVariables.population_value * 0.01)
+		elif happiness_percentage <= 70:
+			population_change += round(GlobalVariables.population_value * 0.05)
+		elif happiness_percentage <= 90:
+			population_change += round(GlobalVariables.population_value * 0.1)
 		else:
-			population_change = 3
+			population_change += round(GlobalVariables.population_value * 0.15)
 
 		GlobalVariables.population_value += population_change
 		if GlobalVariables.population_value < 0:

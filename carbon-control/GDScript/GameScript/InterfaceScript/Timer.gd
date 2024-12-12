@@ -37,12 +37,17 @@ func _on_day_timer_timeout() -> void:
 	# Handle year transition
 	if day_count > DAYS_IN_YEAR:
 		year_count += 1
+		GlobalVariables.yearly_malus = 0
+		GlobalVariables.yearly_bonus = 0
+	
 		day_count = 1
 
 	# Update labels and save user data
 	_update_labels()
 	_update_money()
 	GlobalPopulation.update_population()
+	GlobalCarbon.update_carbon()
+	GlobalHappiness.update_happiness()
 	_save_user_data()
 	
 func _update_money():
