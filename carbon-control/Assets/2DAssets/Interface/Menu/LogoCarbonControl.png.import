@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b3cjh5nfx3cgg"
-path="res://.godot/imported/ConstructionMenu.png-2ab688711e0df5c3aa869a2fb2810fe4.ctex"
+uid="uid://imnqpriv4omx"
+path="res://.godot/imported/LogoCarbonControl.png-b95360ea71824301ca5cd10070830c4b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/2DAssets/Interface/ConstructionMenu.png"
-dest_files=["res://.godot/imported/ConstructionMenu.png-2ab688711e0df5c3aa869a2fb2810fe4.ctex"]
+source_file="res://Assets/2DAssets/Interface/Menu/LogoCarbonControl.png"
+dest_files=["res://.godot/imported/LogoCarbonControl.png-b95360ea71824301ca5cd10070830c4b.ctex"]
 
 [params]
 

@@ -5,11 +5,11 @@ var userSettingsFile = FileAccess.file_exists("user://settings.json")
 
 func _ready():
 	_gameInit()
-	$PlayButton.connect("pressed", self._onPressed.bind(1))
-	$LeaveButton.connect("pressed", self._onPressed.bind(2))
-	$SettingsButton.connect("pressed", self._onPressed.bind(3))
-	$CreditsButton.connect("pressed", self._onPressed.bind(4))
-	$NewGameButton.connect("pressed", self._onPressed.bind(5))
+	$MarginContainer/VBoxContainer/PlayButton.connect("pressed", self._onPressed.bind(1))
+	$MarginContainer/VBoxContainer/LeaveButton.connect("pressed", self._onPressed.bind(2))
+	$MarginContainer/VBoxContainer/SettingsButton.connect("pressed", self._onPressed.bind(3))
+	$MarginContainer/VBoxContainer/CreditsButton.connect("pressed", self._onPressed.bind(4))
+	$MarginContainer/VBoxContainer/NewGameButton.connect("pressed", self._onPressed.bind(5))
 	
 
 func _gameInit():

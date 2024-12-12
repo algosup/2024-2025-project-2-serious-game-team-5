@@ -1,8 +1,8 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1734011834
+::res://::1734033207
 icon.svg::CompressedTexture2D::8382284087465703567::1734011720::1734011836::1::::<><>::
-::res://addons/::1734011720
-::res://addons/anthonyec.camera_preview/::1734011720
+::res://addons/::1734014209
+::res://addons/anthonyec.camera_preview/::1734011836
 GuiResizerTopLeft.svg::CompressedTexture2D::3725702983604658859::1734011720::1734011836::1::::<><>::
 GuiResizerTopRight.svg::CompressedTexture2D::1815302168263048502::1734011720::1734011836::1::::<><>::
 Pin.svg::CompressedTexture2D::8206140417864082802::1734011720::1734011836::1::::<><>::
@@ -24,12 +24,11 @@ small_icon.tres::ShaderMaterial::4918079014018722108::1734011720::0::1::::<><>::
 UUID.gd::GDScript::-1::1734011720::0::1::::UUID<>Node<>::
 ::res://Assets/::1734011720
 mesh.tres::MeshLibrary::5193405120322652949::1734011720::0::1::::<><>::uid://dij1xnw0pajq8::::res://Assets/kenney_platformer-kit/Models/GLB format/Textures/colormap.png
-::res://Assets/2DAssets/::1734011720
-::res://Assets/2DAssets/Interface/::1734011720
+::res://Assets/2DAssets/::1734015729
+::res://Assets/2DAssets/Interface/::1734015729
 Construction.png::CompressedTexture2D::1696906928983389584::1734011720::1734011836::1::::<><>::
-ConstructionMenu.png::CompressedTexture2D::4356397610600337418::1734011720::1734011836::1::::<><>::
 ::res://Assets/2DAssets/Interface/Buildings/::1734011720
-::res://Assets/2DAssets/Interface/Buildings/Commercial/::1734011720
+::res://Assets/2DAssets/Interface/Buildings/Commercial/::1734011836
 Bakery.png::CompressedTexture2D::8274793764849877132::1734011720::1734011836::1::::<><>::
 Barbershop.png::CompressedTexture2D::4344281892410856874::1734011720::1734011836::1::::<><>::
 Bookshop.png::CompressedTexture2D::5783741832339003985::1734011720::1734011836::1::::<><>::
@@ -37,48 +36,53 @@ Casino.png::CompressedTexture2D::1850650688956253349::1734011720::1734011836::1:
 farm.png::CompressedTexture2D::904676208021343180::1734011720::1734011836::1::::<><>::
 Hardware.png::CompressedTexture2D::3830377898097680407::1734011720::1734011836::1::::<><>::
 Pharmacy.png::CompressedTexture2D::5567098138607901817::1734011720::1734011836::1::::<><>::
-::res://Assets/2DAssets/Interface/Buildings/Houses/::1734011720
+::res://Assets/2DAssets/Interface/Buildings/Houses/::1734011836
 apartment.png::CompressedTexture2D::4860132288330195350::1734011720::1734011836::1::::<><>::
 large-house.png::CompressedTexture2D::4111864214437041528::1734011720::1734011836::1::::<><>::
 medium-house.png::CompressedTexture2D::2352999787950443810::1734011720::1734011836::1::::<><>::
 skyscraper.png::CompressedTexture2D::6304222654032846704::1734011720::1734011836::1::::<><>::
 small-house.png::CompressedTexture2D::1372452844071455916::1734011720::1734011836::1::::<><>::
-::res://Assets/2DAssets/Interface/Buildings/Industrial/::1734011720
+::res://Assets/2DAssets/Interface/Buildings/Industrial/::1734011836
 factory.png::CompressedTexture2D::5803243151541359130::1734011720::1734011836::1::::<><>::
 power-plant.png::CompressedTexture2D::4197495150555732122::1734011720::1734011836::1::::<><>::
 solar-panel.png::CompressedTexture2D::8986255619923576928::1734011720::1734011836::1::::<><>::
 wind-turbine.png::CompressedTexture2D::7874728901051973583::1734011720::1734011836::1::::<><>::
-::res://Assets/2DAssets/Interface/Buildings/Public/::1734011720
+::res://Assets/2DAssets/Interface/Buildings/Public/::1734011836
 city-hall.png::CompressedTexture2D::4593164121142191514::1734011720::1734011836::1::::<><>::
 hospital.png::CompressedTexture2D::3947082452755397055::1734011720::1734011836::1::::<><>::
 museum.png::CompressedTexture2D::1438876675919255118::1734011720::1734011836::1::::<><>::
 school.png::CompressedTexture2D::587823285576641403::1734011720::1734011836::1::::<><>::
+::res://Assets/2DAssets/Interface/Menu/::1734038743
+CloudsMainMenu.ogv::VideoStreamTheora::-1::1734035070::0::1::::<><>::
+file-RAGz6k1UdwP17v27bVPg5L.png::CompressedTexture2D::8788319922554387632::1734037137::1734038747::1::::<><>::
+ImageBackground.png::CompressedTexture2D::4512519327846292767::1734018298::1734038747::1::::<><>::
+LogoCarbonControl.png::CompressedTexture2D::587101990266048863::1734017636::1734038747::1::::<><>::
 ::res://Assets/2DAssets/Interface/Others/::1734011720
-::res://Assets/2DAssets/Interface/Others/Decorative/::1734011720
+::res://Assets/2DAssets/Interface/Others/Decorative/::1734011836
 bench.png::CompressedTexture2D::5103078437092020089::1734011720::1734011836::1::::<><>::
 streetlight.png::CompressedTexture2D::5276940587568723615::1734011720::1734011836::1::::<><>::
 trees.png::CompressedTexture2D::5239223593983296440::1734011720::1734011836::1::::<><>::
-::res://Assets/2DAssets/Interface/Others/Terrain/::1734011720
+::res://Assets/2DAssets/Interface/Others/Terrain/::1734011837
 lake.png::CompressedTexture2D::2701932235050312362::1734011720::1734011836::1::::<><>::
 road.png::CompressedTexture2D::4290883405239688391::1734011720::1734011837::1::::<><>::
 ::res://Assets/3DAssets/::1734011720
-::res://Assets/3DAssets/Buildings/::1734011720
+::res://Assets/3DAssets/Buildings/::1734011847
 MediumHouse.fbx::PackedScene::6986745332165062505::1734011720::1734011846::1::::<><>::
 Skyscraper.fbx::PackedScene::8666333845995965358::1734011720::1734011847::1::::<><>::
 SmallHouse.fbx::PackedScene::564507597252922586::1734011720::1734011847::1::::<><>::
 ::res://Assets/Fonts/::1734011720
-::res://Assets/Fonts/Parkinsans/::1734011720
+::res://Assets/Fonts/Parkinsans/::1734011836
 OFL.txt::TextFile::-1::1734011720::0::1::::<><>::
 Parkinsans-VariableFont_wght.ttf::FontFile::3402954709312986797::1734011720::1734011836::1::::<><>::
 README.txt::TextFile::-1::1734011720::0::1::::<><>::
-::res://Assets/Fonts/Parkinsans/static/::1734011720
+::res://Assets/Fonts/Parkinsans/static/::1734011836
 Parkinsans-Bold.ttf::FontFile::4804852359267250432::1734011720::1734011836::1::::<><>::
 Parkinsans-ExtraBold.ttf::FontFile::1210502363887182878::1734011720::1734011836::1::::<><>::
 Parkinsans-Light.ttf::FontFile::3454893678890645827::1734011720::1734011836::1::::<><>::
 Parkinsans-Medium.ttf::FontFile::2003409141259454208::1734011720::1734011836::1::::<><>::
 Parkinsans-Regular.ttf::FontFile::4722379895414764921::1734011720::1734011836::1::::<><>::
 Parkinsans-SemiBold.ttf::FontFile::5137938944370644556::1734011720::1734011836::1::::<><>::
-::res://Assets/Fonts/Roboto/::1734011720
+::res://Assets/Fonts/Roboto/::1734011836
 LICENSE.txt::TextFile::-1::1734011720::0::1::::<><>::
 Roboto-Black.ttf::FontFile::1356763676362841787::1734011720::1734011836::1::::<><>::
 Roboto-BlackItalic.ttf::FontFile::421294362903689355::1734011720::1734011836::1::::<><>::
@@ -92,13 +96,13 @@ Roboto-MediumItalic.ttf::FontFile::5567012675072838353::1734011720::1734011836::
 Roboto-Regular.ttf::FontFile::2005911563119037752::1734011720::1734011836::1::::<><>::
 Roboto-Thin.ttf::FontFile::44366917975872463::1734011720::1734011836::1::::<><>::
 Roboto-ThinItalic.ttf::FontFile::8378975978475921993::1734011720::1734011836::1::::<><>::
-::res://Assets/kenney_platformer-kit/::1734011720
+::res://Assets/kenney_platformer-kit/::1734011836
 License.txt::TextFile::-1::1734011720::0::1::::<><>::
 Preview (Variation A).png::CompressedTexture2D::7458086465185836532::1734011720::1734011836::1::::<><>::
 Preview.png::CompressedTexture2D::691490247240126311::1734011720::1734011836::1::::<><>::
 Sample.png::CompressedTexture2D::8395836151098070307::1734011720::1734011836::1::::<><>::
 ::res://Assets/kenney_platformer-kit/Models/::1734011720
-::res://Assets/kenney_platformer-kit/Models/FBX format/::1734011720
+::res://Assets/kenney_platformer-kit/Models/FBX format/::1734011860
 arrow.fbx::PackedScene::4983236660126765636::1734011720::1734011847::1::::<><>::uid://ctufxvh20irr4::::res://Assets/kenney_platformer-kit/Models/FBX format/Textures/colormap.png
 arrows.fbx::PackedScene::5999564799707288708::1734011720::1734011847::1::::<><>::uid://ctufxvh20irr4::::res://Assets/kenney_platformer-kit/Models/FBX format/Textures/colormap.png
 barrel.fbx::PackedScene::8572689201895841790::1734011720::1734011850::1::::<><>::uid://ctufxvh20irr4::::res://Assets/kenney_platformer-kit/Models/FBX format/Textures/colormap.png
@@ -241,9 +245,9 @@ tree-pine-snow.fbx::PackedScene::2115719018263856192::1734011720::1734011846::1:
 tree-pine.fbx::PackedScene::4993854534135046328::1734011720::1734011846::1::::<><>::uid://ctufxvh20irr4::::res://Assets/kenney_platformer-kit/Models/FBX format/Textures/colormap.png
 tree-snow.fbx::PackedScene::5846190353511283230::1734011720::1734011846::1::::<><>::uid://ctufxvh20irr4::::res://Assets/kenney_platformer-kit/Models/FBX format/Textures/colormap.png
 tree.fbx::PackedScene::8739058092389754893::1734011720::1734011846::1::::<><>::uid://ctufxvh20irr4::::res://Assets/kenney_platformer-kit/Models/FBX format/Textures/colormap.png
-::res://Assets/kenney_platformer-kit/Models/FBX format/Textures/::1734011720
+::res://Assets/kenney_platformer-kit/Models/FBX format/Textures/::1734011836
 colormap.png::CompressedTexture2D::6148062724878141331::1734011720::1734011836::1::::<><>::
-::res://Assets/kenney_platformer-kit/Models/GLB format/::1734011720
+::res://Assets/kenney_platformer-kit/Models/GLB format/::1734011864
 arrow.glb::PackedScene::1745272730620641988::1734011720::1734011846::1::::<><>::uid://dij1xnw0pajq8::::res://Assets/kenney_platformer-kit/Models/GLB format/Textures/colormap.png
 arrows.glb::PackedScene::1420182176538503202::1734011720::1734011846::1::::<><>::uid://dij1xnw0pajq8::::res://Assets/kenney_platformer-kit/Models/GLB format/Textures/colormap.png
 barrel.glb::PackedScene::7571138440894160549::1734011720::1734011847::1::::<><>::uid://dij1xnw0pajq8::::res://Assets/kenney_platformer-kit/Models/GLB format/Textures/colormap.png
@@ -386,9 +390,9 @@ tree-pine-snow.glb::PackedScene::6010896401090913931::1734011720::1734011856::1:
 tree-pine.glb::PackedScene::2581146053403860668::1734011720::1734011856::1::::<><>::uid://dij1xnw0pajq8::::res://Assets/kenney_platformer-kit/Models/GLB format/Textures/colormap.png
 tree-snow.glb::PackedScene::4818427349874752721::1734011720::1734011856::1::::<><>::uid://dij1xnw0pajq8::::res://Assets/kenney_platformer-kit/Models/GLB format/Textures/colormap.png
 tree.glb::PackedScene::2894883468093269391::1734011720::1734011856::1::::<><>::uid://dij1xnw0pajq8::::res://Assets/kenney_platformer-kit/Models/GLB format/Textures/colormap.png
-::res://Assets/kenney_platformer-kit/Models/GLB format/Textures/::1734011720
+::res://Assets/kenney_platformer-kit/Models/GLB format/Textures/::1734011836
 colormap.png::CompressedTexture2D::7740972632987031541::1734011720::1734011836::1::::<><>::
-::res://Assets/kenney_platformer-kit/Models/OBJ format/::1734011720
+::res://Assets/kenney_platformer-kit/Models/OBJ format/::1734011839
 arrow.obj::Mesh::2753347693539331827::1734011720::1734011839::1::::<><>::uid://xcq6n520wr23::::res://Assets/kenney_platformer-kit/Models/OBJ format/Textures/colormap.png
 arrows.obj::Mesh::3599133560372833700::1734011720::1734011837::1::::<><>::uid://xcq6n520wr23::::res://Assets/kenney_platformer-kit/Models/OBJ format/Textures/colormap.png
 barrel.obj::Mesh::1223587591584388874::1734011720::1734011837::1::::<><>::uid://xcq6n520wr23::::res://Assets/kenney_platformer-kit/Models/OBJ format/Textures/colormap.png
@@ -531,11 +535,11 @@ tree-pine-snow.obj::Mesh::5497073780330139799::1734011720::1734011838::1::::<><>
 tree-pine.obj::Mesh::7786145946782433244::1734011720::1734011838::1::::<><>::uid://xcq6n520wr23::::res://Assets/kenney_platformer-kit/Models/OBJ format/Textures/colormap.png
 tree-snow.obj::Mesh::8692617606134983746::1734011720::1734011838::1::::<><>::uid://xcq6n520wr23::::res://Assets/kenney_platformer-kit/Models/OBJ format/Textures/colormap.png
 tree.obj::Mesh::3214193733928221441::1734011720::1734011838::1::::<><>::uid://xcq6n520wr23::::res://Assets/kenney_platformer-kit/Models/OBJ format/Textures/colormap.png
-::res://Assets/kenney_platformer-kit/Models/OBJ format/Textures/::1734011720
+::res://Assets/kenney_platformer-kit/Models/OBJ format/Textures/::1734011836
 colormap.png::CompressedTexture2D::1619499721086914070::1734011720::1734011836::1::::<><>::
-::res://Assets/kenney_platformer-kit/Models/Textures/::1734011720
+::res://Assets/kenney_platformer-kit/Models/Textures/::1734011836
 variation-a.png::CompressedTexture2D::7297650439554830151::1734011720::1734011836::1::::<><>::
-::res://Assets/kenney_platformer-kit/Previews/::1734011720
+::res://Assets/kenney_platformer-kit/Previews/::1734011836
 arrow.png::CompressedTexture2D::6722770084030686211::1734011720::1734011836::1::::<><>::
 arrows.png::CompressedTexture2D::3196809723413145079::1734011720::1734011836::1::::<><>::
 barrel.png::CompressedTexture2D::2605676186873119259::1734011720::1734011836::1::::<><>::
@@ -692,25 +696,25 @@ LargeHouse.gd::GDScript::-1::1734011720::0::1::::<>StaticBody3D<>::
 MediumHouse.gd::GDScript::-1::1734011720::0::1::::<>StaticBody3D<>::
 Skyscraper.gd::GDScript::-1::1734011720::0::1::::<>StaticBody3D<>::
 SmallHouse.gd::GDScript::-1::1734011720::0::1::::<>StaticBody3D<>::
-::res://GDScript/GameScript/InterfaceScript/::1734011720
-BuildingsInfo.gd::GDScript::-1::1734011720::0::1::::<>ColorRect<>::
+::res://GDScript/GameScript/InterfaceScript/::1734012128
+BuildingsInfo.gd::GDScript::-1::1734012128::0::1::::<>ColorRect<>::
 Carbon.gd::GDScript::-1::1734011720::0::1::::<>ColorRect<>::
 Happiness.gd::GDScript::-1::1734011720::0::1::::<>ColorRect<>::
 Interface.gd::GDScript::-1::1734011720::0::1::::<>Control<>::
 Marker.gd::GDScript::-1::1734011720::0::1::::<>StaticBody3D<>::
 Population.gd::GDScript::-1::1734011720::0::1::::<>ColorRect<>::
 Timer.gd::GDScript::-1::1734011720::0::1::::<>ColorRect<>::
-::res://GDScript/MenuScript/::1734011720
+::res://GDScript/MenuScript/::1734017869
 Credits.gd::GDScript::-1::1734011720::0::1::::<>Control<>::
-MainControl.gd::GDScript::-1::1734011720::0::1::::<>Control<>::
+MainControl.gd::GDScript::-1::1734017869::0::1::::<>Control<>::
 SettingsControl.gd::GDScript::-1::1734011720::0::1::::<>Control<>::
 ::res://Materials/::1734011720
 green_material_3d.tres::StandardMaterial3D::1901284162479472473::1734011720::0::1::::<><>::
-::res://Scenes/::1734011720
+::res://Scenes/::1734038657
 Building.tscn::PackedScene::8625749941109522317::1734011720::0::1::::<><>::
-Credits.tscn::PackedScene::7808227568536745292::1734011720::0::1::::<><>::res://GDScript/MenuScript/Credits.gd
-Interface.tscn::PackedScene::531281067181567627::1734011720::0::1::::<><>::res://GDScript/GameScript/InterfaceScript/Interface.gd<>uid://yf82ro07spqe::::res://Assets/2DAssets/Interface/Construction.png<>res://GDScript/GameScript/InterfaceScript/timer.gd<>uid://ts3dlc4yk6jo::::res://Assets/2DAssets/Interface/Buildings/Houses/small-house.png<>res://GDScript/GameScript/InterfaceScript/BuildingsInfo.gd<>uid://8r2tersk5nr3::::res://Assets/2DAssets/Interface/Buildings/Houses/medium-house.png<>uid://boqofw6h0dfy8::::res://Assets/Fonts/Parkinsans/Parkinsans-VariableFont_wght.ttf<>uid://3txcnmdu8s7i::::res://Assets/Fonts/Roboto/Roboto-Regular.ttf<>uid://byt22kdv6ktw7::::res://Assets/2DAssets/Interface/Buildings/Houses/large-house.png<>uid://cbijw0bfmxbna::::res://Assets/2DAssets/Interface/Buildings/Houses/apartment.png<>uid://cv22vjyn1ueaa::::res://Assets/2DAssets/Interface/Buildings/Houses/skyscraper.png<>uid://bwh84vinrl1y6::::res://Assets/2DAssets/Interface/Buildings/Public/hospital.png<>uid://uradaprkbeyg::::res://Assets/2DAssets/Interface/Buildings/Public/museum.png<>uid://im0mmmfyn012::::res://Assets/2DAssets/Interface/Buildings/Public/school.png<>uid://coxetjjevwifq::::res://Assets/2DAssets/Interface/Buildings/Industrial/factory.png<>uid://b02keqo64uslm::::res://Assets/2DAssets/Interface/Buildings/Industrial/power-plant.png<>uid://d1bak1vlk44f1::::res://Assets/2DAssets/Interface/Buildings/Industrial/solar-panel.png<>uid://dkgtvtp6g5g7h::::res://Assets/2DAssets/Interface/Buildings/Industrial/wind-turbine.png<>uid://dp5mv54k4d6mq::::res://Assets/2DAssets/Interface/Buildings/Commercial/Bakery.png<>uid://b25nxnnr8um4q::::res://Assets/2DAssets/Interface/Buildings/Commercial/Barbershop.png<>uid://conxnax8y6puv::::res://Assets/2DAssets/Interface/Buildings/Commercial/Bookshop.png<>uid://m5h5da57tw57::::res://Assets/2DAssets/Interface/Buildings/Commercial/farm.png<>uid://1mp7gd2pxsav::::res://Assets/2DAssets/Interface/Buildings/Commercial/Casino.png<>uid://cex77rqarhmht::::res://Assets/2DAssets/Interface/Others/Decorative/bench.png<>uid://butp08ujbt2kp::::res://Assets/2DAssets/Interface/Buildings/Commercial/Hardware.png<>uid://clk0j7xji3uv6::::res://Assets/2DAssets/Interface/Buildings/Commercial/Pharmacy.png<>uid://cgv6inxknwam7::::res://Assets/2DAssets/Interface/Others/Decorative/trees.png<>uid://beq3oudp8yfe5::::res://Assets/2DAssets/Interface/Others/Terrain/lake.png<>uid://b2eshtsc1pfcx::::res://Assets/2DAssets/Interface/Others/Terrain/road.png
-MainMenu.tscn::PackedScene::1541220898339167491::1734011720::0::1::::<><>::res://GDScript/MenuScript/MainControl.gd
+Credits.tscn::PackedScene::7808227568536745292::1734038657::0::1::::<><>::res://GDScript/MenuScript/Credits.gd
+Interface.tscn::PackedScene::531281067181567627::1734038657::0::1::::<><>::res://GDScript/GameScript/InterfaceScript/Interface.gd<>uid://yf82ro07spqe::::res://Assets/2DAssets/Interface/Construction.png<>res://GDScript/GameScript/InterfaceScript/timer.gd<>uid://ts3dlc4yk6jo::::res://Assets/2DAssets/Interface/Buildings/Houses/small-house.png<>res://GDScript/GameScript/InterfaceScript/BuildingsInfo.gd<>uid://8r2tersk5nr3::::res://Assets/2DAssets/Interface/Buildings/Houses/medium-house.png<>uid://boqofw6h0dfy8::::res://Assets/Fonts/Parkinsans/Parkinsans-VariableFont_wght.ttf<>uid://3txcnmdu8s7i::::res://Assets/Fonts/Roboto/Roboto-Regular.ttf<>uid://byt22kdv6ktw7::::res://Assets/2DAssets/Interface/Buildings/Houses/large-house.png<>uid://cbijw0bfmxbna::::res://Assets/2DAssets/Interface/Buildings/Houses/apartment.png<>uid://cv22vjyn1ueaa::::res://Assets/2DAssets/Interface/Buildings/Houses/skyscraper.png<>uid://bwh84vinrl1y6::::res://Assets/2DAssets/Interface/Buildings/Public/hospital.png<>uid://uradaprkbeyg::::res://Assets/2DAssets/Interface/Buildings/Public/museum.png<>uid://im0mmmfyn012::::res://Assets/2DAssets/Interface/Buildings/Public/school.png<>uid://coxetjjevwifq::::res://Assets/2DAssets/Interface/Buildings/Industrial/factory.png<>uid://b02keqo64uslm::::res://Assets/2DAssets/Interface/Buildings/Industrial/power-plant.png<>uid://d1bak1vlk44f1::::res://Assets/2DAssets/Interface/Buildings/Industrial/solar-panel.png<>uid://dkgtvtp6g5g7h::::res://Assets/2DAssets/Interface/Buildings/Industrial/wind-turbine.png<>uid://dp5mv54k4d6mq::::res://Assets/2DAssets/Interface/Buildings/Commercial/Bakery.png<>uid://b25nxnnr8um4q::::res://Assets/2DAssets/Interface/Buildings/Commercial/Barbershop.png<>uid://conxnax8y6puv::::res://Assets/2DAssets/Interface/Buildings/Commercial/Bookshop.png<>uid://m5h5da57tw57::::res://Assets/2DAssets/Interface/Buildings/Commercial/farm.png<>uid://1mp7gd2pxsav::::res://Assets/2DAssets/Interface/Buildings/Commercial/Casino.png<>uid://cex77rqarhmht::::res://Assets/2DAssets/Interface/Others/Decorative/bench.png<>uid://butp08ujbt2kp::::res://Assets/2DAssets/Interface/Buildings/Commercial/Hardware.png<>uid://clk0j7xji3uv6::::res://Assets/2DAssets/Interface/Buildings/Commercial/Pharmacy.png<>uid://cgv6inxknwam7::::res://Assets/2DAssets/Interface/Others/Decorative/trees.png<>uid://beq3oudp8yfe5::::res://Assets/2DAssets/Interface/Others/Terrain/lake.png<>uid://b2eshtsc1pfcx::::res://Assets/2DAssets/Interface/Others/Terrain/road.png
+MainMenu.tscn::PackedScene::1541220898339167491::1734038657::0::1::::<><>::res://GDScript/MenuScript/MainControl.gd<>uid://boqofw6h0dfy8::::res://Assets/Fonts/Parkinsans/Parkinsans-VariableFont_wght.ttf<>res://Assets/2DAssets/Interface/Menu/CloudsMainMenu.ogv<>uid://dpl20xgklda::::res://Assets/2DAssets/Interface/Menu/file-RAGz6k1UdwP17v27bVPg5L.png
 Player.tscn::PackedScene::8870691627966634932::1734011720::0::1::::<><>::res://GDScript/CharacterScript/PlayerScript/Player.gd
 SettingsMenu.tscn::PackedScene::7784238107916600912::1734011720::0::1::::<><>::res://GDScript/MenuScript/SettingsControl.gd
 tiles.tscn::PackedScene::8419768099573090805::1734011720::0::1::::<><>::uid://y4onfifnw66k::::res://Assets/kenney_platformer-kit/Models/GLB format/arrow.glb<>uid://uh7gtb7s1mjq::::res://Assets/kenney_platformer-kit/Models/GLB format/arrows.glb<>uid://df4rsq28fg6cf::::res://Assets/kenney_platformer-kit/Models/GLB format/barrel.glb<>uid://d3ueuwovo6hhy::::res://Assets/kenney_platformer-kit/Models/GLB format/block-grass-corner-low.glb<>uid://bn1jujxsstxhf::::res://Assets/kenney_platformer-kit/Models/GLB format/block-grass-corner-overhang-low.glb<>uid://cl02gxwcj11rj::::res://Assets/kenney_platformer-kit/Models/GLB format/block-grass-corner-overhang.glb<>uid://bcqeywmpwwe4q::::res://Assets/kenney_platformer-kit/Models/GLB format/block-grass-corner.glb<>uid://cho000f35f4tg::::res://Assets/kenney_platformer-kit/Models/GLB format/block-grass-curve-half.glb<>uid://djq6qwwkpt50f::::res://Assets/kenney_platformer-kit/Models/GLB format/block-grass-curve-low.glb<>uid://f7sgjm5hxr7h::::res://Assets/kenney_platformer-kit/Models/GLB format/block-grass-curve.glb<>uid://ynpxrbdsmvdk::::res://Assets/kenney_platformer-kit/Models/GLB format/block-grass-edge.glb<>uid://bklpjmvk7ams3::::res://Assets/kenney_platformer-kit/Models/GLB format/block-grass-hexagon.glb<>uid://vcxjml2xaimg::::res://Assets/kenney_platformer-kit/Models/GLB format/block-grass-large-slope-narrow.glb<>uid://c2m6nx5oxdfpy::::res://Assets/kenney_platformer-kit/Models/GLB format/block-grass-large-slope-steep-narrow.glb<>uid://ddqf2u50vtwh8::::res://Assets/kenney_platformer-kit/Models/GLB format/block-grass-large-slope-steep.glb<>uid://do64btf0u0670::::res://Assets/kenney_platformer-kit/Models/GLB format/block-grass-large-slope.glb<>uid://bpahf4cns1cso::::res://Assets/kenney_platformer-kit/Models/GLB format/block-grass-large-tall.glb<>uid://vkmgg6ajcyb1::::res://Assets/kenney_platformer-kit/Models/GLB format/block-grass-large.glb<>uid://cukk3bju2mmg7::::res://Assets/kenney_platformer-kit/Models/GLB format/block-grass-long.glb<>uid://4wkg2fwun4ib::::res://Assets/kenney_platformer-kit/Models/GLB format/block-grass-low-hexagon.glb<>uid://b2mkms0xykrue::::res://Assets/kenney_platformer-kit/Models/GLB format/block-grass-low-large.glb<>uid://bkipvru8t3qq5::::res://Assets/kenney_platformer-kit/Models/GLB format/block-grass-low-long.glb<>uid://cjcjqpb0x53a8::::res://Assets/kenney_platformer-kit/Models/GLB format/block-grass-low-narrow.glb<>uid://ixlqrvas2ywx::::res://Assets/kenney_platformer-kit/Models/GLB format/block-grass-low.glb<>uid://deci7wrk54rtx::::res://Assets/kenney_platformer-kit/Models/GLB format/block-grass-narrow.glb<>uid://dgheediklhx85::::res://Assets/kenney_platformer-kit/Models/GLB format/block-grass-overhang-corner.glb<>uid://ba44p18s6ubsc::::res://Assets/kenney_platformer-kit/Models/GLB format/block-grass-overhang-edge.glb<>uid://cspdniktogqlx::::res://Assets/kenney_platformer-kit/Models/GLB format/block-grass-overhang-hexagon.glb<>uid://bpieh4cebyfly::::res://Assets/kenney_platformer-kit/Models/GLB format/block-grass-overhang-large-slope-narrow.glb<>uid://cemppgvtjywdy::::res://Assets/kenney_platformer-kit/Models/GLB format/block-grass-overhang-large-slope-steep-narrow.glb<>uid://cp0x7e3a488om::::res://Assets/kenney_platformer-kit/Models/GLB format/block-grass-overhang-large-slope-steep.glb<>uid://ckg0ri1tvg03t::::res://Assets/kenney_platformer-kit/Models/GLB format/block-grass-overhang-large-slope.glb<>uid://dlslk1l0oeoy::::res://Assets/kenney_platformer-kit/Models/GLB format/block-grass-overhang-large-tall.glb<>uid://dvxiosfu04u1g::::res://Assets/kenney_platformer-kit/Models/GLB format/block-grass-overhang-large.glb<>uid://dhctew1kkchcr::::res://Assets/kenney_platformer-kit/Models/GLB format/block-grass-overhang-long.glb<>uid://bmucrrq6shiaj::::res://Assets/kenney_platformer-kit/Models/GLB format/block-grass-overhang-low-hexagon.glb<>uid://bls3oqdo5q13s::::res://Assets/kenney_platformer-kit/Models/GLB format/block-grass-overhang-low-large.glb<>uid://do1l6kn53tn2x::::res://Assets/kenney_platformer-kit/Models/GLB format/block-grass-overhang-low-long.glb<>uid://ct3l7xdtad6jy::::res://Assets/kenney_platformer-kit/Models/GLB format/block-grass-overhang-low-narrow.glb<>uid://0bfc3c7fc1vy::::res://Assets/kenney_platformer-kit/Models/GLB format/block-grass-overhang-low.glb<>uid://6r6xbsp6n640::::res://Assets/kenney_platformer-kit/Models/GLB format/block-grass-overhang-narrow.glb<>uid://bopod2wttc3jr::::res://Assets/kenney_platformer-kit/Models/GLB format/block-grass.glb<>uid://bj3et24vo6mkv::::res://Assets/kenney_platformer-kit/Models/GLB format/block-moving-blue.glb<>uid://bl4xep7m57dx4::::res://Assets/kenney_platformer-kit/Models/GLB format/block-moving-large.glb<>uid://bpij8of0hntts::::res://Assets/kenney_platformer-kit/Models/GLB format/block-moving.glb<>uid://c5occdf257o5g::::res://Assets/kenney_platformer-kit/Models/GLB format/block-snow-corner-low.glb<>uid://bptcd13fj3nuk::::res://Assets/kenney_platformer-kit/Models/GLB format/block-snow-corner-overhang-low.glb<>uid://6q0fqsgw7fda::::res://Assets/kenney_platformer-kit/Models/GLB format/block-snow-corner-overhang.glb<>uid://dmtxnkbjxrykb::::res://Assets/kenney_platformer-kit/Models/GLB format/block-snow-corner.glb<>uid://bj7asq4kd8cpi::::res://Assets/kenney_platformer-kit/Models/GLB format/block-snow-curve-half.glb<>uid://chff6xaei3kry::::res://Assets/kenney_platformer-kit/Models/GLB format/block-snow-curve-low.glb<>uid://hvcw01sdmyof::::res://Assets/kenney_platformer-kit/Models/GLB format/block-snow-curve.glb<>uid://5miesf7o77r1::::res://Assets/kenney_platformer-kit/Models/GLB format/block-snow-edge.glb<>uid://db6suka8cy5wi::::res://Assets/kenney_platformer-kit/Models/GLB format/block-snow-hexagon.glb<>uid://baisrwep8va8f::::res://Assets/kenney_platformer-kit/Models/GLB format/block-snow-large-slope-narrow.glb<>uid://yakmw4ttx7u0::::res://Assets/kenney_platformer-kit/Models/GLB format/block-snow-large-slope-steep-narrow.glb<>uid://dfa810fhuynyf::::res://Assets/kenney_platformer-kit/Models/GLB format/block-snow-large-slope-steep.glb<>uid://bm1tmop7xtgo2::::res://Assets/kenney_platformer-kit/Models/GLB format/block-snow-large-slope.glb<>uid://c14y4foi74dqw::::res://Assets/kenney_platformer-kit/Models/GLB format/block-snow-large-tall.glb<>uid://csbp1qgqrx72b::::res://Assets/kenney_platformer-kit/Models/GLB format/block-snow-large.glb<>uid://dyvwqafeg7223::::res://Assets/kenney_platformer-kit/Models/GLB format/block-snow-long.glb<>uid://c8ailp8qiggap::::res://Assets/kenney_platformer-kit/Models/GLB format/block-snow-low-hexagon.glb<>uid://dt4x6rxogri5u::::res://Assets/kenney_platformer-kit/Models/GLB format/block-snow-low-large.glb<>uid://dsarfehgt0qnp::::res://Assets/kenney_platformer-kit/Models/GLB format/block-snow-low-long.glb<>uid://bqqotryndc5pc::::res://Assets/kenney_platformer-kit/Models/GLB format/block-snow-low-narrow.glb<>uid://c00y2hmd6noaa::::res://Assets/kenney_platformer-kit/Models/GLB format/block-snow-low.glb<>uid://dctd3fhsgnc1d::::res://Assets/kenney_platformer-kit/Models/GLB format/block-snow-narrow.glb<>uid://ckb3otbga2anr::::res://Assets/kenney_platformer-kit/Models/GLB format/block-snow-overhang-corner.glb<>uid://cgajivnmog615::::res://Assets/kenney_platformer-kit/Models/GLB format/block-snow-overhang-edge.glb<>uid://dt68veiufw8ka::::res://Assets/kenney_platformer-kit/Models/GLB format/block-snow-overhang-hexagon.glb<>uid://bm2hcyxdlec4v::::res://Assets/kenney_platformer-kit/Models/GLB format/block-snow-overhang-large-slope-narrow.glb<>uid://bsvuetpmalbjp::::res://Assets/kenney_platformer-kit/Models/GLB format/block-snow-overhang-large-slope-steep-narrow.glb<>uid://bp5cs2j7eypqt::::res://Assets/kenney_platformer-kit/Models/GLB format/block-snow-overhang-large-slope-steep.glb<>uid://bw37gpbfew421::::res://Assets/kenney_platformer-kit/Models/GLB format/block-snow-overhang-large-slope.glb<>uid://b0xse70e8y6c6::::res://Assets/kenney_platformer-kit/Models/GLB format/block-snow-overhang-large-tall.glb<>uid://bargnvckufv3y::::res://Assets/kenney_platformer-kit/Models/GLB format/block-snow-overhang-large.glb<>uid://xnee60pr1lpa::::res://Assets/kenney_platformer-kit/Models/GLB format/block-snow-overhang-long.glb<>uid://2s3bpcm1hph1::::res://Assets/kenney_platformer-kit/Models/GLB format/block-snow-overhang-low-hexagon.glb<>uid://bk7ggum0a2e31::::res://Assets/kenney_platformer-kit/Models/GLB format/block-snow-overhang-low-large.glb<>uid://c8ua6gybbxkoy::::res://Assets/kenney_platformer-kit/Models/GLB format/block-snow-overhang-low-long.glb<>uid://b8kxmvhu871st::::res://Assets/kenney_platformer-kit/Models/GLB format/block-snow-overhang-low-narrow.glb<>uid://d30fr8bu355tq::::res://Assets/kenney_platformer-kit/Models/GLB format/block-snow-overhang-low.glb<>uid://c4an81ydhs2q7::::res://Assets/kenney_platformer-kit/Models/GLB format/block-snow-overhang-narrow.glb<>uid://3iu3yqm3i2hi::::res://Assets/kenney_platformer-kit/Models/GLB format/block-snow.glb<>uid://vw47cwtrduvg::::res://Assets/kenney_platformer-kit/Models/GLB format/bomb.glb<>uid://dnjq64fgrsdav::::res://Assets/kenney_platformer-kit/Models/GLB format/button-round.glb<>uid://btnly7pk38eh2::::res://Assets/kenney_platformer-kit/Models/GLB format/button-square.glb<>uid://cp12teurqdry2::::res://Assets/kenney_platformer-kit/Models/GLB format/chest.glb<>uid://c4shjto5yjb3s::::res://Assets/kenney_platformer-kit/Models/GLB format/coin-bronze.glb<>uid://bkl0ku1ofrafo::::res://Assets/kenney_platformer-kit/Models/GLB format/coin-gold.glb<>uid://cu3t8i31t4luo::::res://Assets/kenney_platformer-kit/Models/GLB format/coin-silver.glb<>uid://cu0j466g8nd8l::::res://Assets/kenney_platformer-kit/Models/GLB format/crate-item-strong.glb<>uid://hik3yuva037l::::res://Assets/kenney_platformer-kit/Models/GLB format/crate-item.glb<>uid://cxot45iys0ua7::::res://Assets/kenney_platformer-kit/Models/GLB format/crate-strong.glb<>uid://b2fd44evqgukm::::res://Assets/kenney_platformer-kit/Models/GLB format/crate.glb<>uid://ctdh3hxly3nv0::::res://Assets/kenney_platformer-kit/Models/GLB format/door-large-open.glb<>uid://cqcry2tgg37me::::res://Assets/kenney_platformer-kit/Models/GLB format/door-open.glb<>uid://bwmvnm3lm4qb7::::res://Assets/kenney_platformer-kit/Models/GLB format/door-rotate-large.glb<>uid://cevv40tmcn0nh::::res://Assets/kenney_platformer-kit/Models/GLB format/door-rotate.glb<>uid://dv2ke6a43170x::::res://Assets/kenney_platformer-kit/Models/GLB format/fence-broken.glb<>uid://c80gm5cg34jxq::::res://Assets/kenney_platformer-kit/Models/GLB format/fence-corner-curved.glb<>uid://bjpsn42vdbdjp::::res://Assets/kenney_platformer-kit/Models/GLB format/fence-corner.glb<>uid://bf2rsm44bfel4::::res://Assets/kenney_platformer-kit/Models/GLB format/fence-low-broken.glb<>uid://cqrly76x0j6bh::::res://Assets/kenney_platformer-kit/Models/GLB format/fence-low-corner-curved.glb<>uid://lxgnuv8s788y::::res://Assets/kenney_platformer-kit/Models/GLB format/fence-low-corner.glb<>uid://bh5cov7kfjs8y::::res://Assets/kenney_platformer-kit/Models/GLB format/fence-low-straight.glb<>uid://bvt8ws6lbmt8v::::res://Assets/kenney_platformer-kit/Models/GLB format/fence-straight.glb<>uid://cau5vb5lloqvf::::res://Assets/kenney_platformer-kit/Models/GLB format/flag.glb<>uid://rvjsfqslnndt::::res://Assets/kenney_platformer-kit/Models/GLB format/flowers-tall.glb<>uid://cwps8mfetl6vo::::res://Assets/kenney_platformer-kit/Models/GLB format/flowers.glb<>uid://cqyljpgao6n06::::res://Assets/kenney_platformer-kit/Models/GLB format/grass.glb<>uid://bcnkyay8gnamo::::res://Assets/kenney_platformer-kit/Models/GLB format/heart.glb<>uid://ddiun52agadoy::::res://Assets/kenney_platformer-kit/Models/GLB format/hedge-corner.glb<>uid://xyjre2pkp5a8::::res://Assets/kenney_platformer-kit/Models/GLB format/hedge.glb<>uid://c64ft38btj8uk::::res://Assets/kenney_platformer-kit/Models/GLB format/jewel.glb<>uid://ryocl5qqne0p::::res://Assets/kenney_platformer-kit/Models/GLB format/key.glb<>uid://bjimr3ex1tso0::::res://Assets/kenney_platformer-kit/Models/GLB format/ladder-broken.glb<>uid://b6vi8xvhubc6n::::res://Assets/kenney_platformer-kit/Models/GLB format/ladder-long.glb<>uid://cjjrb80hpq4k1::::res://Assets/kenney_platformer-kit/Models/GLB format/ladder.glb<>uid://bdl0kpbkm8goj::::res://Assets/kenney_platformer-kit/Models/GLB format/lever.glb<>uid://lh5ucpvjg7eu::::res://Assets/kenney_platformer-kit/Models/GLB format/lock.glb<>uid://b1ha6eef1vgc0::::res://Assets/kenney_platformer-kit/Models/GLB format/mushrooms.glb<>uid://c0jumlbdq6eav::::res://Assets/kenney_platformer-kit/Models/GLB format/plant.glb<>uid://dyekyjwr4p3jn::::res://Assets/kenney_platformer-kit/Models/GLB format/platform-fortified.glb<>uid://dvrn2ac00c2cj::::res://Assets/kenney_platformer-kit/Models/GLB format/platform-overhang.glb<>uid://clsy6g8gw6mx4::::res://Assets/kenney_platformer-kit/Models/GLB format/platform-ramp.glb<>uid://rmscsds27020::::res://Assets/kenney_platformer-kit/Models/GLB format/platform.glb<>uid://r301ent7bfmy::::res://Assets/kenney_platformer-kit/Models/GLB format/poles.glb<>uid://cc8io34f1c1w::::res://Assets/kenney_platformer-kit/Models/GLB format/rocks.glb<>uid://cdlxqahhdrcgj::::res://Assets/kenney_platformer-kit/Models/GLB format/saw.glb<>uid://bfjwq7jum7j6l::::res://Assets/kenney_platformer-kit/Models/GLB format/sign.glb<>uid://bg2ta33gs4w1e::::res://Assets/kenney_platformer-kit/Models/GLB format/spike-block-wide.glb<>uid://r440c2f1mfn8::::res://Assets/kenney_platformer-kit/Models/GLB format/spike-block.glb<>uid://cl27t5wrawkfw::::res://Assets/kenney_platformer-kit/Models/GLB format/stones.glb<>uid://cuw27djhamd7m::::res://Assets/kenney_platformer-kit/Models/GLB format/trap-spikes-large.glb<>uid://c67w0yoq37xbu::::res://Assets/kenney_platformer-kit/Models/GLB format/trap-spikes.glb<>uid://dcpy1aat22gsf::::res://Assets/kenney_platformer-kit/Models/GLB format/tree-pine-small.glb<>uid://b71o0vv12sxhm::::res://Assets/kenney_platformer-kit/Models/GLB format/tree-pine-snow-small.glb<>uid://crvyt54nqljx8::::res://Assets/kenney_platformer-kit/Models/GLB format/tree-pine-snow.glb<>uid://bc1ldl0dkjiie::::res://Assets/kenney_platformer-kit/Models/GLB format/tree-pine.glb<>uid://cawc2an5yrix2::::res://Assets/kenney_platformer-kit/Models/GLB format/tree-snow.glb<>uid://bhikkp1wo77dj::::res://Assets/kenney_platformer-kit/Models/GLB format/tree.glb

@@ -21,9 +21,11 @@ text = "Back to Main Menu"
 
 [node name="CreditsText" type="Label" parent="Control"]
 layout_mode = 0
-offset_left = 850.0
+offset_left = 650.0
 offset_top = 240.0
-offset_right = 1023.0
+offset_right = 1317.0
 offset_bottom = 316.0
-text = "Elone - Good guy"
+text = "Elone - Good guy
+
+https://www.vecteezy.com/free-videos/2d-clouds 2d Clouds Stock Videos by Vecteezy"
 horizontal_alignment = 1
