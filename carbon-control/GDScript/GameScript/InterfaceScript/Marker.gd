@@ -36,53 +36,42 @@ func _ready() -> void:
 	marker = get_node("/root/World/Marker")
 
 func _on_input_event(camera: Node, event: InputEvent, event_position: Vector3, normal: Vector3, shape_idx: int) -> void:
-	if event is InputEventMouseMotion or event is InputEventMouseButton:
-		var posX = round(event_position.x)
-		var posY = round(event_position.z)
+	var posX = round(event_position.x)
+	var posY = round(event_position.z)
+	marker.transform.origin = Vector3(posX, 0.1 , posY)
 
-		# Recalculate the marker position
-		marker.transform.origin = Vector3(posX, 0.1, posY)
+	# Fetch building size
+	var size = building_sizes.get(BuildingsMgr.selected_building, Vector2(1, 1))
 
-		# Get building size
-		var size = building_sizes.get(BuildingsMgr.selected_building, Vector2(1, 1))
-		
-		# Rotate the size depending on the current angle
-		var rotated_size = size
-		if BuildingsMgr.rotation_angle in [90, 270]:
-			rotated_size = Vector2(size.y, size.x)
+	# Scale marker
+	marker.scale = Vector3(size.x, 1, size.y)
 
-		# Update marker scale for the rotated size
-		marker.scale = Vector3(rotated_size.x, 1, rotated_size.y)
-
-		# Adjust the marker's rotation
-		marker.rotation_degrees = Vector3(0, BuildingsMgr.rotation_angle, 0)
-
-		# Collision detection logic
-		var vec = Vector2(posX, posY)
-		var occupied = false
-		for x in range(rotated_size.x):
-			for y in range(rotated_size.y):
-				var pos_tab = (vec.x + x) + ((vec.y + y) * 512)
-				if pos_tab < 0 or pos_tab >= BuildingsMgr.gridData.size():
-					occupied = true
-					break
-				if BuildingsMgr.gridData[pos_tab] != 0:
-					occupied = true
-					break
-			if occupied:
+	# Check all tiles covered by the building
+	var vec = Vector2(posX, posY)
+	var occupied = false
+	for x in range(size.x):
+		for y in range(size.y):
+			var pos_tab = (vec.x + x) + ((vec.y + y) * 512)
+			if pos_tab < 0 or pos_tab >= BuildingsMgr.gridData.size():  # Out of bounds
+				occupied = true
 				break
+			if BuildingsMgr.gridData[pos_tab] != 0:  # Occupied tile
+				occupied = true
+				break
+		if occupied:
+			break
 
-		# Define marker color
-		_define_marker_color(occupied)
+	# Define marker color
+	_define_marker_color(occupied)
 
-		# Handle building placement
-		if Input.is_action_just_pressed("left_click") and BuildingsMgr.isBuilding:
-			if not occupied:
-				print("Building created at " + str(marker.transform.origin))
-				var pos = Vector3(posX, 0, posY)
-				BuildingsMgr.CreateBuilding(pos, vec.x + vec.y * 512)
-			else:
-				print("Cannot place building here, area is occupied.")
+	# Handle building creation when left click is pressed
+	if Input.is_action_just_pressed("left_click") and BuildingsMgr.isBuilding:
+		if not occupied:
+			print("Building created at " + str(marker.transform.origin))
+			pos = Vector3(posX, 0, posY)
+			BuildingsMgr.CreateBuilding(pos, vec.x + vec.y * 512)
+		else:
+			print("Cannot place building here, area is occupied.")
 
 func _define_marker_color(occupied: bool):
 	# Load the materials
