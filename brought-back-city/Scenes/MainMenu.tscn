@@ -13,49 +13,49 @@ script = ExtResource("1_r62ga")
 
 [node name="WelcomeText" type="Label" parent="Control"]
 layout_mode = 0
-offset_left = 464.0
+offset_left = 835.0
 offset_top = 152.0
-offset_right = 697.0
+offset_right = 1068.0
 offset_bottom = 175.0
 text = "Welcome to Carbon Control"
 horizontal_alignment = 1
 
 [node name="PlayButton" type="Button" parent="Control"]
 layout_mode = 0
-offset_left = 486.0
-offset_top = 210.0
-offset_right = 676.0
-offset_bottom = 253.0
+offset_left = 850.0
+offset_top = 208.0
+offset_right = 1040.0
+offset_bottom = 251.0
 text = "Continue"
 
 [node name="LeaveButton" type="Button" parent="Control"]
 layout_mode = 0
-offset_left = 485.0
-offset_top = 369.0
-offset_right = 675.0
-offset_bottom = 412.0
+offset_left = 850.0
+offset_top = 422.0
+offset_right = 1040.0
+offset_bottom = 465.0
 text = "Leave the game"
 
 [node name="SettingsButton" type="Button" parent="Control"]
 layout_mode = 0
-offset_left = 485.0
+offset_left = 850.0
 offset_top = 316.0
-offset_right = 675.0
+offset_right = 1040.0
 offset_bottom = 359.0
 text = "Settings"
 
 [node name="CreditsButton" type="Button" parent="Control"]
 layout_mode = 0
-offset_left = 951.0
-offset_top = 11.0
-offset_right = 1141.0
-offset_bottom = 54.0
+offset_left = 850.0
+offset_top = 369.0
+offset_right = 1040.0
+offset_bottom = 412.0
 text = "Credits"
 
 [node name="NewGameButton" type="Button" parent="Control"]
 layout_mode = 0
-offset_left = 485.0
+offset_left = 850.0
 offset_top = 263.0
-offset_right = 675.0
+offset_right = 1040.0
 offset_bottom = 306.0
 text = "New Game"

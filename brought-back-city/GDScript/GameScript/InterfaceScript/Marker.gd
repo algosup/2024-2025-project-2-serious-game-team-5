@@ -6,7 +6,7 @@ var pos = Vector3()
 func _ready() :
 	marker = get_node("/root/World/Marker")
 
-func _on_input_event(camera: Node, event: InputEvent, event_position: Vector3, normal: Vector3, shape_idx: int) -> void:
+func _on_input_event(_camera: Node, _event: InputEvent, event_position: Vector3, _normal: Vector3, _shape_idx: int) -> void:
 	var posX = round(event_position.x)
 	var posY = round(event_position.z)
 	marker.transform.origin = Vector3(posX, 0, posY)

@@ -12,7 +12,7 @@ var is_user_data_exists := FileAccess.file_exists(USER_DATA_FILE_PATH)
 var year_count: int = 1
 var day_count: int = 1
 
-@onready var timer: Timer = $"../DayTimer"
+@onready var timer: Timer = $DayTimer
 @onready var day_label: Label = $DayLabel
 @onready var year_label: Label = $YearLabel
 

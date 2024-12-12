@@ -13,18 +13,18 @@ script = ExtResource("1_q0uh4")
 
 [node name="RightLine" type="LineEdit" parent="Control"]
 layout_mode = 0
-offset_left = 632.0
+offset_left = 950.0
 offset_top = 403.0
-offset_right = 699.062
+offset_right = 1017.06
 offset_bottom = 434.0
 alignment = 1
 max_length = 1
 
 [node name="SettingsText" type="Label" parent="Control"]
 layout_mode = 0
-offset_left = 520.0
+offset_left = 900.0
 offset_top = 152.0
-offset_right = 631.0
+offset_right = 1011.0
 offset_bottom = 175.0
 text = "Settings Menu"
 
@@ -38,68 +38,68 @@ text = "Back to Main Menu"
 
 [node name="ForwardText" type="Label" parent="Control"]
 layout_mode = 0
-offset_left = 453.0
+offset_left = 850.0
 offset_top = 239.0
-offset_right = 564.0
+offset_right = 961.0
 offset_bottom = 262.0
 text = "Forward"
 
 [node name="ForwardLine" type="LineEdit" parent="Control"]
 layout_mode = 0
-offset_left = 632.0
+offset_left = 950.0
 offset_top = 235.0
-offset_right = 699.062
+offset_right = 1017.06
 offset_bottom = 266.0
 alignment = 1
 max_length = 1
 
 [node name="BackwardText" type="Label" parent="Control"]
 layout_mode = 0
-offset_left = 453.0
+offset_left = 850.0
 offset_top = 295.0
-offset_right = 564.0
+offset_right = 961.0
 offset_bottom = 318.0
 text = "Backward"
 
 [node name="BackwardLine" type="LineEdit" parent="Control"]
 layout_mode = 0
-offset_left = 632.0
+offset_left = 950.0
 offset_top = 291.0
-offset_right = 699.062
+offset_right = 1017.06
 offset_bottom = 322.0
 alignment = 1
 max_length = 1
 
 [node name="LeftText" type="Label" parent="Control"]
 layout_mode = 0
-offset_left = 453.0
+offset_left = 850.0
 offset_top = 351.0
-offset_right = 564.0
+offset_right = 961.0
 offset_bottom = 374.0
 text = "Left"
 
 [node name="RightText" type="Label" parent="Control"]
 layout_mode = 0
-offset_left = 453.0
+offset_left = 850.0
 offset_top = 407.0
-offset_right = 564.0
+offset_right = 961.0
 offset_bottom = 430.0
 text = "Right"
 
 [node name="LeftLine" type="LineEdit" parent="Control"]
 layout_mode = 0
-offset_left = 632.0
+offset_left = 950.0
 offset_top = 347.0
-offset_right = 699.062
+offset_right = 1017.06
 offset_bottom = 378.0
 alignment = 1
 max_length = 1
 
 [node name="LanguageButton" type="Button" parent="Control"]
 layout_mode = 0
-offset_left = 962.0
+offset_left = 1750.0
 offset_top = 15.0
-offset_right = 1111.0
+offset_right = 1899.0
 offset_bottom = 51.0
 text = "English Version"
 

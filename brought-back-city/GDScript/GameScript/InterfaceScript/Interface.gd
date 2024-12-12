@@ -16,7 +16,6 @@ func _ready() -> void:
 	var default_down_anchor = Vector2(0.936, 1.068)
 	
 	# Check and assign anchors from construction_menu_box or use default values
-	var down_anchor: Vector2
 	if construction_menu_box == null or construction_menu_box.anchor_left == null or construction_menu_box.anchor_right == null:
 		down_anchor = default_down_anchor
 	else:

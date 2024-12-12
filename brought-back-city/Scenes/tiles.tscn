@@ -1,4 +1,4 @@
-[gd_scene load_steps=143 format=3 uid="uid://b5tu3njcuwc4q"]
+[gd_scene load_steps=143 format=3 uid="uid://dr7ul6eltucq4"]
 
 [ext_resource type="PackedScene" uid="uid://y4onfifnw66k" path="res://Assets/kenney_platformer-kit/Models/GLB format/arrow.glb" id="1_qn7vq"]
 [ext_resource type="PackedScene" uid="uid://uh7gtb7s1mjq" path="res://Assets/kenney_platformer-kit/Models/GLB format/arrows.glb" id="2_mugvj"]
