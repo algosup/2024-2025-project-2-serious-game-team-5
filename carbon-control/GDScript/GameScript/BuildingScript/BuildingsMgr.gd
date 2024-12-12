@@ -229,7 +229,6 @@ func CreateBuilding(pos: Vector3, pos_tab: int):
 		
 		# Update money
 		GlobalMoney.rem_money(building_price)
-
 		# Update all grid tiles occupied by the building
 		var size = building_sizes.get(selected_building, Vector2(1, 1))
 		var vec = Vector2(pos.x, pos.z)
@@ -237,5 +236,7 @@ func CreateBuilding(pos: Vector3, pos_tab: int):
 			for y in range(size.y):
 				var tile_index = (vec.x + x) + ((vec.y + y) * 512)
 				gridData[tile_index] = selected_building  # Use the building ID as marker
+		
+		get_node("/root/World/WorldAudioManager/Construction").play()
 	else:
 		print("Building already exists at this location.")

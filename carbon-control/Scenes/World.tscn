@@ -1,18 +1,19 @@
-[gd_scene load_steps=20 format=3 uid="uid://wqw1ua78dy8k"]
+[gd_scene load_steps=21 format=3 uid="uid://wqw1ua78dy8k"]
 
 [ext_resource type="PackedScene" uid="uid://dyna83k7m266c" path="res://Scenes/Player.tscn" id="1_gga1m"]
 [ext_resource type="Script" path="res://GDScript/GameScript/BuildingScript/BuildingsMgr.gd" id="1_s4h8r"]
-[ext_resource type="AudioStream" uid="uid://dikhc0v4dyonp" path="res://Assets/Music&Sound/Chill-Focus-Music.mp3" id="2_glva2"]
+[ext_resource type="AudioStream" uid="uid://pn5uk1ybbeic" path="res://Assets/Music&Sound/JazzBackground.mp3" id="2_juh27"]
 [ext_resource type="AudioStream" uid="uid://cja71bx36uvqr" path="res://Assets/Music&Sound/ambience-city-daytime-birds-traffic-61955.mp3" id="3_8ipem"]
 [ext_resource type="AudioStream" uid="uid://dtotu0x3j8nsu" path="res://Assets/Music&Sound/Radio-Music.mp3" id="3_dtpoe"]
 [ext_resource type="Script" path="res://GDScript/GameScript/InterfaceScript/Marker.gd" id="4_7j8va"]
 [ext_resource type="Material" uid="uid://2c84wp3bqorp" path="res://Materials/green_material_3d.tres" id="4_io1jh"]
 [ext_resource type="PackedScene" uid="uid://htmeeru1v4h8" path="res://Scenes/Interface.tscn" id="4_q2v0b"]
 [ext_resource type="MeshLibrary" uid="uid://dmymo3hn2hqop" path="res://Assets/mesh.tres" id="5_5st4n"]
+[ext_resource type="AudioStream" uid="uid://cvyelnlyoxvu5" path="res://Assets/Music&Sound/Hammering_Sound.mp3" id="5_n1v06"]
 
 [sub_resource type="AudioStreamPlaylist" id="AudioStreamPlaylist_be2cu"]
 stream_count = 1
-stream_0 = ExtResource("2_glva2")
+stream_0 = ExtResource("2_juh27")
 
 [sub_resource type="AudioStreamPlaylist" id="AudioStreamPlaylist_6s22w"]
 stream_count = 1
@@ -26,11 +27,11 @@ stream_0 = ExtResource("3_dtpoe")
 [sub_resource type="AudioStreamSynchronized" id="AudioStreamSynchronized_xxkrp"]
 stream_count = 3
 stream_0/stream = SubResource("AudioStreamPlaylist_be2cu")
-stream_0/volume = -25.0
+stream_0/volume = -15.0
 stream_1/stream = SubResource("AudioStreamPlaylist_6s22w")
-stream_1/volume = -10.0
+stream_1/volume = -5.0
 stream_2/stream = SubResource("AudioStreamPlaylist_2olf6")
-stream_2/volume = -15.0
+stream_2/volume = -5.0
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_fa2s6"]
 sky_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
@@ -59,9 +60,13 @@ script = ExtResource("1_s4h8r")
 
 [node name="WorldAudioManager" type="Node" parent="."]
 
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="WorldAudioManager"]
+[node name="BackgroundMusic" type="AudioStreamPlayer" parent="WorldAudioManager"]
 stream = SubResource("AudioStreamSynchronized_xxkrp")
 autoplay = true
+
+[node name="Construction" type="AudioStreamPlayer" parent="WorldAudioManager"]
+stream = ExtResource("5_n1v06")
+volume_db = -10.0
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_3ontc")
