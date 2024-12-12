@@ -37,14 +37,15 @@ var tree = "res://Scenes/Buildings/Tree.tscn" # 1x1 ID: 22
 var park = "res://Scenes/Buildings/Park.tscn" # 1x1 ID: 23
 
 ## Roads
-var horizontal_road = "res://Scenes/Buildings/HoriRoad.tscn" # 1x1 ID: 24
-var vertical_road = "res://Scenes/Buildings/VertiRoad.tscn" # 1x1 ID: 25
+var road = "res://Scenes/Buildings/Road.tscn" # 1x1 ID: 24
 
 var gridData = [] # 512x512 grid data
+var current_rotation = 0 # Rotation angle in degrees (0, 90, 180, 270)
 
-var isBuilding = true
 var selected_building = 0
 var building_price = 0
+
+var rotation_angle = 0 # Current rotation angle in degrees
 
 # Store the dimensions of each building (width x height)
 var building_sizes = {
@@ -78,6 +79,10 @@ var building_sizes = {
 func _ready():
 	for i in range(262144):
 		gridData.append(0)
+
+func RotateBuilding():
+	current_rotation = (current_rotation + 90) % 360
+	print("Current rotation: ", current_rotation)
 
 func GetSelectedBuilding():
 	if selected_building == 1:
@@ -127,9 +132,7 @@ func GetSelectedBuilding():
 	elif selected_building == 23:
 		return park
 	elif selected_building == 24:
-		return vertical_road
-	elif selected_building == 25:
-		return horizontal_road
+		return road
 	else:
 		return
 
@@ -200,7 +203,11 @@ func _update_popu_capa():
 	new_max_capa += GlobalVariables.apartment_nb * 70
 	new_max_capa += GlobalVariables.skyscrapper_nb * 1000
 	GlobalVariables.population_max = new_max_capa
-	
+
+func _input(event: InputEvent) -> void:
+	if event.is_action_pressed("rotate_building"): # Handle "R" key press
+		rotation_angle = (rotation_angle + 90) % 360
+		print("Rotation angle: ", rotation_angle)
 
 # Building creation
 func CreateBuilding(pos: Vector3, pos_tab: int):
@@ -213,36 +220,66 @@ func CreateBuilding(pos: Vector3, pos_tab: int):
 	if gridData[pos_tab] == 0 or selected_building == 25:
 		var building_path = GetSelectedBuilding()
 		
-				# Update builing nb
+		# Update builing nb
 		_update_building_nb()
 		# Update population capacity
 		_update_popu_capa()
 		GlobalPopulation.display_population()
 		GlobalCarbon.update_carbon()
+
 		# Check if a building is selected
 		if building_path == null:
 			print("No building selected.")
 			return
 
-		# Load the building resource
-		var building_res = load(building_path)
-		if building_res == null:
-			print("Failed to load building resource: ", building_path)
-			return
+		if gridData[pos_tab] == 0 or selected_building == 25: # Roads are exempt from placement checks
+			var building_path = GetSelectedBuilding()
+			
+			# Update building count
+			_update_building_nb()
+			
+			# Update population capacity
+			_update_popu_capa()
+			
+			GlobalPopulation.display_population()
+			
+			# Check if a building is selected
+			if building_path == null:
+				print("No building selected.")
+				return
 
-		var building = building_res.instantiate()
-		building.position = pos
-		get_tree().get_root().add_child(building)
-		
-		# Update money
-		GlobalMoney.rem_money(building_price)
+			# Load the building resource
+			var building_res = load(building_path)
+			if building_res == null:
+				print("Failed to load building resource: ", building_path)
+				return
 
-		# Update all grid tiles occupied by the building
-		var size = building_sizes.get(selected_building, Vector2(1, 1))
-		var vec = Vector2(pos.x, pos.z)
-		for x in range(size.x):
-			for y in range(size.y):
-				var tile_index = (vec.x + x) + ((vec.y + y) * 512)
-				gridData[tile_index] = selected_building  # Use the building ID as marker
+			# Instantiate the building
+			var building = building_res.instantiate()
+			building.position = pos
+			
+			# Apply rotation if rotation_angle is set
+			if rotation_angle != 0:
+				building.rotation_degrees = Vector3(0, rotation_angle, 0)
+			
+			get_tree().get_root().add_child(building)
+			
+			# Update money
+			GlobalMoney.rem_money(building_price)
+
+			# Update all grid tiles occupied by the building
+			var size = building_sizes.get(selected_building, Vector2(1, 1))
+			var vec = Vector2(pos.x, pos.z)
+			
+			# Swap width and height if the building is rotated 90° or 270°
+			if rotation_angle in [90, 270]:
+				size = Vector2(size.y, size.x)
+			
+			for x in range(size.x):
+				for y in range(size.y):
+					var tile_index = (vec.x + x) + ((vec.y + y) * 512)
+					gridData[tile_index] = selected_building # Use the building ID as marker
+		else:
+			print("Building already exists at this location.")
 	else:
-		print("Building already exists at this location.")
+		print("You're not allowed to build")

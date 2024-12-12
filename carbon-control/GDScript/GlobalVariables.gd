@@ -2,7 +2,7 @@ extends Control
 
 @onready var popped_up = false
 
-@onready var isBuilding = true
+@onready var isBuilding = false
 @onready var buildingId = 1
 # Variables to store loaded data
 @onready var remaining_money: int = 0
