@@ -68,7 +68,7 @@ func _on_input_event(camera: Node, event: InputEvent, event_position: Vector3, n
 	_define_marker_color(occupied)
 
 	# Handle building creation when left click is pressed
-	if Input.is_action_just_pressed("left_click") and BuildingsMgr.isBuilding:
+	if Input.is_action_just_pressed("left_click"):
 		if not occupied:
 			print("Building created at " + str(marker.transform.origin))
 			pos = Vector3(posX, 0, posY)

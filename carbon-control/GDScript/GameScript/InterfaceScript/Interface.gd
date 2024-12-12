@@ -33,8 +33,11 @@ func _process(_delta: float) -> void:
 func _on_construction_menu_button_pressed() -> void:
 	if not popped_up:
 		target_anchor = up_anchor
+		GlobalVariables.isBuilding = true
 	else:
 		target_anchor = down_anchor
+		GlobalVariables.isBuilding = false
+		BuildingsMgr.selected_building = 0
 	popped_up = !popped_up
 
 
