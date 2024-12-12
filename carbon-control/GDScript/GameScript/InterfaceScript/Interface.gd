@@ -19,7 +19,7 @@ var target_anchor: Vector2
 func _ready() -> void:
 	down_anchor = Vector2(construction_menu_box.anchor_left, construction_menu_box.anchor_right)
 	up_anchor = Vector2(down_anchor.x - menu_size, down_anchor.y - menu_size)
-	target_anchor = down_anchor  # Set no movement of the MenuBox at the beginning
+	target_anchor = down_anchor # Set no movement of the MenuBox at the beginning
 	GlobalMoney.set_base_money(money_label)
 	GlobalPopulation.set_base_population(population_label)
 
@@ -137,5 +137,5 @@ func _on_bench_pressed() -> void:
 	BuildingsMgr.building_price = 1000
 
 func _on_road_pressed() -> void:
-	BuildingsMgr.selected_building = 25
+	BuildingsMgr.selected_building = 24
 	BuildingsMgr.building_price = 500

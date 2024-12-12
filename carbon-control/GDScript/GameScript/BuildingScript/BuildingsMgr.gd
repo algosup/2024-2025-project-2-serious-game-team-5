@@ -37,8 +37,7 @@ var tree = "res://Scenes/Buildings/Tree.tscn" # 1x1 ID: 22
 var park = "res://Scenes/Buildings/Park.tscn" # 1x1 ID: 23
 
 ## Roads
-var horizontal_road = "res://Scenes/Buildings/HoriRoad.tscn" # 1x1 ID: 24
-var vertical_road = "res://Scenes/Buildings/VertiRoad.tscn" # 1x1 ID: 25
+var road = "res://Scenes/Buildings/Road.tscn" # 1x1 ID: 24
 
 var gridData = [] # 512x512 grid data
 var current_rotation = 0 # Rotation angle in degrees (0, 90, 180, 270)
@@ -133,9 +132,7 @@ func GetSelectedBuilding():
 	elif selected_building == 23:
 		return park
 	elif selected_building == 24:
-		return vertical_road
-	elif selected_building == 25:
-		return horizontal_road
+		return road
 	else:
 		return
 
