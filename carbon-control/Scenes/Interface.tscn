@@ -1,0 +1,2303 @@
+[gd_scene load_steps=50 format=3 uid="uid://htmeeru1v4h8"]
+
+[ext_resource type="Script" path="res://GDScript/GameScript/InterfaceScript/Interface.gd" id="1_5xait"]
+[ext_resource type="Texture2D" uid="uid://yf82ro07spqe" path="res://Assets/2DAssets/Interface/Construction.png" id="1_q44jx"]
+[ext_resource type="Script" path="res://GDScript/GameScript/InterfaceScript/timer.gd" id="2_xjeol"]
+[ext_resource type="Texture2D" uid="uid://ts3dlc4yk6jo" path="res://Assets/2DAssets/Interface/Buildings/Houses/small-house.png" id="3_gbasx"]
+[ext_resource type="Script" path="res://GDScript/GameScript/InterfaceScript/BuildingsInfo.gd" id="3_tycjg"]
+[ext_resource type="Texture2D" uid="uid://8r2tersk5nr3" path="res://Assets/2DAssets/Interface/Buildings/Houses/medium-house.png" id="4_dfwmb"]
+[ext_resource type="FontFile" uid="uid://boqofw6h0dfy8" path="res://Assets/Fonts/Parkinsans/Parkinsans-VariableFont_wght.ttf" id="4_pe4f5"]
+[ext_resource type="FontFile" uid="uid://3txcnmdu8s7i" path="res://Assets/Fonts/Roboto/Roboto-Regular.ttf" id="5_6fkww"]
+[ext_resource type="Texture2D" uid="uid://byt22kdv6ktw7" path="res://Assets/2DAssets/Interface/Buildings/Houses/large-house.png" id="5_j0uc5"]
+[ext_resource type="Texture2D" uid="uid://cbijw0bfmxbna" path="res://Assets/2DAssets/Interface/Buildings/Houses/apartment.png" id="6_kgbo8"]
+[ext_resource type="Texture2D" uid="uid://cv22vjyn1ueaa" path="res://Assets/2DAssets/Interface/Buildings/Houses/skyscraper.png" id="7_duqr8"]
+[ext_resource type="Texture2D" uid="uid://bwh84vinrl1y6" path="res://Assets/2DAssets/Interface/Buildings/Public/hospital.png" id="9_va2x0"]
+[ext_resource type="Texture2D" uid="uid://uradaprkbeyg" path="res://Assets/2DAssets/Interface/Buildings/Public/museum.png" id="10_3w7my"]
+[ext_resource type="Texture2D" uid="uid://im0mmmfyn012" path="res://Assets/2DAssets/Interface/Buildings/Public/school.png" id="11_aftwm"]
+[ext_resource type="Texture2D" uid="uid://coxetjjevwifq" path="res://Assets/2DAssets/Interface/Buildings/Industrial/factory.png" id="12_s4i72"]
+[ext_resource type="Texture2D" uid="uid://b02keqo64uslm" path="res://Assets/2DAssets/Interface/Buildings/Industrial/power-plant.png" id="13_k2p3l"]
+[ext_resource type="Texture2D" uid="uid://d1bak1vlk44f1" path="res://Assets/2DAssets/Interface/Buildings/Industrial/solar-panel.png" id="14_wd0do"]
+[ext_resource type="Texture2D" uid="uid://dkgtvtp6g5g7h" path="res://Assets/2DAssets/Interface/Buildings/Industrial/wind-turbine.png" id="15_wfm65"]
+[ext_resource type="Texture2D" uid="uid://dp5mv54k4d6mq" path="res://Assets/2DAssets/Interface/Buildings/Commercial/Bakery.png" id="16_wxt2q"]
+[ext_resource type="Texture2D" uid="uid://b25nxnnr8um4q" path="res://Assets/2DAssets/Interface/Buildings/Commercial/Barbershop.png" id="17_snd6s"]
+[ext_resource type="Texture2D" uid="uid://conxnax8y6puv" path="res://Assets/2DAssets/Interface/Buildings/Commercial/Bookshop.png" id="18_27wky"]
+[ext_resource type="Texture2D" uid="uid://m5h5da57tw57" path="res://Assets/2DAssets/Interface/Buildings/Commercial/farm.png" id="18_kb016"]
+[ext_resource type="Texture2D" uid="uid://1mp7gd2pxsav" path="res://Assets/2DAssets/Interface/Buildings/Commercial/Casino.png" id="19_dg28o"]
+[ext_resource type="Texture2D" uid="uid://cex77rqarhmht" path="res://Assets/2DAssets/Interface/Others/Decorative/bench.png" id="21_jhn4m"]
+[ext_resource type="Texture2D" uid="uid://butp08ujbt2kp" path="res://Assets/2DAssets/Interface/Buildings/Commercial/Hardware.png" id="21_tse4m"]
+[ext_resource type="Texture2D" uid="uid://clk0j7xji3uv6" path="res://Assets/2DAssets/Interface/Buildings/Commercial/Pharmacy.png" id="22_6wcch"]
+[ext_resource type="Texture2D" uid="uid://cgv6inxknwam7" path="res://Assets/2DAssets/Interface/Others/Decorative/trees.png" id="23_pevaw"]
+[ext_resource type="Texture2D" uid="uid://beq3oudp8yfe5" path="res://Assets/2DAssets/Interface/Others/Terrain/lake.png" id="25_qn2le"]
+[ext_resource type="Texture2D" uid="uid://b2eshtsc1pfcx" path="res://Assets/2DAssets/Interface/Others/Terrain/road.png" id="28_peh56"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_t4721"]
+font_size = 9
+
+[sub_resource type="LabelSettings" id="LabelSettings_x18k8"]
+font = ExtResource("4_pe4f5")
+font_size = 25
+font_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_l3svw"]
+font = ExtResource("4_pe4f5")
+font_size = 23
+font_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_puecs"]
+font = ExtResource("5_6fkww")
+font_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_84u7w"]
+font = ExtResource("4_pe4f5")
+font_size = 12
+font_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_7cvel"]
+font = ExtResource("4_pe4f5")
+font_size = 12
+font_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_tkl2v"]
+font = ExtResource("5_6fkww")
+font_size = 10
+font_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_vpms4"]
+font = ExtResource("5_6fkww")
+font_size = 10
+font_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_tasgg"]
+font = ExtResource("5_6fkww")
+font_size = 10
+font_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_eklb7"]
+font = ExtResource("5_6fkww")
+font_size = 10
+font_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_pbk6y"]
+font = ExtResource("5_6fkww")
+font_size = 10
+font_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_g7c1p"]
+font = ExtResource("5_6fkww")
+font_size = 10
+font_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_ngfh2"]
+font = ExtResource("5_6fkww")
+font_size = 10
+font_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_qy6ek"]
+font = ExtResource("5_6fkww")
+font_size = 10
+font_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_52636"]
+font = ExtResource("5_6fkww")
+font_size = 12
+font_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_0xgn5"]
+font = ExtResource("5_6fkww")
+font_size = 12
+font_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_epjci"]
+font = ExtResource("5_6fkww")
+font_size = 10
+font_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_1v3fr"]
+font = ExtResource("5_6fkww")
+font_size = 10
+font_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_foom5"]
+font = ExtResource("5_6fkww")
+font_size = 10
+font_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_msxx7"]
+font = ExtResource("5_6fkww")
+font_size = 10
+font_color = Color(0, 0, 0, 1)
+
+[node name="Interface" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 1
+script = ExtResource("1_5xait")
+
+[node name="Co2Background" type="ColorRect" parent="."]
+layout_mode = 0
+offset_left = 30.0
+offset_top = 130.0
+offset_right = 130.0
+offset_bottom = 172.0
+scale = Vector2(2, 2)
+mouse_filter = 1
+color = Color(0.0562916, 0.0562916, 0.0562916, 1)
+
+[node name="Co2Label" type="Label" parent="Co2Background"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -23.0
+offset_top = -14.0
+offset_right = 51.0
+offset_bottom = 9.0
+grow_horizontal = 2
+grow_vertical = 0
+text = "TCo₂/year"
+label_settings = SubResource("LabelSettings_t4721")
+
+[node name="Co2Bar" type="ProgressBar" parent="Co2Background"]
+modulate = Color(0.95782, 0.446297, 1.44392e-05, 1)
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -50.0
+offset_top = 2.0
+offset_right = 50.0
+offset_bottom = 29.0
+grow_horizontal = 2
+value = 42.0
+
+[node name="HappinessBackground" type="ColorRect" parent="."]
+layout_mode = 0
+offset_left = 30.0
+offset_top = 380.0
+offset_right = 130.0
+offset_bottom = 422.0
+scale = Vector2(2, 2)
+mouse_filter = 1
+color = Color(0.0562916, 0.0562916, 0.0562916, 1)
+
+[node name="HappinessLabel" type="Label" parent="HappinessBackground"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -23.0
+offset_top = -14.0
+offset_right = 51.0
+offset_bottom = 9.0
+grow_horizontal = 2
+grow_vertical = 0
+text = "Happiness"
+label_settings = SubResource("LabelSettings_t4721")
+
+[node name="HappinessBar" type="ProgressBar" parent="HappinessBackground"]
+modulate = Color(0.653786, 0.26679, 0.832991, 1)
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -50.0
+offset_top = 2.0
+offset_right = 50.0
+offset_bottom = 29.0
+grow_horizontal = 2
+value = 72.0
+
+[node name="Population" type="ColorRect" parent="."]
+layout_mode = 0
+offset_left = 30.0
+offset_top = 255.0
+offset_right = 130.0
+offset_bottom = 297.0
+scale = Vector2(2, 2)
+mouse_filter = 1
+color = Color(0.0562916, 0.0562916, 0.0562916, 1)
+
+[node name="PopulationLabel" type="Label" parent="Population"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -61.0
+offset_top = -11.5
+offset_right = 61.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "103/106"
+horizontal_alignment = 1
+
+[node name="MoneyBackground" type="ColorRect" parent="."]
+layout_mode = 0
+offset_left = 30.0
+offset_top = 20.0
+offset_right = 130.0
+offset_bottom = 62.0
+scale = Vector2(2, 2)
+mouse_filter = 1
+color = Color(0.0562916, 0.0562916, 0.0562916, 1)
+
+[node name="MoneyLabel" type="Label" parent="MoneyBackground"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -36.5
+offset_top = -11.5
+offset_right = 36.5
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "123,400 $"
+
+[node name="Year&DayBackground" type="ColorRect" parent="."]
+layout_mode = 0
+offset_left = 1600.0
+offset_top = 20.0
+offset_right = 1750.0
+offset_bottom = 72.0
+scale = Vector2(2, 2)
+mouse_filter = 1
+color = Color(0.0562916, 0.0562916, 0.0562916, 1)
+script = ExtResource("2_xjeol")
+
+[node name="YearLabel" type="Label" parent="Year&DayBackground"]
+layout_mode = 1
+offset_right = 74.0
+offset_bottom = 23.0
+
+[node name="DayLabel" type="Label" parent="Year&DayBackground"]
+layout_mode = 1
+offset_top = 29.0
+offset_right = 148.0
+offset_bottom = 52.0
+
+[node name="DayTimer" type="Timer" parent="Year&DayBackground"]
+process_callback = 0
+wait_time = 12.0
+autostart = true
+
+[node name="ConstructionMenu" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.936
+anchor_top = 1.0
+anchor_right = 1.068
+anchor_bottom = 1.0
+offset_left = -703.272
+offset_top = -798.0
+offset_right = -11.3359
+offset_bottom = -188.0
+grow_horizontal = 0
+grow_vertical = 0
+scale = Vector2(1.5, 1.5)
+theme_override_constants/separation = 10
+
+[node name="ConstructionMenuBox" type="ColorRect" parent="ConstructionMenu"]
+custom_minimum_size = Vector2(265, 400)
+layout_mode = 2
+size_flags_horizontal = 8
+mouse_filter = 1
+mouse_default_cursor_shape = 2
+script = ExtResource("3_tycjg")
+
+[node name="ConstructionMenuTitle" type="Label" parent="ConstructionMenu/ConstructionMenuBox"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -58.0
+offset_top = 5.0
+offset_right = 174.0
+offset_bottom = 40.0
+grow_horizontal = 2
+scale = Vector2(0.5, 0.5)
+text = "Construction Menu"
+label_settings = SubResource("LabelSettings_x18k8")
+
+[node name="PopupTimer" type="Timer" parent="ConstructionMenu/ConstructionMenuBox"]
+wait_time = 0.4
+
+[node name="SmallHouseInfo" type="ColorRect" parent="ConstructionMenu/ConstructionMenuBox"]
+visible = false
+layout_mode = 0
+offset_left = -135.0
+offset_right = -2.0
+offset_bottom = 178.0
+mouse_filter = 1
+mouse_default_cursor_shape = 2
+color = Color(0.956863, 0.960784, 0.980392, 1)
+
+[node name="Title" type="Label" parent="ConstructionMenu/ConstructionMenuBox/SmallHouseInfo"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -34.0
+offset_right = 100.0
+offset_bottom = 32.0
+grow_horizontal = 2
+scale = Vector2(0.5, 0.5)
+text = "Small house"
+label_settings = SubResource("LabelSettings_l3svw")
+
+[node name="ColorRect" type="ColorRect" parent="ConstructionMenu/ConstructionMenuBox/SmallHouseInfo"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -57.5
+offset_top = 20.0
+offset_right = 57.5
+offset_bottom = 80.0
+grow_horizontal = 2
+
+[node name="TextureRect" type="TextureRect" parent="ConstructionMenu/ConstructionMenuBox/SmallHouseInfo/ColorRect"]
+layout_mode = 0
+offset_right = 1643.0
+offset_bottom = 857.0
+scale = Vector2(0.07, 0.07)
+texture = ExtResource("3_gbasx")
+
+[node name="ColorRect2" type="ColorRect" parent="ConstructionMenu/ConstructionMenuBox/SmallHouseInfo"]
+layout_mode = 0
+offset_left = 9.0
+offset_top = 83.0
+offset_right = 124.0
+offset_bottom = 173.0
+
+[node name="Subtitles" type="Label" parent="ConstructionMenu/ConstructionMenuBox/SmallHouseInfo/ColorRect2"]
+layout_mode = 0
+offset_right = 70.0
+offset_bottom = 197.0
+scale = Vector2(0.5, 0.5)
+text = "- Cost: $28,000
+
+- Capacity: 2 citizens
+
+- Size: 1x1
+
+- Description: A cozy home 
+perfect for two residents."
+label_settings = SubResource("LabelSettings_puecs")
+
+[node name="MediumHouseInfo" type="ColorRect" parent="ConstructionMenu/ConstructionMenuBox"]
+visible = false
+layout_mode = 0
+offset_left = -135.0
+offset_right = -2.0
+offset_bottom = 189.0
+mouse_filter = 1
+mouse_default_cursor_shape = 2
+color = Color(0.956863, 0.960784, 0.980392, 1)
+
+[node name="Title" type="Label" parent="ConstructionMenu/ConstructionMenuBox/MediumHouseInfo"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -42.5
+offset_right = 126.5
+offset_bottom = 34.0
+grow_horizontal = 2
+scale = Vector2(0.5, 0.5)
+text = "Medium house"
+label_settings = SubResource("LabelSettings_l3svw")
+
+[node name="ColorRect" type="ColorRect" parent="ConstructionMenu/ConstructionMenuBox/MediumHouseInfo"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -57.5
+offset_top = 20.0
+offset_right = 57.5
+offset_bottom = 80.0
+grow_horizontal = 2
+
+[node name="TextureRect" type="TextureRect" parent="ConstructionMenu/ConstructionMenuBox/MediumHouseInfo/ColorRect"]
+layout_mode = 0
+offset_right = 1643.0
+offset_bottom = 857.0
+scale = Vector2(0.07, 0.07)
+texture = ExtResource("4_dfwmb")
+
+[node name="ColorRect2" type="ColorRect" parent="ConstructionMenu/ConstructionMenuBox/MediumHouseInfo"]
+layout_mode = 0
+offset_left = 9.0
+offset_top = 83.0
+offset_right = 124.0
+offset_bottom = 183.0
+
+[node name="Subtitles" type="Label" parent="ConstructionMenu/ConstructionMenuBox/MediumHouseInfo/ColorRect2"]
+layout_mode = 0
+offset_right = 70.0
+offset_bottom = 197.0
+scale = Vector2(0.5, 0.5)
+text = "- Cost: $60,000
+
+- Capacity: 4 citizens
+
+- Size: 2x2
+
+- Description: A comfortable 
+dwelling suitable for a small
+ family of four.
+"
+label_settings = SubResource("LabelSettings_puecs")
+
+[node name="LargeHouseInfo" type="ColorRect" parent="ConstructionMenu/ConstructionMenuBox"]
+visible = false
+layout_mode = 0
+offset_left = -135.0
+offset_right = -2.0
+offset_bottom = 189.0
+mouse_filter = 1
+mouse_default_cursor_shape = 2
+color = Color(0.956863, 0.960784, 0.980392, 1)
+
+[node name="Title" type="Label" parent="ConstructionMenu/ConstructionMenuBox/LargeHouseInfo"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -34.0
+offset_right = 100.0
+offset_bottom = 32.0
+grow_horizontal = 2
+scale = Vector2(0.5, 0.5)
+text = "Large house"
+label_settings = SubResource("LabelSettings_l3svw")
+
+[node name="ColorRect" type="ColorRect" parent="ConstructionMenu/ConstructionMenuBox/LargeHouseInfo"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -57.5
+offset_top = 20.0
+offset_right = 57.5
+offset_bottom = 80.0
+grow_horizontal = 2
+
+[node name="TextureRect" type="TextureRect" parent="ConstructionMenu/ConstructionMenuBox/LargeHouseInfo/ColorRect"]
+layout_mode = 0
+offset_left = 0.101237
+offset_top = -2.66667
+offset_right = 1643.1
+offset_bottom = 968.333
+scale = Vector2(0.07, 0.07)
+texture = ExtResource("5_j0uc5")
+
+[node name="ColorRect2" type="ColorRect" parent="ConstructionMenu/ConstructionMenuBox/LargeHouseInfo"]
+layout_mode = 0
+offset_left = 9.0
+offset_top = 83.0
+offset_right = 124.0
+offset_bottom = 184.0
+
+[node name="Subtitles" type="Label" parent="ConstructionMenu/ConstructionMenuBox/LargeHouseInfo/ColorRect2"]
+layout_mode = 0
+offset_right = 70.0
+offset_bottom = 197.0
+scale = Vector2(0.5, 0.5)
+text = "- Cost: $84,000
+
+- Capacity: 6 citizens
+
+- Size: 2x3
+
+ - Description: A spacious
+residence designed for larger
+ households."
+label_settings = SubResource("LabelSettings_puecs")
+
+[node name="ApartmentInfo" type="ColorRect" parent="ConstructionMenu/ConstructionMenuBox"]
+visible = false
+layout_mode = 0
+offset_left = -135.0
+offset_right = -2.0
+offset_bottom = 203.0
+mouse_filter = 1
+mouse_default_cursor_shape = 2
+color = Color(0.956863, 0.960784, 0.980392, 1)
+
+[node name="Title" type="Label" parent="ConstructionMenu/ConstructionMenuBox/ApartmentInfo"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -34.0
+offset_right = 100.0
+offset_bottom = 32.0
+grow_horizontal = 2
+scale = Vector2(0.5, 0.5)
+text = "Apartment"
+label_settings = SubResource("LabelSettings_l3svw")
+
+[node name="ColorRect" type="ColorRect" parent="ConstructionMenu/ConstructionMenuBox/ApartmentInfo"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -57.5
+offset_top = 20.0
+offset_right = 57.5
+offset_bottom = 80.0
+grow_horizontal = 2
+
+[node name="TextureRect" type="TextureRect" parent="ConstructionMenu/ConstructionMenuBox/ApartmentInfo/ColorRect"]
+layout_mode = 0
+offset_left = -0.232
+offset_top = -3.667
+offset_right = 1642.77
+offset_bottom = 973.333
+scale = Vector2(0.07, 0.07)
+texture = ExtResource("6_kgbo8")
+
+[node name="ColorRect2" type="ColorRect" parent="ConstructionMenu/ConstructionMenuBox/ApartmentInfo"]
+layout_mode = 0
+offset_left = 9.0
+offset_top = 83.0
+offset_right = 124.0
+offset_bottom = 196.0
+
+[node name="Subtitles" type="Label" parent="ConstructionMenu/ConstructionMenuBox/ApartmentInfo/ColorRect2"]
+layout_mode = 0
+offset_right = 70.0
+offset_bottom = 197.0
+scale = Vector2(0.5, 0.5)
+text = "- Cost: $1,320,000
+
+- Capacity: 24 citizens
+
+- Size: 4x5
+
+- Description: A large building
+with multiple units, perfect for
+housing a large number of
+citizens."
+label_settings = SubResource("LabelSettings_puecs")
+
+[node name="SkyscraperInfo" type="ColorRect" parent="ConstructionMenu/ConstructionMenuBox"]
+visible = false
+layout_mode = 0
+offset_left = -135.0
+offset_right = -2.0
+offset_bottom = 196.0
+mouse_filter = 1
+mouse_default_cursor_shape = 2
+color = Color(0.956863, 0.960784, 0.980392, 1)
+
+[node name="Title" type="Label" parent="ConstructionMenu/ConstructionMenuBox/SkyscraperInfo"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -34.0
+offset_right = 100.0
+offset_bottom = 32.0
+grow_horizontal = 2
+scale = Vector2(0.5, 0.5)
+text = "Skyscraper"
+label_settings = SubResource("LabelSettings_l3svw")
+
+[node name="ColorRect" type="ColorRect" parent="ConstructionMenu/ConstructionMenuBox/SkyscraperInfo"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -57.5
+offset_top = 20.0
+offset_right = 57.5
+offset_bottom = 80.0
+grow_horizontal = 2
+
+[node name="TextureRect" type="TextureRect" parent="ConstructionMenu/ConstructionMenuBox/SkyscraperInfo/ColorRect"]
+layout_mode = 0
+offset_left = 2.0
+offset_right = 1658.0
+offset_bottom = 857.0
+scale = Vector2(0.07, 0.07)
+texture = ExtResource("7_duqr8")
+
+[node name="ColorRect2" type="ColorRect" parent="ConstructionMenu/ConstructionMenuBox/SkyscraperInfo"]
+layout_mode = 0
+offset_left = 9.0
+offset_top = 83.0
+offset_right = 126.0
+offset_bottom = 189.0
+
+[node name="Subtitles" type="Label" parent="ConstructionMenu/ConstructionMenuBox/SkyscraperInfo/ColorRect2"]
+layout_mode = 0
+offset_right = 242.0
+offset_bottom = 283.0
+scale = Vector2(0.5, 0.5)
+text = "- Cost: $7,040,000
+
+- Capacity: 128 citizens
+
+- Size: 7x8
+
+- Description: A towering 
+structure that can accommodate
+a large number of residents.
+"
+label_settings = SubResource("LabelSettings_puecs")
+
+[node name="HospitalInfo" type="ColorRect" parent="ConstructionMenu/ConstructionMenuBox"]
+visible = false
+layout_mode = 0
+offset_left = -135.0
+offset_right = -2.0
+offset_bottom = 211.0
+mouse_filter = 1
+mouse_default_cursor_shape = 2
+color = Color(0.956863, 0.960784, 0.980392, 1)
+
+[node name="Title" type="Label" parent="ConstructionMenu/ConstructionMenuBox/HospitalInfo"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -34.0
+offset_right = 100.0
+offset_bottom = 32.0
+grow_horizontal = 2
+scale = Vector2(0.5, 0.5)
+text = "Hospital"
+label_settings = SubResource("LabelSettings_l3svw")
+horizontal_alignment = 1
+
+[node name="ColorRect" type="ColorRect" parent="ConstructionMenu/ConstructionMenuBox/HospitalInfo"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -57.5
+offset_top = 20.0
+offset_right = 57.5
+offset_bottom = 80.0
+grow_horizontal = 2
+
+[node name="TextureRect" type="TextureRect" parent="ConstructionMenu/ConstructionMenuBox/HospitalInfo/ColorRect"]
+layout_mode = 0
+offset_left = 12.1012
+offset_top = 1.33333
+offset_right = 1222.1
+offset_bottom = 839.333
+scale = Vector2(0.07, 0.07)
+texture = ExtResource("9_va2x0")
+
+[node name="ColorRect2" type="ColorRect" parent="ConstructionMenu/ConstructionMenuBox/HospitalInfo"]
+layout_mode = 0
+offset_left = 9.0
+offset_top = 83.0
+offset_right = 124.0
+offset_bottom = 205.0
+
+[node name="Subtitles" type="Label" parent="ConstructionMenu/ConstructionMenuBox/HospitalInfo/ColorRect2"]
+layout_mode = 0
+offset_right = 70.0
+offset_bottom = 197.0
+scale = Vector2(0.5, 0.5)
+text = "- Cost: $400,000
+
+- Daily Income: $2,000
+
+- Happiness: +600
+
+- Size: 8x16
+
+- Description: A medical
+facility that provides healthcare
+services to the city's residents.
+"
+label_settings = SubResource("LabelSettings_puecs")
+
+[node name="MuseumInfo" type="ColorRect" parent="ConstructionMenu/ConstructionMenuBox"]
+visible = false
+layout_mode = 0
+offset_left = -135.0
+offset_right = -2.0
+offset_bottom = 222.0
+mouse_filter = 1
+mouse_default_cursor_shape = 2
+color = Color(0.956863, 0.960784, 0.980392, 1)
+
+[node name="Title" type="Label" parent="ConstructionMenu/ConstructionMenuBox/MuseumInfo"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -34.0
+offset_right = 100.0
+offset_bottom = 32.0
+grow_horizontal = 2
+scale = Vector2(0.5, 0.5)
+text = "Museum"
+label_settings = SubResource("LabelSettings_l3svw")
+horizontal_alignment = 1
+
+[node name="ColorRect" type="ColorRect" parent="ConstructionMenu/ConstructionMenuBox/MuseumInfo"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -57.5
+offset_top = 20.0
+offset_right = 57.5
+offset_bottom = 80.0
+grow_horizontal = 2
+
+[node name="TextureRect" type="TextureRect" parent="ConstructionMenu/ConstructionMenuBox/MuseumInfo/ColorRect"]
+layout_mode = 0
+offset_left = 2.0
+offset_right = 1556.0
+offset_bottom = 857.0
+scale = Vector2(0.07, 0.07)
+texture = ExtResource("10_3w7my")
+
+[node name="ColorRect2" type="ColorRect" parent="ConstructionMenu/ConstructionMenuBox/MuseumInfo"]
+layout_mode = 0
+offset_left = 9.0
+offset_top = 83.0
+offset_right = 124.0
+offset_bottom = 215.0
+
+[node name="Subtitles" type="Label" parent="ConstructionMenu/ConstructionMenuBox/MuseumInfo/ColorRect2"]
+layout_mode = 0
+offset_right = 242.0
+offset_bottom = 283.0
+scale = Vector2(0.5, 0.5)
+text = "- Cost: $800,000
+
+- Daily Income: $4,000
+
+- Happiness: +1,200
+
+- Size: 6x6
+
+- Description: A cultural
+institution that showcases art, 
+history, and other exhibits."
+label_settings = SubResource("LabelSettings_puecs")
+
+[node name="SchoolInfo" type="ColorRect" parent="ConstructionMenu/ConstructionMenuBox"]
+visible = false
+layout_mode = 0
+offset_left = -135.0
+offset_right = -2.0
+offset_bottom = 207.0
+mouse_filter = 1
+mouse_default_cursor_shape = 2
+color = Color(0.956863, 0.960784, 0.980392, 1)
+
+[node name="Title" type="Label" parent="ConstructionMenu/ConstructionMenuBox/SchoolInfo"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -34.0
+offset_right = 100.0
+offset_bottom = 32.0
+grow_horizontal = 2
+scale = Vector2(0.5, 0.5)
+text = "School"
+label_settings = SubResource("LabelSettings_l3svw")
+horizontal_alignment = 1
+
+[node name="ColorRect" type="ColorRect" parent="ConstructionMenu/ConstructionMenuBox/SchoolInfo"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -57.5
+offset_top = 20.0
+offset_right = 57.5
+offset_bottom = 80.0
+grow_horizontal = 2
+
+[node name="TextureRect" type="TextureRect" parent="ConstructionMenu/ConstructionMenuBox/SchoolInfo/ColorRect"]
+layout_mode = 0
+offset_left = 6.7679
+offset_right = 1484.77
+offset_bottom = 857.0
+scale = Vector2(0.07, 0.07)
+texture = ExtResource("11_aftwm")
+
+[node name="ColorRect2" type="ColorRect" parent="ConstructionMenu/ConstructionMenuBox/SchoolInfo"]
+layout_mode = 0
+offset_left = 9.0
+offset_top = 83.0
+offset_right = 124.0
+offset_bottom = 202.0
+
+[node name="Subtitles" type="Label" parent="ConstructionMenu/ConstructionMenuBox/SchoolInfo/ColorRect2"]
+layout_mode = 0
+offset_right = 242.0
+offset_bottom = 283.0
+scale = Vector2(0.5, 0.5)
+text = "- Cost: $200,000
+
+- Daily Income: $1,000
+
+- Happiness: +400
+
+- Size: 3x5
+
+- Description: A place of
+learning for the city's children."
+label_settings = SubResource("LabelSettings_puecs")
+
+[node name="FactoryInfo" type="ColorRect" parent="ConstructionMenu/ConstructionMenuBox"]
+visible = false
+layout_mode = 0
+offset_left = -135.0
+offset_right = -2.0
+offset_bottom = 219.0
+mouse_filter = 1
+mouse_default_cursor_shape = 2
+color = Color(0.956863, 0.960784, 0.980392, 1)
+
+[node name="Title" type="Label" parent="ConstructionMenu/ConstructionMenuBox/FactoryInfo"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -34.0
+offset_right = 100.0
+offset_bottom = 32.0
+grow_horizontal = 2
+scale = Vector2(0.5, 0.5)
+text = "Factory"
+label_settings = SubResource("LabelSettings_l3svw")
+horizontal_alignment = 1
+
+[node name="ColorRect" type="ColorRect" parent="ConstructionMenu/ConstructionMenuBox/FactoryInfo"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -57.5
+offset_top = 20.0
+offset_right = 57.5
+offset_bottom = 80.0
+grow_horizontal = 2
+
+[node name="TextureRect" type="TextureRect" parent="ConstructionMenu/ConstructionMenuBox/FactoryInfo/ColorRect"]
+layout_mode = 0
+offset_left = -11.8988
+offset_top = -4.66667
+offset_right = 1871.1
+offset_bottom = 1014.33
+scale = Vector2(0.07, 0.07)
+texture = ExtResource("12_s4i72")
+
+[node name="ColorRect2" type="ColorRect" parent="ConstructionMenu/ConstructionMenuBox/FactoryInfo"]
+layout_mode = 0
+offset_left = 9.0
+offset_top = 83.0
+offset_right = 124.0
+offset_bottom = 214.0
+
+[node name="Subtitles" type="Label" parent="ConstructionMenu/ConstructionMenuBox/FactoryInfo/ColorRect2"]
+layout_mode = 0
+offset_right = 242.0
+offset_bottom = 283.0
+scale = Vector2(0.5, 0.5)
+text = "- Cost: $400,000
+
+- Daily Income: $8,000
+
+- Daily Pollution: +12,000 CO2
+
+- Size: 7x7
+
+- Description: A large industrial
+facility that produces goods
+for the city."
+label_settings = SubResource("LabelSettings_puecs")
+
+[node name="PowerPlantInfo" type="ColorRect" parent="ConstructionMenu/ConstructionMenuBox"]
+visible = false
+layout_mode = 0
+offset_left = -135.0
+offset_right = -2.0
+offset_bottom = 207.0
+mouse_filter = 1
+mouse_default_cursor_shape = 2
+color = Color(0.956863, 0.960784, 0.980392, 1)
+
+[node name="Title" type="Label" parent="ConstructionMenu/ConstructionMenuBox/PowerPlantInfo"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -57.0
+offset_right = 171.0
+offset_bottom = 34.0
+grow_horizontal = 2
+scale = Vector2(0.5, 0.5)
+text = "Nuclear Power Plant"
+label_settings = SubResource("LabelSettings_l3svw")
+horizontal_alignment = 1
+
+[node name="ColorRect" type="ColorRect" parent="ConstructionMenu/ConstructionMenuBox/PowerPlantInfo"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -57.5
+offset_top = 20.0
+offset_right = 57.5
+offset_bottom = 80.0
+grow_horizontal = 2
+
+[node name="TextureRect" type="TextureRect" parent="ConstructionMenu/ConstructionMenuBox/PowerPlantInfo/ColorRect"]
+layout_mode = 0
+offset_left = 2.0
+offset_top = -6.0
+offset_right = 1658.0
+offset_bottom = 851.0
+scale = Vector2(0.07, 0.07)
+texture = ExtResource("13_k2p3l")
+
+[node name="ColorRect2" type="ColorRect" parent="ConstructionMenu/ConstructionMenuBox/PowerPlantInfo"]
+layout_mode = 0
+offset_left = 9.0
+offset_top = 83.0
+offset_right = 124.0
+offset_bottom = 203.0
+
+[node name="Subtitles" type="Label" parent="ConstructionMenu/ConstructionMenuBox/PowerPlantInfo/ColorRect2"]
+layout_mode = 0
+offset_right = 242.0
+offset_bottom = 283.0
+scale = Vector2(0.5, 0.5)
+text = "- Cost: $3,000,000
+
+- Daily Income: $35,000
+
+- Daily Pollution: +20,000 CO2
+
+- Size: 24x40
+
+- Description: A power plant
+that generates electricity.
+"
+label_settings = SubResource("LabelSettings_puecs")
+
+[node name="SolarPanelInfo" type="ColorRect" parent="ConstructionMenu/ConstructionMenuBox"]
+visible = false
+layout_mode = 0
+offset_left = -135.0
+offset_right = -2.0
+offset_bottom = 214.0
+mouse_filter = 1
+mouse_default_cursor_shape = 2
+color = Color(0.956863, 0.960784, 0.980392, 1)
+
+[node name="Title" type="Label" parent="ConstructionMenu/ConstructionMenuBox/SolarPanelInfo"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -34.0
+offset_right = 100.0
+offset_bottom = 32.0
+grow_horizontal = 2
+scale = Vector2(0.5, 0.5)
+text = "Solar Panel"
+label_settings = SubResource("LabelSettings_l3svw")
+horizontal_alignment = 1
+
+[node name="ColorRect" type="ColorRect" parent="ConstructionMenu/ConstructionMenuBox/SolarPanelInfo"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -57.5
+offset_top = 20.0
+offset_right = 57.5
+offset_bottom = 80.0
+grow_horizontal = 2
+
+[node name="TextureRect" type="TextureRect" parent="ConstructionMenu/ConstructionMenuBox/SolarPanelInfo/ColorRect"]
+layout_mode = 0
+offset_left = 5.43457
+offset_top = -2.0
+offset_right = 1406.43
+offset_bottom = 855.0
+scale = Vector2(0.07, 0.07)
+texture = ExtResource("14_wd0do")
+
+[node name="ColorRect2" type="ColorRect" parent="ConstructionMenu/ConstructionMenuBox/SolarPanelInfo"]
+layout_mode = 0
+offset_left = 9.0
+offset_top = 83.0
+offset_right = 124.0
+offset_bottom = 208.0
+
+[node name="Subtitles" type="Label" parent="ConstructionMenu/ConstructionMenuBox/SolarPanelInfo/ColorRect2"]
+layout_mode = 0
+offset_right = 242.0
+offset_bottom = 283.0
+scale = Vector2(0.5, 0.5)
+text = "- Cost: $600,000
+
+- Daily Income: $4,000
+
+- Daily Pollution: -4,000 CO2
+
+- Size: 2x2
+
+- Description: A renewable
+energy source that generates 
+electricity using solar power.
+"
+label_settings = SubResource("LabelSettings_puecs")
+
+[node name="WindTurbineInfo" type="ColorRect" parent="ConstructionMenu/ConstructionMenuBox"]
+visible = false
+layout_mode = 0
+offset_left = -135.0
+offset_right = -2.0
+offset_bottom = 211.0
+mouse_filter = 1
+mouse_default_cursor_shape = 2
+color = Color(0.956863, 0.960784, 0.980392, 1)
+
+[node name="Title" type="Label" parent="ConstructionMenu/ConstructionMenuBox/WindTurbineInfo"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -34.0
+offset_right = 100.0
+offset_bottom = 32.0
+grow_horizontal = 2
+scale = Vector2(0.5, 0.5)
+text = "Wind Turbine"
+label_settings = SubResource("LabelSettings_l3svw")
+horizontal_alignment = 1
+
+[node name="ColorRect" type="ColorRect" parent="ConstructionMenu/ConstructionMenuBox/WindTurbineInfo"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -57.5
+offset_top = 20.0
+offset_right = 57.5
+offset_bottom = 80.0
+grow_horizontal = 2
+
+[node name="TextureRect" type="TextureRect" parent="ConstructionMenu/ConstructionMenuBox/WindTurbineInfo/ColorRect"]
+layout_mode = 0
+offset_left = -2.0
+offset_right = 1654.0
+offset_bottom = 857.0
+scale = Vector2(0.07, 0.07)
+texture = ExtResource("15_wfm65")
+
+[node name="ColorRect2" type="ColorRect" parent="ConstructionMenu/ConstructionMenuBox/WindTurbineInfo"]
+layout_mode = 0
+offset_left = 9.0
+offset_top = 83.0
+offset_right = 124.0
+offset_bottom = 205.0
+
+[node name="Subtitles" type="Label" parent="ConstructionMenu/ConstructionMenuBox/WindTurbineInfo/ColorRect2"]
+layout_mode = 0
+offset_right = 242.0
+offset_bottom = 283.0
+scale = Vector2(0.5, 0.5)
+text = "- Cost: $360,000
+
+- Daily Income: $2,000
+
+- Daily Pollution: -2,500 CO2
+
+- Size: 7x9
+
+- Description: A renewable
+energy source that generates 
+electricity using wind power."
+label_settings = SubResource("LabelSettings_puecs")
+
+[node name="BakeryInfo" type="ColorRect" parent="ConstructionMenu/ConstructionMenuBox"]
+visible = false
+layout_mode = 0
+offset_left = -135.0
+offset_right = -2.0
+offset_bottom = 196.0
+mouse_filter = 1
+mouse_default_cursor_shape = 2
+color = Color(0.956863, 0.960784, 0.980392, 1)
+
+[node name="Title" type="Label" parent="ConstructionMenu/ConstructionMenuBox/BakeryInfo"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -34.0
+offset_right = 100.0
+offset_bottom = 32.0
+grow_horizontal = 2
+scale = Vector2(0.5, 0.5)
+text = "Bakery"
+label_settings = SubResource("LabelSettings_l3svw")
+horizontal_alignment = 1
+
+[node name="ColorRect" type="ColorRect" parent="ConstructionMenu/ConstructionMenuBox/BakeryInfo"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -57.5
+offset_top = 20.0
+offset_right = 57.5
+offset_bottom = 80.0
+grow_horizontal = 2
+
+[node name="TextureRect" type="TextureRect" parent="ConstructionMenu/ConstructionMenuBox/BakeryInfo/ColorRect"]
+layout_mode = 0
+offset_left = 23.4346
+offset_top = -1.33333
+offset_right = 985.435
+offset_bottom = 836.667
+scale = Vector2(0.07, 0.07)
+texture = ExtResource("16_wxt2q")
+
+[node name="ColorRect2" type="ColorRect" parent="ConstructionMenu/ConstructionMenuBox/BakeryInfo"]
+layout_mode = 0
+offset_left = 9.0
+offset_top = 83.0
+offset_right = 124.0
+offset_bottom = 189.0
+
+[node name="Subtitles" type="Label" parent="ConstructionMenu/ConstructionMenuBox/BakeryInfo/ColorRect2"]
+layout_mode = 0
+offset_right = 242.0
+offset_bottom = 283.0
+scale = Vector2(0.5, 0.5)
+text = "- Cost: $80,000
+
+- Daily Income: $1,400
+
+- Size: 2x2
+
+- Description: A shop that bakes
+and sells fresh bread and
+pastries."
+label_settings = SubResource("LabelSettings_puecs")
+
+[node name="BarbershopInfo" type="ColorRect" parent="ConstructionMenu/ConstructionMenuBox"]
+visible = false
+layout_mode = 0
+offset_left = -135.0
+offset_right = -2.0
+offset_bottom = 183.0
+mouse_filter = 1
+mouse_default_cursor_shape = 2
+color = Color(0.956863, 0.960784, 0.980392, 1)
+
+[node name="Title" type="Label" parent="ConstructionMenu/ConstructionMenuBox/BarbershopInfo"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -34.0
+offset_right = 100.0
+offset_bottom = 32.0
+grow_horizontal = 2
+scale = Vector2(0.5, 0.5)
+text = "Barbershop"
+label_settings = SubResource("LabelSettings_l3svw")
+horizontal_alignment = 1
+
+[node name="ColorRect" type="ColorRect" parent="ConstructionMenu/ConstructionMenuBox/BarbershopInfo"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -57.5
+offset_top = 20.0
+offset_right = 57.5
+offset_bottom = 80.0
+grow_horizontal = 2
+
+[node name="TextureRect" type="TextureRect" parent="ConstructionMenu/ConstructionMenuBox/BarbershopInfo/ColorRect"]
+layout_mode = 0
+offset_left = 27.435
+offset_top = -2.0
+offset_right = 981.435
+offset_bottom = 878.0
+scale = Vector2(0.07, 0.07)
+texture = ExtResource("17_snd6s")
+
+[node name="ColorRect2" type="ColorRect" parent="ConstructionMenu/ConstructionMenuBox/BarbershopInfo"]
+layout_mode = 0
+offset_left = 9.0
+offset_top = 83.0
+offset_right = 124.0
+offset_bottom = 177.0
+
+[node name="Subtitles" type="Label" parent="ConstructionMenu/ConstructionMenuBox/BarbershopInfo/ColorRect2"]
+layout_mode = 0
+offset_right = 242.0
+offset_bottom = 283.0
+scale = Vector2(0.5, 0.5)
+text = "- Cost: $60,000
+
+- Daily Income: $1,200
+
+- Size: 2x2
+
+- Description: A shop that offers 
+haircuts and grooming services."
+label_settings = SubResource("LabelSettings_puecs")
+
+[node name="BookshopInfo" type="ColorRect" parent="ConstructionMenu/ConstructionMenuBox"]
+visible = false
+layout_mode = 0
+offset_left = -135.0
+offset_right = -2.0
+offset_bottom = 196.0
+mouse_filter = 1
+mouse_default_cursor_shape = 2
+color = Color(0.956863, 0.960784, 0.980392, 1)
+
+[node name="Title" type="Label" parent="ConstructionMenu/ConstructionMenuBox/BookshopInfo"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -34.0
+offset_right = 100.0
+offset_bottom = 32.0
+grow_horizontal = 2
+scale = Vector2(0.5, 0.5)
+text = "Bookshop"
+label_settings = SubResource("LabelSettings_l3svw")
+horizontal_alignment = 1
+
+[node name="ColorRect" type="ColorRect" parent="ConstructionMenu/ConstructionMenuBox/BookshopInfo"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -57.5
+offset_top = 20.0
+offset_right = 57.5
+offset_bottom = 80.0
+grow_horizontal = 2
+
+[node name="TextureRect" type="TextureRect" parent="ConstructionMenu/ConstructionMenuBox/BookshopInfo/ColorRect"]
+layout_mode = 0
+offset_left = 18.1012
+offset_top = -0.666667
+offset_right = 1124.1
+offset_bottom = 856.333
+scale = Vector2(0.07, 0.07)
+texture = ExtResource("18_27wky")
+
+[node name="ColorRect2" type="ColorRect" parent="ConstructionMenu/ConstructionMenuBox/BookshopInfo"]
+layout_mode = 0
+offset_left = 9.0
+offset_top = 83.0
+offset_right = 124.0
+offset_bottom = 189.0
+
+[node name="Subtitles" type="Label" parent="ConstructionMenu/ConstructionMenuBox/BookshopInfo/ColorRect2"]
+layout_mode = 0
+offset_right = 242.0
+offset_bottom = 283.0
+scale = Vector2(0.5, 0.5)
+text = "- Cost: $40,000
+
+- Daily Income: $800
+
+- Size: 3x3
+
+- Description: A small shop that
+sells books and other reading 
+materials."
+label_settings = SubResource("LabelSettings_puecs")
+
+[node name="CasinoInfo" type="ColorRect" parent="ConstructionMenu/ConstructionMenuBox"]
+visible = false
+layout_mode = 0
+offset_left = -135.0
+offset_right = -2.0
+offset_bottom = 196.0
+mouse_filter = 1
+mouse_default_cursor_shape = 2
+color = Color(0.956863, 0.960784, 0.980392, 1)
+
+[node name="Title" type="Label" parent="ConstructionMenu/ConstructionMenuBox/CasinoInfo"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -34.0
+offset_right = 100.0
+offset_bottom = 32.0
+grow_horizontal = 2
+scale = Vector2(0.5, 0.5)
+text = "Casino"
+label_settings = SubResource("LabelSettings_l3svw")
+horizontal_alignment = 1
+
+[node name="ColorRect" type="ColorRect" parent="ConstructionMenu/ConstructionMenuBox/CasinoInfo"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -57.5
+offset_top = 20.0
+offset_right = 57.5
+offset_bottom = 80.0
+grow_horizontal = 2
+
+[node name="TextureRect" type="TextureRect" parent="ConstructionMenu/ConstructionMenuBox/CasinoInfo/ColorRect"]
+layout_mode = 0
+offset_left = 18.7679
+offset_top = -1.33333
+offset_right = 1153.77
+offset_bottom = 836.667
+scale = Vector2(0.07, 0.07)
+texture = ExtResource("19_dg28o")
+
+[node name="ColorRect2" type="ColorRect" parent="ConstructionMenu/ConstructionMenuBox/CasinoInfo"]
+layout_mode = 0
+offset_left = 9.0
+offset_top = 83.0
+offset_right = 124.0
+offset_bottom = 189.0
+
+[node name="Subtitles" type="Label" parent="ConstructionMenu/ConstructionMenuBox/CasinoInfo/ColorRect2"]
+layout_mode = 0
+offset_right = 242.0
+offset_bottom = 283.0
+scale = Vector2(0.5, 0.5)
+text = "- Cost: $3,000,000
+
+- Daily Income: $30,000
+
+- Size: 4x10
+
+- Description: A popular 
+entertainment venue that offers 
+various games of chance."
+label_settings = SubResource("LabelSettings_puecs")
+
+[node name="FarmInfo" type="ColorRect" parent="ConstructionMenu/ConstructionMenuBox"]
+visible = false
+layout_mode = 0
+offset_left = -135.0
+offset_right = -2.0
+offset_bottom = 196.0
+mouse_filter = 1
+mouse_default_cursor_shape = 2
+color = Color(0.956863, 0.960784, 0.980392, 1)
+
+[node name="Title" type="Label" parent="ConstructionMenu/ConstructionMenuBox/FarmInfo"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -34.0
+offset_right = 100.0
+offset_bottom = 32.0
+grow_horizontal = 2
+scale = Vector2(0.5, 0.5)
+text = "Farm"
+label_settings = SubResource("LabelSettings_l3svw")
+horizontal_alignment = 1
+
+[node name="ColorRect" type="ColorRect" parent="ConstructionMenu/ConstructionMenuBox/FarmInfo"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -57.5
+offset_top = 20.0
+offset_right = 57.5
+offset_bottom = 80.0
+grow_horizontal = 2
+
+[node name="TextureRect" type="TextureRect" parent="ConstructionMenu/ConstructionMenuBox/FarmInfo/ColorRect"]
+layout_mode = 0
+offset_left = 2.0
+offset_right = 1658.0
+offset_bottom = 857.0
+scale = Vector2(0.07, 0.07)
+texture = ExtResource("18_kb016")
+
+[node name="ColorRect2" type="ColorRect" parent="ConstructionMenu/ConstructionMenuBox/FarmInfo"]
+layout_mode = 0
+offset_left = 9.0
+offset_top = 83.0
+offset_right = 124.0
+offset_bottom = 189.0
+
+[node name="Subtitles" type="Label" parent="ConstructionMenu/ConstructionMenuBox/FarmInfo/ColorRect2"]
+layout_mode = 0
+offset_right = 242.0
+offset_bottom = 283.0
+scale = Vector2(0.5, 0.5)
+text = "- Cost: $1,200,000
+
+- Daily Income: $12,000
+
+- Size: 9x12
+
+- Description: A large agricultural 
+facility that produces a variety
+of crops and livestock.
+"
+label_settings = SubResource("LabelSettings_puecs")
+
+[node name="HardwareInfo" type="ColorRect" parent="ConstructionMenu/ConstructionMenuBox"]
+visible = false
+layout_mode = 0
+offset_left = -135.0
+offset_right = -2.0
+offset_bottom = 196.0
+mouse_filter = 1
+mouse_default_cursor_shape = 2
+color = Color(0.956863, 0.960784, 0.980392, 1)
+
+[node name="Title" type="Label" parent="ConstructionMenu/ConstructionMenuBox/HardwareInfo"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -43.5
+offset_right = 131.5
+offset_bottom = 34.0
+grow_horizontal = 2
+scale = Vector2(0.5, 0.5)
+text = "Hardware Store"
+label_settings = SubResource("LabelSettings_l3svw")
+horizontal_alignment = 1
+
+[node name="ColorRect" type="ColorRect" parent="ConstructionMenu/ConstructionMenuBox/HardwareInfo"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -57.5
+offset_top = 18.0
+offset_right = 57.5
+offset_bottom = 85.0
+grow_horizontal = 2
+
+[node name="TextureRect" type="TextureRect" parent="ConstructionMenu/ConstructionMenuBox/HardwareInfo/ColorRect"]
+layout_mode = 0
+offset_left = 26.0
+offset_top = -2.0
+offset_right = 931.0
+offset_bottom = 983.0
+scale = Vector2(0.07, 0.07)
+texture = ExtResource("21_tse4m")
+
+[node name="ColorRect2" type="ColorRect" parent="ConstructionMenu/ConstructionMenuBox/HardwareInfo"]
+layout_mode = 0
+offset_left = 9.0
+offset_top = 87.0
+offset_right = 124.0
+offset_bottom = 189.0
+
+[node name="Subtitles" type="Label" parent="ConstructionMenu/ConstructionMenuBox/HardwareInfo/ColorRect2"]
+layout_mode = 0
+offset_right = 242.0
+offset_bottom = 283.0
+scale = Vector2(0.5, 0.5)
+text = "- Cost: $200,000
+
+- Daily Income: $3,000
+
+- Size: 4x4
+
+- Description: A shop that sells
+tools, equipment, and other 
+hardware items."
+label_settings = SubResource("LabelSettings_puecs")
+
+[node name="PharmacyInfo" type="ColorRect" parent="ConstructionMenu/ConstructionMenuBox"]
+visible = false
+layout_mode = 0
+offset_left = -135.0
+offset_right = -2.0
+offset_bottom = 196.0
+mouse_filter = 1
+mouse_default_cursor_shape = 2
+color = Color(0.956863, 0.960784, 0.980392, 1)
+
+[node name="Title" type="Label" parent="ConstructionMenu/ConstructionMenuBox/PharmacyInfo"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -34.0
+offset_right = 100.0
+offset_bottom = 32.0
+grow_horizontal = 2
+scale = Vector2(0.5, 0.5)
+text = "Pharmacy"
+label_settings = SubResource("LabelSettings_l3svw")
+horizontal_alignment = 1
+
+[node name="ColorRect" type="ColorRect" parent="ConstructionMenu/ConstructionMenuBox/PharmacyInfo"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -57.5
+offset_top = 20.0
+offset_right = 57.5
+offset_bottom = 80.0
+grow_horizontal = 2
+
+[node name="TextureRect" type="TextureRect" parent="ConstructionMenu/ConstructionMenuBox/PharmacyInfo/ColorRect"]
+layout_mode = 0
+offset_left = 36.7679
+offset_top = 2.0
+offset_right = 828.768
+offset_bottom = 1112.0
+scale = Vector2(0.05, 0.05)
+texture = ExtResource("22_6wcch")
+
+[node name="ColorRect2" type="ColorRect" parent="ConstructionMenu/ConstructionMenuBox/PharmacyInfo"]
+layout_mode = 0
+offset_left = 9.0
+offset_top = 83.0
+offset_right = 124.0
+offset_bottom = 189.0
+
+[node name="Subtitles" type="Label" parent="ConstructionMenu/ConstructionMenuBox/PharmacyInfo/ColorRect2"]
+layout_mode = 0
+offset_right = 242.0
+offset_bottom = 283.0
+scale = Vector2(0.5, 0.5)
+text = "- Cost: $120,000
+
+- Daily Income: $2,000
+
+- Size: 3x3
+
+- Description: A store that sells 
+medicine and other
+health-related products."
+label_settings = SubResource("LabelSettings_puecs")
+
+[node name="BenchInfo" type="ColorRect" parent="ConstructionMenu/ConstructionMenuBox"]
+visible = false
+layout_mode = 0
+offset_left = -135.0
+offset_right = -2.0
+offset_bottom = 210.0
+mouse_filter = 1
+mouse_default_cursor_shape = 2
+color = Color(0.956863, 0.960784, 0.980392, 1)
+
+[node name="Title" type="Label" parent="ConstructionMenu/ConstructionMenuBox/BenchInfo"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -34.0
+offset_right = 100.0
+offset_bottom = 32.0
+grow_horizontal = 2
+scale = Vector2(0.5, 0.5)
+text = "Park"
+label_settings = SubResource("LabelSettings_l3svw")
+horizontal_alignment = 1
+
+[node name="ColorRect" type="ColorRect" parent="ConstructionMenu/ConstructionMenuBox/BenchInfo"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -57.5
+offset_top = 20.0
+offset_right = 57.5
+offset_bottom = 80.0
+grow_horizontal = 2
+
+[node name="TextureRect" type="TextureRect" parent="ConstructionMenu/ConstructionMenuBox/BenchInfo/ColorRect"]
+layout_mode = 0
+offset_right = 1656.0
+offset_bottom = 857.0
+scale = Vector2(0.07, 0.07)
+texture = ExtResource("21_jhn4m")
+
+[node name="ColorRect2" type="ColorRect" parent="ConstructionMenu/ConstructionMenuBox/BenchInfo"]
+layout_mode = 0
+offset_left = 9.0
+offset_top = 83.0
+offset_right = 124.0
+offset_bottom = 205.0
+
+[node name="Subtitles" type="Label" parent="ConstructionMenu/ConstructionMenuBox/BenchInfo/ColorRect2"]
+layout_mode = 0
+offset_right = 242.0
+offset_bottom = 283.0
+scale = Vector2(0.5, 0.5)
+text = "- Cost: $40,000
+
+- Happiness: +300
+
+- Daily Pollution: -200 CO2
+
+- Size: 4x4
+
+- Description: A recreational
+area with green spaces and 
+amenities for citizens to enjoy."
+label_settings = SubResource("LabelSettings_puecs")
+
+[node name="TreeInfo" type="ColorRect" parent="ConstructionMenu/ConstructionMenuBox"]
+visible = false
+layout_mode = 0
+offset_left = -135.0
+offset_right = -2.0
+offset_bottom = 203.0
+mouse_filter = 1
+mouse_default_cursor_shape = 2
+color = Color(0.956863, 0.960784, 0.980392, 1)
+
+[node name="Title" type="Label" parent="ConstructionMenu/ConstructionMenuBox/TreeInfo"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -34.0
+offset_right = 100.0
+offset_bottom = 32.0
+grow_horizontal = 2
+scale = Vector2(0.5, 0.5)
+text = "Forest"
+label_settings = SubResource("LabelSettings_l3svw")
+horizontal_alignment = 1
+
+[node name="ColorRect" type="ColorRect" parent="ConstructionMenu/ConstructionMenuBox/TreeInfo"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -57.5
+offset_top = 20.0
+offset_right = 57.5
+offset_bottom = 80.0
+grow_horizontal = 2
+
+[node name="TextureRect" type="TextureRect" parent="ConstructionMenu/ConstructionMenuBox/TreeInfo/ColorRect"]
+layout_mode = 0
+offset_left = -2.0
+offset_right = 1654.0
+offset_bottom = 857.0
+scale = Vector2(0.07, 0.07)
+texture = ExtResource("23_pevaw")
+
+[node name="ColorRect2" type="ColorRect" parent="ConstructionMenu/ConstructionMenuBox/TreeInfo"]
+layout_mode = 0
+offset_left = 9.0
+offset_top = 83.0
+offset_right = 124.0
+offset_bottom = 196.0
+
+[node name="Subtitles" type="Label" parent="ConstructionMenu/ConstructionMenuBox/TreeInfo/ColorRect2"]
+layout_mode = 0
+offset_right = 242.0
+offset_bottom = 283.0
+scale = Vector2(0.5, 0.5)
+text = "- Cost: $5,000
+
+- Happiness: +100
+
+- Daily Pollution: -400 CO2
+
+- Size: 2x2
+
+- Description: A natural area
+with trees and vegetation.
+"
+label_settings = SubResource("LabelSettings_puecs")
+
+[node name="RoadInfo" type="ColorRect" parent="ConstructionMenu/ConstructionMenuBox"]
+visible = false
+layout_mode = 0
+offset_left = -135.0
+offset_right = -2.0
+offset_bottom = 209.0
+mouse_filter = 1
+mouse_default_cursor_shape = 2
+color = Color(0.956863, 0.960784, 0.980392, 1)
+
+[node name="Title" type="Label" parent="ConstructionMenu/ConstructionMenuBox/RoadInfo"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -34.0
+offset_right = 100.0
+offset_bottom = 32.0
+grow_horizontal = 2
+scale = Vector2(0.5, 0.5)
+text = "Road"
+label_settings = SubResource("LabelSettings_l3svw")
+horizontal_alignment = 1
+
+[node name="ColorRect" type="ColorRect" parent="ConstructionMenu/ConstructionMenuBox/RoadInfo"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -57.5
+offset_top = 20.0
+offset_right = 57.5
+offset_bottom = 80.0
+grow_horizontal = 2
+
+[node name="TextureRect" type="TextureRect" parent="ConstructionMenu/ConstructionMenuBox/RoadInfo/ColorRect"]
+layout_mode = 0
+offset_right = 1647.0
+offset_bottom = 857.0
+scale = Vector2(0.07, 0.07)
+texture = ExtResource("28_peh56")
+
+[node name="ColorRect2" type="ColorRect" parent="ConstructionMenu/ConstructionMenuBox/RoadInfo"]
+layout_mode = 0
+offset_left = 9.0
+offset_top = 83.0
+offset_right = 124.0
+offset_bottom = 204.0
+
+[node name="Subtitles" type="Label" parent="ConstructionMenu/ConstructionMenuBox/RoadInfo/ColorRect2"]
+layout_mode = 0
+offset_right = 242.0
+offset_bottom = 283.0
+scale = Vector2(0.5, 0.5)
+text = "- Cost: $500
+
+- Happiness: +10
+
+- Daily Pollution: +20 CO2
+
+- Size: 1x1
+
+- Description: A basic road that 
+allows citizens to travel around
+the city."
+label_settings = SubResource("LabelSettings_puecs")
+
+[node name="LakeInfo" type="ColorRect" parent="ConstructionMenu/ConstructionMenuBox"]
+visible = false
+layout_mode = 0
+offset_left = -135.0
+offset_right = -2.0
+offset_bottom = 209.0
+mouse_filter = 1
+mouse_default_cursor_shape = 2
+color = Color(0.956863, 0.960784, 0.980392, 1)
+
+[node name="Title" type="Label" parent="ConstructionMenu/ConstructionMenuBox/LakeInfo"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -34.0
+offset_right = 100.0
+offset_bottom = 32.0
+grow_horizontal = 2
+scale = Vector2(0.5, 0.5)
+text = "Lake"
+label_settings = SubResource("LabelSettings_l3svw")
+horizontal_alignment = 1
+
+[node name="ColorRect" type="ColorRect" parent="ConstructionMenu/ConstructionMenuBox/LakeInfo"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -57.5
+offset_top = 20.0
+offset_right = 57.5
+offset_bottom = 80.0
+grow_horizontal = 2
+
+[node name="TextureRect" type="TextureRect" parent="ConstructionMenu/ConstructionMenuBox/LakeInfo/ColorRect"]
+layout_mode = 0
+offset_left = 2.0
+offset_right = 1658.0
+offset_bottom = 857.0
+scale = Vector2(0.07, 0.07)
+texture = ExtResource("25_qn2le")
+
+[node name="ColorRect2" type="ColorRect" parent="ConstructionMenu/ConstructionMenuBox/LakeInfo"]
+layout_mode = 0
+offset_left = 9.0
+offset_top = 83.0
+offset_right = 124.0
+offset_bottom = 204.0
+
+[node name="Subtitles" type="Label" parent="ConstructionMenu/ConstructionMenuBox/LakeInfo/ColorRect2"]
+layout_mode = 0
+offset_right = 242.0
+offset_bottom = 283.0
+scale = Vector2(0.5, 0.5)
+text = "- Cost: $80,000
+
+- Happiness: +200
+
+- Daily Pollution: -300 CO2
+
+- Size: 4x6
+
+- Description: A body of water
+that adds beauty and tranquility
+to the city."
+label_settings = SubResource("LabelSettings_puecs")
+
+[node name="ScrollContainer" type="ScrollContainer" parent="ConstructionMenu/ConstructionMenuBox"]
+layout_mode = 0
+offset_left = 10.0
+offset_top = 29.0
+offset_right = 255.0
+offset_bottom = 400.0
+horizontal_scroll_mode = 0
+vertical_scroll_mode = 3
+
+[node name="BuildingsBox" type="ColorRect" parent="ConstructionMenu/ConstructionMenuBox/ScrollContainer"]
+custom_minimum_size = Vector2(0, 600)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+color = Color(0.956863, 0.960784, 0.980392, 1)
+
+[node name="BuildingsLabel" type="Label" parent="ConstructionMenu/ConstructionMenuBox/ScrollContainer/BuildingsBox"]
+layout_mode = 0
+offset_left = 5.0
+offset_right = 59.0
+offset_bottom = 23.0
+text = "Buildings"
+label_settings = SubResource("LabelSettings_84u7w")
+
+[node name="BuildingsUnderline" type="Label" parent="ConstructionMenu/ConstructionMenuBox/ScrollContainer/BuildingsBox/BuildingsLabel"]
+layout_mode = 0
+offset_left = -5.0
+offset_top = 12.0
+offset_right = 235.0
+offset_bottom = 35.0
+text = "━━━━━━━━━━━━━━━━━━━"
+label_settings = SubResource("LabelSettings_7cvel")
+
+[node name="ResidentialsLabel" type="Label" parent="ConstructionMenu/ConstructionMenuBox/ScrollContainer/BuildingsBox/BuildingsLabel"]
+layout_mode = 0
+offset_left = 5.0
+offset_top = 25.0
+offset_right = 64.0
+offset_bottom = 48.0
+text = "Residentials"
+label_settings = SubResource("LabelSettings_tkl2v")
+
+[node name="ResidentialsUnderline" type="Label" parent="ConstructionMenu/ConstructionMenuBox/ScrollContainer/BuildingsBox/BuildingsLabel/ResidentialsLabel"]
+layout_mode = 0
+offset_left = -10.0
+offset_top = 10.0
+offset_right = 220.0
+offset_bottom = 33.0
+text = "━━━━━━━━━━━━━━━━━━━━━━"
+label_settings = SubResource("LabelSettings_vpms4")
+
+[node name="SmallHouse" type="TextureButton" parent="ConstructionMenu/ConstructionMenuBox/ScrollContainer/BuildingsBox/BuildingsLabel/ResidentialsLabel"]
+layout_mode = 0
+offset_left = -10.0
+offset_top = 30.0
+offset_right = 576.0
+offset_bottom = 456.0
+scale = Vector2(0.07, 0.07)
+mouse_filter = 1
+mouse_default_cursor_shape = 2
+texture_normal = ExtResource("3_gbasx")
+
+[node name="MediumHouse" type="TextureButton" parent="ConstructionMenu/ConstructionMenuBox/ScrollContainer/BuildingsBox/BuildingsLabel/ResidentialsLabel"]
+layout_mode = 0
+offset_left = 40.0
+offset_top = 30.0
+offset_right = 537.0
+offset_bottom = 532.0
+scale = Vector2(0.07, 0.07)
+mouse_filter = 1
+mouse_default_cursor_shape = 2
+texture_normal = ExtResource("4_dfwmb")
+
+[node name="LargeHouse" type="TextureButton" parent="ConstructionMenu/ConstructionMenuBox/ScrollContainer/BuildingsBox/BuildingsLabel/ResidentialsLabel"]
+layout_mode = 0
+offset_left = 90.0
+offset_top = 30.0
+offset_right = 564.0
+offset_bottom = 557.0
+scale = Vector2(0.07, 0.07)
+mouse_filter = 1
+mouse_default_cursor_shape = 2
+texture_normal = ExtResource("5_j0uc5")
+
+[node name="Apartment" type="TextureButton" parent="ConstructionMenu/ConstructionMenuBox/ScrollContainer/BuildingsBox/BuildingsLabel/ResidentialsLabel"]
+layout_mode = 0
+offset_left = 140.0
+offset_top = 30.0
+offset_right = 602.0
+offset_bottom = 570.0
+scale = Vector2(0.07, 0.07)
+mouse_filter = 1
+mouse_default_cursor_shape = 2
+texture_normal = ExtResource("6_kgbo8")
+
+[node name="Skyscraper" type="TextureButton" parent="ConstructionMenu/ConstructionMenuBox/ScrollContainer/BuildingsBox/BuildingsLabel/ResidentialsLabel"]
+layout_mode = 0
+offset_left = 190.0
+offset_top = 30.0
+offset_right = 652.0
+offset_bottom = 570.0
+scale = Vector2(0.07, 0.07)
+mouse_filter = 1
+mouse_default_cursor_shape = 2
+texture_normal = ExtResource("7_duqr8")
+
+[node name="PublicLabel" type="Label" parent="ConstructionMenu/ConstructionMenuBox/ScrollContainer/BuildingsBox/BuildingsLabel"]
+layout_mode = 0
+offset_left = 5.0
+offset_top = 100.0
+offset_right = 45.0
+offset_bottom = 123.0
+text = "Public"
+label_settings = SubResource("LabelSettings_tasgg")
+
+[node name="PublicUnderline" type="Label" parent="ConstructionMenu/ConstructionMenuBox/ScrollContainer/BuildingsBox/BuildingsLabel/PublicLabel"]
+layout_mode = 0
+offset_left = -10.0
+offset_top = 10.0
+offset_right = 230.0
+offset_bottom = 33.0
+text = "━━━━━━━━━━━━━━━━━━━━━━"
+label_settings = SubResource("LabelSettings_eklb7")
+
+[node name="Hospital" type="TextureButton" parent="ConstructionMenu/ConstructionMenuBox/ScrollContainer/BuildingsBox/BuildingsLabel/PublicLabel"]
+layout_mode = 0
+offset_left = -5.0
+offset_top = 20.0
+offset_right = 418.0
+offset_bottom = 610.0
+scale = Vector2(0.07, 0.07)
+mouse_filter = 1
+mouse_default_cursor_shape = 2
+texture_normal = ExtResource("9_va2x0")
+
+[node name="Museum" type="TextureButton" parent="ConstructionMenu/ConstructionMenuBox/ScrollContainer/BuildingsBox/BuildingsLabel/PublicLabel"]
+layout_mode = 0
+offset_left = 40.0
+offset_top = 29.0
+offset_right = 655.0
+offset_bottom = 435.0
+scale = Vector2(0.07, 0.07)
+mouse_filter = 1
+mouse_default_cursor_shape = 2
+texture_normal = ExtResource("10_3w7my")
+
+[node name="School" type="TextureButton" parent="ConstructionMenu/ConstructionMenuBox/ScrollContainer/BuildingsBox/BuildingsLabel/PublicLabel"]
+layout_mode = 0
+offset_left = 90.0
+offset_top = 27.0
+offset_right = 640.0
+offset_bottom = 481.0
+scale = Vector2(0.07, 0.07)
+mouse_filter = 1
+mouse_default_cursor_shape = 2
+texture_normal = ExtResource("11_aftwm")
+
+[node name="IndustrialLabel" type="Label" parent="ConstructionMenu/ConstructionMenuBox/ScrollContainer/BuildingsBox/BuildingsLabel"]
+layout_mode = 0
+offset_left = 5.0
+offset_top = 175.0
+offset_right = 52.0
+offset_bottom = 198.0
+text = "Industrial"
+label_settings = SubResource("LabelSettings_pbk6y")
+
+[node name="IndustrialUnderline" type="Label" parent="ConstructionMenu/ConstructionMenuBox/ScrollContainer/BuildingsBox/BuildingsLabel/IndustrialLabel"]
+layout_mode = 0
+offset_left = -10.0
+offset_top = 10.0
+offset_right = 230.0
+offset_bottom = 33.0
+text = "━━━━━━━━━━━━━━━━━━━━━━"
+label_settings = SubResource("LabelSettings_g7c1p")
+
+[node name="Factory" type="TextureButton" parent="ConstructionMenu/ConstructionMenuBox/ScrollContainer/BuildingsBox/BuildingsLabel/IndustrialLabel"]
+layout_mode = 0
+offset_left = -13.0
+offset_top = 30.0
+offset_right = 537.0
+offset_bottom = 484.0
+scale = Vector2(0.09, 0.09)
+mouse_filter = 1
+mouse_default_cursor_shape = 2
+texture_normal = ExtResource("12_s4i72")
+
+[node name="PowerPlant" type="TextureButton" parent="ConstructionMenu/ConstructionMenuBox/ScrollContainer/BuildingsBox/BuildingsLabel/IndustrialLabel"]
+layout_mode = 0
+offset_left = 40.0
+offset_top = 35.0
+offset_right = 632.0
+offset_bottom = 457.0
+scale = Vector2(0.07, 0.07)
+mouse_filter = 1
+mouse_default_cursor_shape = 2
+texture_normal = ExtResource("13_k2p3l")
+
+[node name="SolarPanel" type="TextureButton" parent="ConstructionMenu/ConstructionMenuBox/ScrollContainer/BuildingsBox/BuildingsLabel/IndustrialLabel"]
+layout_mode = 0
+offset_left = 90.0
+offset_top = 35.0
+offset_right = 606.0
+offset_bottom = 518.0
+scale = Vector2(0.08, 0.08)
+mouse_filter = 1
+mouse_default_cursor_shape = 2
+texture_normal = ExtResource("14_wd0do")
+
+[node name="WindTurbine" type="TextureButton" parent="ConstructionMenu/ConstructionMenuBox/ScrollContainer/BuildingsBox/BuildingsLabel/IndustrialLabel"]
+layout_mode = 0
+offset_left = 140.0
+offset_top = 35.0
+offset_right = 656.0
+offset_bottom = 518.0
+scale = Vector2(0.09, 0.09)
+mouse_filter = 1
+mouse_default_cursor_shape = 2
+texture_normal = ExtResource("15_wfm65")
+
+[node name="CommercialLabel" type="Label" parent="ConstructionMenu/ConstructionMenuBox/ScrollContainer/BuildingsBox/BuildingsLabel"]
+layout_mode = 0
+offset_left = 5.0
+offset_top = 265.0
+offset_right = 63.0
+offset_bottom = 288.0
+text = "Commercial"
+label_settings = SubResource("LabelSettings_ngfh2")
+
+[node name="CommercialUnderline" type="Label" parent="ConstructionMenu/ConstructionMenuBox/ScrollContainer/BuildingsBox/BuildingsLabel/CommercialLabel"]
+layout_mode = 0
+offset_left = -10.0
+offset_top = 10.0
+offset_right = 210.0
+offset_bottom = 33.0
+text = "━━━━━━━━━━━━━━━━━━━━━━"
+label_settings = SubResource("LabelSettings_qy6ek")
+
+[node name="Bakery" type="TextureButton" parent="ConstructionMenu/ConstructionMenuBox/ScrollContainer/BuildingsBox/BuildingsLabel/CommercialLabel"]
+layout_mode = 0
+offset_left = -6.0
+offset_top = 35.0
+offset_right = 709.0
+offset_bottom = 792.0
+scale = Vector2(0.04, 0.04)
+mouse_filter = 1
+mouse_default_cursor_shape = 2
+texture_normal = ExtResource("16_wxt2q")
+
+[node name="Barbershop" type="TextureButton" parent="ConstructionMenu/ConstructionMenuBox/ScrollContainer/BuildingsBox/BuildingsLabel/CommercialLabel"]
+layout_mode = 0
+offset_left = 45.0
+offset_top = 30.0
+offset_right = 684.0
+offset_bottom = 910.0
+scale = Vector2(0.04, 0.04)
+mouse_filter = 1
+mouse_default_cursor_shape = 2
+texture_normal = ExtResource("17_snd6s")
+
+[node name="Bookshop" type="TextureButton" parent="ConstructionMenu/ConstructionMenuBox/ScrollContainer/BuildingsBox/BuildingsLabel/CommercialLabel"]
+layout_mode = 0
+offset_left = 95.0
+offset_top = 35.0
+offset_right = 802.0
+offset_bottom = 830.0
+scale = Vector2(0.04, 0.04)
+mouse_filter = 1
+mouse_default_cursor_shape = 2
+texture_normal = ExtResource("18_27wky")
+
+[node name="Casino" type="TextureButton" parent="ConstructionMenu/ConstructionMenuBox/ScrollContainer/BuildingsBox/BuildingsLabel/CommercialLabel"]
+layout_mode = 0
+offset_left = 145.0
+offset_top = 35.0
+offset_right = 467.0
+offset_bottom = 313.0
+scale = Vector2(0.12, 0.12)
+mouse_filter = 1
+mouse_default_cursor_shape = 2
+texture_normal = ExtResource("19_dg28o")
+
+[node name="Farm" type="TextureButton" parent="ConstructionMenu/ConstructionMenuBox/ScrollContainer/BuildingsBox/BuildingsLabel/CommercialLabel"]
+layout_mode = 0
+offset_left = 191.0
+offset_top = 40.0
+offset_right = 779.0
+offset_bottom = 465.0
+scale = Vector2(0.07, 0.07)
+mouse_filter = 1
+mouse_default_cursor_shape = 2
+texture_normal = ExtResource("18_kb016")
+
+[node name="Hardware" type="TextureButton" parent="ConstructionMenu/ConstructionMenuBox/ScrollContainer/BuildingsBox/BuildingsLabel/CommercialLabel"]
+layout_mode = 0
+offset_left = -6.0
+offset_top = 80.0
+offset_right = 99.0
+offset_bottom = 261.0
+scale = Vector2(0.04, 0.04)
+mouse_filter = 1
+mouse_default_cursor_shape = 2
+texture_normal = ExtResource("21_tse4m")
+
+[node name="Pharmacy" type="TextureButton" parent="ConstructionMenu/ConstructionMenuBox/ScrollContainer/BuildingsBox/BuildingsLabel/CommercialLabel"]
+layout_mode = 0
+offset_left = 40.0
+offset_top = 77.0
+offset_right = 514.0
+offset_bottom = 1187.0
+scale = Vector2(0.04, 0.04)
+mouse_filter = 1
+mouse_default_cursor_shape = 2
+texture_normal = ExtResource("22_6wcch")
+
+[node name="OthersLabel" type="Label" parent="ConstructionMenu/ConstructionMenuBox/ScrollContainer/BuildingsBox"]
+layout_mode = 0
+offset_left = 5.0
+offset_top = 400.0
+offset_right = 45.0
+offset_bottom = 423.0
+text = "Others"
+label_settings = SubResource("LabelSettings_52636")
+
+[node name="OthersUnderline" type="Label" parent="ConstructionMenu/ConstructionMenuBox/ScrollContainer/BuildingsBox/OthersLabel"]
+layout_mode = 0
+offset_left = -5.0
+offset_top = 12.0
+offset_right = 235.0
+offset_bottom = 35.0
+text = "━━━━━━━━━━━━━━━━━━━━"
+label_settings = SubResource("LabelSettings_0xgn5")
+
+[node name="DecorativeLabel" type="Label" parent="ConstructionMenu/ConstructionMenuBox/ScrollContainer/BuildingsBox/OthersLabel"]
+layout_mode = 0
+offset_left = 5.0
+offset_top = 25.0
+offset_right = 58.0
+offset_bottom = 48.0
+text = "Decorative"
+label_settings = SubResource("LabelSettings_epjci")
+
+[node name="DecorativeLabel" type="Label" parent="ConstructionMenu/ConstructionMenuBox/ScrollContainer/BuildingsBox/OthersLabel/DecorativeLabel"]
+layout_mode = 0
+offset_left = -10.0
+offset_top = 10.0
+offset_right = 230.0
+offset_bottom = 33.0
+text = "━━━━━━━━━━━━━━━━━━━━━━━━"
+label_settings = SubResource("LabelSettings_1v3fr")
+
+[node name="Bench" type="TextureButton" parent="ConstructionMenu/ConstructionMenuBox/ScrollContainer/BuildingsBox/OthersLabel/DecorativeLabel"]
+layout_mode = 0
+offset_left = -10.0
+offset_top = 30.0
+offset_right = 555.0
+offset_bottom = 472.0
+scale = Vector2(0.07, 0.07)
+mouse_filter = 1
+mouse_default_cursor_shape = 2
+texture_normal = ExtResource("21_jhn4m")
+
+[node name="Tree" type="TextureButton" parent="ConstructionMenu/ConstructionMenuBox/ScrollContainer/BuildingsBox/OthersLabel/DecorativeLabel"]
+layout_mode = 0
+offset_left = 35.0
+offset_top = 26.0
+offset_right = 600.0
+offset_bottom = 468.0
+scale = Vector2(0.08, 0.08)
+mouse_filter = 1
+mouse_default_cursor_shape = 2
+texture_normal = ExtResource("23_pevaw")
+
+[node name="TerrainLabel" type="Label" parent="ConstructionMenu/ConstructionMenuBox/ScrollContainer/BuildingsBox/OthersLabel"]
+layout_mode = 0
+offset_left = 5.0
+offset_top = 95.0
+offset_right = 45.0
+offset_bottom = 118.0
+text = "Terrain"
+label_settings = SubResource("LabelSettings_foom5")
+
+[node name="TerrainUnderline" type="Label" parent="ConstructionMenu/ConstructionMenuBox/ScrollContainer/BuildingsBox/OthersLabel/TerrainLabel"]
+layout_mode = 0
+offset_left = -10.0
+offset_top = 10.0
+offset_right = 230.0
+offset_bottom = 33.0
+text = "━━━━━━━━━━━━━━━━━━━━━━━━"
+label_settings = SubResource("LabelSettings_msxx7")
+
+[node name="Road" type="TextureButton" parent="ConstructionMenu/ConstructionMenuBox/ScrollContainer/BuildingsBox/OthersLabel/TerrainLabel"]
+layout_mode = 0
+offset_left = -6.0
+offset_top = 30.0
+offset_right = 506.0
+offset_bottom = 542.0
+scale = Vector2(0.067, 0.067)
+mouse_filter = 1
+mouse_default_cursor_shape = 2
+texture_normal = ExtResource("28_peh56")
+
+[node name="Lake" type="TextureButton" parent="ConstructionMenu/ConstructionMenuBox/ScrollContainer/BuildingsBox/OthersLabel/TerrainLabel"]
+layout_mode = 0
+offset_left = 40.0
+offset_top = 25.0
+offset_right = 594.0
+offset_bottom = 475.0
+scale = Vector2(0.09, 0.09)
+mouse_filter = 1
+mouse_default_cursor_shape = 2
+texture_normal = ExtResource("25_qn2le")
+
+[node name="ConstructionMenuButton" type="TextureButton" parent="ConstructionMenu"]
+layout_mode = 2
+size_flags_horizontal = 4
+mouse_filter = 1
+mouse_default_cursor_shape = 2
+texture_normal = ExtResource("1_q44jx")
+
+[connection signal="timeout" from="Year&DayBackground/DayTimer" to="." method="_on_day_timer_timeout"]
+[connection signal="pressed" from="ConstructionMenu/ConstructionMenuButton" to="." method="_on_construction_menu_button_pressed"]
