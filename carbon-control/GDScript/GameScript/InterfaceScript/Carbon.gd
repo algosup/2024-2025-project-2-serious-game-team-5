@@ -6,7 +6,6 @@ const USER_DATA_FILE_PATH = "user://userCarbonData.dat"
 # Variables
 var is_user_data_exists := FileAccess.file_exists(USER_DATA_FILE_PATH)
 
-
 @onready var timer: Timer = $"../DayTimer"
 @onready var carbon_bar: ProgressBar = null
 @onready var carbon_value: Label = null
@@ -22,7 +21,6 @@ func _ready() -> void:
 		print("Error: DayTimer node not found!")
 
 func _on_day_timer_timeout() -> void:
-	
 	update_color()
 	_save_user_data()
 
@@ -70,20 +68,18 @@ func update_carbon() -> void:
 	new_carbon_value = new_carbon_value - GlobalVariables.park_nb * 0.6 * 365
 	new_carbon_value = new_carbon_value - GlobalVariables.lake_nb * 0.4 * 365
 	new_carbon_value = new_carbon_value - GlobalVariables.wind_turbine_nb * 540 * 365
-	print("carbon new before solare panel value ", new_carbon_value)
 	new_carbon_value = new_carbon_value - GlobalVariables.solar_panel_nb * 2 * 365
-	print("carbon new after solare panel value ", new_carbon_value)
 	new_carbon_value = new_carbon_value - GlobalVariables.tree_nb * 0.05 * 365
-	print("carbon bar value ", carbon_bar.value)
-	print("carbon new value ", new_carbon_value)
 	
 	if carbon_bar != null :
 		carbon_bar.value = new_carbon_value
 		update_color()
-		
+		_save_user_data()
+
 func set_base_carbon(new_carbon_bar: ProgressBar, new_carbon_value: Label) -> void:
 	carbon_value = new_carbon_value
 	carbon_bar = new_carbon_bar
+	_load_user_data()
 
 func get_percentage() -> float:
 	if carbon_bar == null:
@@ -133,3 +129,10 @@ func _save_user_data() -> void:
 		file.close()
 	else:
 		print("Error: Failed to save user data.")
+		
+func reset_carbon():
+	if carbon_bar == null :
+		return
+	carbon_bar.value = 50000.0
+	_save_user_data()
+	update_color()

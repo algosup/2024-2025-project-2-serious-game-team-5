@@ -94,6 +94,22 @@ func _create_user_data() -> void:
 func reset_user_data() -> void:
 	year_count = 1
 	day_count = 1
+	GlobalVariables.happiness_bonus = 0
+	GlobalVariables.yearly_malus = 0
+	GlobalVariables.yearly_bonus = 0
+	GlobalVariables.small_house_nb = 12
+	GlobalVariables.medium_house_nb = 4
+	GlobalVariables.large_house_nb = 2
+	GlobalVariables.apartment_nb = 2
+	GlobalVariables.barber_shop_nb = 1
+	GlobalVariables.bakery_nb = 1
+	GlobalVariables.city_hall_nb = 1
+
+	GlobalCarbon.reset_carbon()
+	GlobalHappiness.reset_happiness()
+	GlobalMoney.reset_money()
+	GlobalPopulation.reset_population_data()
+	
 	_save_user_data()
 
 # Save user data

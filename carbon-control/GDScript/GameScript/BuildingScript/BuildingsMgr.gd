@@ -220,12 +220,6 @@ func CreateBuilding(pos: Vector3, pos_tab: int):
 	if gridData[pos_tab] == 0 or selected_building == 25:
 		var building_path = GetSelectedBuilding()
 		
-		# Update builing nb
-		_update_building_nb()
-		# Update population capacity
-		_update_popu_capa()
-		GlobalPopulation.display_population()
-		GlobalCarbon.update_carbon()
 
 		# Check if a building is selected
 		if building_path == null:
@@ -233,14 +227,14 @@ func CreateBuilding(pos: Vector3, pos_tab: int):
 			return
 
 		if gridData[pos_tab] == 0 or selected_building == 25: # Roads are exempt from placement checks
-			var building_path = GetSelectedBuilding()
+			building_path = GetSelectedBuilding()
 			
 			# Update building count
 			_update_building_nb()
 			
 			# Update population capacity
 			_update_popu_capa()
-			
+			GlobalCarbon.update_carbon()
 			GlobalPopulation.display_population()
 			
 			# Check if a building is selected

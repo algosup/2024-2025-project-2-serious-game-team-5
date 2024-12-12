@@ -5,51 +5,51 @@ extends Control
 @onready var isBuilding = false
 @onready var buildingId = 1
 # Variables to store loaded data
-@onready var remaining_money: int = 0
-@onready var population_value: int = 100
-@onready var population_max: int = 100
-@onready var carbon_percentage: int = 0
-@onready var happiness_value: float = 5000.00
-@onready var happiness_bonus: float = 0
-@onready var yearly_malus: float = 0
-@onready var yearly_bonus: float = 0
+@onready var remaining_money: int
+@onready var population_value: int
+@onready var population_max: int
+@onready var carbon_percentage: int
+@onready var happiness_value: float
+@onready var happiness_bonus: float
+@onready var yearly_malus: float
+@onready var yearly_bonus: float
 
 
 # Residential buildings
-@onready var small_house_nb: int = 0
-@onready var medium_house_nb: int = 0
-@onready var large_house_nb: int = 0
-@onready var apartment_nb: int = 0
-@onready var skyscrapper_nb: int = 0
+@onready var small_house_nb: int
+@onready var medium_house_nb: int
+@onready var large_house_nb: int
+@onready var apartment_nb: int
+@onready var skyscrapper_nb: int
 
 # Commercial buildings
-@onready var bookshop_nb: int = 0
-@onready var bakery_nb: int = 0
-@onready var barber_shop_nb: int = 0
-@onready var pharmacy_nb: int = 0
-@onready var hardware_store_nb: int = 0
-@onready var farm_nb: int = 0
-@onready var casino_nb: int = 0
+@onready var bookshop_nb: int
+@onready var bakery_nb: int
+@onready var barber_shop_nb: int
+@onready var pharmacy_nb: int
+@onready var hardware_store_nb: int
+@onready var farm_nb: int
+@onready var casino_nb: int
 
 # Industrial buildings
-@onready var factory_nb: int = 0
-@onready var recycling_center_nb: int = 0
-@onready var power_plant_nb: int = 0
-@onready var oil_rafinery_nb: int = 0
+@onready var factory_nb: int
+@onready var recycling_center_nb: int
+@onready var power_plant_nb: int
+@onready var oil_rafinery_nb: int
 
 # Public buildings
-@onready var city_hall_nb: int = 1
-@onready var school_nb: int = 0
-@onready var museum_nb:int = 0
-@onready var hospital_nb: int = 0
+@onready var city_hall_nb: int
+@onready var school_nb: int
+@onready var museum_nb:int
+@onready var hospital_nb: int
 
 # Green spaces and energy
-@onready var park_nb: int = 0
-@onready var lake_nb: int = 0
-@onready var wind_turbine_nb: int = 0
-@onready var solar_panel_nb: int = 0
+@onready var park_nb: int
+@onready var lake_nb: int
+@onready var wind_turbine_nb: int
+@onready var solar_panel_nb: int
 
-@onready var tree_nb: int = 0
-@onready var bench_nb: int = 0
-@onready var street_light_nb: int = 0
-@onready var road_nb: int = 0
+@onready var tree_nb: int
+@onready var bench_nb: int
+@onready var street_light_nb: int
+@onready var road_nb: int

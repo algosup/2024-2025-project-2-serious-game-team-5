@@ -11,7 +11,6 @@ func _ready() -> void:
 	# Load the saved carbon percentage and happiness value from the user data files
 	_load_carbon_percentage()
 	_load_happiness_value()
-	
 	_display_happiness()
 
 	# Start the day timer
@@ -24,6 +23,8 @@ func _ready() -> void:
 func set_base_happyness(new_happiness_bar: ProgressBar, new_happiness_value: Label) -> void:
 	happiness_bar = new_happiness_bar
 	happiness_value = new_happiness_value
+	_load_happiness_value()
+	update_happiness()
 	
 
 func _on_day_timer_timeout() -> void:
@@ -55,12 +56,14 @@ func _load_happiness_value() -> void:
 		var file := FileAccess.open(USER_HAPPINESS_DATA_FILE_PATH, FileAccess.READ)
 		if file:
 			var content: String = file.get_as_text().strip_edges()
-			GlobalVariables.happiness_value = float(content)  # Assuming the file only contains the happiness value
+			GlobalVariables.happiness_value = float(content)
 			file.close()
 		else:
 			print("Error: Failed to open happiness data file.")
+			GlobalVariables.happiness_value = 50
 	else:
-		print("Error: Happiness data file does not exist. Using default value.")
+		print("Error: Happiness data file does not exist.")
+		GlobalVariables.happiness_value = 50
 
 # Save the updated happiness value to the user happiness data file
 func _save_happiness_value() -> void:
@@ -71,11 +74,16 @@ func _save_happiness_value() -> void:
 	else:
 		print("Error: Failed to save happiness data.")
 
+func reset_happiness() -> void:
+	GlobalVariables.happiness_value = 50
+	_display_happiness()
+	_save_happiness_value()
+
 # Increase or decrease the happiness bar based on the carbon level
 func update_happiness() -> void:
 	
-	if GlobalVariables.happiness_value < 2:
-		GlobalVariables.happiness_value = 2
+	if GlobalVariables.happiness_value < 10:
+		GlobalVariables.happiness_value = 10
 	
 	# Adjust happiness based on the loaded carbon percentage
 	if GlobalVariables.carbon_percentage < 30.0:
@@ -87,15 +95,15 @@ func update_happiness() -> void:
 	else:
 		GlobalVariables.happiness_value -= GlobalVariables.happiness_value * 0.3
 		
-	GlobalVariables.happiness_value += GlobalVariables.happiness_value * GlobalVariables.happiness_bonus
-
+	GlobalVariables.happiness_value += (GlobalVariables.happiness_value * (GlobalVariables.happiness_bonus / 300))
 	# Clamp the happiness value to be within the [0, 2500] range
-	GlobalVariables.happiness_value = clamp(GlobalVariables.happiness_value, 0.0, 10000.0)
-	print("happ val = ", GlobalVariables.happiness_value)
+	GlobalVariables.happiness_value = clamp(GlobalVariables.happiness_value, 0.0, 100.0)
+	GlobalVariables.happiness_value = round(GlobalVariables.happiness_value)
 	_display_happiness()
+	_save_happiness_value()
 
 func _display_happiness() -> void:
 	if happiness_bar == null:
 		return
 	# Update the happiness bar
-	happiness_bar.value = round(GlobalVariables.happiness_value / 100)
+	happiness_bar.value = GlobalVariables.happiness_value
