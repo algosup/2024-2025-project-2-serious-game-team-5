@@ -41,7 +41,7 @@ extends Control
 # Green spaces and energy
 @onready var park_nb: int = 0
 @onready var lake_nb: int = 0
-@onready var wind_turbin_nb: int = 0
+@onready var wind_turbine_nb: int = 0
 @onready var solar_panel_nb: int = 0
 
 @onready var tree_nb: int = 0

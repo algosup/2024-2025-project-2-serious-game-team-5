@@ -40,27 +40,25 @@ func _on_input_event(camera: Node, event: InputEvent, event_position: Vector3, n
 		var posX = round(event_position.x)
 		var posY = round(event_position.z)
 
-		# Get building size and adjust for rotation
+		# Recalculate the marker position
+		marker.transform.origin = Vector3(posX, 0.1, posY)
+
+		# Get building size
 		var size = building_sizes.get(BuildingsMgr.selected_building, Vector2(1, 1))
+		
+		# Rotate the size depending on the current angle
 		var rotated_size = size
 		if BuildingsMgr.rotation_angle in [90, 270]:
 			rotated_size = Vector2(size.y, size.x)
 
-		# Snap position and update marker origin
-		var snapped_posX = round(posX / grid_size) * grid_size
-		var snapped_posY = round(posY / grid_size) * grid_size
-		marker.transform.origin = Vector3(
-			snapped_posX - (rotated_size.x - 1) / 2,
-			0.1,
-			snapped_posY - (rotated_size.y - 1) / 2
-		)
-
-		# Update marker scale and rotation
+		# Update marker scale for the rotated size
 		marker.scale = Vector3(rotated_size.x, 1, rotated_size.y)
+
+		# Adjust the marker's rotation
 		marker.rotation_degrees = Vector3(0, BuildingsMgr.rotation_angle, 0)
 
 		# Collision detection logic
-		var vec = Vector2(snapped_posX, snapped_posY)
+		var vec = Vector2(posX, posY)
 		var occupied = false
 		for x in range(rotated_size.x):
 			for y in range(rotated_size.y):
@@ -81,7 +79,7 @@ func _on_input_event(camera: Node, event: InputEvent, event_position: Vector3, n
 		if Input.is_action_just_pressed("left_click") and BuildingsMgr.isBuilding:
 			if not occupied:
 				print("Building created at " + str(marker.transform.origin))
-				var pos = Vector3(snapped_posX, 0, snapped_posY)
+				var pos = Vector3(posX, 0, posY)
 				BuildingsMgr.CreateBuilding(pos, vec.x + vec.y * 512)
 			else:
 				print("Cannot place building here, area is occupied.")
