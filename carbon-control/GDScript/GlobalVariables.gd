@@ -9,7 +9,8 @@ extends Control
 @onready var population_value: int = 100
 @onready var population_max: int = 100
 @onready var carbon_percentage: int = 0
-@onready var happiness_value: float = 50.00
+@onready var happiness_value: float = 5000.00
+@onready var happiness_bonus: float = 0
 @onready var yearly_malus: float = 0
 @onready var yearly_bonus: float = 0
 

@@ -163,15 +163,20 @@ func _update_building_nb() -> void:
 	elif selected_building == 14:
 		GlobalVariables.power_plant_nb += 1
 	elif selected_building == 15:
-		return
+		GlobalVariables.city_hall_nb += 1
+		GlobalVariables.happiness_bonus += 0.1
 	elif selected_building == 16:
 		GlobalVariables.school_nb += 1
+		GlobalVariables.happiness_bonus += 0.4
 	elif selected_building == 17:
 		GlobalVariables.hospital_nb += 1
+		GlobalVariables.happiness_bonus += 0.6
 	elif selected_building == 18:
 		GlobalVariables.museum_nb += 1
+		GlobalVariables.happiness_bonus += 1.2
 	elif selected_building == 19:
 		GlobalVariables.lake_nb += 1
+		GlobalVariables.happiness_bonus += 0.4
 	elif selected_building == 20:
 		GlobalVariables.wind_turbine_nb += 1
 	elif selected_building == 21:
@@ -179,7 +184,8 @@ func _update_building_nb() -> void:
 	elif selected_building == 22:
 		GlobalVariables.tree_nb += 1
 	elif selected_building == 23:
-		GlobalVariables.bench_nb += 1
+		GlobalVariables.park_nb += 1
+		GlobalVariables.happiness_bonus += 0.3
 	elif selected_building == 24:
 		GlobalVariables.street_light_nb += 1
 	elif selected_building == 25:
@@ -191,8 +197,8 @@ func _update_popu_capa():
 	var new_max_capa: int = GlobalVariables.small_house_nb * 2
 	new_max_capa += GlobalVariables.medium_house_nb * 4
 	new_max_capa += GlobalVariables.large_house_nb * 6
-	new_max_capa += GlobalVariables.apartment_nb * 24
-	new_max_capa += GlobalVariables.skyscrapper_nb * 128
+	new_max_capa += GlobalVariables.apartment_nb * 70
+	new_max_capa += GlobalVariables.skyscrapper_nb * 1000
 	GlobalVariables.population_max = new_max_capa
 	
 

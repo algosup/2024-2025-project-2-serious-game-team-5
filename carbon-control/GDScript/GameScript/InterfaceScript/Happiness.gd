@@ -73,20 +73,25 @@ func _save_happiness_value() -> void:
 
 # Increase or decrease the happiness bar based on the carbon level
 func update_happiness() -> void:
-	print("Carbon % = ", GlobalVariables.carbon_percentage)
-	print("Happiness value = ", GlobalVariables.happiness_value)
+	
+	if GlobalVariables.happiness_value < 2:
+		GlobalVariables.happiness_value = 2
+	
 	# Adjust happiness based on the loaded carbon percentage
 	if GlobalVariables.carbon_percentage < 30.0:
 		GlobalVariables.happiness_value += GlobalVariables.happiness_value * 0.15
 	elif GlobalVariables.carbon_percentage < 50.0:
 		GlobalVariables.happiness_value += GlobalVariables.happiness_value * 0.05
 	elif GlobalVariables.carbon_percentage < 70.0:
-		GlobalVariables.happiness_value -= GlobalVariables.happiness_value * 0.05
-	else:
 		GlobalVariables.happiness_value -= GlobalVariables.happiness_value * 0.1
+	else:
+		GlobalVariables.happiness_value -= GlobalVariables.happiness_value * 0.3
+		
+	GlobalVariables.happiness_value += GlobalVariables.happiness_value * GlobalVariables.happiness_bonus
 
 	# Clamp the happiness value to be within the [0, 2500] range
-	GlobalVariables.happiness_value = clamp(GlobalVariables.happiness_value, 0.0, 2500.0)
+	GlobalVariables.happiness_value = clamp(GlobalVariables.happiness_value, 0.0, 10000.0)
+	print("happ val = ", GlobalVariables.happiness_value)
 	_display_happiness()
 
 func _display_happiness() -> void:

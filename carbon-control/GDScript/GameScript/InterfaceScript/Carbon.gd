@@ -47,31 +47,31 @@ func update_color() -> void:
 	carbon_value.text = str(carbon_bar.value)  # Convert value to string
 
 func update_carbon() -> void:
-	var new_carbon_value: float = GlobalVariables.small_house_nb * 7.5
-	new_carbon_value += GlobalVariables.medium_house_nb * 15
-	new_carbon_value += GlobalVariables.large_house_nb * 30
-	new_carbon_value += GlobalVariables.apartment_nb * 7.5 * 12
-	new_carbon_value += GlobalVariables.skyscrapper_nb * 60 * 32
-	new_carbon_value += GlobalVariables.bookshop_nb * 37.5 * 50
-	new_carbon_value += GlobalVariables.barber_shop_nb * 30 * 30
-	new_carbon_value += GlobalVariables.bakery_nb * 60 * 30
-	new_carbon_value += GlobalVariables.pharmacy_nb * 50 * 30
-	new_carbon_value += GlobalVariables.hardware_store_nb * 50 * 30
-	new_carbon_value += GlobalVariables.farm_nb * 5000 * 15
-	new_carbon_value += GlobalVariables.casino_nb * 150 * 500
-	new_carbon_value += GlobalVariables.factory_nb * 2500000
+	var new_carbon_value: float = GlobalVariables.small_house_nb * 10000
+	new_carbon_value += GlobalVariables.medium_house_nb * 20000 * 2
+	new_carbon_value += GlobalVariables.large_house_nb * 40000 * 3
+	new_carbon_value += GlobalVariables.apartment_nb * 15000 * 35
+	new_carbon_value += GlobalVariables.skyscrapper_nb * 100000 * 50
+	new_carbon_value += GlobalVariables.bookshop_nb * 50 * 50
+	new_carbon_value += GlobalVariables.barber_shop_nb * 40 * 30
+	new_carbon_value += GlobalVariables.bakery_nb * 100 * 30
+	new_carbon_value += GlobalVariables.pharmacy_nb * 70 * 30
+	new_carbon_value += GlobalVariables.hardware_store_nb * 60 * 30
+	new_carbon_value += GlobalVariables.farm_nb * 10000 * 15
+	new_carbon_value += GlobalVariables.casino_nb * 250 * 500
+	new_carbon_value += GlobalVariables.factory_nb * 5000000
 	new_carbon_value = new_carbon_value - GlobalVariables.recycling_center_nb * 8000000
-	new_carbon_value += GlobalVariables.power_plant_nb * 2500000000
+	new_carbon_value = new_carbon_value -  GlobalVariables.power_plant_nb * 40000000
 	new_carbon_value += GlobalVariables.oil_rafinery_nb * 3000000000
-	new_carbon_value += GlobalVariables.city_hall_nb * 100 * 300
-	new_carbon_value += GlobalVariables.school_nb * 50 * 300
-	new_carbon_value += GlobalVariables.museum_nb * 150 * 500
-	new_carbon_value += GlobalVariables.hospital_nb * 225 * 500
+	new_carbon_value += GlobalVariables.city_hall_nb * 150 * 300
+	new_carbon_value += GlobalVariables.school_nb * 70 * 300
+	new_carbon_value += GlobalVariables.museum_nb * 200 * 500
+	new_carbon_value += GlobalVariables.hospital_nb * 300 * 500
 	new_carbon_value = new_carbon_value - GlobalVariables.park_nb * 0.6 * 365
 	new_carbon_value = new_carbon_value - GlobalVariables.lake_nb * 0.4 * 365
-	new_carbon_value = new_carbon_value - GlobalVariables.wind_turbine_nb * 2.5 * 365
+	new_carbon_value = new_carbon_value - GlobalVariables.wind_turbine_nb * 540 * 365
 	print("carbon new before solare panel value ", new_carbon_value)
-	new_carbon_value = new_carbon_value - GlobalVariables.solar_panel_nb * 4 * 365
+	new_carbon_value = new_carbon_value - GlobalVariables.solar_panel_nb * 2 * 365
 	print("carbon new after solare panel value ", new_carbon_value)
 	new_carbon_value = new_carbon_value - GlobalVariables.tree_nb * 0.05 * 365
 	print("carbon bar value ", carbon_bar.value)
@@ -88,7 +88,7 @@ func set_base_carbon(new_carbon_bar: ProgressBar, new_carbon_value: Label) -> vo
 func get_percentage() -> float:
 	if carbon_bar == null:
 		return 0.0
-	carbon_bar.max_value = GlobalVariables.population_value * 12000
+	carbon_bar.max_value = GlobalVariables.population_value * 3400
 	GlobalVariables.carbon_percentage = (carbon_bar.value / carbon_bar.max_value) * 100
 	return carbon_bar.value / carbon_bar.max_value
 

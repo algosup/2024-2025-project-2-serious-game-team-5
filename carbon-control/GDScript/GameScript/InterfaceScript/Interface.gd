@@ -61,11 +61,11 @@ func _on_large_house_pressed() -> void:
 
 func _on_apartment_pressed() -> void:
 	BuildingsMgr.selected_building = 4
-	BuildingsMgr.building_price = 1320000
+	BuildingsMgr.building_price = 2000000
 
 func _on_skyscraper_pressed() -> void:
 	BuildingsMgr.selected_building = 5
-	BuildingsMgr.building_price = 7040000
+	BuildingsMgr.building_price = 30000000
 
 func _on_bookshop_pressed() -> void:
 	BuildingsMgr.selected_building = 6

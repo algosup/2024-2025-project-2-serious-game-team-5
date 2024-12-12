@@ -59,6 +59,7 @@ func _update_money():
 	earned += GlobalVariables.hardware_store_nb * 3000
 	earned += GlobalVariables.farm_nb * 12000
 	earned += GlobalVariables.casino_nb * 30000
+	earned += GlobalVariables.factory_nb * 8000
 	GlobalMoney.add_money(earned)
 
 
