@@ -196,7 +196,7 @@ func _update_popu_capa():
 
 func _input(event: InputEvent) -> void:
 	if event.is_action_pressed("rotate_building"): # Handle "R" key press
-		rotation_angle = (rotation_angle + 90) % 360
+		rotation_angle = (rotation_angle + 90) % 180
 		print("Rotation angle: ", rotation_angle)
 
 # Building creation
