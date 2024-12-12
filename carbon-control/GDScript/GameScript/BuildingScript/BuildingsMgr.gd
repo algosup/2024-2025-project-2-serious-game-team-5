@@ -41,11 +41,9 @@ var road = "res://Scenes/Buildings/Road.tscn" # 1x1 ID: 24
 
 var gridData = [] # 512x512 grid data
 var current_rotation = 0 # Rotation angle in degrees (0, 90, 180, 270)
-
-var selected_building = 0
-var building_price = 0
-
 var rotation_angle = 0 # Current rotation angle in degrees
+
+var building_instances = {} # Store building instances with their position as key.
 
 # Store the dimensions of each building (width x height)
 var building_sizes = {
@@ -85,107 +83,105 @@ func RotateBuilding():
 	print("Current rotation: ", current_rotation)
 
 func GetSelectedBuilding():
-	if selected_building == 1:
+	if GlobalVariables.selected_building == 1:
 		return small_house
-	elif selected_building == 2:
+	elif GlobalVariables.selected_building == 2:
 		return medium_house
-	elif selected_building == 3:
+	elif GlobalVariables.selected_building == 3:
 		return large_house
-	elif selected_building == 4:
+	elif GlobalVariables.selected_building == 4:
 		return apartment
-	elif selected_building == 5:
+	elif GlobalVariables.selected_building == 5:
 		return skyscraper
-	elif selected_building == 6:
+	elif GlobalVariables.selected_building == 6:
 		return bookshop
-	elif selected_building == 7:
+	elif GlobalVariables.selected_building == 7:
 		return barber
-	elif selected_building == 8:
+	elif GlobalVariables.selected_building == 8:
 		return bakery
-	elif selected_building == 9:
+	elif GlobalVariables.selected_building == 9:
 		return pharmacy
-	elif selected_building == 10:
+	elif GlobalVariables.selected_building == 10:
 		return hardware_shop
-	elif selected_building == 11:
+	elif GlobalVariables.selected_building == 11:
 		return farm
-	elif selected_building == 12:
+	elif GlobalVariables.selected_building == 12:
 		return casino
-	elif selected_building == 13:
+	elif GlobalVariables.selected_building == 13:
 		return factory
-	elif selected_building == 14:
+	elif GlobalVariables.selected_building == 14:
 		return power_plant
-	elif selected_building == 15:
+	elif GlobalVariables.selected_building == 15:
 		return city_hall
-	elif selected_building == 16:
+	elif GlobalVariables.selected_building == 16:
 		return school
-	elif selected_building == 17:
+	elif GlobalVariables.selected_building == 17:
 		return hospital
-	elif selected_building == 18:
+	elif GlobalVariables.selected_building == 18:
 		return museum
-	elif selected_building == 19:
+	elif GlobalVariables.selected_building == 19:
 		return lake
-	elif selected_building == 20:
+	elif GlobalVariables.selected_building == 20:
 		return wind_turbine
-	elif selected_building == 21:
+	elif GlobalVariables.selected_building == 21:
 		return solar_panel
-	elif selected_building == 22:
+	elif GlobalVariables.selected_building == 22:
 		return tree
-	elif selected_building == 23:
+	elif GlobalVariables.selected_building == 23:
 		return park
-	elif selected_building == 24:
+	elif GlobalVariables.selected_building == 24:
 		return road
 	else:
 		return
 
 func _update_building_nb() -> void:
-	if selected_building == 1:
+	if GlobalVariables.selected_building == 1:
 		GlobalVariables.small_house_nb += 1
-	elif selected_building == 2:
+	elif GlobalVariables.selected_building == 2:
 		GlobalVariables.medium_house_nb += 1
-	elif selected_building == 3:
+	elif GlobalVariables.selected_building == 3:
 		GlobalVariables.large_house_nb += 1
-	elif selected_building == 4:
+	elif GlobalVariables.selected_building == 4:
 		GlobalVariables.apartment_nb += 1
-	elif selected_building == 5:
+	elif GlobalVariables.selected_building == 5:
 		GlobalVariables.skyscrapper_nb += 1
-	elif selected_building == 6:
+	elif GlobalVariables.selected_building == 6:
 		GlobalVariables.bookshop_nb += 1
-	elif selected_building == 7:
+	elif GlobalVariables.selected_building == 7:
 		GlobalVariables.bakery_nb += 1
-	elif selected_building == 8:
+	elif GlobalVariables.selected_building == 8:
 		GlobalVariables.barber_shop_nb += 1
-	elif selected_building == 9:
+	elif GlobalVariables.selected_building == 9:
 		GlobalVariables.pharmacy_nb += 1
-	elif selected_building == 10:
+	elif GlobalVariables.selected_building == 10:
 		GlobalVariables.hardware_store_nb += 1
-	elif selected_building == 11:
+	elif GlobalVariables.selected_building == 11:
 		GlobalVariables.farm_nb += 1
-	elif selected_building == 12:
+	elif GlobalVariables.selected_building == 12:
 		GlobalVariables.casino_nb += 1
-	elif selected_building == 13:
+	elif GlobalVariables.selected_building == 13:
 		GlobalVariables.factory_nb += 1
-	elif selected_building == 14:
+	elif GlobalVariables.selected_building == 14:
 		GlobalVariables.power_plant_nb += 1
-	elif selected_building == 15:
+	elif GlobalVariables.selected_building == 15:
 		return
-	elif selected_building == 16:
+	elif GlobalVariables.selected_building == 16:
 		GlobalVariables.school_nb += 1
-	elif selected_building == 17:
+	elif GlobalVariables.selected_building == 17:
 		GlobalVariables.hospital_nb += 1
-	elif selected_building == 18:
+	elif GlobalVariables.selected_building == 18:
 		GlobalVariables.museum_nb += 1
-	elif selected_building == 19:
+	elif GlobalVariables.selected_building == 19:
 		GlobalVariables.lake_nb += 1
-	elif selected_building == 20:
+	elif GlobalVariables.selected_building == 20:
 		GlobalVariables.wind_turbine_nb += 1
-	elif selected_building == 21:
+	elif GlobalVariables.selected_building == 21:
 		GlobalVariables.solar_panel_nb += 1
-	elif selected_building == 22:
+	elif GlobalVariables.selected_building == 22:
 		GlobalVariables.tree_nb += 1
-	elif selected_building == 23:
+	elif GlobalVariables.selected_building == 23:
 		GlobalVariables.bench_nb += 1
-	elif selected_building == 24:
-		GlobalVariables.street_light_nb += 1
-	elif selected_building == 25:
+	elif GlobalVariables.selected_building == 24:
 		GlobalVariables.road_nb += 1
 	else:
 		return
@@ -208,11 +204,11 @@ func CreateBuilding(pos: Vector3, pos_tab: int):
 	# Check if the player can build
 	if GlobalVariables.isBuilding:
 		# Check if the player has enough money
-		if GlobalVariables.remaining_money < building_price:
+		if GlobalVariables.remaining_money < GlobalVariables.building_price:
 			print("Player needs more money to buy this building")
 			return
 
-		if gridData[pos_tab] == 0 or selected_building == 25: # Roads are exempt from placement checks
+		if gridData[pos_tab] == 0 or GlobalVariables.selected_building == 25: # Roads are exempt from placement checks
 			var building_path = GetSelectedBuilding()
 			
 			# Update building count
@@ -245,10 +241,10 @@ func CreateBuilding(pos: Vector3, pos_tab: int):
 			get_tree().get_root().add_child(building)
 			
 			# Update money
-			GlobalMoney.rem_money(building_price)
+			GlobalMoney.rem_money(GlobalVariables.building_price)
 
 			# Update all grid tiles occupied by the building
-			var size = building_sizes.get(selected_building, Vector2(1, 1))
+			var size = building_sizes.get(GlobalVariables.selected_building, Vector2(1, 1))
 			var vec = Vector2(pos.x, pos.z)
 			
 			# Swap width and height if the building is rotated 90° or 270°
@@ -258,8 +254,24 @@ func CreateBuilding(pos: Vector3, pos_tab: int):
 			for x in range(size.x):
 				for y in range(size.y):
 					var tile_index = (vec.x + x) + ((vec.y + y) * 512)
-					gridData[tile_index] = selected_building # Use the building ID as marker
+					gridData[tile_index] = GlobalVariables.selected_building # Use the building ID as marker
+			# Add the instance to building_instances
+			building_instances[pos_tab] = building
 		else:
 			print("Building already exists at this location.")
 	else:
 		print("You're not allowed to build")
+
+func DestroyBuilding(pos: Vector3, pos_tab: int):
+	if GlobalVariables.isDestroying:
+		if gridData[pos_tab] != 0:
+			# Retrieve the building instance from the dictionary
+			var building = building_instances.get(pos_tab)
+			if building != null:
+				building.queue_free()
+				building_instances.erase(pos_tab)
+			else:
+				print("Failed to find building instance for grid position: ", pos_tab)
+
+			# Clear the gridData entry
+			gridData[pos_tab] = 0
