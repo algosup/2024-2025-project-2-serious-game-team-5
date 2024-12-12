@@ -34,7 +34,7 @@ var solar_panel = "res://Scenes/Buildings/SolarPanel.tscn" # 4x4 ID: 21
 
 ## Decorative buildings
 var tree = "res://Scenes/Buildings/Tree.tscn" # 1x1 ID: 22
-var park = "res://Scenes/Buildings/Park.tscn" # 1x1 ID: 23
+var park = "res://Scenes/Buildings/Park.tscn" # 4x4 ID: 23
 
 ## Roads
 var road = "res://Scenes/Buildings/Road.tscn" # 1x1 ID: 24
