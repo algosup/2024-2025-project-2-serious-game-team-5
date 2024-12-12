@@ -162,31 +162,31 @@ func _update_building_nb() -> void:
 		GlobalVariables.factory_nb += 1
 	elif GlobalVariables.selected_building == 14:
 		GlobalVariables.power_plant_nb += 1
-	elif selected_building == 15:
+	elif GlobalVariables.selected_building == 15:
 		GlobalVariables.city_hall_nb += 1
 		GlobalVariables.happiness_bonus += 0.1
-	elif selected_building == 16:
+	elif GlobalVariables.selected_building == 16:
 		GlobalVariables.school_nb += 1
 		GlobalVariables.happiness_bonus += 0.4
-	elif selected_building == 17:
+	elif GlobalVariables.selected_building == 17:
 		GlobalVariables.hospital_nb += 1
 		GlobalVariables.happiness_bonus += 0.6
-	elif selected_building == 18:
+	elif GlobalVariables.selected_building == 18:
 		GlobalVariables.museum_nb += 1
 		GlobalVariables.happiness_bonus += 1.2
-	elif selected_building == 19:
+	elif GlobalVariables.selected_building == 19:
 		GlobalVariables.lake_nb += 1
 		GlobalVariables.happiness_bonus += 0.4
-	elif selected_building == 20:
+	elif GlobalVariables.selected_building == 20:
 		GlobalVariables.wind_turbine_nb += 1
 	elif GlobalVariables.selected_building == 21:
 		GlobalVariables.solar_panel_nb += 1
 	elif GlobalVariables.selected_building == 22:
 		GlobalVariables.tree_nb += 1
-	elif selected_building == 23:
+	elif GlobalVariables.selected_building == 23:
 		GlobalVariables.park_nb += 1
 		GlobalVariables.happiness_bonus += 0.3
-	elif selected_building == 24:
+	elif GlobalVariables.selected_building == 24:
 		GlobalVariables.road_nb += 1
 	else:
 		return
@@ -207,12 +207,12 @@ func _input(event: InputEvent) -> void:
 # Building creation
 func CreateBuilding(pos: Vector3, pos_tab: int):
 	# Check if player as enought money
-	if GlobalVariables.remaining_money < building_price:
+	if GlobalVariables.remaining_money < GlobalVariables.building_price:
 		print("Player need more money to buy this building")
 		return
 	
 
-	if gridData[pos_tab] == 0 or selected_building == 24:
+	if gridData[pos_tab] == 0 or GlobalVariables.selected_building == 24:
 		var building_path = GetSelectedBuilding()
 		
 
@@ -221,7 +221,7 @@ func CreateBuilding(pos: Vector3, pos_tab: int):
 			print("No building selected.")
 			return
 
-		if gridData[pos_tab] == 0 or selected_building == 24: # Roads are exempt from placement checks
+		if gridData[pos_tab] == 0 or GlobalVariables.selected_building == 24: # Roads are exempt from placement checks
 			building_path = GetSelectedBuilding()
 			
 			# Update building count
