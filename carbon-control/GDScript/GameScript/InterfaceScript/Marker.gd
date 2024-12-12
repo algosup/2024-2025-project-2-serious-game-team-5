@@ -41,7 +41,7 @@ func _on_input_event(camera: Node, event: InputEvent, event_position: Vector3, n
 	marker.transform.origin = Vector3(posX, 0.1, posY)
 
 	# Fetch building size
-	var size = building_sizes.get(BuildingsMgr.selected_building, Vector2(1, 1))
+	var size = building_sizes.get(GlobalVariables.selected_building, Vector2(1, 1))
 
 	# Scale marker
 	marker.scale = Vector3(size.x, 1, size.y)
@@ -69,12 +69,21 @@ func _on_input_event(camera: Node, event: InputEvent, event_position: Vector3, n
 
 	# Handle building creation when left click is pressed
 	if Input.is_action_just_pressed("left_click"):
-		if not occupied:
-			print("Building created at " + str(marker.transform.origin))
-			pos = Vector3(posX, 0, posY)
-			BuildingsMgr.CreateBuilding(pos, vec.x + vec.y * 512)
-		else:
-			print("Cannot place building here, area is occupied.")
+		if GlobalVariables.isBuilding == true:
+			if not occupied:
+				print("Building created at " + str(marker.transform.origin))
+				pos = Vector3(posX, 0, posY)
+				BuildingsMgr.CreateBuilding(pos, vec.x + vec.y * 512)
+			else:
+				print("Cannot place building here, area is occupied.")
+		elif GlobalVariables.isDestroying == true:
+			if occupied:
+				print("Building destroyed at " + str(marker.transform.origin))
+				pos = Vector3(posX, 0, posY) # Ensure `pos` is recalculated here
+				BuildingsMgr.DestroyBuilding(pos, vec.x + vec.y * 512)
+			else:
+				print("No building to destroy here.")
+
 
 func _define_marker_color(occupied: bool):
 	# Load the materials

@@ -3,6 +3,10 @@ extends Control
 @onready var popped_up = false
 
 @onready var isBuilding = false
+@onready var selected_building = 0
+@onready var building_price = 0
+@onready var isDestroying = false
+
 @onready var buildingId = 1
 # Variables to store loaded data
 @onready var remaining_money: int

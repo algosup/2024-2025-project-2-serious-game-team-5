@@ -23,7 +23,7 @@ transform = Transform3D(400, 0, 0, 0, -4.76837e-05, 5, 0, -200, -1.19209e-06, 5.
 shape = SubResource("ConvexPolygonShape3D_avxh5")
 
 [node name="RoadFullNoSideWalks_001" parent="." index="1"]
-transform = Transform3D(400, 0, 0, 0, -9.53674e-05, 5, 0, -400, -1.19209e-06, 5.99014, 0, 7.33848)
+transform = Transform3D(400, 0, 0, 0, -9.53674e-05, 5, 0, -400, -1.19209e-06, 5.99014, 0, 7.10261)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="RoadFullNoSideWalks_001" index="0"]
 
