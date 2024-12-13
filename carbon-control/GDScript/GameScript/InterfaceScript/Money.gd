@@ -4,9 +4,11 @@ const USER_MONEY_DATA_FILE_PATH = "user://userMoneyData.dat"
 const base_money = 500000
 
 var money_label: Label = null
+var money_day_value: Label = null
 
-func set_base_money(new_money_label: Label) -> void:
+func set_base_money(new_money_label: Label, new_money_day_value: Label) -> void:
 	money_label = new_money_label
+	money_day_value = new_money_day_value
 	GlobalVariables.remaining_money = base_money
 	_load_money()
 	money_label.text = _format_money(GlobalVariables.remaining_money)
@@ -14,6 +16,7 @@ func set_base_money(new_money_label: Label) -> void:
 func add_money(to_add: int) -> void:
 	GlobalVariables.remaining_money += to_add
 	money_label.text = _format_money(GlobalVariables.remaining_money)
+	money_day_value.text = _format_money(to_add) + " / Day"
 	_save_money()
 
 func rem_money(to_rem: int) -> void:

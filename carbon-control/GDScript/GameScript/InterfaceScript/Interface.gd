@@ -17,6 +17,7 @@ var target_anchor: Vector2
 @onready var carbon_value: Label = $Co2Background/Co2Label
 @onready var happiness_bar: ProgressBar = $HappinessBackground/HappinessBar
 @onready var happiness_value: Label = $HappinessBackground/HappinessLabel
+@onready var money_day_value: Label = $EarnPerDayBackground/Label
 
 
 # This function sets up the starting and sliding positions for the ConstructionMenuBox
@@ -24,7 +25,7 @@ func _ready() -> void:
 	down_anchor = Vector2(construction_menu_box.anchor_left, construction_menu_box.anchor_right)
 	up_anchor = Vector2(down_anchor.x - menu_size, down_anchor.y - menu_size)
 	target_anchor = down_anchor # Set no movement of the MenuBox at the beginning
-	GlobalMoney.set_base_money(money_label)
+	GlobalMoney.set_base_money(money_label, money_day_value)
 	GlobalPopulation.set_base_population(population_label)
 	GlobalCarbon.set_base_carbon(carbon_bar, carbon_value)
 	GlobalHappiness.set_base_happyness(happiness_bar, happiness_value)
