@@ -1,6 +1,24 @@
-[gd_scene load_steps=2 format=3 uid="uid://di50i8t4bbcvg"]
+[gd_scene load_steps=8 format=3 uid="uid://di50i8t4bbcvg"]
 
 [ext_resource type="Script" path="res://GDScript/MenuScript/SettingsControl.gd" id="1_q0uh4"]
+[ext_resource type="VideoStream" path="res://Assets/2DAssets/Interface/Menu/CloudsMainMenu.ogv" id="2_mb8sh"]
+[ext_resource type="FontFile" uid="uid://i0sopgyfpnb1" path="res://Assets/Fonts/Parkinsans/Parkinsans-VariableFont_wght.ttf" id="3_p5xae"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_u0hee"]
+font = ExtResource("3_p5xae")
+font_size = 20
+
+[sub_resource type="LabelSettings" id="LabelSettings_al7o8"]
+font = ExtResource("3_p5xae")
+font_size = 20
+
+[sub_resource type="LabelSettings" id="LabelSettings_xj313"]
+font = ExtResource("3_p5xae")
+font_size = 20
+
+[sub_resource type="LabelSettings" id="LabelSettings_spd0s"]
+font = ExtResource("3_p5xae")
+font_size = 20
 
 [node name="Node2D" type="Node2D"]
 
@@ -11,96 +29,135 @@ offset_right = 40.0
 offset_bottom = 40.0
 script = ExtResource("1_q0uh4")
 
-[node name="RightLine" type="LineEdit" parent="Control"]
+[node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="Control"]
 layout_mode = 0
-offset_left = 632.0
-offset_top = 403.0
-offset_right = 699.062
-offset_bottom = 434.0
-alignment = 1
-max_length = 1
+offset_right = 1920.0
+offset_bottom = 1080.0
+stream = ExtResource("2_mb8sh")
+autoplay = true
+expand = true
+loop = true
+
+[node name="Panel" type="Panel" parent="Control"]
+layout_mode = 0
+offset_left = 760.0
+offset_top = 224.0
+offset_right = 1160.0
+offset_bottom = 474.0
 
 [node name="SettingsText" type="Label" parent="Control"]
 layout_mode = 0
-offset_left = 520.0
+offset_left = 760.0
 offset_top = 152.0
-offset_right = 631.0
-offset_bottom = 175.0
+offset_right = 1160.0
+offset_bottom = 223.0
+theme_override_colors/font_color = Color(0.443137, 0.603922, 0.368627, 1)
+theme_override_fonts/font = ExtResource("3_p5xae")
+theme_override_font_sizes/font_size = 50
 text = "Settings Menu"
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="BackToMenuButton" type="Button" parent="Control"]
 layout_mode = 0
-offset_left = 29.0
-offset_top = 15.0
-offset_right = 211.0
-offset_bottom = 51.0
+offset_left = 25.0
+offset_top = 25.0
+offset_right = 275.0
+offset_bottom = 75.0
+theme_override_colors/font_hover_color = Color(0.647059, 0.843137, 0.129412, 1)
+theme_override_colors/font_pressed_color = Color(0.509804, 0.701961, 0, 1)
+theme_override_colors/font_color = Color(0.443137, 0.603922, 0.368627, 1)
+theme_override_fonts/font = ExtResource("3_p5xae")
+theme_override_font_sizes/font_size = 25
 text = "Back to Main Menu"
 
 [node name="ForwardText" type="Label" parent="Control"]
 layout_mode = 0
-offset_left = 453.0
-offset_top = 239.0
-offset_right = 564.0
-offset_bottom = 262.0
+offset_left = 810.0
+offset_top = 250.0
+offset_right = 960.0
+offset_bottom = 290.0
 text = "Forward"
+label_settings = SubResource("LabelSettings_u0hee")
+vertical_alignment = 1
 
 [node name="ForwardLine" type="LineEdit" parent="Control"]
 layout_mode = 0
-offset_left = 632.0
-offset_top = 235.0
-offset_right = 699.062
-offset_bottom = 266.0
+offset_left = 1000.0
+offset_top = 250.0
+offset_right = 1067.06
+offset_bottom = 290.0
 alignment = 1
 max_length = 1
 
 [node name="BackwardText" type="Label" parent="Control"]
 layout_mode = 0
-offset_left = 453.0
-offset_top = 295.0
-offset_right = 564.0
-offset_bottom = 318.0
+offset_left = 810.0
+offset_top = 300.0
+offset_right = 960.0
+offset_bottom = 340.0
 text = "Backward"
+label_settings = SubResource("LabelSettings_al7o8")
+vertical_alignment = 1
 
 [node name="BackwardLine" type="LineEdit" parent="Control"]
 layout_mode = 0
-offset_left = 632.0
-offset_top = 291.0
-offset_right = 699.062
-offset_bottom = 322.0
+offset_left = 1000.0
+offset_top = 300.0
+offset_right = 1067.06
+offset_bottom = 340.0
 alignment = 1
 max_length = 1
 
 [node name="LeftText" type="Label" parent="Control"]
 layout_mode = 0
-offset_left = 453.0
-offset_top = 351.0
-offset_right = 564.0
-offset_bottom = 374.0
+offset_left = 810.0
+offset_top = 350.0
+offset_right = 960.0
+offset_bottom = 390.0
 text = "Left"
-
-[node name="RightText" type="Label" parent="Control"]
-layout_mode = 0
-offset_left = 453.0
-offset_top = 407.0
-offset_right = 564.0
-offset_bottom = 430.0
-text = "Right"
+label_settings = SubResource("LabelSettings_xj313")
+vertical_alignment = 1
 
 [node name="LeftLine" type="LineEdit" parent="Control"]
 layout_mode = 0
-offset_left = 632.0
-offset_top = 347.0
-offset_right = 699.062
-offset_bottom = 378.0
+offset_left = 1000.0
+offset_top = 350.0
+offset_right = 1067.06
+offset_bottom = 390.0
+alignment = 1
+max_length = 1
+
+[node name="RightText" type="Label" parent="Control"]
+layout_mode = 0
+offset_left = 810.0
+offset_top = 400.0
+offset_right = 960.0
+offset_bottom = 440.0
+text = "Right"
+label_settings = SubResource("LabelSettings_spd0s")
+vertical_alignment = 1
+
+[node name="RightLine" type="LineEdit" parent="Control"]
+layout_mode = 0
+offset_left = 1000.0
+offset_top = 400.0
+offset_right = 1067.06
+offset_bottom = 440.0
 alignment = 1
 max_length = 1
 
 [node name="LanguageButton" type="Button" parent="Control"]
 layout_mode = 0
-offset_left = 962.0
-offset_top = 15.0
-offset_right = 1111.0
-offset_bottom = 51.0
+offset_left = 1645.0
+offset_top = 25.0
+offset_right = 1895.0
+offset_bottom = 75.0
+theme_override_colors/font_hover_color = Color(0.647059, 0.843137, 0.129412, 1)
+theme_override_colors/font_pressed_color = Color(0.509804, 0.701961, 0, 1)
+theme_override_colors/font_color = Color(0.443137, 0.603922, 0.368627, 1)
+theme_override_fonts/font = ExtResource("3_p5xae")
+theme_override_font_sizes/font_size = 25
 text = "English Version"
 
 [node name="KeyErrorText" type="Label" parent="Control"]
