@@ -157,11 +157,6 @@ func _on_power_plant_pressed() -> void:
 	GlobalVariables.selected_building = 14
 	GlobalVariables.building_price = 3000000
 
-func _on_city_hall_pressed() -> void:
-	$ConstructionMenu/UI_Click.play()
-	GlobalVariables.selected_building = 15
-	GlobalVariables.building_price = 0
-
 func _on_school_pressed() -> void:
 	$ConstructionMenu/UI_Click.play()
 	GlobalVariables.selected_building = 16

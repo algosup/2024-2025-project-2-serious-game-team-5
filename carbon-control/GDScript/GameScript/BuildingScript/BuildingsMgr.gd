@@ -120,8 +120,6 @@ func GetSelectedBuilding():
 		return factory
 	elif GlobalVariables.selected_building == 14:
 		return power_plant
-	elif GlobalVariables.selected_building == 15:
-		return city_hall
 	elif GlobalVariables.selected_building == 16:
 		return school
 	elif GlobalVariables.selected_building == 17:
@@ -172,9 +170,6 @@ func _update_building_nb() -> void:
 		GlobalVariables.factory_nb += 1
 	elif GlobalVariables.selected_building == 14:
 		GlobalVariables.power_plant_nb += 1
-	elif GlobalVariables.selected_building == 15:
-		GlobalVariables.city_hall_nb += 1
-		GlobalVariables.happiness_bonus += 0.1
 	elif GlobalVariables.selected_building == 16:
 		GlobalVariables.school_nb += 1
 		GlobalVariables.happiness_bonus += 0.4
@@ -301,7 +296,6 @@ func DestroyBuilding(pos: Vector3, pos_tab: int):
 			gridData[pos_tab] = 0
 	else:
 		print("You're not allowed to destroy buildings")
-
 
 func _on_save_timer_timeout() -> void:
 	_save_game()
