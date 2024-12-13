@@ -1,0 +1,62 @@
+[gd_scene load_steps=9 format=3 uid="uid://bg6mjyo8le845"]
+
+[ext_resource type="PackedScene" uid="uid://coqjy5yb3bmt3" path="res://Assets/3DAssets/Buildings/solarPanel1.fbx" id="1_8lpfv"]
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_66ab2"]
+points = PackedVector3Array(0.116667, 0.006, 0.0015, 0.116667, -0.006, 0.0015, 0.116667, 0.006, 0, -0.01, 0.006, 0.0015, 0.116667, -0.006, 0, -0.01, -0.006, 0.0015, -0.01, 0.006, 0, -0.01, -0.006, 0)
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_pkl8c"]
+points = PackedVector3Array(0.09, 0.006, 0.0015, 0.09, -0.006, 0.0015, 0.09, 0.006, 0, -0.01, 0.006, 0.0015, 0.09, -0.006, 0, -0.01, -0.006, 0.0015, -0.01, 0.006, 0, -0.01, -0.006, 0)
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_0rmu8"]
+points = PackedVector3Array(0.116667, 0.006, 0.0015, 0.116667, -0.006, 0.0015, 0.116667, 0.006, 0, -0.01, 0.006, 0.0015, 0.116667, -0.006, 0, -0.01, -0.006, 0.0015, -0.01, 0.006, 0, -0.01, -0.006, 0)
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_74seg"]
+points = PackedVector3Array(0.09, 0.006, 0.0015, 0.09, -0.006, 0.0015, 0.09, 0.006, 0, -0.01, 0.006, 0.0015, 0.09, -0.006, 0, -0.01, -0.006, 0.0015, -0.01, 0.006, 0, -0.01, -0.006, 0)
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_n32rj"]
+points = PackedVector3Array(0.09, 0.006, 0.0015, 0.09, -0.006, 0.0015, 0.09, 0.006, 0, -0.01, 0.006, 0.0015, 0.09, -0.006, 0, -0.01, -0.006, 0.0015, -0.01, 0.006, 0, -0.01, -0.006, 0)
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_6t7d2"]
+points = PackedVector3Array(0.116667, 0.006, 0.0015, 0.116667, -0.006, 0.0015, 0.116667, 0.006, 0, -0.01, 0.006, 0.0015, 0.116667, -0.006, 0, -0.01, -0.006, 0.0015, -0.01, 0.006, 0, -0.01, -0.006, 0)
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_bfbt2"]
+points = PackedVector3Array(0.09, 0.006, 0.0015, 0.09, -0.006, 0.0015, 0.09, 0.006, 0, -0.01, 0.006, 0.0015, 0.09, -0.006, 0, -0.01, -0.006, 0.0015, -0.01, 0.006, 0, -0.01, -0.006, 0)
+
+[node name="solarPanel1" instance=ExtResource("1_8lpfv")]
+transform = Transform3D(-6.77527e-08, 0, 1.55, 0, 1.55, 0, -1.55, 0, -6.77527e-08, 0, 0, 0)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Frame_001" index="0"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Frame_001/StaticBody3D" index="0"]
+shape = SubResource("ConvexPolygonShape3D_66ab2")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Frame_008" index="0"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Frame_008/StaticBody3D" index="0"]
+shape = SubResource("ConvexPolygonShape3D_pkl8c")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Frame_002" index="0"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Frame_002/StaticBody3D" index="0"]
+shape = SubResource("ConvexPolygonShape3D_0rmu8")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Frame_003" index="0"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Frame_003/StaticBody3D" index="0"]
+shape = SubResource("ConvexPolygonShape3D_74seg")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Frame_004" index="0"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Frame_004/StaticBody3D" index="0"]
+shape = SubResource("ConvexPolygonShape3D_n32rj")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Frame_005" index="0"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Frame_005/StaticBody3D" index="0"]
+shape = SubResource("ConvexPolygonShape3D_6t7d2")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Frame_006" index="0"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Frame_006/StaticBody3D" index="0"]
+shape = SubResource("ConvexPolygonShape3D_bfbt2")

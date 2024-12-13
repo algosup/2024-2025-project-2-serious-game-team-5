@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://bfh0h71x76852"
+path="res://.godot/imported/arrow.obj-31cc7f3b977bcb2c7c5d7b8414f1d8bd.mesh"
+
+[deps]
+
+files=["res://.godot/imported/arrow.obj-31cc7f3b977bcb2c7c5d7b8414f1d8bd.mesh"]
+
+source_file="res://Assets/kenney_platformer-kit/Models/OBJ format/arrow.obj"
+dest_files=["res://.godot/imported/arrow.obj-31cc7f3b977bcb2c7c5d7b8414f1d8bd.mesh", "res://.godot/imported/arrow.obj-31cc7f3b977bcb2c7c5d7b8414f1d8bd.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

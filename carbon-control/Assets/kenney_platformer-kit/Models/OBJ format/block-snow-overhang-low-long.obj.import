@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://gw6n85cnt87v"
+path="res://.godot/imported/block-snow-overhang-low-long.obj-5520c2174c4dc84554877294f7d46359.mesh"
+
+[deps]
+
+files=["res://.godot/imported/block-snow-overhang-low-long.obj-5520c2174c4dc84554877294f7d46359.mesh"]
+
+source_file="res://Assets/kenney_platformer-kit/Models/OBJ format/block-snow-overhang-low-long.obj"
+dest_files=["res://.godot/imported/block-snow-overhang-low-long.obj-5520c2174c4dc84554877294f7d46359.mesh", "res://.godot/imported/block-snow-overhang-low-long.obj-5520c2174c4dc84554877294f7d46359.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

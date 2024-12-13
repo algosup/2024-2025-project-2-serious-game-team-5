@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://b6xgkxxqhj2pv"]
+
+[ext_resource type="PackedScene" uid="uid://bwysy72tv2v6" path="res://Assets/3DAssets/Buildings/concrete.fbx" id="1_58hqv"]
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_aaj8d"]
+points = PackedVector3Array(-1, 0, -1, -1, 0.1, -1, 1, 0, -1, -1, 0, 1, -1, 0.1, 1, 1, 0.1, -1, 1, 0, 1, 1, 0.1, 1)
+
+[node name="concrete" instance=ExtResource("1_58hqv")]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="roof-flat-center" index="0"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="roof-flat-center/StaticBody3D" index="0"]
+shape = SubResource("ConvexPolygonShape3D_aaj8d")
