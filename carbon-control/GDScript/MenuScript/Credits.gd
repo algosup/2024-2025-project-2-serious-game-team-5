@@ -15,10 +15,8 @@ func _updateLanguage(i):
 	match i:
 		"english":
 			$BackToMenuButton.text = "Back to Menu"
-			$CreditsText.text = "Elone - Good guy"
 		"french":
 			$BackToMenuButton.text = "Revenir au Menu"
-			$CreditsText.text = "Elone - Bon gars"
 
 # This function will take input i, and depends on i value, it will make different action. i = buttons
 func _onPressed(i):

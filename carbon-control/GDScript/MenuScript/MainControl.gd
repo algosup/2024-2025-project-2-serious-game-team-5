@@ -80,3 +80,4 @@ func _createUserSettings():
 	file.store_string(JSON.stringify(default_settings))
 	print("File created successfully")
 	file.close
+	
