@@ -5,7 +5,7 @@ extends Control
 @onready var popped_up = false
 
 @onready var isBuilding = false
-@onready var selected_building = 0
+@onready var selected_building: int = 0
 @onready var building_price = 0
 @onready var isDestroying = false
 

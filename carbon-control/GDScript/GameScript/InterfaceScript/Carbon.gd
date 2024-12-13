@@ -9,7 +9,6 @@ var is_user_data_exists := FileAccess.file_exists(USER_DATA_FILE_PATH)
 @onready var timer: Timer = $"../DayTimer"
 @onready var carbon_bar: ProgressBar = null
 @onready var carbon_value: Label = null
-
 func _ready() -> void:
 	_init_game()
 	update_color()
@@ -26,24 +25,23 @@ func _on_day_timer_timeout() -> void:
 	_save_user_data()
 
 func update_color() -> void:
-	if carbon_bar == null:
+	if carbon_bar == null :
 		return
-	
 	# Change the color of the carbon bar based on the carbon level
 	var percentage = get_percentage()
 
 	if percentage < 0.3:
-		carbon_bar.modulate = Color(0, 1, 0, 1) # Green
+		carbon_bar.modulate = Color(0, 1, 0, 1)  # Green
 	elif percentage < 0.5:
-		carbon_bar.modulate = Color(1, 1, 0, 1) # Yellow
+		carbon_bar.modulate = Color(1, 1, 0, 1)  # Yellow
 	elif percentage < 0.7:
-		carbon_bar.modulate = Color(1, 0.647059, 0, 1) # Orange
+		carbon_bar.modulate = Color(1, 0.647059, 0, 1)  # Orange
 	else:
-		carbon_bar.modulate = Color(1, 0, 0, 1) # Red
+		carbon_bar.modulate = Color(1, 0, 0, 1)  # Red
 	
 	if carbon_value == null:
 		return
-	carbon_value.text = str(carbon_bar.value) # Convert value to string
+	carbon_value.text = str(round(percentage*100)) + "%"
 
 func update_carbon() -> void:
 	var new_carbon_value: float = GlobalVariables.small_house_nb * 10000
@@ -60,7 +58,7 @@ func update_carbon() -> void:
 	new_carbon_value += GlobalVariables.casino_nb * 250 * 500
 	new_carbon_value += GlobalVariables.factory_nb * 5000000
 	new_carbon_value = new_carbon_value - GlobalVariables.recycling_center_nb * 8000000
-	new_carbon_value = new_carbon_value - GlobalVariables.power_plant_nb * 40000000
+	new_carbon_value = new_carbon_value -  GlobalVariables.power_plant_nb * 40000000
 	new_carbon_value += GlobalVariables.oil_rafinery_nb * 3000000000
 	new_carbon_value += GlobalVariables.city_hall_nb * 150 * 300
 	new_carbon_value += GlobalVariables.school_nb * 70 * 300
@@ -72,7 +70,7 @@ func update_carbon() -> void:
 	new_carbon_value = new_carbon_value - GlobalVariables.solar_panel_nb * 2 * 365
 	new_carbon_value = new_carbon_value - GlobalVariables.tree_nb * 0.05 * 365
 	
-	if carbon_bar != null:
+	if carbon_bar != null :
 		carbon_bar.value = new_carbon_value
 		update_color()
 		_save_user_data()
@@ -116,14 +114,14 @@ func _load_user_data() -> void:
 
 # Reset user data to defaults
 func _reset_user_data() -> void:
-	if carbon_bar == null:
+	if carbon_bar == null :
 		return
 	carbon_bar.value = 50000.0
 	_save_user_data()
 
 # Save user data
 func _save_user_data() -> void:
-	var percentage = get_percentage() * 100.0 # Convert to percentage (0-100)
+	var percentage = get_percentage() * 100.0  # Convert to percentage (0-100)
 	var file := FileAccess.open(USER_DATA_FILE_PATH, FileAccess.WRITE)
 	if file:
 		file.store_string("%.2f %.2f" % [carbon_bar.value, percentage])
@@ -132,7 +130,7 @@ func _save_user_data() -> void:
 		print("Error: Failed to save user data.")
 		
 func reset_carbon():
-	if carbon_bar == null:
+	if carbon_bar == null :
 		return
 	carbon_bar.value = 50000.0
 	_save_user_data()

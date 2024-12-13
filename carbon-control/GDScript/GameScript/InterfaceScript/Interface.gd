@@ -14,9 +14,10 @@ var target_anchor: Vector2
 @onready var money_label = $MoneyBackground/MoneyLabel
 @onready var population_label = $Population/PopulationLabel
 @onready var carbon_bar: ProgressBar = $Co2Background/Co2Bar
-@onready var carbon_value: Label = $Co2Background/C02Label
+@onready var carbon_value: Label = $Co2Background/Co2Label
 @onready var happiness_bar: ProgressBar = $HappinessBackground/HappinessBar
 @onready var happiness_value: Label = $HappinessBackground/HappinessLabel
+@onready var money_day_value: Label = $EarnPerDayBackground/Label
 
 
 # This function sets up the starting and sliding positions for the ConstructionMenuBox
@@ -24,7 +25,7 @@ func _ready() -> void:
 	down_anchor = Vector2(construction_menu_box.anchor_left, construction_menu_box.anchor_right)
 	up_anchor = Vector2(down_anchor.x - menu_size, down_anchor.y - menu_size)
 	target_anchor = down_anchor # Set no movement of the MenuBox at the beginning
-	GlobalMoney.set_base_money(money_label)
+	GlobalMoney.set_base_money(money_label, money_day_value)
 	GlobalPopulation.set_base_population(population_label)
 	GlobalCarbon.set_base_carbon(carbon_bar, carbon_value)
 	GlobalHappiness.set_base_happyness(happiness_bar, happiness_value)
@@ -37,6 +38,7 @@ func _process(_delta: float) -> void:
 
 # This function toggles the ConstructionMenuBox between its hidden and visible positions when the button is pressed.
 func _on_construction_menu_button_pressed() -> void:
+	$ConstructionMenu/UI_Click.play()
 	if not popped_up:
 		target_anchor = up_anchor
 		GlobalVariables.isBuilding = true
@@ -51,150 +53,121 @@ func _on_static_body_3d_input_event(camera: Node, event: InputEvent, event_posit
 	pass # Replace with function body.
 
 func _on_small_house_pressed() -> void:
-	GlobalVariables.isBuilding = true
+	$ConstructionMenu/UI_Click.play()
 	GlobalVariables.selected_building = 1
 	GlobalVariables.building_price = 28000
-	GlobalVariables.isDestroying = false
 
 func _on_medium_house_pressed() -> void:
-	GlobalVariables.isBuilding = true
+	$ConstructionMenu/UI_Click.play()
 	GlobalVariables.selected_building = 2
 	GlobalVariables.building_price = 60000
-	GlobalVariables.isDestroying = false
 
 func _on_large_house_pressed() -> void:
-	GlobalVariables.isBuilding = true
+	$ConstructionMenu/UI_Click.play()
 	GlobalVariables.selected_building = 3
 	GlobalVariables.building_price = 84000
-	GlobalVariables.isDestroying = false
 
 func _on_apartment_pressed() -> void:
-	GlobalVariables.isBuilding = true
-	BuildingsMgr.selected_building = 4
-	BuildingsMgr.building_price = 2000000
-	GlobalVariables.isDestroying = false
+	$ConstructionMenu/UI_Click.play()
+	GlobalVariables.selected_building = 4
+	GlobalVariables.building_price = 2000000
 
 func _on_skyscraper_pressed() -> void:
-	GlobalVariables.isBuilding = true
-	BuildingsMgr.selected_building = 5
-	BuildingsMgr.building_price = 30000000
-	GlobalVariables.isDestroying = false
+	$ConstructionMenu/UI_Click.play()
+	GlobalVariables.selected_building = 5
+	GlobalVariables.building_price = 30000000
 
 func _on_bookshop_pressed() -> void:
-	GlobalVariables.isBuilding = true
+	$ConstructionMenu/UI_Click.play()
 	GlobalVariables.selected_building = 6
 	GlobalVariables.building_price = 40000
-	GlobalVariables.isDestroying = false
 
 func _on_barber_pressed() -> void:
-	GlobalVariables.isBuilding = true
+	$ConstructionMenu/UI_Click.play()
 	GlobalVariables.selected_building = 7
 	GlobalVariables.building_price = 60000
-	GlobalVariables.isDestroying = false
 
 func _on_bakery_pressed() -> void:
-	GlobalVariables.isBuilding = true
+	$ConstructionMenu/UI_Click.play()
 	GlobalVariables.selected_building = 8
 	GlobalVariables.building_price = 80000
-	GlobalVariables.isDestroying = false
 
 func _on_pharmacy_pressed() -> void:
-	GlobalVariables.isBuilding = true
+	$ConstructionMenu/UI_Click.play()
 	GlobalVariables.selected_building = 9
 	GlobalVariables.building_price = 120000
-	GlobalVariables.isDestroying = false
 
 func _on_hardware_shop_pressed() -> void:
-	GlobalVariables.isBuilding = true
+	$ConstructionMenu/UI_Click.play()
 	GlobalVariables.selected_building = 10
 	GlobalVariables.building_price = 200000
-	GlobalVariables.isDestroying = false
 
 func _on_farm_pressed() -> void:
-	GlobalVariables.isBuilding = true
+	$ConstructionMenu/UI_Click.play()
 	GlobalVariables.selected_building = 11
 	GlobalVariables.building_price = 1200000
-	GlobalVariables.isDestroying = false
 
 func _on_casino_pressed() -> void:
-	GlobalVariables.isBuilding = true
+	$ConstructionMenu/UI_Click.play()
 	GlobalVariables.selected_building = 12
 	GlobalVariables.building_price = 3000000
-	GlobalVariables.isDestroying = false
 
 func _on_factory_pressed() -> void:
-	GlobalVariables.isBuilding = true
+	$ConstructionMenu/UI_Click.play()
 	GlobalVariables.selected_building = 13
 	GlobalVariables.building_price = 400000
-	GlobalVariables.isDestroying = false
 
 func _on_power_plant_pressed() -> void:
-	GlobalVariables.isBuilding = true
+	$ConstructionMenu/UI_Click.play()
 	GlobalVariables.selected_building = 14
 	GlobalVariables.building_price = 3000000
-	GlobalVariables.isDestroying = false
 
 func _on_city_hall_pressed() -> void:
-	GlobalVariables.isBuilding = true
+	$ConstructionMenu/UI_Click.play()
 	GlobalVariables.selected_building = 15
 	GlobalVariables.building_price = 0
-	GlobalVariables.isDestroying = false
 
 func _on_school_pressed() -> void:
-	GlobalVariables.isBuilding = true
+	$ConstructionMenu/UI_Click.play()
 	GlobalVariables.selected_building = 16
 	GlobalVariables.building_price = 200000
-	GlobalVariables.isDestroying = false
 
 func _on_hospital_pressed() -> void:
-	GlobalVariables.isBuilding = true
+	$ConstructionMenu/UI_Click.play()
 	GlobalVariables.selected_building = 17
 	GlobalVariables.building_price = 400000
-	GlobalVariables.isDestroying = false
 
 func _on_museum_pressed() -> void:
-	GlobalVariables.isBuilding = true
+	$ConstructionMenu/UI_Click.play()
 	GlobalVariables.selected_building = 18
 	GlobalVariables.building_price = 800000
-	GlobalVariables.isDestroying = false
 
 func _on_lake_pressed() -> void:
-	GlobalVariables.isBuilding = true
+	$ConstructionMenu/UI_Click.play()
 	GlobalVariables.selected_building = 19
 	GlobalVariables.building_price = 80000
-	GlobalVariables.isDestroying = false
 
 func _on_wind_turbine_pressed() -> void:
-	GlobalVariables.isBuilding = true
+	$ConstructionMenu/UI_Click.play()
 	GlobalVariables.selected_building = 20
 	GlobalVariables.building_price = 360000
-	GlobalVariables.isDestroying = false
 
 func _on_solar_panel_pressed() -> void:
-	GlobalVariables.isBuilding = true
+	$ConstructionMenu/UI_Click.play()
 	GlobalVariables.selected_building = 21
 	GlobalVariables.building_price = 600000
-	GlobalVariables.isDestroying = false
 
 func _on_tree_pressed() -> void:
-	GlobalVariables.isBuilding = true
+	$ConstructionMenu/UI_Click.play()
 	GlobalVariables.selected_building = 22
 	GlobalVariables.building_price = 1000
-	GlobalVariables.isDestroying = false
 
 func _on_bench_pressed() -> void:
-	GlobalVariables.isBuilding = true
+	$ConstructionMenu/UI_Click.play()
 	GlobalVariables.selected_building = 23
 	GlobalVariables.building_price = 1000
-	GlobalVariables.isDestroying = false
-
-func _on_street_light_pressed() -> void:
-	GlobalVariables.isBuilding = false
-	GlobalVariables.selected_building = 0
-	GlobalVariables.isDestroying = true
 
 func _on_road_pressed() -> void:
-	GlobalVariables.isBuilding = true
-	GlobalVariables.selected_building = 24
+	$ConstructionMenu/UI_Click.play()
+	GlobalVariables.selected_building = 25
 	GlobalVariables.building_price = 500
-	GlobalVariables.isDestroying = false

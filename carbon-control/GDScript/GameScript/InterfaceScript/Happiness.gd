@@ -107,3 +107,7 @@ func _display_happiness() -> void:
 		return
 	# Update the happiness bar
 	happiness_bar.value = GlobalVariables.happiness_value
+	
+	if happiness_value == null:
+		print("Error retrieving happ lab")
+	happiness_value.text = str(round(GlobalVariables.happiness_value))+"%"
