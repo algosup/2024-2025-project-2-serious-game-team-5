@@ -254,7 +254,7 @@ func CreateBuilding(pos: Vector3, pos_tab: int):
 			if rotation_angle != 0:
 				building.rotation_degrees = Vector3(0, rotation_angle, 0)
 			
-			get_tree().get_root().add_child(building)
+			get_tree().get_root().get_child(7).add_child(building)
 			
 			# Update money
 			GlobalMoney.rem_money(GlobalVariables.building_price)
