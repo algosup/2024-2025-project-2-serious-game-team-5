@@ -22,7 +22,7 @@ func _ready() -> void:
 
 func _on_day_timer_timeout() -> void:
 	update_color()
-	_save_user_data()
+	save_user_data()
 
 func update_color() -> void:
 	if carbon_bar == null :
@@ -73,7 +73,7 @@ func update_carbon() -> void:
 	if carbon_bar != null :
 		carbon_bar.value = new_carbon_value
 		update_color()
-		_save_user_data()
+		save_user_data()
 
 func set_base_carbon(new_carbon_bar: ProgressBar, new_carbon_value: Label) -> void:
 	carbon_value = new_carbon_value
@@ -83,8 +83,8 @@ func set_base_carbon(new_carbon_bar: ProgressBar, new_carbon_value: Label) -> vo
 func get_percentage() -> float:
 	if carbon_bar == null:
 		return 0.0
-	carbon_bar.max_value = GlobalVariables.population_value * 3400
-	GlobalVariables.carbon_percentage = (carbon_bar.value / carbon_bar.max_value) * 100
+	carbon_bar.max_value = GlobalVariables.population_value * 42000
+	GlobalVariables.carbon_percentage = round((carbon_bar.value / carbon_bar.max_value) * 100)
 	return carbon_bar.value / carbon_bar.max_value
 
 # Initialize game
@@ -117,13 +117,14 @@ func _reset_user_data() -> void:
 	if carbon_bar == null :
 		return
 	carbon_bar.value = 50000.0
-	_save_user_data()
+	save_user_data()
 
 # Save user data
-func _save_user_data() -> void:
+func save_user_data() -> void:
 	var percentage = get_percentage() * 100.0  # Convert to percentage (0-100)
 	var file := FileAccess.open(USER_DATA_FILE_PATH, FileAccess.WRITE)
-	if file:
+
+	if file && carbon_bar != null:
 		file.store_string("%.2f %.2f" % [carbon_bar.value, percentage])
 		file.close()
 	else:
@@ -133,5 +134,5 @@ func reset_carbon():
 	if carbon_bar == null :
 		return
 	carbon_bar.value = 50000.0
-	_save_user_data()
+	save_user_data()
 	update_color()

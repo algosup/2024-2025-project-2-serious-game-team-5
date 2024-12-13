@@ -29,7 +29,7 @@ func set_base_happyness(new_happiness_bar: ProgressBar, new_happiness_value: Lab
 
 func _on_day_timer_timeout() -> void:
 	update_happiness()
-	_save_happiness_value()  # Save the updated happiness value
+	save_happiness_value()  # Save the updated happiness value
 
 # Load the saved carbon percentage from the user carbon data file
 func _load_carbon_percentage() -> void:
@@ -66,7 +66,7 @@ func _load_happiness_value() -> void:
 		GlobalVariables.happiness_value = 50
 
 # Save the updated happiness value to the user happiness data file
-func _save_happiness_value() -> void:
+func save_happiness_value() -> void:
 	var file := FileAccess.open(USER_HAPPINESS_DATA_FILE_PATH, FileAccess.WRITE)
 	if file:
 		file.store_string(str(GlobalVariables.happiness_value))  # Save the happiness value as a string
@@ -77,7 +77,7 @@ func _save_happiness_value() -> void:
 func reset_happiness() -> void:
 	GlobalVariables.happiness_value = 50
 	_display_happiness()
-	_save_happiness_value()
+	save_happiness_value()
 
 # Increase or decrease the happiness bar based on the carbon level
 func update_happiness() -> void:
@@ -100,7 +100,7 @@ func update_happiness() -> void:
 	GlobalVariables.happiness_value = clamp(GlobalVariables.happiness_value, 0.0, 100.0)
 	GlobalVariables.happiness_value = round(GlobalVariables.happiness_value)
 	_display_happiness()
-	_save_happiness_value()
+	save_happiness_value()
 
 func _display_happiness() -> void:
 	if happiness_bar == null:
