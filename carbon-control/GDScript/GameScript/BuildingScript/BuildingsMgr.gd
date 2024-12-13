@@ -294,6 +294,8 @@ func DestroyBuilding(pos: Vector3, pos_tab: int):
 
 			# Clear the gridData entry
 			gridData[pos_tab] = 0
+
+		GlobalVariables.isDestroying = false
 	else:
 		print("You're not allowed to destroy buildings")
 

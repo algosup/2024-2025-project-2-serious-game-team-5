@@ -204,3 +204,11 @@ func _on_road_pressed() -> void:
 
 func _on_save_button_pressed() -> void:
 	BuildingsMgr._save_game()
+
+
+func _on_destruction_button_pressed() -> void:
+	GlobalVariables.selected_building = 0
+	GlobalVariables.isBuilding = false
+	popped_up = false
+	target_anchor = down_anchor
+	GlobalVariables.isDestroying = true
