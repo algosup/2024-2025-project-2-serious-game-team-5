@@ -255,6 +255,9 @@ func CreateBuilding(pos: Vector3, pos_tab: int):
 				building.rotation_degrees = Vector3(0, rotation_angle, 0)
 			
 			get_tree().get_root().get_child(7).add_child(building)
+			var new_node = get_tree().get_root().get_child(7).get_child(get_tree().get_root().get_child(7).get_child_count() - 1)
+			new_node.name = "Building" + str(GlobalVariables.selected_building) + str(new_node.get_instance_id())
+			new_node.owner = get_tree().get_root().get_child(7)
 			
 			# Update money
 			GlobalMoney.rem_money(GlobalVariables.building_price)
@@ -300,6 +303,9 @@ func DestroyBuilding(pos: Vector3, pos_tab: int):
 
 
 func _on_save_timer_timeout() -> void:
+	_save_game()
+
+func _save_game() -> void:
 	print("Saved game")
 	var node_to_save = self # Change this if the buildings are under a specific subnode like $NodeToSave
 	var scene = PackedScene.new()
