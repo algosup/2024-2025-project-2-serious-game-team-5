@@ -27,7 +27,6 @@ func _on_day_timer_timeout() -> void:
 func update_color() -> void:
 	if carbon_bar == null :
 		return
-	
 	# Change the color of the carbon bar based on the carbon level
 	var percentage = get_percentage()
 
