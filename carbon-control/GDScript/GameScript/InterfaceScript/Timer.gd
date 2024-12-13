@@ -48,7 +48,6 @@ func _on_day_timer_timeout() -> void:
 	GlobalPopulation.update_population()
 	GlobalCarbon.update_carbon()
 	GlobalHappiness.update_happiness()
-	GlobalVariables.save_building_data()
 	_save_user_data()
 	
 func _update_money():
@@ -95,12 +94,7 @@ func _create_user_data() -> void:
 func reset_user_data() -> void:
 	year_count = 1
 	day_count = 1
-	GlobalVariables.happiness_value = 70
 	GlobalVariables.happiness_bonus = 0
-	GlobalVariables.remaining_money = GlobalMoney.base_money
-	GlobalVariables.population_value = 192
-	GlobalVariables.population_max = 192
-	GlobalVariables.carbon_percentage = 40
 	GlobalVariables.yearly_malus = 0
 	GlobalVariables.yearly_bonus = 0
 	GlobalVariables.small_house_nb = 12
@@ -110,26 +104,11 @@ func reset_user_data() -> void:
 	GlobalVariables.barber_shop_nb = 1
 	GlobalVariables.bakery_nb = 1
 	GlobalVariables.city_hall_nb = 1
-	GlobalVariables.park_nb = 1
-	GlobalVariables.tree_nb = 5
-	GlobalVariables.road_nb = 55
-	GlobalVariables.wind_turbine_nb = 7
 
-	if GlobalVariables.happiness_value != null:
-		GlobalHappiness.save_happiness_value()
-		GlobalHappiness.update_happiness()
-
-	if GlobalVariables.remaining_money != null:
-		GlobalMoney.save_money()
-		GlobalMoney.display_money()
-
-	if GlobalVariables.population_value != null:
-		GlobalPopulation.save_population_data()
-		GlobalPopulation.display_population()
-
-	if GlobalVariables.carbon_percentage != null:
-		GlobalCarbon.save_user_data()
-		GlobalCarbon.update_color()
+	GlobalCarbon.reset_carbon()
+	GlobalHappiness.reset_happiness()
+	GlobalMoney.reset_money()
+	GlobalPopulation.reset_population_data()
 	
 	_save_user_data()
 

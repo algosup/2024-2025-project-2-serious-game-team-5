@@ -12,7 +12,7 @@ font_size = 18
 [sub_resource type="LabelSettings" id="LabelSettings_wjo10"]
 font_size = 18
 
-[node name="Node2D2" type="Node2D"]
+[node name="Node2D" type="Node2D"]
 
 [node name="Control" type="Control" parent="."]
 layout_mode = 3

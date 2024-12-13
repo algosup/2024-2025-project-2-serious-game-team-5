@@ -30,7 +30,7 @@ func set_base_population(new_popu_label: Label) -> void:
 	
 func _on_day_timer_timeout() -> void:
 	update_population()
-	save_population_data()  # Save the updated population value
+	save_population_value()  # Save the updated population value
 
 # Load the saved happiness value from the user happiness data file
 func _load_happiness_value() -> void:
@@ -43,6 +43,14 @@ func _load_happiness_value() -> void:
 		else:
 			print("Error: Failed to open happiness data file.")
 
+# Save the updated population and max population values to the user population data file
+func save_population_value() -> void:
+	var file := FileAccess.open(USER_POPULATION_DATA_FILE_PATH, FileAccess.WRITE)
+	if file:
+		file.store_string("%d %d" % [GlobalVariables.population_value, GlobalVariables.population_max])
+		file.close()
+	else:
+		print("Error: Failed to open population data file for writing.")
 
 # Update the population value based on happiness
 func update_population() -> void:
@@ -71,7 +79,7 @@ func update_population() -> void:
 
 
 	display_population()
-	save_population_data()
+	save_population_value()
 
 # Display the population value
 func display_population() -> void:
@@ -111,6 +119,7 @@ func reset_population_data() -> void:
 	GlobalVariables.population_value = 192
 	GlobalVariables.population_max = 192
 	save_population_data()
+	save_population_value()
 
 # Save user data
 func save_population_data() -> void:
