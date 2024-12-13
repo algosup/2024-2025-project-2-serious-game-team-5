@@ -1,0 +1,31 @@
+[gd_scene load_steps=8 format=3 uid="uid://b7hy1ghr6ssuq"]
+
+[ext_resource type="AudioStream" uid="uid://pn5uk1ybbeic" path="res://Assets/Music&Sound/JazzBackground.mp3" id="1_7peua"]
+[ext_resource type="AudioStream" uid="uid://cja71bx36uvqr" path="res://Assets/Music&Sound/ambience-city-daytime-birds-traffic-61955.mp3" id="2_ega8p"]
+[ext_resource type="AudioStream" uid="uid://dtotu0x3j8nsu" path="res://Assets/Music&Sound/Radio-Music.mp3" id="3_y6p1y"]
+
+[sub_resource type="AudioStreamPlaylist" id="AudioStreamPlaylist_be2cu"]
+stream_count = 1
+stream_0 = ExtResource("1_7peua")
+
+[sub_resource type="AudioStreamPlaylist" id="AudioStreamPlaylist_6s22w"]
+stream_count = 1
+stream_0 = ExtResource("2_ega8p")
+
+[sub_resource type="AudioStreamPlaylist" id="AudioStreamPlaylist_2olf6"]
+loop = false
+stream_count = 1
+stream_0 = ExtResource("3_y6p1y")
+
+[sub_resource type="AudioStreamSynchronized" id="AudioStreamSynchronized_xxkrp"]
+stream_count = 3
+stream_0/stream = SubResource("AudioStreamPlaylist_be2cu")
+stream_0/volume = -15.0
+stream_1/stream = SubResource("AudioStreamPlaylist_6s22w")
+stream_1/volume = -5.0
+stream_2/stream = SubResource("AudioStreamPlaylist_2olf6")
+stream_2/volume = -5.0
+
+[node name="BackgroundMusic" type="AudioStreamPlayer"]
+stream = SubResource("AudioStreamSynchronized_xxkrp")
+autoplay = true

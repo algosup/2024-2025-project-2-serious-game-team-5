@@ -1,8 +1,10 @@
-[gd_scene load_steps=23 format=3 uid="uid://bbxqj5to0n3ye"]
+[gd_scene load_steps=25 format=3 uid="uid://bbxqj5to0n3ye"]
 
 [ext_resource type="Script" path="res://GDScript/GameScript/BuildingScript/BuildingsMgr.gd" id="1_0po00"]
+[ext_resource type="PackedScene" uid="uid://b7hy1ghr6ssuq" path="res://Scenes/background_music.tscn" id="2_3un2q"]
 [ext_resource type="PackedScene" uid="uid://dyna83k7m266c" path="res://Scenes/Player.tscn" id="2_pdajl"]
 [ext_resource type="PackedScene" uid="uid://htmeeru1v4h8" path="res://Scenes/Interface.tscn" id="3_1irrt"]
+[ext_resource type="AudioStream" uid="uid://cvyelnlyoxvu5" path="res://Assets/Music&Sound/Hammering_Sound.mp3" id="3_u6b65"]
 [ext_resource type="MeshLibrary" uid="uid://dmymo3hn2hqop" path="res://Assets/mesh.tres" id="5_5aibf"]
 [ext_resource type="Script" path="res://GDScript/GameScript/InterfaceScript/Marker.gd" id="6_fywgo"]
 [ext_resource type="Material" uid="uid://2c84wp3bqorp" path="res://Materials/green_material_3d.tres" id="7_kh3td"]
@@ -41,6 +43,14 @@ size = Vector2(1, 1)
 
 [node name="World" type="Node3D"]
 script = ExtResource("1_0po00")
+
+[node name="WorldAudioManager" type="AudioStreamPlayer" parent="."]
+
+[node name="BackgroundMusic" parent="WorldAudioManager" instance=ExtResource("2_3un2q")]
+
+[node name="Construction" type="AudioStreamPlayer" parent="WorldAudioManager"]
+stream = ExtResource("3_u6b65")
+volume_db = -15.0
 
 [node name="SaveTimer" type="Timer" parent="."]
 wait_time = 9.0
