@@ -24,9 +24,9 @@ func _process(_delta: float) -> void:
 		translate(Vector3(0.2, 0, 0))
 
 	# Handle camera zoom with R and F keys
-	if Input.is_key_pressed(KEY_R):
+	if Input.is_key_pressed(KEY_T):
 		player_camera.size = clamp(player_camera.size - (zoom_speed * 6) * _delta, 5.0, 100.0)
-	if Input.is_key_pressed(KEY_F):
+	if Input.is_key_pressed(KEY_G):
 		player_camera.size = clamp(player_camera.size + (zoom_speed * 6) * _delta, 5.0, 100.0)
 
 	# Movement using right mouse button

@@ -45,7 +45,7 @@ func _gameInit():
 func _onPressed(i):
 	match i:
 		1: # Starting the game function
-			get_tree().change_scene_to_file("res://Scenes/World.tscn")
+			get_tree().change_scene_to_file("res://Scenes/SavedGame.tscn")
 		2: # Exiting the game function
 			get_tree().quit() 
 		3: # Switch to Settings menu
@@ -54,7 +54,7 @@ func _onPressed(i):
 			get_tree().change_scene_to_file("res://Scenes/Credits.tscn")
 		5: # Remove previous save and play
 			GlobalTimer.reset_user_data()
-			get_tree().change_scene_to_file("res://Scenes/World.tscn")
+			get_tree().change_scene_to_file("res://Scenes/Starter.tscn")
 
 # This function will load the userLanguage
 func _loadUserData():

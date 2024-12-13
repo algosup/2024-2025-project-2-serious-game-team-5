@@ -204,5 +204,5 @@ func _on_bench_pressed() -> void:
 
 func _on_road_pressed() -> void:
 	$ConstructionMenu/UI_Click.play()
-	GlobalVariables.selected_building = 25
+	GlobalVariables.selected_building = 24
 	GlobalVariables.building_price = 500

@@ -1,5 +1,7 @@
 extends Node
 
+@onready var save_timer: Timer = $SaveTimer
+
 # Building list
 ## Residential building
 var small_house = "res://Scenes/Buildings/SmallHouse.tscn" # 1x1 ID: 1
@@ -74,8 +76,16 @@ var building_sizes = {
 }
 
 func _ready():
+
 	for i in range(262144):
 		gridData.append(0)
+
+	if save_timer:
+		save_timer.timeout.connect(_on_save_timer_timeout)
+		save_timer.start()
+	else:
+		print("Error: Missing save timer")
+
 
 func RotateBuilding():
 	current_rotation = (current_rotation + 90) % 360
@@ -206,17 +216,15 @@ func _input(event: InputEvent) -> void:
 
 # Building creation
 func CreateBuilding(pos: Vector3, pos_tab: int):
-	# Check if player as enought money
-	if GlobalVariables.remaining_money < GlobalVariables.building_price:
-		print("Player need more money to buy this building")
-		return
-	
+	# Check if player has enough money
+#	if GlobalVariables.remaining_money < GlobalVariables.building_price:
+#		print("Player needs more money to buy this building")
+#		return
 
-	if gridData[pos_tab] == 0 or GlobalVariables.selected_building == 24:
+	# Check if the selected grid tile is available
+	if gridData[pos_tab] == 0 or GlobalVariables.selected_building == 24: # Roads are exempt from placement checks
 		var building_path = GetSelectedBuilding()
-		
 
-		# Check if a building is selected
 		if building_path == null:
 			print("No building selected.")
 			return
@@ -247,7 +255,10 @@ func CreateBuilding(pos: Vector3, pos_tab: int):
 			if rotation_angle != 0:
 				building.rotation_degrees = Vector3(0, rotation_angle, 0)
 			
-			get_tree().get_root().add_child(building)
+			get_tree().get_root().get_child(7).add_child(building)
+			var new_node = get_tree().get_root().get_child(7).get_child(get_tree().get_root().get_child(7).get_child_count() - 1)
+			new_node.name = "Building" + str(GlobalVariables.selected_building) + str(new_node.get_instance_id())
+			new_node.owner = get_tree().get_root().get_child(7)
 			
 			# Update money
 			GlobalMoney.rem_money(GlobalVariables.building_price)
@@ -255,7 +266,7 @@ func CreateBuilding(pos: Vector3, pos_tab: int):
 			# Update all grid tiles occupied by the building
 			var size = building_sizes.get(GlobalVariables.selected_building, Vector2(1, 1))
 			var vec = Vector2(pos.x, pos.z)
-			get_node("/root/World/WorldAudioManager/Construction").play()
+			#get_node("/root/World/WorldAudioManager/Construction").play()
 			# Swap width and height if the building is rotated 90° or 270°
 			if rotation_angle in [90, 270]:
 				size = Vector2(size.y, size.x)
@@ -269,10 +280,14 @@ func CreateBuilding(pos: Vector3, pos_tab: int):
 		else:
 			print("Building already exists at this location.")
 	else:
-		print("You're not allowed to build")
+		print("You're not allowed to build here")
 
 func DestroyBuilding(pos: Vector3, pos_tab: int):
 	if GlobalVariables.isDestroying:
+		if GlobalVariables.remaining_money < GlobalVariables.destroy_price:
+			print("Player need more money to destroy")
+			return
+
 		if gridData[pos_tab] != 0:
 			# Retrieve the building instance from the dictionary
 			var building = building_instances.get(pos_tab)
@@ -284,3 +299,16 @@ func DestroyBuilding(pos: Vector3, pos_tab: int):
 
 			# Clear the gridData entry
 			gridData[pos_tab] = 0
+	else:
+		print("You're not allowed to destroy buildings")
+
+
+func _on_save_timer_timeout() -> void:
+	_save_game()
+
+func _save_game() -> void:
+	print("Saved game")
+	var node_to_save = self # Change this if the buildings are under a specific subnode like $NodeToSave
+	var scene = PackedScene.new()
+	scene.pack(node_to_save)
+	ResourceSaver.save(scene, "res://Scenes/SavedGame.tscn")

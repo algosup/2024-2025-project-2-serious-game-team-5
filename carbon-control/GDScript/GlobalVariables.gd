@@ -1,5 +1,7 @@
 extends Control
 
+@onready var destroy_price = 5000
+
 @onready var popped_up = false
 
 @onready var isBuilding = false
@@ -44,7 +46,7 @@ extends Control
 # Public buildings
 @onready var city_hall_nb: int
 @onready var school_nb: int
-@onready var museum_nb:int
+@onready var museum_nb: int
 @onready var hospital_nb: int
 
 # Green spaces and energy
