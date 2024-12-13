@@ -157,11 +157,6 @@ func _on_power_plant_pressed() -> void:
 	GlobalVariables.selected_building = 14
 	GlobalVariables.building_price = 3000000
 
-func _on_city_hall_pressed() -> void:
-	$ConstructionMenu/UI_Click.play()
-	GlobalVariables.selected_building = 15
-	GlobalVariables.building_price = 0
-
 func _on_school_pressed() -> void:
 	$ConstructionMenu/UI_Click.play()
 	GlobalVariables.selected_building = 16
@@ -206,3 +201,7 @@ func _on_road_pressed() -> void:
 	$ConstructionMenu/UI_Click.play()
 	GlobalVariables.selected_building = 24
 	GlobalVariables.building_price = 500
+
+
+func _on_save_button_pressed() -> void:
+	BuildingsMgr._save_game()
