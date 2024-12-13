@@ -1,7 +1,7 @@
 extends ColorRect
 const USER_MONEY_DATA_FILE_PATH = "user://userMoneyData.dat"
 
-const base_money = 500000
+const base_money = 500000000
 
 var money_label: Label = null
 

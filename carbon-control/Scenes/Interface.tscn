@@ -114,7 +114,7 @@ script = ExtResource("1_5xait")
 
 [node name="DayTimer" type="Timer" parent="."]
 process_callback = 0
-wait_time = 12.0
+wait_time = 3.0
 autostart = true
 
 [node name="Co2Background" type="ColorRect" parent="."]

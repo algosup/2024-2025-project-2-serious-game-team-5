@@ -1,5 +1,7 @@
 extends Node
 
+@onready var save_timer: Timer = $SaveTimer
+
 # Building list
 ## Residential building
 var small_house = "res://Scenes/Buildings/SmallHouse.tscn" # 1x1 ID: 1
@@ -76,6 +78,13 @@ var building_sizes = {
 func _ready():
 	for i in range(262144):
 		gridData.append(0)
+
+	if save_timer:
+		save_timer.timeout.connect(_on_save_timer_timeout)
+		save_timer.start()
+	else:
+		print("Error: Missing save timer")
+
 
 func RotateBuilding():
 	current_rotation = (current_rotation + 90) % 360
@@ -206,17 +215,15 @@ func _input(event: InputEvent) -> void:
 
 # Building creation
 func CreateBuilding(pos: Vector3, pos_tab: int):
-	# Check if player as enought money
+	# Check if player has enough money
 	if GlobalVariables.remaining_money < GlobalVariables.building_price:
-		print("Player need more money to buy this building")
+		print("Player needs more money to buy this building")
 		return
-	
 
-	if gridData[pos_tab] == 0 or GlobalVariables.selected_building == 24:
+	# Check if the selected grid tile is available
+	if gridData[pos_tab] == 0 or GlobalVariables.selected_building == 24: # Roads are exempt from placement checks
 		var building_path = GetSelectedBuilding()
-		
 
-		# Check if a building is selected
 		if building_path == null:
 			print("No building selected.")
 			return
@@ -269,7 +276,7 @@ func CreateBuilding(pos: Vector3, pos_tab: int):
 		else:
 			print("Building already exists at this location.")
 	else:
-		print("You're not allowed to build")
+		print("You're not allowed to build here")
 
 func DestroyBuilding(pos: Vector3, pos_tab: int):
 	if GlobalVariables.isDestroying:
@@ -290,3 +297,11 @@ func DestroyBuilding(pos: Vector3, pos_tab: int):
 			gridData[pos_tab] = 0
 	else:
 		print("You're not allowed to destroy buildings")
+
+
+func _on_save_timer_timeout() -> void:
+	print("Saved game")
+	var node_to_save = self # Change this if the buildings are under a specific subnode like $NodeToSave
+	var scene = PackedScene.new()
+	scene.pack(node_to_save)
+	ResourceSaver.save(scene, "res://Scenes/SavedGame.tscn")

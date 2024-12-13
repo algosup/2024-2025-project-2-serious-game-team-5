@@ -46,7 +46,7 @@ func _gameInit():
 func _onPressed(i):
 	match i:
 		1: # Starting the game function
-			get_tree().change_scene_to_file("res://Scenes/World.tscn")
+			get_tree().change_scene_to_file("res://Scenes/SavedGame.tscn")
 		2: # Exiting the game function
 			get_tree().quit() 
 		3: # Switch to Settings menu
