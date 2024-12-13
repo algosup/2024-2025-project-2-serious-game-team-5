@@ -9,6 +9,7 @@ var popped_up = false
 var up_anchor: Vector2
 var down_anchor: Vector2
 var target_anchor: Vector2
+var settingsStates = 0
 
 @onready var construction_menu_box = $ConstructionMenu/ConstructionMenuBox
 @onready var money_label = $MoneyBackground/MoneyLabel
@@ -18,6 +19,13 @@ var target_anchor: Vector2
 @onready var happiness_bar: ProgressBar = $HappinessBackground/HappinessBar
 @onready var happiness_value: Label = $HappinessBackground/HappinessLabel
 @onready var money_day_value: Label = $EarnPerDayBackground/Label
+
+@onready var day_timer_value: Timer = $DayTimer
+
+@onready var settings_button_value: Button = $SettingsMenu
+@onready var resume_button_value: Button = $SettingsMenu/ResumeButton
+@onready var save_button_value: Button = $SettingsMenu/SaveButton
+@onready var main_menu_button_value: Button = $SettingsMenu/MainMenuButton
 
 
 # This function sets up the starting and sliding positions for the ConstructionMenuBox
@@ -29,9 +37,36 @@ func _ready() -> void:
 	GlobalPopulation.set_base_population(population_label)
 	GlobalCarbon.set_base_carbon(carbon_bar, carbon_value)
 	GlobalHappiness.set_base_happyness(happiness_bar, happiness_value)
+	main_menu_button_value.connect("pressed", self._on_MainMenuButton_pressed)
+	resume_button_value.connect("pressed", self._on_ResumeButton_pressed)
+	
+func _on_ResumeButton_pressed():
+	settingsStates = 0
+	settings_button_value.visible = false
+	day_timer_value.start()
+
+func _on_MainMenuButton_pressed():
+	get_tree().change_scene_to_file("res://Scenes/MainMenu.tscn")
 
 # This function moves the ConstructionMenuBox towards the target position, creating a sliding animation.
 func _process(_delta: float) -> void:
+	if Input.is_action_just_pressed("ui_cancel"):
+		if settingsStates == 0:
+			settingsStates = 1
+			settings_button_value.visible = true
+			day_timer_value.stop()
+			#resume_button_value.visible = true
+			#save_button_value.visible = true
+			#main_menu_button_value.visible = true
+		else:
+			settingsStates = 0
+			settings_button_value.visible = false
+			day_timer_value.start()
+			#resume_button_value.visible = false
+			#save_button_value.visible = false
+			#main_menu_button_value.visible = false
+			
+		
 	if construction_menu_box.anchor_left != target_anchor.x or construction_menu_box.anchor_right != target_anchor.y:
 		construction_menu_box.anchor_left = lerp(construction_menu_box.anchor_left, target_anchor.x, lerp_speed)
 		construction_menu_box.anchor_right = lerp(construction_menu_box.anchor_right, target_anchor.y, lerp_speed)

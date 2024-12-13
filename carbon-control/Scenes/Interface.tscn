@@ -154,7 +154,7 @@ script = ExtResource("1_5xait")
 
 [node name="DayTimer" type="Timer" parent="."]
 process_callback = 0
-wait_time = 12.0
+wait_time = 3.0
 autostart = true
 
 [node name="Co2Background" type="ColorRect" parent="."]
@@ -868,6 +868,40 @@ text = "0$ / day"
 label_settings = SubResource("LabelSettings_qwvot")
 horizontal_alignment = 2
 vertical_alignment = 1
+
+[node name="SettingsMenu" type="Button" parent="."]
+visible = false
+layout_mode = 0
+offset_left = -9.0
+offset_top = -10.0
+offset_right = 1940.0
+offset_bottom = 1097.0
+disabled = true
+
+[node name="ResumeButton" type="Button" parent="SettingsMenu"]
+layout_mode = 0
+offset_left = 841.0
+offset_top = 330.0
+offset_right = 1225.0
+offset_bottom = 458.0
+theme_override_font_sizes/font_size = 40
+text = "Resume"
+
+[node name="SaveButton" type="Button" parent="SettingsMenu"]
+offset_left = 841.0
+offset_top = 522.0
+offset_right = 1228.0
+offset_bottom = 650.0
+theme_override_font_sizes/font_size = 40
+text = "Save"
+
+[node name="MainMenuButton" type="Button" parent="SettingsMenu"]
+offset_left = 841.0
+offset_top = 714.0
+offset_right = 1228.0
+offset_bottom = 860.0
+theme_override_font_sizes/font_size = 40
+text = "Main Menu"
 
 [connection signal="timeout" from="DayTimer" to="." method="_on_day_timer_timeout"]
 [connection signal="pressed" from="ConstructionMenu/ConstructionMenuBox/ScrollContainer/BuildingsBox/BuildingsLabel/ResidentialsLabel/SmallHouse" to="." method="_on_small_house_pressed"]
