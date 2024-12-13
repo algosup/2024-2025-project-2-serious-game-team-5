@@ -1,6 +1,7 @@
 [gd_scene load_steps=67 format=4 uid="uid://htmeeru1v4h8"]
 
 [ext_resource type="Script" path="res://GDScript/GameScript/InterfaceScript/Interface.gd" id="1_5xait"]
+[ext_resource type="Texture2D" uid="uid://yf82ro07spqe" path="res://Assets/2DAssets/Interface/Construction.png" id="1_q44jx"]
 [ext_resource type="Texture2D" uid="uid://dewoswlt3sm2e" path="res://Assets/2DAssets/Interface/Smoke Icon.png" id="2_qp4yp"]
 [ext_resource type="FontFile" uid="uid://i0sopgyfpnb1" path="res://Assets/Fonts/Parkinsans/Parkinsans-VariableFont_wght.ttf" id="2_vortr"]
 [ext_resource type="Script" path="res://GDScript/GameScript/InterfaceScript/Timer.gd" id="2_xjeol"]
@@ -39,7 +40,6 @@
 [ext_resource type="AudioStream" uid="uid://cm8rqc83fiymm" path="res://Assets/Music&Sound/UI_Click.ogg" id="31_dal6q"]
 [ext_resource type="FontFile" uid="uid://bnh61duvbqrbn" path="res://Assets/Fonts/Roboto/Roboto-Regular.ttf" id="36_ufcy1"]
 [ext_resource type="Texture2D" uid="uid://d2nqvm68uh4uy" path="res://Assets/2DAssets/Interface/Money Time Icon.png" id="38_2d2an"]
-[ext_resource type="Texture2D" uid="uid://b30m6en72xu7i" path="res://Assets/2DAssets/Interface/destroy.png" id="38_2wwf4"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_t4721"]
 font = ExtResource("2_vortr")
@@ -361,13 +361,12 @@ anchor_left = 0.936
 anchor_top = 1.0
 anchor_right = 1.068
 anchor_bottom = 1.0
-offset_left = -704.12
-offset_top = -785.0
-offset_right = -12.1838
-offset_bottom = -175.0
+offset_left = -418.272
+offset_top = -555.0
+offset_right = 273.664
+offset_bottom = 55.0
 grow_horizontal = 0
 grow_vertical = 0
-scale = Vector2(1.5, 1.5)
 theme_override_constants/separation = 10
 
 [node name="ConstructionMenuBox" type="ColorRect" parent="ConstructionMenu"]
@@ -2409,32 +2408,6 @@ stream = SubResource("AudioStreamMP3_fkxv6")
 [node name="UI_Click" type="AudioStreamPlayer" parent="ConstructionMenu"]
 stream = ExtResource("31_dal6q")
 
-[node name="ConstructionBtnNode" type="Node" parent="ConstructionMenu"]
-
-[node name="ConstructionMenuButton" type="TextureButton" parent="ConstructionMenu/ConstructionBtnNode"]
-offset_left = 1768.0
-offset_top = 938.0
-offset_right = 1868.0
-offset_bottom = 1038.0
-scale = Vector2(0.2, 0.2)
-size_flags_horizontal = 4
-mouse_filter = 1
-mouse_default_cursor_shape = 2
-texture_normal = ExtResource("37_2vjjt")
-
-[node name="DestructionBtnNode" type="Node" parent="ConstructionMenu"]
-
-[node name="DestructionButton" type="TextureButton" parent="ConstructionMenu/DestructionBtnNode"]
-offset_left = 1619.0
-offset_top = 938.0
-offset_right = 2131.0
-offset_bottom = 1450.0
-scale = Vector2(0.2, 0.2)
-size_flags_horizontal = 4
-mouse_filter = 1
-mouse_default_cursor_shape = 2
-texture_normal = ExtResource("38_2wwf4")
-
 [node name="EarnPerDayBackground" type="ColorRect" parent="."]
 layout_mode = 0
 offset_left = 25.0
@@ -2519,5 +2492,4 @@ text = "Main Menu"
 [connection signal="pressed" from="ConstructionMenu/ConstructionMenuBox/ScrollContainer/BuildingsBox/OthersLabel/DecorativeLabel/Tree" to="." method="_on_tree_pressed"]
 [connection signal="pressed" from="ConstructionMenu/ConstructionMenuBox/ScrollContainer/BuildingsBox/OthersLabel/TerrainLabel/Road" to="." method="_on_road_pressed"]
 [connection signal="pressed" from="ConstructionMenu/ConstructionMenuBox/ScrollContainer/BuildingsBox/OthersLabel/TerrainLabel/Lake" to="." method="_on_lake_pressed"]
-[connection signal="pressed" from="ConstructionMenu/ConstructionBtnNode/ConstructionMenuButton" to="." method="_on_construction_menu_button_pressed"]
-[connection signal="pressed" from="ConstructionMenu/DestructionBtnNode/DestructionButton" to="." method="_on_construction_menu_button_pressed"]
+[connection signal="pressed" from="ConstructionMenu/ConstructionMenuButton" to="." method="_on_construction_menu_button_pressed"]
