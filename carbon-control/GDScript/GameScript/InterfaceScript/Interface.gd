@@ -14,7 +14,7 @@ var target_anchor: Vector2
 @onready var money_label = $MoneyBackground/MoneyLabel
 @onready var population_label = $Population/PopulationLabel
 @onready var carbon_bar: ProgressBar = $Co2Background/Co2Bar
-@onready var carbon_value: Label = $Co2Background/C02Label
+@onready var carbon_value: Label = $Co2Background/Co2Label
 @onready var happiness_bar: ProgressBar = $HappinessBackground/HappinessBar
 @onready var happiness_value: Label = $HappinessBackground/HappinessLabel
 

@@ -41,7 +41,7 @@ func update_color() -> void:
 	
 	if carbon_value == null:
 		return
-	carbon_value.text = str(carbon_bar.value)  # Convert value to string
+	carbon_value.text = str(round(percentage*100)) + "%"
 
 func update_carbon() -> void:
 	var new_carbon_value: float = GlobalVariables.small_house_nb * 10000
