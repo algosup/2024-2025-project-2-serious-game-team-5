@@ -5,13 +5,12 @@ var userSettingsFile = FileAccess.file_exists("user://settings.json")
 
 func _ready():
 	_gameInit()
-	$PlayButton.connect("pressed", self._onPressed.bind(1))
-	$LeaveButton.connect("pressed", self._onPressed.bind(2))
-	$SettingsButton.connect("pressed", self._onPressed.bind(3))
-	$CreditsButton.connect("pressed", self._onPressed.bind(4))
-	$NewGameButton.connect("pressed", self._onPressed.bind(5))
+	$OverallMarginContainer/ComponentsMarginContainer/ButtonMarginContainer/BoxContainerButton/PlayButton.connect("pressed", self._onPressed.bind(1))
+	$OverallMarginContainer/ComponentsMarginContainer/ButtonMarginContainer/BoxContainerButton/NewGameButton.connect("pressed", self._onPressed.bind(5))
+	$OverallMarginContainer/ComponentsMarginContainer/ButtonMarginContainer/BoxContainerButton/SettingsButton.connect("pressed", self._onPressed.bind(3))
+	$OverallMarginContainer/ComponentsMarginContainer/ButtonMarginContainer/BoxContainerButton/CreditsButton.connect("pressed", self._onPressed.bind(4))
+	$OverallMarginContainer/ComponentsMarginContainer/ButtonMarginContainer/BoxContainerButton/LeaveButton.connect("pressed", self._onPressed.bind(2))
 	
-
 func _gameInit():
 	var language
 	# Check if user data file exist
