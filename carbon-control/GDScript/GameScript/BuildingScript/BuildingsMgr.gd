@@ -273,6 +273,10 @@ func CreateBuilding(pos: Vector3, pos_tab: int):
 
 func DestroyBuilding(pos: Vector3, pos_tab: int):
 	if GlobalVariables.isDestroying:
+		if GlobalVariables.remaining_money < GlobalVariables.destroy_price:
+			print("Player need more money to destroy")
+			return
+
 		if gridData[pos_tab] != 0:
 			# Retrieve the building instance from the dictionary
 			var building = building_instances.get(pos_tab)
@@ -284,3 +288,5 @@ func DestroyBuilding(pos: Vector3, pos_tab: int):
 
 			# Clear the gridData entry
 			gridData[pos_tab] = 0
+	else:
+		print("You're not allowed to destroy buildings")
