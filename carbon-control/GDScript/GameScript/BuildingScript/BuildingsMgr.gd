@@ -217,9 +217,9 @@ func _input(event: InputEvent) -> void:
 # Building creation
 func CreateBuilding(pos: Vector3, pos_tab: int):
 	# Check if player has enough money
-#	if GlobalVariables.remaining_money < GlobalVariables.building_price:
-#		print("Player needs more money to buy this building")
-#		return
+	if GlobalVariables.remaining_money < GlobalVariables.building_price:
+		print("Player needs more money to buy this building")
+		return
 
 	# Check if the selected grid tile is available
 	if gridData[pos_tab] == 0 or GlobalVariables.selected_building == 24: # Roads are exempt from placement checks
@@ -266,7 +266,7 @@ func CreateBuilding(pos: Vector3, pos_tab: int):
 			# Update all grid tiles occupied by the building
 			var size = building_sizes.get(GlobalVariables.selected_building, Vector2(1, 1))
 			var vec = Vector2(pos.x, pos.z)
-			#get_node("/root/World/WorldAudioManager/Construction").play()
+			get_node("/root/World/WorldAudioManager/Construction").play()
 			# Swap width and height if the building is rotated 90° or 270°
 			if rotation_angle in [90, 270]:
 				size = Vector2(size.y, size.x)

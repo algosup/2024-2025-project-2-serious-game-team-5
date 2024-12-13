@@ -206,3 +206,6 @@ func _on_road_pressed() -> void:
 	$ConstructionMenu/UI_Click.play()
 	GlobalVariables.selected_building = 24
 	GlobalVariables.building_price = 500
+
+func _on_save_button_pressed() -> void:
+	BuildingsMgr._save_game()
