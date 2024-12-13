@@ -851,6 +851,7 @@ wait_time = 0.4
 
 [node name="SmallHouseInfo" type="ColorRect" parent="ConstructionMenu/ConstructionMenuBox"]
 visible = false
+layout_mode = 0
 offset_left = -135.0
 offset_right = -2.0
 offset_bottom = 178.0
@@ -913,6 +914,7 @@ label_settings = SubResource("LabelSettings_nhvpv")
 
 [node name="MediumHouseInfo" type="ColorRect" parent="ConstructionMenu/ConstructionMenuBox"]
 visible = false
+layout_mode = 0
 offset_left = -135.0
 offset_right = -2.0
 offset_bottom = 189.0
@@ -977,6 +979,7 @@ label_settings = SubResource("LabelSettings_nhvpv")
 
 [node name="LargeHouseInfo" type="ColorRect" parent="ConstructionMenu/ConstructionMenuBox"]
 visible = false
+layout_mode = 0
 offset_left = -135.0
 offset_right = -2.0
 offset_bottom = 189.0
@@ -1042,6 +1045,7 @@ label_settings = SubResource("LabelSettings_nhvpv")
 
 [node name="ApartmentInfo" type="ColorRect" parent="ConstructionMenu/ConstructionMenuBox"]
 visible = false
+layout_mode = 0
 offset_left = -135.0
 offset_right = -2.0
 offset_bottom = 203.0
@@ -1108,6 +1112,7 @@ label_settings = SubResource("LabelSettings_nhvpv")
 
 [node name="SkyscraperInfo" type="ColorRect" parent="ConstructionMenu/ConstructionMenuBox"]
 visible = false
+layout_mode = 0
 offset_left = -135.0
 offset_right = -2.0
 offset_bottom = 196.0
@@ -1173,6 +1178,7 @@ label_settings = SubResource("LabelSettings_nhvpv")
 
 [node name="HospitalInfo" type="ColorRect" parent="ConstructionMenu/ConstructionMenuBox"]
 visible = false
+layout_mode = 0
 offset_left = -135.0
 offset_right = -2.0
 offset_bottom = 211.0
@@ -1242,6 +1248,7 @@ label_settings = SubResource("LabelSettings_nhvpv")
 
 [node name="MuseumInfo" type="ColorRect" parent="ConstructionMenu/ConstructionMenuBox"]
 visible = false
+layout_mode = 0
 offset_left = -135.0
 offset_right = -2.0
 offset_bottom = 222.0
@@ -1309,6 +1316,7 @@ label_settings = SubResource("LabelSettings_nhvpv")
 
 [node name="SchoolInfo" type="ColorRect" parent="ConstructionMenu/ConstructionMenuBox"]
 visible = false
+layout_mode = 0
 offset_left = -135.0
 offset_right = -2.0
 offset_bottom = 207.0
@@ -1375,6 +1383,7 @@ label_settings = SubResource("LabelSettings_nhvpv")
 
 [node name="FactoryInfo" type="ColorRect" parent="ConstructionMenu/ConstructionMenuBox"]
 visible = false
+layout_mode = 0
 offset_left = -135.0
 offset_right = -2.0
 offset_bottom = 219.0
@@ -1443,6 +1452,7 @@ label_settings = SubResource("LabelSettings_nhvpv")
 
 [node name="PowerPlantInfo" type="ColorRect" parent="ConstructionMenu/ConstructionMenuBox"]
 visible = false
+layout_mode = 0
 offset_left = -135.0
 offset_right = -2.0
 offset_bottom = 207.0
@@ -1511,6 +1521,7 @@ label_settings = SubResource("LabelSettings_nhvpv")
 
 [node name="SolarPanelInfo" type="ColorRect" parent="ConstructionMenu/ConstructionMenuBox"]
 visible = false
+layout_mode = 0
 offset_left = -135.0
 offset_right = -2.0
 offset_bottom = 214.0
@@ -1580,6 +1591,7 @@ label_settings = SubResource("LabelSettings_nhvpv")
 
 [node name="WindTurbineInfo" type="ColorRect" parent="ConstructionMenu/ConstructionMenuBox"]
 visible = false
+layout_mode = 0
 offset_left = -135.0
 offset_right = -2.0
 offset_bottom = 211.0
@@ -1647,6 +1659,7 @@ label_settings = SubResource("LabelSettings_nhvpv")
 
 [node name="BakeryInfo" type="ColorRect" parent="ConstructionMenu/ConstructionMenuBox"]
 visible = false
+layout_mode = 0
 offset_left = -135.0
 offset_right = -2.0
 offset_bottom = 196.0
@@ -1713,6 +1726,7 @@ label_settings = SubResource("LabelSettings_nhvpv")
 
 [node name="BarbershopInfo" type="ColorRect" parent="ConstructionMenu/ConstructionMenuBox"]
 visible = false
+layout_mode = 0
 offset_left = -135.0
 offset_right = -2.0
 offset_bottom = 183.0
@@ -1778,6 +1792,7 @@ label_settings = SubResource("LabelSettings_nhvpv")
 
 [node name="BookshopInfo" type="ColorRect" parent="ConstructionMenu/ConstructionMenuBox"]
 visible = false
+layout_mode = 0
 offset_left = -135.0
 offset_right = -2.0
 offset_bottom = 196.0
@@ -1844,6 +1859,7 @@ label_settings = SubResource("LabelSettings_nhvpv")
 
 [node name="CasinoInfo" type="ColorRect" parent="ConstructionMenu/ConstructionMenuBox"]
 visible = false
+layout_mode = 0
 offset_left = -135.0
 offset_right = -2.0
 offset_bottom = 196.0
@@ -1910,6 +1926,7 @@ label_settings = SubResource("LabelSettings_nhvpv")
 
 [node name="FarmInfo" type="ColorRect" parent="ConstructionMenu/ConstructionMenuBox"]
 visible = false
+layout_mode = 0
 offset_left = -135.0
 offset_right = -2.0
 offset_bottom = 196.0
@@ -1976,6 +1993,7 @@ label_settings = SubResource("LabelSettings_nhvpv")
 
 [node name="HardwareInfo" type="ColorRect" parent="ConstructionMenu/ConstructionMenuBox"]
 visible = false
+layout_mode = 0
 offset_left = -135.0
 offset_right = -2.0
 offset_bottom = 196.0
@@ -2042,6 +2060,7 @@ label_settings = SubResource("LabelSettings_nhvpv")
 
 [node name="PharmacyInfo" type="ColorRect" parent="ConstructionMenu/ConstructionMenuBox"]
 visible = false
+layout_mode = 0
 offset_left = -135.0
 offset_right = -2.0
 offset_bottom = 196.0
@@ -2108,6 +2127,7 @@ label_settings = SubResource("LabelSettings_nhvpv")
 
 [node name="BenchInfo" type="ColorRect" parent="ConstructionMenu/ConstructionMenuBox"]
 visible = false
+layout_mode = 0
 offset_left = -135.0
 offset_right = -2.0
 offset_bottom = 210.0
@@ -2174,6 +2194,7 @@ label_settings = SubResource("LabelSettings_nhvpv")
 
 [node name="TreeInfo" type="ColorRect" parent="ConstructionMenu/ConstructionMenuBox"]
 visible = false
+layout_mode = 0
 offset_left = -135.0
 offset_right = -2.0
 offset_bottom = 203.0
@@ -2241,6 +2262,7 @@ label_settings = SubResource("LabelSettings_nhvpv")
 
 [node name="RoadInfo" type="ColorRect" parent="ConstructionMenu/ConstructionMenuBox"]
 visible = false
+layout_mode = 0
 offset_left = -135.0
 offset_right = -2.0
 offset_bottom = 209.0
@@ -2307,6 +2329,7 @@ label_settings = SubResource("LabelSettings_nhvpv")
 
 [node name="LakeInfo" type="ColorRect" parent="ConstructionMenu/ConstructionMenuBox"]
 visible = false
+layout_mode = 0
 offset_left = -135.0
 offset_right = -2.0
 offset_bottom = 209.0
@@ -2426,6 +2449,7 @@ theme_override_font_sizes/font_size = 40
 text = "Resume"
 
 [node name="SaveButton" type="Button" parent="SettingsMenu"]
+layout_mode = 0
 offset_left = 841.0
 offset_top = 522.0
 offset_right = 1228.0
@@ -2434,6 +2458,7 @@ theme_override_font_sizes/font_size = 40
 text = "Save"
 
 [node name="MainMenuButton" type="Button" parent="SettingsMenu"]
+layout_mode = 0
 offset_left = 841.0
 offset_top = 714.0
 offset_right = 1228.0

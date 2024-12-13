@@ -1,7 +1,7 @@
 extends ColorRect
 const USER_MONEY_DATA_FILE_PATH = "user://userMoneyData.dat"
 
-const base_money = 5000000000000
+const base_money = 500000
 
 var money_label: Label = null
 var money_day_value: Label = null
@@ -13,16 +13,21 @@ func set_base_money(new_money_label: Label, new_money_day_value: Label) -> void:
 	_load_money()
 	money_label.text = _format_money(GlobalVariables.remaining_money)
 	
+func display_money() -> void:
+	if money_label == null:
+		return
+	money_label.text = _format_money(GlobalVariables.remaining_money)
+
 func add_money(to_add: int) -> void:
 	GlobalVariables.remaining_money += to_add
 	money_label.text = _format_money(GlobalVariables.remaining_money)
 	money_day_value.text = _format_money(to_add) + " / Day"
-	_save_money()
+	save_money()
 
 func rem_money(to_rem: int) -> void:
 	GlobalVariables.remaining_money -= to_rem
 	money_label.text = _format_money(GlobalVariables.remaining_money)
-	_save_money()
+	save_money()
 
 func _format_money(money: int) -> String:
 	var num_str = str(money)
@@ -36,7 +41,7 @@ func _format_money(money: int) -> String:
 	
 	return formatted_str + " $"
 
-func _save_money() -> void:
+func save_money() -> void:
 	var file := FileAccess.open(USER_MONEY_DATA_FILE_PATH, FileAccess.WRITE)
 	if file:
 		file.store_string(str(GlobalVariables.remaining_money))
@@ -49,7 +54,7 @@ func reset_money() -> void:
 		return
 	GlobalVariables.remaining_money = base_money
 	money_label.text = _format_money(GlobalVariables.remaining_money)
-	_save_money()
+	save_money()
 
 func _load_money() -> void:
 	if FileAccess.file_exists(USER_MONEY_DATA_FILE_PATH):
