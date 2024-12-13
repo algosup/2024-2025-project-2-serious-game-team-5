@@ -1,7 +1,6 @@
-[gd_scene load_steps=59 format=4 uid="uid://htmeeru1v4h8"]
+[gd_scene load_steps=64 format=4 uid="uid://htmeeru1v4h8"]
 
 [ext_resource type="Script" path="res://GDScript/GameScript/InterfaceScript/Interface.gd" id="1_5xait"]
-[ext_resource type="Texture2D" uid="uid://yf82ro07spqe" path="res://Assets/2DAssets/Interface/Construction.png" id="1_q44jx"]
 [ext_resource type="Texture2D" uid="uid://dewoswlt3sm2e" path="res://Assets/2DAssets/Interface/Smoke Icon.png" id="2_qp4yp"]
 [ext_resource type="FontFile" uid="uid://i0sopgyfpnb1" path="res://Assets/Fonts/Parkinsans/Parkinsans-VariableFont_wght.ttf" id="2_vortr"]
 [ext_resource type="Script" path="res://GDScript/GameScript/InterfaceScript/Timer.gd" id="2_xjeol"]
@@ -13,6 +12,7 @@
 [ext_resource type="Texture2D" uid="uid://b8rl6tgbflasg" path="res://Assets/2DAssets/Interface/Money Icon.png" id="6_3r48q"]
 [ext_resource type="Texture2D" uid="uid://cbijw0bfmxbna" path="res://Assets/2DAssets/Interface/Buildings/Houses/apartment.png" id="6_kgbo8"]
 [ext_resource type="Texture2D" uid="uid://cv22vjyn1ueaa" path="res://Assets/2DAssets/Interface/Buildings/Houses/skyscraper.png" id="7_duqr8"]
+[ext_resource type="Texture2D" uid="uid://b6o70h01ydyis" path="res://Assets/2DAssets/Interface/Buildings/Public/city-hall.png" id="8_1b5uu"]
 [ext_resource type="Texture2D" uid="uid://c6c7nx1786jue" path="res://Assets/2DAssets/Interface/Calendar Icon.png" id="8_jdok0"]
 [ext_resource type="Texture2D" uid="uid://bwh84vinrl1y6" path="res://Assets/2DAssets/Interface/Buildings/Public/hospital.png" id="9_va2x0"]
 [ext_resource type="Texture2D" uid="uid://uradaprkbeyg" path="res://Assets/2DAssets/Interface/Buildings/Public/museum.png" id="10_3w7my"]
@@ -29,11 +29,16 @@
 [ext_resource type="Texture2D" uid="uid://cex77rqarhmht" path="res://Assets/2DAssets/Interface/Others/Decorative/bench.png" id="21_jhn4m"]
 [ext_resource type="Texture2D" uid="uid://butp08ujbt2kp" path="res://Assets/2DAssets/Interface/Buildings/Commercial/Hardware.png" id="21_tse4m"]
 [ext_resource type="Texture2D" uid="uid://clk0j7xji3uv6" path="res://Assets/2DAssets/Interface/Buildings/Commercial/Pharmacy.png" id="22_6wcch"]
+[ext_resource type="Texture2D" uid="uid://chggo8hw2u60b" path="res://Assets/2DAssets/Interface/Others/Decorative/streetlight.png" id="22_038ja"]
 [ext_resource type="Texture2D" uid="uid://cgv6inxknwam7" path="res://Assets/2DAssets/Interface/Others/Decorative/trees.png" id="23_pevaw"]
+[ext_resource type="Texture2D" uid="uid://bxqevxc0yoliu" path="res://Assets/2DAssets/Interface/Others/Terrain/grass.png" id="24_vc05v"]
 [ext_resource type="Texture2D" uid="uid://beq3oudp8yfe5" path="res://Assets/2DAssets/Interface/Others/Terrain/lake.png" id="25_qn2le"]
+[ext_resource type="Texture2D" uid="uid://fo7v84wjawva" path="res://Assets/2DAssets/Interface/Others/Terrain/water.png" id="27_gyv68"]
 [ext_resource type="Texture2D" uid="uid://b2eshtsc1pfcx" path="res://Assets/2DAssets/Interface/Others/Terrain/road.png" id="28_peh56"]
 [ext_resource type="AudioStream" uid="uid://cm8rqc83fiymm" path="res://Assets/Music&Sound/UI_Click.ogg" id="31_dal6q"]
+[ext_resource type="Texture2D" uid="uid://ddo3gv5w4ffmq" path="res://Assets/2DAssets/Interface/build.png" id="37_2vjjt"]
 [ext_resource type="Texture2D" uid="uid://d2nqvm68uh4uy" path="res://Assets/2DAssets/Interface/Money Time Icon.png" id="38_2d2an"]
+[ext_resource type="Texture2D" uid="uid://b30m6en72xu7i" path="res://Assets/2DAssets/Interface/destroy.png" id="38_2wwf4"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_t4721"]
 font = ExtResource("2_vortr")
@@ -346,12 +351,13 @@ anchor_left = 0.936
 anchor_top = 1.0
 anchor_right = 1.068
 anchor_bottom = 1.0
-offset_left = -418.272
-offset_top = -555.0
-offset_right = 273.664
-offset_bottom = 55.0
+offset_left = -704.12
+offset_top = -785.0
+offset_right = -12.1838
+offset_bottom = -175.0
 grow_horizontal = 0
 grow_vertical = 0
+scale = Vector2(1.5, 1.5)
 theme_override_constants/separation = 10
 
 [node name="ConstructionMenuBox" type="ColorRect" parent="ConstructionMenu"]
@@ -498,11 +504,22 @@ offset_bottom = 33.0
 text = "━━━━━━━━━━━━━━━━━━━━━━"
 label_settings = SubResource("LabelSettings_eklb7")
 
+[node name="CityHall" type="TextureButton" parent="ConstructionMenu/ConstructionMenuBox/ScrollContainer/BuildingsBox/BuildingsLabel/PublicLabel"]
+layout_mode = 0
+offset_left = -7.0
+offset_top = 25.0
+offset_right = 539.0
+offset_bottom = 482.0
+scale = Vector2(0.07, 0.07)
+mouse_filter = 1
+mouse_default_cursor_shape = 2
+texture_normal = ExtResource("8_1b5uu")
+
 [node name="Hospital" type="TextureButton" parent="ConstructionMenu/ConstructionMenuBox/ScrollContainer/BuildingsBox/BuildingsLabel/PublicLabel"]
 layout_mode = 0
-offset_left = -8.0
+offset_left = 43.0
 offset_top = 20.0
-offset_right = 415.0
+offset_right = 466.0
 offset_bottom = 610.0
 scale = Vector2(0.07, 0.07)
 mouse_filter = 1
@@ -511,9 +528,9 @@ texture_normal = ExtResource("9_va2x0")
 
 [node name="Museum" type="TextureButton" parent="ConstructionMenu/ConstructionMenuBox/ScrollContainer/BuildingsBox/BuildingsLabel/PublicLabel"]
 layout_mode = 0
-offset_left = 39.0
+offset_left = 90.0
 offset_top = 29.0
-offset_right = 654.0
+offset_right = 705.0
 offset_bottom = 435.0
 scale = Vector2(0.07, 0.07)
 mouse_filter = 1
@@ -522,9 +539,9 @@ texture_normal = ExtResource("10_3w7my")
 
 [node name="School" type="TextureButton" parent="ConstructionMenu/ConstructionMenuBox/ScrollContainer/BuildingsBox/BuildingsLabel/PublicLabel"]
 layout_mode = 0
-offset_left = 92.0
+offset_left = 143.0
 offset_top = 27.0
-offset_right = 642.0
+offset_right = 693.0
 offset_bottom = 481.0
 scale = Vector2(0.07, 0.07)
 mouse_filter = 1
@@ -735,12 +752,23 @@ mouse_filter = 1
 mouse_default_cursor_shape = 2
 texture_normal = ExtResource("21_jhn4m")
 
-[node name="Tree" type="TextureButton" parent="ConstructionMenu/ConstructionMenuBox/ScrollContainer/BuildingsBox/OthersLabel/DecorativeLabel"]
+[node name="Streetlight" type="TextureButton" parent="ConstructionMenu/ConstructionMenuBox/ScrollContainer/BuildingsBox/OthersLabel/DecorativeLabel"]
 layout_mode = 0
 offset_left = 50.0
-offset_top = 25.0
-offset_right = 615.0
-offset_bottom = 467.0
+offset_top = 17.0
+offset_right = 343.0
+offset_bottom = 868.0
+scale = Vector2(0.07, 0.07)
+mouse_filter = 1
+mouse_default_cursor_shape = 2
+texture_normal = ExtResource("22_038ja")
+
+[node name="Tree" type="TextureButton" parent="ConstructionMenu/ConstructionMenuBox/ScrollContainer/BuildingsBox/OthersLabel/DecorativeLabel"]
+layout_mode = 0
+offset_left = 90.0
+offset_top = 26.0
+offset_right = 655.0
+offset_bottom = 468.0
 scale = Vector2(0.08, 0.08)
 mouse_filter = 1
 mouse_default_cursor_shape = 2
@@ -764,12 +792,34 @@ offset_bottom = 33.0
 text = "━━━━━━━━━━━━━━━━━━━━━━━━"
 label_settings = SubResource("LabelSettings_msxx7")
 
+[node name="Grass" type="TextureButton" parent="ConstructionMenu/ConstructionMenuBox/ScrollContainer/BuildingsBox/OthersLabel/TerrainLabel"]
+layout_mode = 0
+offset_left = -6.0
+offset_top = 30.0
+offset_right = 1694.0
+offset_bottom = 1730.0
+scale = Vector2(0.02, 0.02)
+mouse_filter = 1
+mouse_default_cursor_shape = 2
+texture_normal = ExtResource("24_vc05v")
+
+[node name="Water" type="TextureButton" parent="ConstructionMenu/ConstructionMenuBox/ScrollContainer/BuildingsBox/OthersLabel/TerrainLabel"]
+layout_mode = 0
+offset_left = 40.0
+offset_top = 30.0
+offset_right = 95.0
+offset_bottom = 79.0
+scale = Vector2(0.067, 0.067)
+mouse_filter = 1
+mouse_default_cursor_shape = 2
+texture_normal = ExtResource("27_gyv68")
+
 [node name="Road" type="TextureButton" parent="ConstructionMenu/ConstructionMenuBox/ScrollContainer/BuildingsBox/OthersLabel/TerrainLabel"]
 layout_mode = 0
-offset_left = -1.0
+offset_left = 90.0
 offset_top = 30.0
-offset_right = 511.0
-offset_bottom = 542.0
+offset_right = 144.0
+offset_bottom = 79.0
 scale = Vector2(0.067, 0.067)
 mouse_filter = 1
 mouse_default_cursor_shape = 2
@@ -777,27 +827,46 @@ texture_normal = ExtResource("28_peh56")
 
 [node name="Lake" type="TextureButton" parent="ConstructionMenu/ConstructionMenuBox/ScrollContainer/BuildingsBox/OthersLabel/TerrainLabel"]
 layout_mode = 0
-offset_left = 49.0
+offset_left = 140.0
 offset_top = 25.0
-offset_right = 603.0
+offset_right = 694.0
 offset_bottom = 475.0
 scale = Vector2(0.09, 0.09)
 mouse_filter = 1
 mouse_default_cursor_shape = 2
 texture_normal = ExtResource("25_qn2le")
 
-[node name="ConstructionMenuButton" type="TextureButton" parent="ConstructionMenu"]
-layout_mode = 2
-size_flags_horizontal = 4
-mouse_filter = 1
-mouse_default_cursor_shape = 2
-texture_normal = ExtResource("1_q44jx")
-
 [node name="Constuction" type="AudioStreamPlayer" parent="ConstructionMenu"]
 stream = SubResource("AudioStreamMP3_fkxv6")
 
 [node name="UI_Click" type="AudioStreamPlayer" parent="ConstructionMenu"]
 stream = ExtResource("31_dal6q")
+
+[node name="ConstructionBtnNode" type="Node" parent="ConstructionMenu"]
+
+[node name="ConstructionMenuButton" type="TextureButton" parent="ConstructionMenu/ConstructionBtnNode"]
+offset_left = 1768.0
+offset_top = 938.0
+offset_right = 1868.0
+offset_bottom = 1038.0
+scale = Vector2(0.2, 0.2)
+size_flags_horizontal = 4
+mouse_filter = 1
+mouse_default_cursor_shape = 2
+texture_normal = ExtResource("37_2vjjt")
+
+[node name="DestructionBtnNode" type="Node" parent="ConstructionMenu"]
+
+[node name="DestructionButton" type="TextureButton" parent="ConstructionMenu/DestructionBtnNode"]
+offset_left = 1619.0
+offset_top = 938.0
+offset_right = 2131.0
+offset_bottom = 1450.0
+scale = Vector2(0.2, 0.2)
+size_flags_horizontal = 4
+mouse_filter = 1
+mouse_default_cursor_shape = 2
+texture_normal = ExtResource("38_2wwf4")
 
 [node name="EarnPerDayBackground" type="ColorRect" parent="."]
 layout_mode = 0
@@ -863,6 +932,7 @@ text = "Main Menu"
 [connection signal="pressed" from="ConstructionMenu/ConstructionMenuBox/ScrollContainer/BuildingsBox/BuildingsLabel/ResidentialsLabel/LargeHouse" to="." method="_on_large_house_pressed"]
 [connection signal="pressed" from="ConstructionMenu/ConstructionMenuBox/ScrollContainer/BuildingsBox/BuildingsLabel/ResidentialsLabel/Apartment" to="." method="_on_apartment_pressed"]
 [connection signal="pressed" from="ConstructionMenu/ConstructionMenuBox/ScrollContainer/BuildingsBox/BuildingsLabel/ResidentialsLabel/Skyscraper" to="." method="_on_skyscraper_pressed"]
+[connection signal="pressed" from="ConstructionMenu/ConstructionMenuBox/ScrollContainer/BuildingsBox/BuildingsLabel/PublicLabel/CityHall" to="." method="_on_city_hall_pressed"]
 [connection signal="pressed" from="ConstructionMenu/ConstructionMenuBox/ScrollContainer/BuildingsBox/BuildingsLabel/PublicLabel/Hospital" to="." method="_on_hospital_pressed"]
 [connection signal="pressed" from="ConstructionMenu/ConstructionMenuBox/ScrollContainer/BuildingsBox/BuildingsLabel/PublicLabel/Museum" to="." method="_on_museum_pressed"]
 [connection signal="pressed" from="ConstructionMenu/ConstructionMenuBox/ScrollContainer/BuildingsBox/BuildingsLabel/PublicLabel/School" to="." method="_on_school_pressed"]
@@ -878,8 +948,9 @@ text = "Main Menu"
 [connection signal="pressed" from="ConstructionMenu/ConstructionMenuBox/ScrollContainer/BuildingsBox/BuildingsLabel/CommercialLabel/Hardware" to="." method="_on_hardware_shop_pressed"]
 [connection signal="pressed" from="ConstructionMenu/ConstructionMenuBox/ScrollContainer/BuildingsBox/BuildingsLabel/CommercialLabel/Pharmacy" to="." method="_on_pharmacy_pressed"]
 [connection signal="pressed" from="ConstructionMenu/ConstructionMenuBox/ScrollContainer/BuildingsBox/OthersLabel/DecorativeLabel/Bench" to="." method="_on_bench_pressed"]
+[connection signal="pressed" from="ConstructionMenu/ConstructionMenuBox/ScrollContainer/BuildingsBox/OthersLabel/DecorativeLabel/Streetlight" to="." method="_on_street_light_pressed"]
 [connection signal="pressed" from="ConstructionMenu/ConstructionMenuBox/ScrollContainer/BuildingsBox/OthersLabel/DecorativeLabel/Tree" to="." method="_on_tree_pressed"]
 [connection signal="pressed" from="ConstructionMenu/ConstructionMenuBox/ScrollContainer/BuildingsBox/OthersLabel/TerrainLabel/Road" to="." method="_on_road_pressed"]
 [connection signal="pressed" from="ConstructionMenu/ConstructionMenuBox/ScrollContainer/BuildingsBox/OthersLabel/TerrainLabel/Lake" to="." method="_on_lake_pressed"]
-[connection signal="pressed" from="ConstructionMenu/ConstructionMenuButton" to="." method="_on_construction_menu_button_pressed"]
-[connection signal="pressed" from="SettingsMenu/SaveButton" to="." method="_on_save_button_pressed"]
+[connection signal="pressed" from="ConstructionMenu/ConstructionBtnNode/ConstructionMenuButton" to="." method="_on_construction_menu_button_pressed"]
+[connection signal="pressed" from="ConstructionMenu/DestructionBtnNode/DestructionButton" to="." method="_on_construction_menu_button_pressed"]
