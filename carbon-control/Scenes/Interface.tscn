@@ -248,10 +248,10 @@ text = "123,400 $"
 
 [node name="Year&DayBackground" type="ColorRect" parent="."]
 layout_mode = 0
-offset_left = 943.0
-offset_top = 10.0
-offset_right = 1144.0
-offset_bottom = 71.0
+offset_left = 1695.0
+offset_top = 19.0
+offset_right = 1896.0
+offset_bottom = 80.0
 mouse_filter = 1
 color = Color(0.0562916, 0.0562916, 0.0562916, 1)
 script = ExtResource("2_xjeol")
