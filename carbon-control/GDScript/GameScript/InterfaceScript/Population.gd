@@ -30,7 +30,7 @@ func set_base_population(new_popu_label: Label) -> void:
 	
 func _on_day_timer_timeout() -> void:
 	update_population()
-	save_population_data()  # Save the updated population value
+	save_population_data() # Save the updated population value
 
 # Load the saved happiness value from the user happiness data file
 func _load_happiness_value() -> void:
@@ -38,7 +38,7 @@ func _load_happiness_value() -> void:
 		var file := FileAccess.open(USER_HAPPINESS_DATA_FILE_PATH, FileAccess.READ)
 		if file:
 			var content: String = file.get_as_text().strip_edges()
-			GlobalVariables.happiness_value = float(content)  # Assuming the file only contains the happiness value
+			GlobalVariables.happiness_value = float(content) # Assuming the file only contains the happiness value
 			file.close()
 		else:
 			print("Error: Failed to open happiness data file.")
@@ -50,24 +50,36 @@ func update_population() -> void:
 		var happiness_percentage: float = GlobalVariables.happiness_value / 100.0
 		var population_change: int = 0
 		
-		if happiness_percentage <= 15:
+		print(happiness_percentage)
+		
+		if happiness_percentage <= 0.15:
 			population_change -= round(GlobalVariables.population_value * 0.15)
-		elif happiness_percentage <= 30:
-			population_change = round(GlobalVariables.population_value * 0.1)
-		elif happiness_percentage <= 45:
+			print('Pop decrease very high')
+		elif happiness_percentage <= 0.30:
+			population_change -= round(GlobalVariables.population_value * 0.1)
+			print('Pop decrease low')
+		elif happiness_percentage <= 0.45:
 			population_change = round(GlobalVariables.population_value * 0.05)
-		elif happiness_percentage <= 60:
-			population_change += round(GlobalVariables.population_value * 0.01)
-		elif happiness_percentage <= 70:
-			population_change += round(GlobalVariables.population_value * 0.05)
-		elif happiness_percentage <= 90:
-			population_change += round(GlobalVariables.population_value * 0.1)
+			print('Pop increase low')
+		elif happiness_percentage <= 0.60:
+			population_change = round(GlobalVariables.population_value * 0.01)
+			print('Pop increase very low')
+		elif happiness_percentage <= 0.70:
+			population_change = round(GlobalVariables.population_value * 0.05)
+			print('Pop increase low')
+		elif happiness_percentage <= 0.90:
+			population_change = round(GlobalVariables.population_value * 0.1)
+			print('Pop increase high')
 		else:
-			population_change += round(GlobalVariables.population_value * 0.15)
+			population_change = round(GlobalVariables.population_value * 0.15)
+			print('Pop increase very high')
 
 		GlobalVariables.population_value += population_change
 		if GlobalVariables.population_value < 10:
 			GlobalVariables.population_value = 10
+		
+		if GlobalVariables.population_value > GlobalVariables.population_max:
+			GlobalVariables.population_value = GlobalVariables.population_max
 
 
 	display_population()
@@ -75,7 +87,7 @@ func update_population() -> void:
 
 # Display the population value
 func display_population() -> void:
-	if population_label == null :
+	if population_label == null:
 		print("Error: Population label not found")
 		return
 	if GlobalVariables != null && GlobalVariables.population_value != null && GlobalVariables.population_max != null:
