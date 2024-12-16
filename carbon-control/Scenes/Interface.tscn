@@ -807,7 +807,7 @@ visible = false
 layout_mode = 0
 offset_left = -135.0
 offset_right = -2.0
-offset_bottom = 178.0
+offset_bottom = 198.0
 mouse_filter = 1
 mouse_default_cursor_shape = 2
 color = Color(0.956863, 0.960784, 0.980392, 1)
@@ -848,18 +848,20 @@ layout_mode = 0
 offset_left = 9.0
 offset_top = 83.0
 offset_right = 124.0
-offset_bottom = 173.0
+offset_bottom = 193.0
 
 [node name="Subtitles" type="Label" parent="ConstructionMenu/ConstructionMenuBox/SmallHouseInfo/ColorRect2"]
 layout_mode = 0
 offset_right = 70.0
 offset_bottom = 197.0
 scale = Vector2(0.5, 0.5)
-text = "- Cost: $28,000
+text = "- Construction Cost: 28,000
 
-- Capacity: 2 citizens
+- Citizen Capacity: 2
 
-- Size: 1x1
+- Building Size: 1x1
+
+- Annual Pollution: 10T CO2
 
 - Description: A cozy home 
 perfect for two residents."
@@ -870,7 +872,7 @@ visible = false
 layout_mode = 0
 offset_left = -135.0
 offset_right = -2.0
-offset_bottom = 189.0
+offset_bottom = 210.0
 mouse_filter = 1
 mouse_default_cursor_shape = 2
 color = Color(0.956863, 0.960784, 0.980392, 1)
@@ -911,18 +913,20 @@ layout_mode = 0
 offset_left = 9.0
 offset_top = 83.0
 offset_right = 124.0
-offset_bottom = 183.0
+offset_bottom = 205.0
 
 [node name="Subtitles" type="Label" parent="ConstructionMenu/ConstructionMenuBox/MediumHouseInfo/ColorRect2"]
 layout_mode = 0
 offset_right = 70.0
 offset_bottom = 197.0
 scale = Vector2(0.5, 0.5)
-text = "- Cost: $60,000
+text = "- Construction Cost: 60,000
 
-- Capacity: 4 citizens
+- Citizen Capacity: 4
 
-- Size: 2x2
+- Building Size: 2x2
+
+- Annual Pollution: 40T CO2
 
 - Description: A comfortable 
 dwelling suitable for a small
@@ -935,7 +939,7 @@ visible = false
 layout_mode = 0
 offset_left = -135.0
 offset_right = -2.0
-offset_bottom = 189.0
+offset_bottom = 211.0
 mouse_filter = 1
 mouse_default_cursor_shape = 2
 color = Color(0.956863, 0.960784, 0.980392, 1)
@@ -978,18 +982,20 @@ layout_mode = 0
 offset_left = 9.0
 offset_top = 83.0
 offset_right = 124.0
-offset_bottom = 184.0
+offset_bottom = 205.0
 
 [node name="Subtitles" type="Label" parent="ConstructionMenu/ConstructionMenuBox/LargeHouseInfo/ColorRect2"]
 layout_mode = 0
 offset_right = 70.0
 offset_bottom = 197.0
 scale = Vector2(0.5, 0.5)
-text = "- Cost: $84,000
+text = "- Construction Cost: 84,000
 
-- Capacity: 6 citizens
+- Citizen Capacity: 6
 
-- Size: 2x3
+- Building Size: 2x3
+
+- Annual Pollution: 120T CO2
 
  - Description: A spacious
 residence designed for larger
@@ -1001,7 +1007,7 @@ visible = false
 layout_mode = 0
 offset_left = -135.0
 offset_right = -2.0
-offset_bottom = 203.0
+offset_bottom = 223.0
 mouse_filter = 1
 mouse_default_cursor_shape = 2
 color = Color(0.956863, 0.960784, 0.980392, 1)
@@ -1044,18 +1050,20 @@ layout_mode = 0
 offset_left = 9.0
 offset_top = 83.0
 offset_right = 124.0
-offset_bottom = 196.0
+offset_bottom = 217.0
 
 [node name="Subtitles" type="Label" parent="ConstructionMenu/ConstructionMenuBox/ApartmentInfo/ColorRect2"]
 layout_mode = 0
 offset_right = 70.0
 offset_bottom = 197.0
 scale = Vector2(0.5, 0.5)
-text = "- Cost: $1,320,000
+text = "- Construction Cost: 2,000,000
 
-- Capacity: 24 citizens
+- Citizen Capacity: 70
 
-- Size: 4x5
+- Building Size: 4x5
+
+- Annual Pollution: 525T CO2
 
 - Description: A large building
 with multiple units, perfect for
@@ -1068,7 +1076,7 @@ visible = false
 layout_mode = 0
 offset_left = -135.0
 offset_right = -2.0
-offset_bottom = 196.0
+offset_bottom = 213.0
 mouse_filter = 1
 mouse_default_cursor_shape = 2
 color = Color(0.956863, 0.960784, 0.980392, 1)
@@ -1110,18 +1118,20 @@ layout_mode = 0
 offset_left = 9.0
 offset_top = 83.0
 offset_right = 126.0
-offset_bottom = 189.0
+offset_bottom = 207.0
 
 [node name="Subtitles" type="Label" parent="ConstructionMenu/ConstructionMenuBox/SkyscraperInfo/ColorRect2"]
 layout_mode = 0
 offset_right = 242.0
 offset_bottom = 283.0
 scale = Vector2(0.5, 0.5)
-text = "- Cost: $7,040,000
+text = "- Construction Cost: 30,000,000
 
-- Capacity: 128 citizens
+- Citizen Capacity: 1000
 
-- Size: 7x8
+- Building Size: 7x8
+
+- Annual Pollution: 5000T CO2
 
 - Description: A towering 
 structure that can accommodate
@@ -1134,7 +1144,7 @@ visible = false
 layout_mode = 0
 offset_left = -135.0
 offset_right = -2.0
-offset_bottom = 211.0
+offset_bottom = 194.0
 mouse_filter = 1
 mouse_default_cursor_shape = 2
 color = Color(0.956863, 0.960784, 0.980392, 1)
@@ -1178,20 +1188,18 @@ layout_mode = 0
 offset_left = 9.0
 offset_top = 83.0
 offset_right = 124.0
-offset_bottom = 205.0
+offset_bottom = 187.0
 
 [node name="Subtitles" type="Label" parent="ConstructionMenu/ConstructionMenuBox/HospitalInfo/ColorRect2"]
 layout_mode = 0
 offset_right = 70.0
 offset_bottom = 197.0
 scale = Vector2(0.5, 0.5)
-text = "- Cost: $400,000
+text = "- Construction Cost: 400,000
 
-- Daily Income: $2,000
+- Building Size: 8x16
 
-- Happiness: +600
-
-- Size: 8x16
+- Annual Pollution: 150T CO2
 
 - Description: A medical
 facility that provides healthcare
@@ -1204,7 +1212,7 @@ visible = false
 layout_mode = 0
 offset_left = -135.0
 offset_right = -2.0
-offset_bottom = 222.0
+offset_bottom = 193.0
 mouse_filter = 1
 mouse_default_cursor_shape = 2
 color = Color(0.956863, 0.960784, 0.980392, 1)
@@ -1247,20 +1255,18 @@ layout_mode = 0
 offset_left = 9.0
 offset_top = 83.0
 offset_right = 124.0
-offset_bottom = 215.0
+offset_bottom = 186.0
 
 [node name="Subtitles" type="Label" parent="ConstructionMenu/ConstructionMenuBox/MuseumInfo/ColorRect2"]
 layout_mode = 0
 offset_right = 242.0
 offset_bottom = 283.0
 scale = Vector2(0.5, 0.5)
-text = "- Cost: $800,000
+text = "- Construction Cost: 800,000
 
-- Daily Income: $4,000
+- Building Size: 6x6
 
-- Happiness: +1,200
-
-- Size: 6x6
+- Annual Pollution: 100T CO2
 
 - Description: A cultural
 institution that showcases art, 
@@ -1272,7 +1278,7 @@ visible = false
 layout_mode = 0
 offset_left = -135.0
 offset_right = -2.0
-offset_bottom = 207.0
+offset_bottom = 184.0
 mouse_filter = 1
 mouse_default_cursor_shape = 2
 color = Color(0.956863, 0.960784, 0.980392, 1)
@@ -1315,20 +1321,18 @@ layout_mode = 0
 offset_left = 9.0
 offset_top = 83.0
 offset_right = 124.0
-offset_bottom = 202.0
+offset_bottom = 177.0
 
 [node name="Subtitles" type="Label" parent="ConstructionMenu/ConstructionMenuBox/SchoolInfo/ColorRect2"]
 layout_mode = 0
 offset_right = 242.0
 offset_bottom = 283.0
 scale = Vector2(0.5, 0.5)
-text = "- Cost: $200,000
+text = "- Construction Cost: 200,000
 
-- Daily Income: $1,000
+- Building Size: 3x5
 
-- Happiness: +400
-
-- Size: 3x5
+- Annual Pollution: 21T CO2
 
 - Description: A place of
 learning for the city's children."
@@ -1339,7 +1343,7 @@ visible = false
 layout_mode = 0
 offset_left = -135.0
 offset_right = -2.0
-offset_bottom = 219.0
+offset_bottom = 214.0
 mouse_filter = 1
 mouse_default_cursor_shape = 2
 color = Color(0.956863, 0.960784, 0.980392, 1)
@@ -1383,20 +1387,20 @@ layout_mode = 0
 offset_left = 9.0
 offset_top = 83.0
 offset_right = 124.0
-offset_bottom = 214.0
+offset_bottom = 207.0
 
 [node name="Subtitles" type="Label" parent="ConstructionMenu/ConstructionMenuBox/FactoryInfo/ColorRect2"]
 layout_mode = 0
 offset_right = 242.0
 offset_bottom = 283.0
 scale = Vector2(0.5, 0.5)
-text = "- Cost: $400,000
+text = "- Construction Cost: 400,000
 
-- Daily Income: $8,000
+- Daily Income: 8 000
 
-- Daily Pollution: +12,000 CO2
+- Building Size: 7x7
 
-- Size: 7x7
+- Annual Pollution: 5 000T CO2
 
 - Description: A large industrial
 facility that produces goods
@@ -1408,7 +1412,7 @@ visible = false
 layout_mode = 0
 offset_left = -135.0
 offset_right = -2.0
-offset_bottom = 207.0
+offset_bottom = 203.0
 mouse_filter = 1
 mouse_default_cursor_shape = 2
 color = Color(0.956863, 0.960784, 0.980392, 1)
@@ -1452,20 +1456,20 @@ layout_mode = 0
 offset_left = 9.0
 offset_top = 83.0
 offset_right = 124.0
-offset_bottom = 203.0
+offset_bottom = 196.0
 
 [node name="Subtitles" type="Label" parent="ConstructionMenu/ConstructionMenuBox/PowerPlantInfo/ColorRect2"]
 layout_mode = 0
 offset_right = 242.0
 offset_bottom = 283.0
 scale = Vector2(0.5, 0.5)
-text = "- Cost: $3,000,000
+text = "- Construction Cost: 50,000,000
 
-- Daily Income: $35,000
+- Daily Income: 0
 
-- Daily Pollution: +20,000 CO2
+- Building Size: 24x40
 
-- Size: 24x40
+- Annual Purity: 40,000T CO2
 
 - Description: A power plant
 that generates electricity.
@@ -1528,13 +1532,13 @@ layout_mode = 0
 offset_right = 242.0
 offset_bottom = 283.0
 scale = Vector2(0.5, 0.5)
-text = "- Cost: $600,000
+text = "- Construction Cost: 15,000
 
-- Daily Income: $4,000
+- Daily Income: 0
 
-- Daily Pollution: -4,000 CO2
+- Building Size: 4x4
 
-- Size: 2x2
+- Annual Purity: 0.75T CO2
 
 - Description: A renewable
 energy source that generates 
@@ -1597,13 +1601,13 @@ layout_mode = 0
 offset_right = 242.0
 offset_bottom = 283.0
 scale = Vector2(0.5, 0.5)
-text = "- Cost: $360,000
+text = "- Construction Cost: 360,000
 
-- Daily Income: $2,000
+- Daily Income: 0
 
-- Daily Pollution: -2,500 CO2
+- Building Size: 7x9
 
-- Size: 7x9
+- Annual Purity: 197T CO2
 
 - Description: A renewable
 energy source that generates 
@@ -1615,7 +1619,7 @@ visible = false
 layout_mode = 0
 offset_left = -135.0
 offset_right = -2.0
-offset_bottom = 196.0
+offset_bottom = 211.0
 mouse_filter = 1
 mouse_default_cursor_shape = 2
 color = Color(0.956863, 0.960784, 0.980392, 1)
@@ -1659,18 +1663,20 @@ layout_mode = 0
 offset_left = 9.0
 offset_top = 83.0
 offset_right = 124.0
-offset_bottom = 189.0
+offset_bottom = 206.0
 
 [node name="Subtitles" type="Label" parent="ConstructionMenu/ConstructionMenuBox/BakeryInfo/ColorRect2"]
 layout_mode = 0
 offset_right = 242.0
 offset_bottom = 283.0
 scale = Vector2(0.5, 0.5)
-text = "- Cost: $80,000
+text = "- Construction Cost: 80,000
 
-- Daily Income: $1,400
+- Daily Income: 1,200
 
-- Size: 2x2
+- Building Size: 2x2
+
+- Annual Pollution: 3T CO2
 
 - Description: A shop that bakes
 and sells fresh bread and
@@ -1682,7 +1688,7 @@ visible = false
 layout_mode = 0
 offset_left = -135.0
 offset_right = -2.0
-offset_bottom = 183.0
+offset_bottom = 201.0
 mouse_filter = 1
 mouse_default_cursor_shape = 2
 color = Color(0.956863, 0.960784, 0.980392, 1)
@@ -1726,18 +1732,20 @@ layout_mode = 0
 offset_left = 9.0
 offset_top = 83.0
 offset_right = 124.0
-offset_bottom = 177.0
+offset_bottom = 195.0
 
 [node name="Subtitles" type="Label" parent="ConstructionMenu/ConstructionMenuBox/BarbershopInfo/ColorRect2"]
 layout_mode = 0
 offset_right = 242.0
 offset_bottom = 283.0
 scale = Vector2(0.5, 0.5)
-text = "- Cost: $60,000
+text = "- Construction Cost: 60,000
 
-- Daily Income: $1,200
+- Daily Income: 1,400
 
-- Size: 2x2
+- Building Size: 2x2
+
+- Annual Pollution: 1.2T CO2
 
 - Description: A shop that offers 
 haircuts and grooming services."
@@ -1748,7 +1756,7 @@ visible = false
 layout_mode = 0
 offset_left = -135.0
 offset_right = -2.0
-offset_bottom = 196.0
+offset_bottom = 211.0
 mouse_filter = 1
 mouse_default_cursor_shape = 2
 color = Color(0.956863, 0.960784, 0.980392, 1)
@@ -1792,18 +1800,20 @@ layout_mode = 0
 offset_left = 9.0
 offset_top = 83.0
 offset_right = 124.0
-offset_bottom = 189.0
+offset_bottom = 205.0
 
 [node name="Subtitles" type="Label" parent="ConstructionMenu/ConstructionMenuBox/BookshopInfo/ColorRect2"]
 layout_mode = 0
 offset_right = 242.0
 offset_bottom = 283.0
 scale = Vector2(0.5, 0.5)
-text = "- Cost: $40,000
+text = "- Construction Cost: 40,000
 
-- Daily Income: $800
+- Daily Income: 800
 
-- Size: 3x3
+- Building Size: 3x3
+
+- Annual Pollution: 2.5T CO2
 
 - Description: A small shop that
 sells books and other reading 
@@ -1815,7 +1825,7 @@ visible = false
 layout_mode = 0
 offset_left = -135.0
 offset_right = -2.0
-offset_bottom = 196.0
+offset_bottom = 211.0
 mouse_filter = 1
 mouse_default_cursor_shape = 2
 color = Color(0.956863, 0.960784, 0.980392, 1)
@@ -1859,18 +1869,20 @@ layout_mode = 0
 offset_left = 9.0
 offset_top = 83.0
 offset_right = 124.0
-offset_bottom = 189.0
+offset_bottom = 206.0
 
 [node name="Subtitles" type="Label" parent="ConstructionMenu/ConstructionMenuBox/CasinoInfo/ColorRect2"]
 layout_mode = 0
 offset_right = 242.0
 offset_bottom = 283.0
 scale = Vector2(0.5, 0.5)
-text = "- Cost: $3,000,000
+text = "- Construction Cost: 3,000,000
 
-- Daily Income: $30,000
+- Citizen Capacity: 30,000
 
-- Size: 4x10
+- Building Size: 4x10
+
+- Annual Pollution: 125T CO2
 
 - Description: A popular 
 entertainment venue that offers 
@@ -1882,7 +1894,7 @@ visible = false
 layout_mode = 0
 offset_left = -135.0
 offset_right = -2.0
-offset_bottom = 196.0
+offset_bottom = 210.0
 mouse_filter = 1
 mouse_default_cursor_shape = 2
 color = Color(0.956863, 0.960784, 0.980392, 1)
@@ -1925,18 +1937,20 @@ layout_mode = 0
 offset_left = 9.0
 offset_top = 83.0
 offset_right = 124.0
-offset_bottom = 189.0
+offset_bottom = 205.0
 
 [node name="Subtitles" type="Label" parent="ConstructionMenu/ConstructionMenuBox/FarmInfo/ColorRect2"]
 layout_mode = 0
 offset_right = 242.0
 offset_bottom = 283.0
 scale = Vector2(0.5, 0.5)
-text = "- Cost: $1,200,000
+text = "- Construction Cost: 1,200,000
 
-- Daily Income: $12,000
+- Daily Income: 12,000
 
-- Size: 9x12
+- Building Size: 9x12
+
+- Annual Pollution: 150T CO2
 
 - Description: A large agricultural 
 facility that produces a variety
@@ -1949,7 +1963,7 @@ visible = false
 layout_mode = 0
 offset_left = -135.0
 offset_right = -2.0
-offset_bottom = 196.0
+offset_bottom = 214.0
 mouse_filter = 1
 mouse_default_cursor_shape = 2
 color = Color(0.956863, 0.960784, 0.980392, 1)
@@ -1993,18 +2007,20 @@ layout_mode = 0
 offset_left = 9.0
 offset_top = 87.0
 offset_right = 124.0
-offset_bottom = 189.0
+offset_bottom = 209.0
 
 [node name="Subtitles" type="Label" parent="ConstructionMenu/ConstructionMenuBox/HardwareInfo/ColorRect2"]
 layout_mode = 0
 offset_right = 242.0
 offset_bottom = 283.0
 scale = Vector2(0.5, 0.5)
-text = "- Cost: $200,000
+text = "- Construction Cost: 200,000
 
-- Daily Income: $3,000
+- Daily Income: 3,000
 
-- Size: 4x4
+- Building Size: 4x4
+
+- Annual Pollution: 1,8T CO2
 
 - Description: A shop that sells
 tools, equipment, and other 
@@ -2016,7 +2032,7 @@ visible = false
 layout_mode = 0
 offset_left = -135.0
 offset_right = -2.0
-offset_bottom = 196.0
+offset_bottom = 210.0
 mouse_filter = 1
 mouse_default_cursor_shape = 2
 color = Color(0.956863, 0.960784, 0.980392, 1)
@@ -2060,18 +2076,20 @@ layout_mode = 0
 offset_left = 9.0
 offset_top = 83.0
 offset_right = 124.0
-offset_bottom = 189.0
+offset_bottom = 205.0
 
 [node name="Subtitles" type="Label" parent="ConstructionMenu/ConstructionMenuBox/PharmacyInfo/ColorRect2"]
 layout_mode = 0
 offset_right = 242.0
 offset_bottom = 283.0
 scale = Vector2(0.5, 0.5)
-text = "- Cost: $120,000
+text = "- Construction Cost: 120,000
 
-- Daily Income: $2,000
+- Daily Income: 2,000
 
-- Size: 3x3
+- Building Size: 3x3
+
+- Annual Pollution: 2,1T CO2
 
 - Description: A store that sells 
 medicine and other
@@ -2083,7 +2101,7 @@ visible = false
 layout_mode = 0
 offset_left = -135.0
 offset_right = -2.0
-offset_bottom = 210.0
+offset_bottom = 191.0
 mouse_filter = 1
 mouse_default_cursor_shape = 2
 color = Color(0.956863, 0.960784, 0.980392, 1)
@@ -2125,20 +2143,18 @@ layout_mode = 0
 offset_left = 9.0
 offset_top = 83.0
 offset_right = 124.0
-offset_bottom = 205.0
+offset_bottom = 185.0
 
 [node name="Subtitles" type="Label" parent="ConstructionMenu/ConstructionMenuBox/BenchInfo/ColorRect2"]
 layout_mode = 0
 offset_right = 242.0
 offset_bottom = 283.0
 scale = Vector2(0.5, 0.5)
-text = "- Cost: $40,000
+text = "- Construction Cost: 1,000
 
-- Happiness: +300
+- Building Size: 4x4
 
-- Daily Pollution: -200 CO2
-
-- Size: 4x4
+- Annual Purity: 0,22T CO2
 
 - Description: A recreational
 area with green spaces and 
@@ -2150,7 +2166,7 @@ visible = false
 layout_mode = 0
 offset_left = -135.0
 offset_right = -2.0
-offset_bottom = 203.0
+offset_bottom = 179.0
 mouse_filter = 1
 mouse_default_cursor_shape = 2
 color = Color(0.956863, 0.960784, 0.980392, 1)
@@ -2193,20 +2209,18 @@ layout_mode = 0
 offset_left = 9.0
 offset_top = 83.0
 offset_right = 124.0
-offset_bottom = 196.0
+offset_bottom = 173.0
 
 [node name="Subtitles" type="Label" parent="ConstructionMenu/ConstructionMenuBox/TreeInfo/ColorRect2"]
 layout_mode = 0
 offset_right = 242.0
 offset_bottom = 283.0
 scale = Vector2(0.5, 0.5)
-text = "- Cost: $5,000
+text = "- Construction Cost: 1,000
 
-- Happiness: +100
+- Building Size: 2x2
 
-- Daily Pollution: -400 CO2
-
-- Size: 2x2
+- Annual Purity: 0,02T CO2
 
 - Description: A natural area
 with trees and vegetation.
@@ -2218,7 +2232,7 @@ visible = false
 layout_mode = 0
 offset_left = -135.0
 offset_right = -2.0
-offset_bottom = 209.0
+offset_bottom = 168.0
 mouse_filter = 1
 mouse_default_cursor_shape = 2
 color = Color(0.956863, 0.960784, 0.980392, 1)
@@ -2260,20 +2274,16 @@ layout_mode = 0
 offset_left = 9.0
 offset_top = 83.0
 offset_right = 124.0
-offset_bottom = 204.0
+offset_bottom = 163.0
 
 [node name="Subtitles" type="Label" parent="ConstructionMenu/ConstructionMenuBox/RoadInfo/ColorRect2"]
 layout_mode = 0
 offset_right = 242.0
 offset_bottom = 283.0
 scale = Vector2(0.5, 0.5)
-text = "- Cost: $500
+text = "- Construction Cost: 500
 
-- Happiness: +10
-
-- Daily Pollution: +20 CO2
-
-- Size: 1x1
+- Building Size: 1x1
 
 - Description: A basic road that 
 allows citizens to travel around
@@ -2285,7 +2295,7 @@ visible = false
 layout_mode = 0
 offset_left = -135.0
 offset_right = -2.0
-offset_bottom = 209.0
+offset_bottom = 191.0
 mouse_filter = 1
 mouse_default_cursor_shape = 2
 color = Color(0.956863, 0.960784, 0.980392, 1)
@@ -2328,20 +2338,18 @@ layout_mode = 0
 offset_left = 9.0
 offset_top = 83.0
 offset_right = 124.0
-offset_bottom = 204.0
+offset_bottom = 185.0
 
 [node name="Subtitles" type="Label" parent="ConstructionMenu/ConstructionMenuBox/LakeInfo/ColorRect2"]
 layout_mode = 0
 offset_right = 242.0
 offset_bottom = 283.0
 scale = Vector2(0.5, 0.5)
-text = "- Cost: $80,000
+text = "- Construction Cost: 80,000
 
-- Happiness: +200
+- Building Size: 6x8
 
-- Daily Pollution: -300 CO2
-
-- Size: 4x6
+- Annual Purity: 0,15T CO2
 
 - Description: A body of water
 that adds beauty and tranquility
