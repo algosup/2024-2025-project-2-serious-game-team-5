@@ -20,8 +20,8 @@
 | **Task**                             | **Assigned To**       | **Status**        | **Comments**                                |
 |-------------------------------------|-----------------------|-------------------|--------------------------------------------|
 | Game Design Document (GDD) Revisions | Team                  | Complete          | Simplified scope finalized and validated.  |
-| Technical Specification              | Salaheddine - TL      | Complete          | Adjusted to reflect reduced feature set.   |
-| Functional Specification Updates     | Pierre - PGM          | Complete          | Revised with clear priorities.             |
+| Technical Specification              | Salaheddine - TL      | In Progress       | Adjusted to reflect reduced feature set.   |
+| Functional Specification             | Pierre - PGM          | Complete          | Revised with clear priorities.             |
 | Menu v0.1 Development                | Elone - TW & Alexis - SE | In Progress    | First prototype screens under development. |
 | Core Mechanics Setup                 | Camille - SE          | In Progress       | Initial coding phase has started.          |
 

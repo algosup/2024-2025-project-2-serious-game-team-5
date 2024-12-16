@@ -18,10 +18,10 @@
 
 | **Task**                             | **Assigned To**       | **Status**        | **Comments**                             |
 |-------------------------------------|-----------------------|-------------------|------------------------------------------|
-| Functional Specification             | Pierre - PGM          | Complete          | Delivered on time with minimal changes.  |
+| Functional Specification             | Pierre - PGM          | In Progress        | Starting to work and the game detail and clarification.  |
 | Risk Management Plan                 | Rémy - PM            | Complete          | Reviewed with minor feedback.            |
 | Technical Specification              | Salaheddine - TL      | In Progress       | Initially delayed; expected by Nov 18.   |
-| Test Plan                            | Maxime - QA          | Complete          | QA defined scenarios and test flows.     |
+| Test Plan                            | Maxime - QA          | Not Started          |  ///  |
 | Game Design Document (GDD) Updates   | Team                 | In Progress       | Significant revisions pushed timeline.   |
 
 ---
