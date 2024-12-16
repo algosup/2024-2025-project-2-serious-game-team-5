@@ -1821,11 +1821,10 @@ materials."
 label_settings = SubResource("LabelSettings_nhvpv")
 
 [node name="CasinoInfo" type="ColorRect" parent="ConstructionMenu/ConstructionMenuBox"]
-visible = false
 layout_mode = 0
 offset_left = -135.0
 offset_right = -2.0
-offset_bottom = 211.0
+offset_bottom = 213.0
 mouse_filter = 1
 mouse_default_cursor_shape = 2
 color = Color(0.956863, 0.960784, 0.980392, 1)
@@ -1869,7 +1868,7 @@ layout_mode = 0
 offset_left = 9.0
 offset_top = 83.0
 offset_right = 124.0
-offset_bottom = 206.0
+offset_bottom = 207.0
 
 [node name="Subtitles" type="Label" parent="ConstructionMenu/ConstructionMenuBox/CasinoInfo/ColorRect2"]
 layout_mode = 0
@@ -1878,7 +1877,7 @@ offset_bottom = 283.0
 scale = Vector2(0.5, 0.5)
 text = "- Construction Cost: 3,000,000
 
-- Citizen Capacity: 30,000
+- Daily Income: 30,000
 
 - Building Size: 4x10
 
