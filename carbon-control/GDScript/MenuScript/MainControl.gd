@@ -3,14 +3,20 @@ extends Control
 var userDataFile = FileAccess.file_exists("user://userLanguage.dat")
 var userSettingsFile = FileAccess.file_exists("user://settings.json")
 
+@onready var play_button: Button = $OverallMarginContainer/ComponentsMarginContainer/ButtonMarginContainer/BoxContainerButton/PlayButton	
+@onready var leave_button: Button = $OverallMarginContainer/ComponentsMarginContainer/ButtonMarginContainer/BoxContainerButton/LeaveButton
+@onready var credits_button: Button = $OverallMarginContainer/ComponentsMarginContainer/ButtonMarginContainer/BoxContainerButton/CreditsButton
+@onready var settings_button: Button = $OverallMarginContainer/ComponentsMarginContainer/ButtonMarginContainer/BoxContainerButton/SettingsButton
+@onready var newgame_button: Button = $OverallMarginContainer/ComponentsMarginContainer/ButtonMarginContainer/BoxContainerButton/NewGameButton
+
 func _ready():
 	_gameInit()
-	$OverallMarginContainer/ComponentsMarginContainer/ButtonMarginContainer/BoxContainerButton/PlayButton.connect("pressed", self._onPressed.bind(1))
-	$OverallMarginContainer/ComponentsMarginContainer/ButtonMarginContainer/BoxContainerButton/NewGameButton.connect("pressed", self._onPressed.bind(5))
-	$OverallMarginContainer/ComponentsMarginContainer/ButtonMarginContainer/BoxContainerButton/SettingsButton.connect("pressed", self._onPressed.bind(3))
-	$OverallMarginContainer/ComponentsMarginContainer/ButtonMarginContainer/BoxContainerButton/CreditsButton.connect("pressed", self._onPressed.bind(4))
-	$OverallMarginContainer/ComponentsMarginContainer/ButtonMarginContainer/BoxContainerButton/LeaveButton.connect("pressed", self._onPressed.bind(2))
-	
+	play_button.connect("pressed", self._onPressed.bind(1))
+	newgame_button.connect("pressed", self._onPressed.bind(5))
+	settings_button.connect("pressed", self._onPressed.bind(3))
+	credits_button.connect("pressed", self._onPressed.bind(4))
+	leave_button.connect("pressed", self._onPressed.bind(2))
+
 func _gameInit():
 	var language
 	# Check if user data file exist
@@ -22,24 +28,25 @@ func _gameInit():
 	
 	# Check if settings file exist
 	if userSettingsFile:
-		return
+		print("")
 	else:
 		_createUserSettings()
 		
+	print("here")
 	# Setup the text language
 	match language:
 		"english":
-			$PlayButton.text = "Play"
-			$LeaveButton.text = "Leave the game"
-			$SettingsButton.text = "Settings"
-			$CreditsButton.text = "Credits"
-			$WelcomeText.text = "Welcome to Brought Back City"
+			play_button.text = "Play"
+			leave_button.text = "Leave the game"
+			settings_button.text = "Settings"
+			credits_button.text = "Credits"
+			newgame_button.text = "New Game"
 		"french":
-			$PlayButton.text = "Jouer"
-			$LeaveButton.text = "Quitter le jeu"
-			$SettingsButton.text = "Paramètres"
-			$CreditsButton.text = "Crédits"
-			$WelcomeText.text = "Bienvenue sur Brought Back City"
+			play_button.text = "Jouer"
+			leave_button.text = "Quitter le jeu"
+			settings_button.text = "Paramètres"
+			credits_button.text = "Crédits"
+			newgame_button.text = "Nouvelle Partie"
 
 # This function take input i, and depends on i value, it will make different actions. i = buttons
 func _onPressed(i):

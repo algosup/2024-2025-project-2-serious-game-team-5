@@ -1,29 +1,29 @@
-[gd_scene load_steps=22 format=3 uid="uid://c35u57sgnw1ha"]
+[gd_scene load_steps=22 format=3 uid="uid://c0x1aae5uxh5m"]
 
-[ext_resource type="Script" path="res://GDScript/GameScript/BuildingScript/BuildingsMgr.gd" id="1_4qv5j"]
-[ext_resource type="PackedScene" uid="uid://b7hy1ghr6ssuq" path="res://Scenes/background_music.tscn" id="2_43axl"]
-[ext_resource type="AudioStream" uid="uid://pn5uk1ybbeic" path="res://Assets/Music&Sound/JazzBackground.mp3" id="3_6by65"]
-[ext_resource type="AudioStream" uid="uid://cja71bx36uvqr" path="res://Assets/Music&Sound/ambience-city-daytime-birds-traffic-61955.mp3" id="4_yy72f"]
-[ext_resource type="AudioStream" uid="uid://dtotu0x3j8nsu" path="res://Assets/Music&Sound/Radio-Music.mp3" id="5_gck21"]
-[ext_resource type="AudioStream" uid="uid://cvyelnlyoxvu5" path="res://Assets/Music&Sound/Hammering_Sound.mp3" id="6_0367d"]
-[ext_resource type="PackedScene" uid="uid://dyna83k7m266c" path="res://Scenes/Player.tscn" id="7_3lajh"]
-[ext_resource type="PackedScene" uid="uid://htmeeru1v4h8" path="res://Scenes/Interface.tscn" id="8_odecs"]
-[ext_resource type="MeshLibrary" uid="uid://dmymo3hn2hqop" path="res://Assets/mesh.tres" id="10_s6hkt"]
-[ext_resource type="Script" path="res://GDScript/GameScript/InterfaceScript/Marker.gd" id="11_ufcl4"]
-[ext_resource type="Material" uid="uid://2c84wp3bqorp" path="res://Materials/green_material_3d.tres" id="12_5g2ja"]
+[ext_resource type="Script" path="res://GDScript/GameScript/BuildingScript/BuildingsMgr.gd" id="1_ygrrm"]
+[ext_resource type="PackedScene" uid="uid://b7hy1ghr6ssuq" path="res://Scenes/background_music.tscn" id="2_lemx5"]
+[ext_resource type="AudioStream" uid="uid://pn5uk1ybbeic" path="res://Assets/Music&Sound/JazzBackground.mp3" id="3_bl7ak"]
+[ext_resource type="AudioStream" uid="uid://cja71bx36uvqr" path="res://Assets/Music&Sound/ambience-city-daytime-birds-traffic-61955.mp3" id="4_fbaq6"]
+[ext_resource type="AudioStream" uid="uid://dtotu0x3j8nsu" path="res://Assets/Music&Sound/Radio-Music.mp3" id="5_fcsof"]
+[ext_resource type="AudioStream" uid="uid://cvyelnlyoxvu5" path="res://Assets/Music&Sound/Hammering_Sound.mp3" id="6_duhlw"]
+[ext_resource type="PackedScene" uid="uid://dyna83k7m266c" path="res://Scenes/Player.tscn" id="7_fvihw"]
+[ext_resource type="PackedScene" uid="uid://htmeeru1v4h8" path="res://Scenes/Interface.tscn" id="8_ljh71"]
+[ext_resource type="MeshLibrary" uid="uid://dmymo3hn2hqop" path="res://Assets/mesh.tres" id="10_i3xbg"]
+[ext_resource type="Script" path="res://GDScript/GameScript/InterfaceScript/Marker.gd" id="11_4xpiq"]
+[ext_resource type="Material" uid="uid://2c84wp3bqorp" path="res://Materials/green_material_3d.tres" id="12_1e5tw"]
 
 [sub_resource type="AudioStreamPlaylist" id="AudioStreamPlaylist_be2cu"]
 stream_count = 1
-stream_0 = ExtResource("3_6by65")
+stream_0 = ExtResource("3_bl7ak")
 
 [sub_resource type="AudioStreamPlaylist" id="AudioStreamPlaylist_6s22w"]
 stream_count = 1
-stream_0 = ExtResource("4_yy72f")
+stream_0 = ExtResource("4_fbaq6")
 
 [sub_resource type="AudioStreamPlaylist" id="AudioStreamPlaylist_2olf6"]
 loop = false
 stream_count = 1
-stream_0 = ExtResource("5_gck21")
+stream_0 = ExtResource("5_fcsof")
 
 [sub_resource type="AudioStreamSynchronized" id="AudioStreamSynchronized_xxkrp"]
 stream_count = 3
@@ -57,15 +57,15 @@ data = PackedVector3Array(0.5, 0, 0.5, -0.5, 0, 0.5, 0.5, 0, -0.5, -0.5, 0, 0.5,
 size = Vector2(1, 1)
 
 [node name="World" type="Node3D"]
-script = ExtResource("1_4qv5j")
+script = ExtResource("1_ygrrm")
 
 [node name="WorldAudioManager" type="AudioStreamPlayer" parent="."]
 
-[node name="BackgroundMusic" parent="WorldAudioManager" instance=ExtResource("2_43axl")]
+[node name="BackgroundMusic" parent="WorldAudioManager" instance=ExtResource("2_lemx5")]
 stream = SubResource("AudioStreamSynchronized_xxkrp")
 
 [node name="Construction" type="AudioStreamPlayer" parent="WorldAudioManager"]
-stream = ExtResource("6_0367d")
+stream = ExtResource("6_duhlw")
 volume_db = -15.0
 
 [node name="SaveTimer" type="Timer" parent="."]
@@ -78,14 +78,14 @@ environment = SubResource("Environment_3ontc")
 transform = Transform3D(-0.866024, -0.433016, 0.250001, 0, 0.499998, 0.866027, -0.500003, 0.75, -0.43301, 15.8842, 15.3395, -18.0187)
 shadow_enabled = true
 
-[node name="Player" parent="." instance=ExtResource("7_3lajh")]
+[node name="Player" parent="." instance=ExtResource("7_fvihw")]
 transform = Transform3D(-0.707107, -0.600314, -0.373662, 0, 0.528438, -0.848972, 0.707107, -0.600314, -0.373662, 227.797, 45, 269.458)
 
-[node name="Interface" parent="." instance=ExtResource("8_odecs")]
+[node name="Interface" parent="." instance=ExtResource("8_ljh71")]
 
 [node name="GridMap" type="GridMap" parent="."]
 transform = Transform3D(2, 0, 0, 0, 1, 0, 0, 0, 2, 0, -1.72374, 0)
-mesh_library = ExtResource("10_s6hkt")
+mesh_library = ExtResource("10_i3xbg")
 cell_size = Vector3(1, 1, 1)
 cell_center_x = false
 cell_scale = 1.2
@@ -99,14 +99,14 @@ transform = Transform3D(255, 0, 0, 0, 1, 0, 0, 0, 255, 128, 1.69, 128)
 mesh = SubResource("PlaneMesh_ihy0p")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="GridMap/MeshInstance3D"]
-script = ExtResource("11_ufcl4")
+script = ExtResource("11_4xpiq")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="GridMap/MeshInstance3D/StaticBody3D"]
 shape = SubResource("ConcavePolygonShape3D_h8u46")
 
 [node name="Marker" type="MeshInstance3D" parent="."]
-transform = Transform3D(8, 0, 0, 0, 0.999984, 0.033929, 0, -0.00565484, 5.9999, 273, 0.1, 300)
-material_override = ExtResource("12_5g2ja")
+transform = Transform3D(1, 0, 0, 0, 0.999984, 0.00565484, 0, -0.00565484, 0.999984, 235, 0.1, 263)
+material_override = ExtResource("12_1e5tw")
 mesh = SubResource("PlaneMesh_6cvga")
 
 [connection signal="timeout" from="SaveTimer" to="." method="_on_save_timer_timeout"]

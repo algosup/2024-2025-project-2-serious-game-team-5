@@ -155,7 +155,7 @@ func _on_factory_pressed() -> void:
 func _on_power_plant_pressed() -> void:
 	$ConstructionMenu/UI_Click.play()
 	GlobalVariables.selected_building = 14
-	GlobalVariables.building_price = 3000000
+	GlobalVariables.building_price = 50000000
 
 func _on_school_pressed() -> void:
 	$ConstructionMenu/UI_Click.play()
@@ -185,7 +185,7 @@ func _on_wind_turbine_pressed() -> void:
 func _on_solar_panel_pressed() -> void:
 	$ConstructionMenu/UI_Click.play()
 	GlobalVariables.selected_building = 21
-	GlobalVariables.building_price = 600000
+	GlobalVariables.building_price = 15000
 
 func _on_tree_pressed() -> void:
 	$ConstructionMenu/UI_Click.play()
