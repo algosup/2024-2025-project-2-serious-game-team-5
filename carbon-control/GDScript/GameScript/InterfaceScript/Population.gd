@@ -46,40 +46,37 @@ func _load_happiness_value() -> void:
 
 # Update the population value based on happiness
 func update_population() -> void:
-	if GlobalVariables.population_value < GlobalVariables.population_max:
-		var happiness_percentage: float = GlobalVariables.happiness_value / 100.0
-		var population_change: int = 0
+	var happiness_percentage: float = GlobalVariables.happiness_value / 100.0
+	var population_change: int = 0
 		
-		print(happiness_percentage)
-		
-		if happiness_percentage <= 0.15:
-			population_change -= round(GlobalVariables.population_value * 0.15)
-			print('Pop decrease very high')
-		elif happiness_percentage <= 0.30:
-			population_change -= round(GlobalVariables.population_value * 0.1)
-			print('Pop decrease low')
-		elif happiness_percentage <= 0.45:
-			population_change = round(GlobalVariables.population_value * 0.05)
-			print('Pop increase low')
-		elif happiness_percentage <= 0.60:
-			population_change = round(GlobalVariables.population_value * 0.01)
-			print('Pop increase very low')
-		elif happiness_percentage <= 0.70:
-			population_change = round(GlobalVariables.population_value * 0.05)
-			print('Pop increase low')
-		elif happiness_percentage <= 0.90:
-			population_change = round(GlobalVariables.population_value * 0.1)
-			print('Pop increase high')
-		else:
-			population_change = round(GlobalVariables.population_value * 0.15)
-			print('Pop increase very high')
+	if happiness_percentage <= 0.15:
+		population_change -= round(GlobalVariables.population_value * 0.15)
+		print('Pop decrease very high')
+	elif happiness_percentage <= 0.30:
+		population_change -= round(GlobalVariables.population_value * 0.1)
+		print('Pop decrease low')
+	elif happiness_percentage <= 0.45:
+		population_change = round(GlobalVariables.population_value * 0.05)
+		print('Pop increase low')
+	elif happiness_percentage <= 0.60:
+		population_change = round(GlobalVariables.population_value * 0.01)
+		print('Pop increase very low')
+	elif happiness_percentage <= 0.70:
+		population_change = round(GlobalVariables.population_value * 0.05)
+		print('Pop increase low')
+	elif happiness_percentage <= 0.90:
+		population_change = round(GlobalVariables.population_value * 0.1)
+		print('Pop increase high')
+	else:
+		population_change = round(GlobalVariables.population_value * 0.15)
+		print('Pop increase very high')
 
-		GlobalVariables.population_value += population_change
-		if GlobalVariables.population_value < 10:
-			GlobalVariables.population_value = 10
-		
-		if GlobalVariables.population_value > GlobalVariables.population_max:
-			GlobalVariables.population_value = GlobalVariables.population_max
+	GlobalVariables.population_value += population_change
+	if GlobalVariables.population_value < 10:
+		GlobalVariables.population_value = 10
+	
+	if GlobalVariables.population_value > GlobalVariables.population_max:
+		GlobalVariables.population_value = GlobalVariables.population_max
 
 
 	display_population()
