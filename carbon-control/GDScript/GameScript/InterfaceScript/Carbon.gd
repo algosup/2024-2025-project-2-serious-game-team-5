@@ -83,7 +83,7 @@ func set_base_carbon(new_carbon_bar: ProgressBar, new_carbon_value: Label) -> vo
 func get_percentage() -> float:
 	if carbon_bar == null:
 		return 0.0
-	carbon_bar.max_value = GlobalVariables.population_value * 42000
+	carbon_bar.max_value = GlobalVariables.population_value * 3400
 	GlobalVariables.carbon_percentage = round((carbon_bar.value / carbon_bar.max_value) * 100)
 	return carbon_bar.value / carbon_bar.max_value
 
