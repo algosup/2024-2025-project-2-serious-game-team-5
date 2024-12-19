@@ -36,13 +36,13 @@ func _gameInit():
 	# Setup the text language
 	match language:
 		"english":
-			play_button.text = "Play"
+			play_button.text = "Resume"
 			leave_button.text = "Leave the game"
 			settings_button.text = "Settings"
 			credits_button.text = "Credits"
 			newgame_button.text = "New Game"
 		"french":
-			play_button.text = "Jouer"
+			play_button.text = "Reprendre"
 			leave_button.text = "Quitter le jeu"
 			settings_button.text = "Paramètres"
 			credits_button.text = "Crédits"
