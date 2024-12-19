@@ -39,7 +39,7 @@ func _format_money(money: int) -> String:
 			formatted_str = " " + formatted_str
 		formatted_str = num_str[len(num_str) - i - 1] + formatted_str
 	
-	return formatted_str + " $"
+	return formatted_str + " €"
 
 func save_money() -> void:
 	var file := FileAccess.open(USER_MONEY_DATA_FILE_PATH, FileAccess.WRITE)
