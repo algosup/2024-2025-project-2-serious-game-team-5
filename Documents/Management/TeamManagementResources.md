@@ -88,13 +88,13 @@ This ensures we address team concerns and maintain productivity.
 
 Weekly reports summarize the project's progress, achievements, and challenges. Below are the expected updates:
 
-- [Week 1](#)  
-- [Week 2](#)  
-- [Week 3](#)  
-- [Week 4](#)  
-- [Week 5](#)  
-- [Week 6](#)  
-- [Week 7](#)  
+- [Week 1](/Documents/Management/WeeklyReport/Week1.md)  
+- [Week 2](/Documents/Management/WeeklyReport/Week2.md)  
+- [Week 3](/Documents/Management/WeeklyReport/Week3.md)  
+- [Week 4](/Documents/Management/WeeklyReport/Week4.md)  
+- [Week 5](/Documents/Management/WeeklyReport/Week5.md)  
+- [Week 6](/Documents/Management/WeeklyReport/Week6.md)  
+- [Week 7](/Documents/Management/WeeklyReport/Week7.md)  
 
 ---
 
@@ -106,6 +106,8 @@ Risks are identified, assessed for likelihood and impact, and mitigated through 
 |--------------------------------------------------------------------------------|--------------|---------------------------------------------------------------|
 | Difficulty balancing educational content with engaging gameplay.               | High         | Iterate gameplay mechanics based on user testing feedback.    |
 | Challenges in accurately simulating climate-related scenarios for audiences.   | Medium       | Consult climate experts and use realistic models.             |
+
+You find the document about it [here](/Documents/Management/RiskManagementPlan.md).
 
 ---
 
@@ -122,6 +124,8 @@ Risks are identified, assessed for likelihood and impact, and mitigated through 
 | Test Plan & Prototype Playtesting       | 2024-12-06      | 12/…/2024           |
 | Final Game Development & User Manual    | 2024-12-13      | 12/…/2024           |
 | Final Game Release & Presentation       | 2024-12-20      | 12/…/2024           |
+
+You can access to the excel file with this [link](https://algosup-my.sharepoint.com/:x:/p/remy_charles/Edzj0k-9d-5CmaVfrXGpd90BPBhSRT7b7Klo25wlWabATQ?e=DLEkSw).
 
 ---
 
