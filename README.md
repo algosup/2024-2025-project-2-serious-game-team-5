@@ -4,6 +4,9 @@
 
 - [Functional Specifications](./Documents/FunctionalSpecifications/FunctionalSpecifications.md)
 - [Technical Specifications](./Documents/TechnicalSpecification/TechnicalSpecifications.md)
+- [Test Plan](./Documents/TestPlan/TestPlan.md)
+- [User Manual](./Documents/UserManual/UserManual.md)
+- [Management Documents](./Documents/Management/TeamManagementResources.md)
 
 **Expected Release Date**: December 15, 2024
 
